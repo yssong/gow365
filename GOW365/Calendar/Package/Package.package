@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package dslVersion="1.0.0.0" 
-        Id="c27b99dd-bc60-45cd-90cb-f76758aa08ab" 
-        solutionId="c27b99dd-bc60-45cd-90cb-f76758aa08ab" 
-        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
-        name="Calendar"
-        sharePointProductVersion="15.0">
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="c27b99dd-bc60-45cd-90cb-f76758aa08ab" solutionId="c27b99dd-bc60-45cd-90cb-f76758aa08ab" resetWebServer="false" sharePointProductVersion="15.0" name="Calendar" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="3d48db77-0465-4373-abc5-18177dd87ec3" />
+  </features>
 </package>
