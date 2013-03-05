@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="c27b99dd-bc60-45cd-90cb-f76758aa08ab" 
+        solutionId="c27b99dd-bc60-45cd-90cb-f76758aa08ab" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="Calendar"
+        sharePointProductVersion="15.0">
+</package>
