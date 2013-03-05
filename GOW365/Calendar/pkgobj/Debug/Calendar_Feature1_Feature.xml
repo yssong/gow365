@@ -3,5 +3,7 @@
   <ElementManifests>
     <ElementManifest Location="CalendarWebpart\Elements.xml" />
     <ElementFile Location="CalendarWebpart\CalendarWebpart.webpart" />
+    <ElementManifest Location="GOW365\Elements.xml" />
+    <ElementFile Location="GOW365\Sample.txt" />
   </ElementManifests>
 </Feature>

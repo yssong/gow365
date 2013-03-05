@@ -7,7 +7,7 @@ using System.Web.UI.WebControls.WebParts;
 using Microsoft.SharePoint;
 using Microsoft.SharePoint.WebControls;
 
-namespace Calendar.CalendarWebpart
+namespace GOW365.CalendarWebpart
 {
     [ToolboxItemAttribute(false)]
     public class CalendarWebpart : WebPart
@@ -18,8 +18,8 @@ namespace Calendar.CalendarWebpart
         SPWeb web;
 
         //배포 전에 ImgUrl을 수정해주세요. (따로 업로드 해야 함)
-        //public string ImgUrl = "/companies/asia-pac/kr/Hicompass/WebParts/CalendarWebPart/";
-        public string ImgUrl = "";
+        public string ImgUrl = "/GOW365/Calendar/";
+        
         private string webName = string.Empty;
         private string listName = string.Empty;
         private bool isViewCalendar = true;
@@ -63,6 +63,7 @@ namespace Calendar.CalendarWebpart
         public CalendarWebpart()
         {
             this.ExportMode = WebPartExportMode.All;
+            this.ImgUrl = SPContext.Current.Site.Url + ImgUrl;
         }
 
         protected override void CreateChildControls()

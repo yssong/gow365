@@ -1,4 +1,3 @@
-C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\Calendar\obj\Debug\Calendar.csprojResolveAssemblyReference.cache
 C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\Calendar\bin\Debug\Calendar.dll
 C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\Calendar\bin\Debug\Calendar.pdb
 C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\Calendar\obj\Debug\Calendar.dll

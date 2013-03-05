@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="8d161fc6-564b-4874-ae6e-1a5428033031" SharePointProductVersion="15.0">
+  <Assemblies>
+    <Assembly Location="TabList.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="TabList, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d7e8fa0d874de9fc" Namespace="GOW365.TabList" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <FeatureManifests>
+    <FeatureManifest Location="TabList_Feature2\Feature.xml" />
+  </FeatureManifests>
+</Solution>

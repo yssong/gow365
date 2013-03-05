@@ -5,6 +5,6 @@
     <ProjectItemFile Source="CalendarWebpart.webpart" Target="CalendarWebpart\" Type="ElementFile" />
   </Files>
   <SafeControls>
-    <SafeControl Name="SafeControlEntry1" Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="Calendar.CalendarWebpart" TypeName="*" IsSafe="true" IsSafeAgainstScript="false" />
+    <SafeControl Name="SafeControlEntry1" Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="GOW365.CalendarWebpart" TypeName="*" IsSafe="true" IsSafeAgainstScript="false" />
   </SafeControls>
 </ProjectItem>

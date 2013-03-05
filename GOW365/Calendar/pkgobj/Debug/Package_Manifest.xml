@@ -3,7 +3,7 @@
   <Assemblies>
     <Assembly Location="Calendar.dll" DeploymentTarget="GlobalAssemblyCache">
       <SafeControls>
-        <SafeControl Assembly="Calendar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=91a8115d2a3ec579" Namespace="Calendar.CalendarWebpart" TypeName="*" />
+        <SafeControl Assembly="Calendar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=91a8115d2a3ec579" Namespace="GOW365.CalendarWebpart" TypeName="*" />
       </SafeControls>
     </Assembly>
   </Assemblies>

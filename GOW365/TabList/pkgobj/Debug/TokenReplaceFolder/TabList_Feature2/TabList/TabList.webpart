@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="GOW365.TabList.TabList, TabList, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d7e8fa0d874de9fc" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">TabList</property>
+        <property name="Description" type="string">내 웹 파트</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="8d161fc6-564b-4874-ae6e-1a5428033031" solutionId="8d161fc6-564b-4874-ae6e-1a5428033031" resetWebServer="false" sharePointProductVersion="15.0" name="TabList" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="ec68ba23-d35a-4f9f-9f96-fca01317e6ce" />
+  </features>
+</package>

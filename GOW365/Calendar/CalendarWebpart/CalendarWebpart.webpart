@@ -2,12 +2,12 @@
 <webParts>
   <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
     <metaData>
-      <type name="Calendar.CalendarWebpart.CalendarWebpart, $SharePoint.Project.AssemblyFullName$" />
+      <type name="GOW365.CalendarWebpart.CalendarWebpart, $SharePoint.Project.AssemblyFullName$" />
       <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
     </metaData>
     <data>
       <properties>
-        <property name="Title" type="string">Calendar - CalendarWebpart</property>
+        <property name="Title" type="string">Calendar</property>
         <property name="Description" type="string">내 웹 파트</property>
       </properties>
     </data>

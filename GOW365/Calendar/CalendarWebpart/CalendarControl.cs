@@ -9,7 +9,7 @@ using System.Data;
 using Microsoft.SharePoint.Client;
 using Microsoft.SharePoint.Utilities;
 
-namespace Calendar.CalendarWebpart
+namespace GOW365.CalendarWebpart
 {
     public class CalendarControl : System.Web.UI.WebControls.Calendar
     {
