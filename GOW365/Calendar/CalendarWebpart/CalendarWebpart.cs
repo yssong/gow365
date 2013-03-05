@@ -62,8 +62,8 @@ namespace GOW365.CalendarWebpart
 
         public CalendarWebpart()
         {
-            this.ExportMode = WebPartExportMode.All;
-            this.ImgUrl = SPContext.Current.Site.Url + ImgUrl;
+            //this.ExportMode = WebPartExportMode.All;
+            //this.ImgUrl = SPContext.Current.Site.Url + ImgUrl;
         }
 
         protected override void CreateChildControls()

@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-  <Module Name="GOW365">
-    <File Path="GOW365\TabList\Sample.txt" Url="GOW365/TabList/Sample.txt" />
-  </Module>
-</Elements>

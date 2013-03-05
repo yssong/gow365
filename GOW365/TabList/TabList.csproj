@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AE3D5C0C-E7CD-4D59-B05A-358A6F006929}</ProjectGuid>
+    <ProjectGuid>{9D4AD2D5-A843-45C5-B926-69B9F89B43FA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GOW365</RootNamespace>
@@ -52,28 +52,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TabListWebpart\TabListWebpart.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Features\Feature2\Feature2.feature">
-      <FeatureId>{ec68ba23-d35a-4f9f-9f96-fca01317e6ce}</FeatureId>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{cb11ec1a-1ae0-4173-8772-aa5308a975ea}</FeatureId>
     </None>
     <None Include="GOW365\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{c66c4e06-cee6-423a-acf7-225a641c73d4}</SharePointProjectItemId>
+      <SharePointProjectItemId>{e8f8327e-890b-4a33-9f23-6fbddf1941fb}</SharePointProjectItemId>
     </None>
     <None Include="key.snk" />
     <None Include="Package\Package.package">
-      <PackageId>{8d161fc6-564b-4874-ae6e-1a5428033031}</PackageId>
+      <PackageId>{f4a0c2a7-6bdd-4176-924f-3b69e8545a64}</PackageId>
     </None>
     <None Include="Package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
     </None>
+    <None Include="TabListWebpart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{97eddb8d-da37-44a6-a409-21baf84ddd67}</SharePointProjectItemId>
+    </None>
+    <None Include="TabListWebpart\TabListWebpart.webpart" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Features\Feature2\Feature2.Template.xml">
-      <DependentUpon>Feature2.feature</DependentUpon>
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
     </Content>
     <Content Include="GOW365\Elements.xml" />
     <Content Include="GOW365\TabList\Sample.txt" />
+    <Content Include="TabListWebpart\Elements.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
