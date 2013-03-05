@@ -18,7 +18,8 @@ namespace Calendar.CalendarWebpart
         SPWeb web;
 
         //배포 전에 ImgUrl을 수정해주세요. (따로 업로드 해야 함)
-        public string ImgUrl = "/companies/asia-pac/kr/Hicompass/WebParts/CalendarWebPart/";
+        //public string ImgUrl = "/companies/asia-pac/kr/Hicompass/WebParts/CalendarWebPart/";
+        public string ImgUrl = "";
         private string webName = string.Empty;
         private string listName = string.Empty;
         private bool isViewCalendar = true;
