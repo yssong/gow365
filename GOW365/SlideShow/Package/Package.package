@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="e1d742ad-b6b2-474a-8e4c-77767a7dcce8" solutionId="e1d742ad-b6b2-474a-8e4c-77767a7dcce8" resetWebServer="false" sharePointProductVersion="15.0" name="SlideShow" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="3824cbe3-44fb-4c5f-8217-7437e188d42d" />
+  </features>
+</package>

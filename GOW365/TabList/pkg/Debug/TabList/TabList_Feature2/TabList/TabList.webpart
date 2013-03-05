@@ -2,7 +2,7 @@
 <webParts>
   <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
     <metaData>
-      <type name="GOW365.TabList.TabList, TabList, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d7e8fa0d874de9fc" />
+      <type name="TabList.TabList.TabList, TabList, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d7e8fa0d874de9fc" />
       <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
     </metaData>
     <data>

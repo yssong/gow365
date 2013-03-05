@@ -3,7 +3,7 @@
   <Assemblies>
     <Assembly Location="TabList.dll" DeploymentTarget="GlobalAssemblyCache">
       <SafeControls>
-        <SafeControl Assembly="TabList, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d7e8fa0d874de9fc" Namespace="GOW365.TabList" TypeName="*" />
+        <SafeControl Assembly="TabList, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d7e8fa0d874de9fc" Namespace="TabList.TabList" TypeName="*" />
       </SafeControls>
     </Assembly>
   </Assemblies>

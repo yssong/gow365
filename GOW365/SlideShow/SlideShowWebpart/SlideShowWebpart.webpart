@@ -2,12 +2,12 @@
 <webParts>
   <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
     <metaData>
-      <type name="GOW365.TabList.TabList, $SharePoint.Project.AssemblyFullName$" />
+      <type name="GOW365.SlideShowWebpart.SlideShowWebpart, $SharePoint.Project.AssemblyFullName$" />
       <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
     </metaData>
     <data>
       <properties>
-        <property name="Title" type="string">TabList</property>
+        <property name="Title" type="string">SlideShow</property>
         <property name="Description" type="string">내 웹 파트</property>
       </properties>
     </data>

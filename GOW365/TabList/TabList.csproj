@@ -52,7 +52,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TabList\TabList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Features\Feature2\Feature2.feature">
@@ -68,10 +67,6 @@
     <None Include="Package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
     </None>
-    <None Include="TabList\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{f9f342a7-cd5a-49ce-97f7-a8d61ca89412}</SharePointProjectItemId>
-    </None>
-    <None Include="TabList\TabList.webpart" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Features\Feature2\Feature2.Template.xml">
@@ -79,7 +74,6 @@
     </Content>
     <Content Include="GOW365\Elements.xml" />
     <Content Include="GOW365\TabList\Sample.txt" />
-    <Content Include="TabList\Elements.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
