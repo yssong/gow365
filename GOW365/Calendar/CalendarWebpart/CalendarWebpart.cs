@@ -69,7 +69,8 @@ namespace Calendar.CalendarWebpart
             if (WebName != string.Empty && WebName.StartsWith("https"))
             {
                 //배포 전에 WebName을 수정해주세요.
-                WebName = WebName.Replace("https://ishare.spiraxsarco.com/companies/asia-pac/kr", "");
+                string url=SPContext.Current.Site.Url;
+                WebName = WebName.Replace(url, "");
                 WebName = WebName.StartsWith("/") ? WebName.Remove(0, 1) : WebName;
                 WebName = WebName.EndsWith("/") ? WebName.Remove(WebName.Length - 1, 1) : WebName;
             }

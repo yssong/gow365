@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="Gow Calendar Webpart" Id="13d71109-b4ce-4a12-be92-2f4c5af2cc99" Scope="Site">
+  <ElementManifests>
+    <ElementManifest Location="CalendarWebpart\Elements.xml" />
+    <ElementFile Location="CalendarWebpart\CalendarWebpart.webpart" />
+  </ElementManifests>
+</Feature>
