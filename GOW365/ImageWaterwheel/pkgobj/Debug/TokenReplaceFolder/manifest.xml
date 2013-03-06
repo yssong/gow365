@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="04daedc6-0c21-4856-a352-c1af7bf6c15b" SharePointProductVersion="15.0">
+  <Assemblies>
+    <Assembly Location="ImageWaterwheel.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="ImageWaterwheel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4b80414ba75bc5b8" Namespace="GOW365.ImageWheelSlideWebpart" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <FeatureManifests>
+    <FeatureManifest Location="ImageWaterwheel_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

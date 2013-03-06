@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="04daedc6-0c21-4856-a352-c1af7bf6c15b" solutionId="04daedc6-0c21-4856-a352-c1af7bf6c15b" resetWebServer="false" sharePointProductVersion="15.0" name="ImageWaterwheel" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="127fb52b-b64a-401f-94da-ed128ec426eb" />
+  </features>
+</package>

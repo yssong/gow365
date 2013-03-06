@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="GOW365.ImageWheelSlideWebpart.ImageWheelSlideWebpart, ImageWaterwheel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4b80414ba75bc5b8" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">ImageWaterwheel - ImageWheelSlideWebpart</property>
+        <property name="Description" type="string">내 웹 파트</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

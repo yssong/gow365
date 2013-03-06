@@ -1,0 +1,4 @@
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\ImageWaterwheel\bin\Debug\ImageWaterwheel.dll
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\ImageWaterwheel\bin\Debug\ImageWaterwheel.pdb
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\ImageWaterwheel\obj\Debug\ImageWaterwheel.dll
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\ImageWaterwheel\obj\Debug\ImageWaterwheel.pdb

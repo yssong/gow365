@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="ImageWaterwheel Feature1" Id="b47df26a-041d-454f-9c8e-8c6a6add2338" Scope="Site">
+  <ElementManifests>
+    <ElementManifest Location="ImageWheelSlideWebpart\Elements.xml" />
+    <ElementFile Location="ImageWheelSlideWebpart\ImageWheelSlideWebpart.webpart" />
+    <ElementManifest Location="GOW365\Elements.xml" />
+    <ElementFile Location="GOW365\ImageWaterWheel\Sample.txt" />
+    <ElementFile Location="GOW365\ImageWaterWheel\jquery.waterwheelCarousel.js" />
+    <ElementFile Location="GOW365\ImageWaterWheel\jquery.waterwheelCarousel.min.js" />
+    <ElementFile Location="GOW365\ImageWaterWheel\WaterWheel.css" />
+  </ElementManifests>
+</Feature>
