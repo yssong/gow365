@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="DropDownLink Feature1" Id="fbea14b3-c918-4f4d-ab41-3d553a0698dd" Scope="Site">
+  <ElementManifests>
+    <ElementManifest Location="DropDownLinkWebpart\Elements.xml" />
+    <ElementFile Location="DropDownLinkWebpart\DropDownLinkWebpart.webpart" />
+    <ElementManifest Location="GOW365\Elements.xml" />
+    <ElementFile Location="GOW365\DropDownLink\Sample.txt" />
+  </ElementManifests>
+</Feature>

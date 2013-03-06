@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="a406793f-f00f-41d9-9c26-2c96c2b19470" solutionId="a406793f-f00f-41d9-9c26-2c96c2b19470" resetWebServer="false" sharePointProductVersion="15.0" name="DropDownLink" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="6cad2ab3-2c07-473d-a0fe-2b5dfebd5419" />
+  </features>
+</package>

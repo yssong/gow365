@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="a406793f-f00f-41d9-9c26-2c96c2b19470" SharePointProductVersion="15.0">
+  <Assemblies>
+    <Assembly Location="DropDownLink.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="DropDownLink, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7ba883eb135bb1d2" Namespace="GOW365.DropDownLinkWebpart" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <FeatureManifests>
+    <FeatureManifest Location="DropDownLink_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>
