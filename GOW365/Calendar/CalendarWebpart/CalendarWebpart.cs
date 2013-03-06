@@ -129,6 +129,7 @@ namespace GOW365.CalendarWebpart
 
         protected override void Render(HtmlTextWriter writer)
         {
+            this.ImgUrl = SPContext.Current.Site.Url + this.ImgUrl;
             RenderClientScript(writer);
             if (check)
             {

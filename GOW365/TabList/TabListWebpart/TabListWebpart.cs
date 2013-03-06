@@ -218,6 +218,7 @@ namespace GOW365.TabListWebpart
 
         protected override void Render(HtmlTextWriter writer)
         {
+            this.ImgUrl = SPContext.Current.Site.Url + this.ImgUrl;
 
             hhdSelectedSite.RenderControl(writer);
             hhdList.RenderControl(writer);

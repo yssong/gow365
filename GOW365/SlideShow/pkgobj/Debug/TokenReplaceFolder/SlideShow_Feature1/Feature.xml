@@ -1,7 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="SlideShow Feature1" Id="8ee511f7-c7e0-4c9f-adfd-145fad384753" Scope="Site">
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="SlideShow" Description="그림라이브러리의 내용을 슬라이드쇼로 보여 줍니다." Id="8ee511f7-c7e0-4c9f-adfd-145fad384753" Scope="Site">
   <ElementManifests>
     <ElementManifest Location="SlideShowWebpart\Elements.xml" />
     <ElementFile Location="SlideShowWebpart\SlideShowWebpart.webpart" />
+    <ElementManifest Location="GOW365\Elements.xml" />
+    <ElementFile Location="GOW365\SlideShow\Sample.txt" />
+    <ElementFile Location="GOW365\SlideShow\jquery.infinitecarousel2.js" />
+    <ElementFile Location="GOW365\SlideShow\jquery-1.4.2.min.js" />
+    <ElementFile Location="GOW365\SlideShow\left.gif" />
+    <ElementFile Location="GOW365\SlideShow\playpause.gif" />
+    <ElementFile Location="GOW365\SlideShow\right.gif" />
   </ElementManifests>
 </Feature>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="GOW365\" Type="ElementManifest" />
+    <ProjectItemFile Source="SlideShow\Sample.txt" Target="GOW365\SlideShow\" Type="ElementFile" />
+    <ProjectItemFile Source="SlideShow\jquery.infinitecarousel2.js" Target="GOW365\SlideShow\" Type="ElementFile" />
+    <ProjectItemFile Source="SlideShow\jquery-1.4.2.min.js" Target="GOW365\SlideShow\" Type="ElementFile" />
+    <ProjectItemFile Source="SlideShow\left.gif" Target="GOW365\SlideShow\" Type="ElementFile" />
+    <ProjectItemFile Source="SlideShow\playpause.gif" Target="GOW365\SlideShow\" Type="ElementFile" />
+    <ProjectItemFile Source="SlideShow\right.gif" Target="GOW365\SlideShow\" Type="ElementFile" />
+  </Files>
+</ProjectItem>
