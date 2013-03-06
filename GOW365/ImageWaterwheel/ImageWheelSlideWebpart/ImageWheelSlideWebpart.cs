@@ -12,8 +12,8 @@ namespace GOW365.ImageWheelSlideWebpart
     [ToolboxItemAttribute(false)]
     public class ImageWheelSlideWebpart : WebPart
     {
-        private string imgWidth = "100";
-        private string imgHeight = "200";
+        private string imgWidth = "320";
+        private string imgHeight = "180";
         private string webName = string.Empty;
         private string listName = string.Empty;
         private int itemCount = 50;
@@ -263,12 +263,12 @@ namespace GOW365.ImageWheelSlideWebpart
             </div>");
 
             writer.WriteLine(@" 
-                                <script type='text/javascript' src='http://code.jquery.com/jquery-1.9.1.min.js'></script>
+                                <script type='text/javascript' src='" + JsUrl + @"jquery-1.9.1.min.js'></script>
                                 <script type='text/javascript' src='" + JsUrl + @"jquery.waterwheelCarousel.js'></script>
                                 <script type='text/javascript'>
                                 $(document).ready(function () {
                                     var carousel = $('#" + this.ClientID + @"_WaterWheel').waterwheelCarousel({
-                                      flankingItems: 3, autoPlay:3000, 
+                                      separation :200,flankingItems: 3, autoPlay:3000, 
                                       movingToCenter: function ($item) {
                                         $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
                                       },
@@ -331,7 +331,7 @@ namespace GOW365.ImageWheelSlideWebpart
                             linkurl = List.DefaultDisplayFormUrl.ToString() + "?ID=" + spl["ID"].ToString();
                         }
 
-                        returnValue += @"<img src='" + spl["FileRef"].ToString() + @"' width='320px' height='180px'   id='" + spl["ID"].ToString() + "'/>";
+                        returnValue += @"<img src='" + spl["FileRef"].ToString() + @"' width='" + ImgWidth + "px' height='" + ImgHeight + "px'   id='" + spl["ID"].ToString() + "'/>";
 
                     }
 

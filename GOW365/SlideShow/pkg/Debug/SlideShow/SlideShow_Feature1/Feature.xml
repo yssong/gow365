@@ -6,9 +6,9 @@
     <ElementManifest Location="GOW365\Elements.xml" />
     <ElementFile Location="GOW365\SlideShow\Sample.txt" />
     <ElementFile Location="GOW365\SlideShow\jquery.infinitecarousel2.js" />
-    <ElementFile Location="GOW365\SlideShow\jquery-1.4.2.min.js" />
     <ElementFile Location="GOW365\SlideShow\left.gif" />
     <ElementFile Location="GOW365\SlideShow\playpause.gif" />
     <ElementFile Location="GOW365\SlideShow\right.gif" />
+    <ElementFile Location="GOW365\SlideShow\jquery-1.9.1.min.js" />
   </ElementManifests>
 </Feature>

@@ -3,9 +3,9 @@
   <Module Name="GOW365">
     <File Path="GOW365\SlideShow\Sample.txt" Url="GOW365/SlideShow/Sample.txt" />
     <File Path="GOW365\SlideShow\jquery.infinitecarousel2.js" Url="GOW365/SlideShow/jquery.infinitecarousel2.js" />
-    <File Path="GOW365\SlideShow\jquery-1.4.2.min.js" Url="GOW365/SlideShow/jquery-1.4.2.min.js" />
     <File Path="GOW365\SlideShow\left.gif" Url="GOW365/SlideShow/left.gif" />
     <File Path="GOW365\SlideShow\playpause.gif" Url="GOW365/SlideShow/playpause.gif" />
     <File Path="GOW365\SlideShow\right.gif" Url="GOW365/SlideShow/right.gif" />
+    <File Path="GOW365\SlideShow\jquery-1.9.1.min.js" Url="GOW365/SlideShow/jquery-1.9.1.min.js" />
   </Module>
 </Elements>

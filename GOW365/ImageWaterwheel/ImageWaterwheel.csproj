@@ -83,6 +83,7 @@
     <Content Include="GOW365\ImageWaterWheel\jquery.waterwheelCarousel.min.js" />
     <Content Include="GOW365\ImageWaterWheel\Sample.txt" />
     <Content Include="GOW365\ImageWaterWheel\WaterWheel.css" />
+    <Content Include="GOW365\ImageWaterWheel\jquery-1.9.1.min.js" />
     <Content Include="ImageWheelSlideWebpart\Elements.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

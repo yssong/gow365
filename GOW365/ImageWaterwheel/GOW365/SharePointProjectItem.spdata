@@ -6,5 +6,6 @@
     <ProjectItemFile Source="ImageWaterWheel\jquery.waterwheelCarousel.js" Target="GOW365\ImageWaterWheel\" Type="ElementFile" />
     <ProjectItemFile Source="ImageWaterWheel\jquery.waterwheelCarousel.min.js" Target="GOW365\ImageWaterWheel\" Type="ElementFile" />
     <ProjectItemFile Source="ImageWaterWheel\WaterWheel.css" Target="GOW365\ImageWaterWheel\" Type="ElementFile" />
+    <ProjectItemFile Source="ImageWaterWheel\jquery-1.9.1.min.js" Target="GOW365\ImageWaterWheel\" Type="ElementFile" />
   </Files>
 </ProjectItem>

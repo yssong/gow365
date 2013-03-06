@@ -263,7 +263,7 @@ namespace GOW365.SlideShowWebpart
             </div>");
 
             writer.WriteLine(@" 
-                                <script type='text/javascript' src='" + JsUrl + @"jquery-1.4.2.min.js'></script>
+                                <script type='text/javascript' src='" + JsUrl + @"jquery-1.9.1.min.js'></script>
                                 <script type='text/javascript' src='" + JsUrl + @"jquery.infinitecarousel2.js'></script>
                                 <script type='text/javascript'>
                                 $(function(){
