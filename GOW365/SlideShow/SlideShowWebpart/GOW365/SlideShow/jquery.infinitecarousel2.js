@@ -10,7 +10,7 @@
 * It has been modified by (c)HiCompass * 
 */
 
-(function ($) {
+;(function ($) {
     $.fn.extend({
         infiniteCarousel: function (options) {
             var defaults =

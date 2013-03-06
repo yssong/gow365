@@ -12,7 +12,7 @@
  * http://www.jquery.com
  */
 ;(function ($) {
-  'use strict';
+  //'use strict';
 
   $.fn.waterwheelCarousel = function (startingOptions) {
 

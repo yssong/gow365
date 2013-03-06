@@ -10,6 +10,8 @@ using Microsoft.SharePoint.WebControls;
 namespace GOW365.ImageWheelSlideWebpart
 {
     [ToolboxItemAttribute(false)]
+    /** http://www.bkosborne.com/jquery-waterwheel-carousel/options 응용 **/
+
     public class ImageWheelSlideWebpart : WebPart
     {
         private string imgWidth = "320";
@@ -262,12 +264,55 @@ namespace GOW365.ImageWheelSlideWebpart
                 " + GetData(writer) + @"
             </div>");
 
-            writer.WriteLine(@" 
-                                <script type='text/javascript' src='" + JsUrl + @"jquery-1.9.1.min.js'></script>
+            writer.WriteLine(@" <script type='text/javascript'>
+// Only do anything if jQuery isn't defined
+if (typeof jQuery == 'undefined') {
+ if (typeof $ == 'function') {
+  // warning, global var
+  thisPageUsingOtherJSLibrary = true;
+ }
+
+  function getScript(url, success) {
+    var script     = document.createElement('script');
+       script.src = url;
+
+    var head = document.getElementsByTagName('head')[0],
+    done = false;
+
+    // Attach handlers for all browsers
+    script.onload = script.onreadystatechange = function() {
+     if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
+      done = true;
+        // callback function provided as param
+    success();
+
+        script.onload = script.onreadystatechange = null;
+    head.removeChild(script);
+       };
+    };
+    head.appendChild(script);
+  };
+
+  getScript('" + JsUrl + @"jquery-1.9.1.min.js', function() {
+   if (typeof jQuery=='undefined') {
+     // Super failsafe - still somehow failed...
+    } else {
+     // jQuery loaded! Make sure to use .noConflict just in case
+   fancyCode();
+      if (thisPageUsingOtherJSLibrary) {
+    // Run your jQuery Code
+   } else {
+    // Use .noConflict(), then run your jQuery Code
+   }
+    }
+  });
+ } else { // jQuery was already loaded
+  // Run your jQuery Code
+</script>
                                 <script type='text/javascript' src='" + JsUrl + @"jquery.waterwheelCarousel.js'></script>
                                 <script type='text/javascript'>
                                 $(document).ready(function () {
-                                    var carousel = $('#" + this.ClientID + @"_WaterWheel').waterwheelCarousel({
+                                    var wwcarousel = $('#" + this.ClientID + @"_WaterWheel').waterwheelCarousel({
                                       separation :200,flankingItems: 3, autoPlay:3000, 
                                       movingToCenter: function ($item) {
                                         $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
