@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageWaterwheel", "ImageWat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropDownLink", "DropDownLink\DropDownLink.csproj", "{78AA069D-BEA7-4507-9D34-B0B8071305FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubSitesTab", "SubSitesTab\SubSitesTab.csproj", "{0C89524B-76F6-4403-BA7F-0398BD365920}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,12 @@ Global
 		{78AA069D-BEA7-4507-9D34-B0B8071305FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78AA069D-BEA7-4507-9D34-B0B8071305FC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{78AA069D-BEA7-4507-9D34-B0B8071305FC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0C89524B-76F6-4403-BA7F-0398BD365920}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C89524B-76F6-4403-BA7F-0398BD365920}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C89524B-76F6-4403-BA7F-0398BD365920}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0C89524B-76F6-4403-BA7F-0398BD365920}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C89524B-76F6-4403-BA7F-0398BD365920}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C89524B-76F6-4403-BA7F-0398BD365920}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

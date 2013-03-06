@@ -1,0 +1,4 @@
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\SubSitesTab\bin\Debug\SubSitesTab.dll
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\SubSitesTab\bin\Debug\SubSitesTab.pdb
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\SubSitesTab\obj\Debug\SubSitesTab.dll
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\SubSitesTab\obj\Debug\SubSitesTab.pdb

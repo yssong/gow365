@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="31b4d812-095b-4fed-ad62-396786594a67" SharePointProductVersion="15.0">
+  <Assemblies>
+    <Assembly Location="SubSitesTab.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="SubSitesTab, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9645b9d3a7e13d19" Namespace="GOW365.SubSitesTabWebpart" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <FeatureManifests>
+    <FeatureManifest Location="SubSitesTab_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>
