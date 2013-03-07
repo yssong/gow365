@@ -308,6 +308,7 @@ if (typeof jQuery == 'undefined') {
   });
  } else { // jQuery was already loaded
   // Run your jQuery Code
+}
 </script>
                                 <script type='text/javascript' src='" + JsUrl + @"jquery.waterwheelCarousel.js'></script>
                                 <script type='text/javascript'>

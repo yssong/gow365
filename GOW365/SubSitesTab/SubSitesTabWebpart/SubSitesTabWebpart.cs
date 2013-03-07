@@ -187,10 +187,13 @@ if (typeof jQuery == 'undefined') {
   // warning, global var
   thisPageUsingOtherJSLibrary = true;
  }
+if (typeof jQuery.ui == 'undefined') {
+  // UI loaded
+}
 
   function getScript(url, success) {
     var script     = document.createElement('script');
-       script.src = url;
+    script.src = url;
 
     var head = document.getElementsByTagName('head')[0],
     done = false;
@@ -222,14 +225,16 @@ if (typeof jQuery == 'undefined') {
    }
     }
   });
- } else { // jQuery was already loaded
+ }else { // jQuery was already loaded
   // Run your jQuery Code
+}
 </script>
+
 <link href='" + imgUrl + @"jquery-ui-1.10.0.custom.min.css' rel='stylesheet'>
 <script src='" + imgUrl + @"jquery-ui-1.10.0.min.js'></script>
-<script type='text/javascript'>
-$(document).ready(function() {
-	$('#"+this.ClientID+@"_tab > ul').tabs();
+<script  type='text/javascript'>
+$(function() {
+    $('#" + this.ClientID + @"_tab').tabs();
 });
 </script>
 ");
