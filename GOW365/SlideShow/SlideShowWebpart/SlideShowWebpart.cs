@@ -22,7 +22,7 @@ namespace GOW365.SlideShowWebpart
         private bool autoPlay = true;
         private bool showbutton = true;
         //배포 전에 JsUrl을 수정해주세요. (따로 업로드 해야 함)
-        private string JsUrl = "/GOW365/SlideShow/";
+        private string JsUrl = "GOW365/SlideShow/";
         bool checkvalue = false;
 
         SPWeb web;
@@ -182,6 +182,7 @@ namespace GOW365.SlideShowWebpart
 
         protected override void CreateChildControls()
         {
+            JsUrl = (SPContext.Current.Site.ServerRelativeUrl.EndsWith("/") ? SPContext.Current.Site.ServerRelativeUrl + JsUrl : SPContext.Current.Site.ServerRelativeUrl + "/" + JsUrl);
             noUrl = new Label();
             this.noUrl.Text = "Check Site Address or List Name.";
             this.Controls.Add(noUrl);

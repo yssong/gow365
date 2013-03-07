@@ -94,7 +94,7 @@ namespace GOW365.SubSitesTabWebpart
 
         protected override void CreateChildControls()
         {
-            imgUrl = SPContext.Current.Site.ServerRelativeUrl + imgUrl;
+            imgUrl = (SPContext.Current.Site.ServerRelativeUrl.EndsWith("/") ? SPContext.Current.Site.ServerRelativeUrl + imgUrl : SPContext.Current.Site.ServerRelativeUrl + "/" + imgUrl);
             base.CreateChildControls();
         }
 

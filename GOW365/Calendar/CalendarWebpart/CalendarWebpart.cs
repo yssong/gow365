@@ -18,7 +18,7 @@ namespace GOW365.CalendarWebpart
         SPWeb web;
 
         //배포 전에 ImgUrl을 수정해주세요. (따로 업로드 해야 함)
-        public string ImgUrl = "/GOW365/Calendar/";
+        public string ImgUrl = "GOW365/Calendar/";
         
         private string webName = string.Empty;
         private string listName = string.Empty;
@@ -68,6 +68,7 @@ namespace GOW365.CalendarWebpart
 
         protected override void CreateChildControls()
         {
+            ImgUrl = (SPContext.Current.Site.ServerRelativeUrl.EndsWith("/") ? SPContext.Current.Site.ServerRelativeUrl + ImgUrl : SPContext.Current.Site.ServerRelativeUrl + "/" + ImgUrl);
             if (WebName != string.Empty && WebName.StartsWith("https"))
             {
                 //배포 전에 WebName을 수정해주세요.

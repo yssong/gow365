@@ -22,7 +22,7 @@ namespace GOW365.DropDownLinkWebpart
         bool checkvalue = false;
         private string controlWidth = "210";
         //배포 전에 ImgUrl을 수정해주세요.
-        private string ImgUrl = "/GOW365/DropDownLink/";
+        private string ImgUrl = "GOW365/DropDownLink/";
 
         #region Properties
 
@@ -89,7 +89,7 @@ namespace GOW365.DropDownLinkWebpart
 
         protected override void CreateChildControls()
         {
-            ImgUrl = SPContext.Current.Site.ServerRelativeUrl + ImgUrl;
+            ImgUrl = (SPContext.Current.Site.ServerRelativeUrl.EndsWith("/") ? SPContext.Current.Site.ServerRelativeUrl + ImgUrl : SPContext.Current.Site.ServerRelativeUrl + "/" + ImgUrl);
 
             this.ddlLink = new DropDownList();
             this.ddlLink.ID = this.ddlLink.ClientID;

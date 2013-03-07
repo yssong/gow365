@@ -184,7 +184,8 @@ namespace GOW365.ImageWheelSlideWebpart
 
         protected override void CreateChildControls()
         {
-            JsUrl = SPContext.Current.Site.ServerRelativeUrl + JsUrl;
+
+            JsUrl = (SPContext.Current.Site.ServerRelativeUrl.EndsWith("/") ? SPContext.Current.Site.ServerRelativeUrl + JsUrl : SPContext.Current.Site.ServerRelativeUrl + "/" + JsUrl);
             noUrl = new Label();
             this.noUrl.Text = "Check Site Address or List Name.";
             this.Controls.Add(noUrl);

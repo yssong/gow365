@@ -1,0 +1,4 @@
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\SiteMap\bin\Debug\SiteMap.dll
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\SiteMap\bin\Debug\SiteMap.pdb
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\SiteMap\obj\Debug\SiteMap.dll
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\SiteMap\obj\Debug\SiteMap.pdb

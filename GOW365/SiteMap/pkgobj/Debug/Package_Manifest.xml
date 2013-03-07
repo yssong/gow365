@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="d041cfae-0356-4317-aca3-78c2a5623c34" SharePointProductVersion="15.0">
+  <Assemblies>
+    <Assembly Location="SiteMap.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="SiteMap, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8885b518c46280d9" Namespace="GOW365.SiteMapWebpart" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <FeatureManifests>
+    <FeatureManifest Location="SiteMap_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>
