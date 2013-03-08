@@ -160,18 +160,25 @@ namespace GOW365.SubSitesTabWebpart
                     }
                     
                 }
-                using (SPSite oSPsite = new SPSite(siteUrl))
+                try
                 {
-                    using (SPWeb oSPWeb = oSPsite.OpenWeb())
+                    using (SPSite oSPsite = new SPSite(siteUrl))
                     {
-                        SPWebCollection webs = null;
-                        webs = oSPWeb.GetSubwebsForCurrentUser();
-                        foreach (SPWeb web in webs)
+                        using (SPWeb oSPWeb = oSPsite.OpenWeb())
                         {
-                            retHtml += @"<li><a href='" + web.Url + "' target='_new'>" + web.Title + "</a></li>";
-                        }
+                            SPWebCollection webs = null;
+                            webs = oSPWeb.GetSubwebsForCurrentUser();
+                            foreach (SPWeb web in webs)
+                            {
+                                retHtml += @"<li><a href='" + web.Url + "' target='_new'>" + web.Title + "</a></li>";
+                            }
 
+                        }
                     }
+                }
+                catch(Exception e)
+                {
+                    retHtml += @"<li>" + e.Message + "</li>";
                 }
             }
             retHtml += "</ul></div>";
@@ -180,62 +187,64 @@ namespace GOW365.SubSitesTabWebpart
         }
         protected void RenderJS(HtmlTextWriter writer)
         {
-           writer.WriteLine(@" <script type='text/javascript'>
+
+            writer.WriteLine(@"<link href='" + imgUrl + @"jquery-ui-1.10.0.custom.min.css' rel='stylesheet'>
+<script type='text/javascript'>
 // Only do anything if jQuery isn't defined
 if (typeof jQuery == 'undefined') {
- if (typeof $ == 'function') {
-  // warning, global var
-  thisPageUsingOtherJSLibrary = true;
- }
-if (typeof jQuery.ui == 'undefined') {
-  // UI loaded
-}
-
-  function getScript(url, success) {
-    var script     = document.createElement('script');
-    script.src = url;
-
-    var head = document.getElementsByTagName('head')[0],
-    done = false;
-
-    // Attach handlers for all browsers
-    script.onload = script.onreadystatechange = function() {
-     if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
-      done = true;
-        // callback function provided as param
-    success();
-
-        script.onload = script.onreadystatechange = null;
-    head.removeChild(script);
-       };
-    };
-    head.appendChild(script);
-  };
-
-  getScript('" + imgUrl + @"jquery-1.9.1.min.js', function() {
-   if (typeof jQuery=='undefined') {
-     // Super failsafe - still somehow failed...
-    } else {
-     // jQuery loaded! Make sure to use .noConflict just in case
-   fancyCode();
-      if (thisPageUsingOtherJSLibrary) {
-    // Run your jQuery Code
-   } else {
-    // Use .noConflict(), then run your jQuery Code
-   }
+    if (typeof $ == 'function') {
+        // warning, global var
     }
-  });
- }else { // jQuery was already loaded
-  // Run your jQuery Code
-}
-</script>
 
-<link href='" + imgUrl + @"jquery-ui-1.10.0.custom.min.css' rel='stylesheet'>
-<script src='" + imgUrl + @"jquery-ui-1.10.0.min.js'></script>
-<script  type='text/javascript'>
-$(function() {
-    $('#" + this.ClientID + @"_tab').tabs();
-});
+	function getScript(url, success)
+	{
+	    var script     = document.createElement('script');
+	    script.src = url;
+	
+	    var head = document.getElementsByTagName('head')[0];
+	    "+this.ClientID+@"done = false;
+	
+	    // Attach handlers for all browsers
+	    script.onload = script.onreadystatechange = function()
+	    {
+	        if (!" + this.ClientID + @"done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete'))
+	        {
+		        " + this.ClientID + @"done = true;
+		        // callback function provided as param
+		        success();
+		
+		        script.onload = script.onreadystatechange = null;
+		        head.removeChild(script);
+	        };
+	    };
+	    head.appendChild(script);
+	};
+
+	getScript('" + imgUrl + @"jquery-1.9.1.min.js', function()
+	{
+		if (typeof jQuery=='undefined') {
+		 // Super failsafe - still somehow failed...
+		}
+		else
+		{
+			getScript('" + imgUrl + @"jquery-ui-1.10.0.min.js',function(){
+		    	$(document).ready(function () {
+					$('#" + this.ClientID + @"_tab').tabs();
+				});
+		    })
+		}
+	});
+}
+else
+{
+// jQuery was already loaded
+// Run your jQuery Code
+	getScript('" + imgUrl + @"jquery-ui-1.10.0.min.js',function(){
+		$(document).ready(function () {
+			$('#" + this.ClientID + @"_tab').tabs();
+		});
+    });
+}
 </script>
 ");
         }

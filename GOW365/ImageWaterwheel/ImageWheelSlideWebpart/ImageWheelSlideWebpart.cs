@@ -268,72 +268,95 @@ namespace GOW365.ImageWheelSlideWebpart
             writer.WriteLine(@" <script type='text/javascript'>
 // Only do anything if jQuery isn't defined
 if (typeof jQuery == 'undefined') {
- if (typeof $ == 'function') {
-  // warning, global var
-  thisPageUsingOtherJSLibrary = true;
- }
-
-  function getScript(url, success) {
-    var script     = document.createElement('script');
-       script.src = url;
-
-    var head = document.getElementsByTagName('head')[0],
-    done = false;
-
-    // Attach handlers for all browsers
-    script.onload = script.onreadystatechange = function() {
-     if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
-      done = true;
-        // callback function provided as param
-    success();
-
-        script.onload = script.onreadystatechange = null;
-    head.removeChild(script);
-       };
-    };
-    head.appendChild(script);
-  };
-
-  getScript('" + JsUrl + @"jquery-1.9.1.min.js', function() {
-   if (typeof jQuery=='undefined') {
-     // Super failsafe - still somehow failed...
-    } else {
-     // jQuery loaded! Make sure to use .noConflict just in case
-   fancyCode();
-      if (thisPageUsingOtherJSLibrary) {
-    // Run your jQuery Code
-   } else {
-    // Use .noConflict(), then run your jQuery Code
-   }
+    if (typeof $ == 'function') {
+        // warning, global var
     }
-  });
- } else { // jQuery was already loaded
-  // Run your jQuery Code
+
+	function getScript(url, success)
+	{
+	    var script     = document.createElement('script');
+	    script.src = url;
+	
+	    var head = document.getElementsByTagName('head')[0];
+	    " + this.ClientID + @"done = false;
+	
+	    // Attach handlers for all browsers
+	    script.onload = script.onreadystatechange = function()
+	    {
+	        if (!" + this.ClientID + @"done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete'))
+	        {
+		        " + this.ClientID + @"done = true;
+		        // callback function provided as param
+		        success();
+		
+		        script.onload = script.onreadystatechange = null;
+		        head.removeChild(script);
+	        };
+	    };
+	    head.appendChild(script);
+	};
+
+	getScript('" + JsUrl + @"jquery-1.9.1.min.js', function()
+	{
+		if (typeof jQuery=='undefined') {
+		 // Super failsafe - still somehow failed...
+		}
+		else
+		{
+			getScript('" + JsUrl + @"jquery.waterwheelCarousel.js',function(){
+		    	$(document).ready(function () {
+		        	var wwcarousel = $('#" + this.ClientID + @"_WaterWheel').waterwheelCarousel
+		            ({
+		                separation :200,flankingItems: 3, autoPlay:3000, 
+		                movingToCenter: function ($item) {
+		                $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
+		                },
+		                movedToCenter: function ($item) {
+		                $('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
+		                },
+		                movingFromCenter: function ($item) {
+		                $('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
+		                },
+		                movedFromCenter: function ($item) {
+		                $('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
+		                },
+		                clickedCenter: function ($item) {
+		                $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
+		                }
+		            });
+		        });
+		    })
+		}
+	});
 }
-</script>
-                                <script type='text/javascript' src='" + JsUrl + @"jquery.waterwheelCarousel.js'></script>
-                                <script type='text/javascript'>
-                                $(document).ready(function () {
-                                    var wwcarousel = $('#" + this.ClientID + @"_WaterWheel').waterwheelCarousel({
-                                      separation :200,flankingItems: 3, autoPlay:3000, 
-                                      movingToCenter: function ($item) {
-                                        $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
-                                      },
-                                      movedToCenter: function ($item) {
-                                        $('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
-                                      },
-                                      movingFromCenter: function ($item) {
-                                        $('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
-                                      },
-                                      movedFromCenter: function ($item) {
-                                        $('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
-                                      },
-                                      clickedCenter: function ($item) {
-                                        $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
-                                      }
-                                    });
-                                 });
-                                </script>");
+else
+{
+// jQuery was already loaded
+// Run your jQuery Code
+	getScript('" + JsUrl + @"jquery.waterwheelCarousel.js',function(){
+		$(document).ready(function () {
+			var wwcarousel = $('#" + this.ClientID + @"_WaterWheel').waterwheelCarousel({
+				separation :200,flankingItems: 3, autoPlay:3000, 
+				movingToCenter: function ($item) {
+				$('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
+				},
+				movedToCenter: function ($item) {
+				$('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
+				},
+				movingFromCenter: function ($item) {
+				$('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
+				},
+				movedFromCenter: function ($item) {
+				$('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
+				},
+				clickedCenter: function ($item) {
+				$('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
+				}
+            });
+        });
+    });
+}
+</script>");
         }
 
         private string GetData(HtmlTextWriter writer)
