@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{76E9A537-C24C-4A04-A4FE-E81AE1EAF087}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Workflow</RootNamespace>
+    <AssemblyName>Workflow</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Approval\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{556ce23d-463b-498b-9bc7-2c53ad39fe00}</SharePointProjectItemId>
+    </None>
+    <None Include="DeptInfo\ListsDeptInfo_pages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8f86d703-064a-499b-b34a-4acf443ea1ff}</SharePointProjectItemId>
+    </None>
+    <None Include="eApprovalTemplate\ListseApprovalTemplate_pages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{260ed2ab-c962-48e7-9bb2-003187abf51b}</SharePointProjectItemId>
+    </None>
+    <None Include="eApprovalTemplate\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{efaa0283-ac66-4835-bc10-ce39eabaa433}</SharePointProjectItemId>
+    </None>
+    <None Include="eApproval\ListseApproval_pages1\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8a39614a-827a-4a35-9940-fd4fdfee03f9}</SharePointProjectItemId>
+    </None>
+    <None Include="eApproval\ListseApproval_pages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{37e9e116-473f-4f2e-839a-49f5600b7969}</SharePointProjectItemId>
+    </None>
+    <None Include="eApproval\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{aa44c7cc-41f6-4eaa-8f72-e258d8682c96}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{85b34453-608f-418c-a652-e444a686cb08}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="DeptInfo\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3e249d60-e9cf-4131-807d-26d09cc90f14}</SharePointProjectItemId>
+    </None>
+    <None Include="orgUsers\ListsorgUsers_pages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9fcaa46c-7393-4a8d-bf2b-826a32e8c615}</SharePointProjectItemId>
+    </None>
+    <None Include="orgUsers\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{82c8008f-1d69-41f7-9bd6-6dac7c100336}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{0a5325a5-a441-4b0b-bd5f-7c57bdf75a33}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="PropertyBags\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{35e20801-7ab0-468c-a70e-01d443cb6070}</SharePointProjectItemId>
+    </None>
+    <None Include="SignImage\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5384d89d-ee07-41b7-a205-6d765d2c31a6}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Approval\Approval.css" />
+    <Content Include="Approval\Approval.html" />
+    <Content Include="Approval\approval.js" />
+    <Content Include="Approval\ApprovalSample.html" />
+    <Content Include="Approval\ApprovalUI.css" />
+    <Content Include="Approval\approvalUI.js" />
+    <Content Include="Approval\Approval_print.css" />
+    <Content Include="Approval\approved.gif" />
+    <Content Include="Approval\blank.gif" />
+    <Content Include="Approval\BlankLine.gif" />
+    <Content Include="Approval\BlankLine_1.gif" />
+    <Content Include="Approval\dynatree\jquery.dynatree-1.2.2.js" />
+    <Content Include="Approval\dynatree\jquery.dynatree.min.js" />
+    <Content Include="Approval\dynatree\skin-custom\custom.css" />
+    <Content Include="Approval\dynatree\skin-custom\customDoc1.gif" />
+    <Content Include="Approval\dynatree\skin-custom\customDoc2.gif" />
+    <Content Include="Approval\dynatree\skin-custom\customFolder1.gif" />
+    <Content Include="Approval\dynatree\skin-custom\doc_with_children.gif" />
+    <Content Include="Approval\dynatree\skin-custom\folder_docs.gif" />
+    <Content Include="Approval\dynatree\skin-custom\folder_images.gif" />
+    <Content Include="Approval\dynatree\skin-custom\folder_page.gif" />
+    <Content Include="Approval\dynatree\skin-vista\Deptfolder.gif" />
+    <Content Include="Approval\dynatree\skin-vista\icons.gif" />
+    <Content Include="Approval\dynatree\skin-vista\loading.gif" />
+    <Content Include="Approval\dynatree\skin-vista\ui.dynatree.css" />
+    <Content Include="Approval\dynatree\skin\Deptfolder.gif" />
+    <Content Include="Approval\dynatree\skin\icons-rtl.gif" />
+    <Content Include="Approval\dynatree\skin\icons.gif" />
+    <Content Include="Approval\dynatree\skin\loading.gif" />
+    <Content Include="Approval\dynatree\skin\OrgRoot.gif" />
+    <Content Include="Approval\dynatree\skin\ui.dynatree.css" />
+    <Content Include="Approval\dynatree\skin\vline-rtl.gif" />
+    <Content Include="Approval\dynatree\skin\vline.gif" />
+    <Content Include="Approval\jquery-1.9.0.min.js" />
+    <Content Include="Approval\jquery-ui\css\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Approval\jquery-ui\css\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Approval\jquery-ui\css\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Approval\jquery-ui\css\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Approval\jquery-ui\css\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Approval\jquery-ui\css\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Approval\jquery-ui\css\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Approval\jquery-ui\css\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Approval\jquery-ui\css\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Approval\jquery-ui\css\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Approval\jquery-ui\css\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="Approval\jquery-ui\css\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="Approval\jquery-ui\css\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Approval\jquery-ui\css\smoothness\jquery-ui-1.10.0.custom.css" />
+    <Content Include="Approval\jquery-ui\css\smoothness\jquery-ui-1.10.0.custom.min.css" />
+    <Content Include="Approval\jquery-ui\js\jquery-1.9.0.js" />
+    <Content Include="Approval\jquery-ui\js\jquery-ui-1.10.0.custom.js" />
+    <Content Include="Approval\jquery-ui\js\jquery-ui-1.10.0.custom.min.js" />
+    <Content Include="Approval\jquery-ui\js\jquery.cookie.js" />
+    <Content Include="Approval\jquery.printElement.js" />
+    <Content Include="Approval\OrgTree.aspx" />
+    <Content Include="Approval\OrgTree\img\blank.gif" />
+    <Content Include="Approval\OrgTree\img\btnAddApprover.gif" />
+    <Content Include="Approval\OrgTree\img\btnAddReferrer.gif" />
+    <Content Include="Approval\OrgTree\img\btnAddReviewer.gif" />
+    <Content Include="Approval\OrgTree\img\btnSelectGroup.jpg" />
+    <Content Include="Approval\OrgTree\img\btnSelectUser.jpg" />
+    <Content Include="Approval\OrgTree\img\btn_apply.jpg" />
+    <Content Include="Approval\OrgTree\img\btn_cancel.jpg" />
+    <Content Include="Approval\OrgTree\img\btn_combination_search.jpg" />
+    <Content Include="Approval\OrgTree\img\btn_del2.jpg" />
+    <Content Include="Approval\OrgTree\img\btn_down2.jpg" />
+    <Content Include="Approval\OrgTree\img\btn_group_off.jpg" />
+    <Content Include="Approval\OrgTree\img\btn_member_on.jpg" />
+    <Content Include="Approval\OrgTree\img\btn_payment_load.jpg" />
+    <Content Include="Approval\OrgTree\img\btn_payment_save.jpg" />
+    <Content Include="Approval\OrgTree\img\btn_reset.jpg" />
+    <Content Include="Approval\OrgTree\img\btn_save2.jpg" />
+    <Content Include="Approval\OrgTree\img\btn_search.jpg" />
+    <Content Include="Approval\OrgTree\img\btn_search_off.jpg" />
+    <Content Include="Approval\OrgTree\img\btn_upload.jpg" />
+    <Content Include="Approval\OrgTree\img\b_line.jpg" />
+    <Content Include="Approval\OrgTree\img\b_line_l.jpg" />
+    <Content Include="Approval\OrgTree\img\b_line_r.jpg" />
+    <Content Include="Approval\OrgTree\img\c_line.jpg" />
+    <Content Include="Approval\OrgTree\img\c_line_l.jpg" />
+    <Content Include="Approval\OrgTree\img\c_line_r.jpg" />
+    <Content Include="Approval\OrgTree\img\Deptfolder.gif" />
+    <Content Include="Approval\OrgTree\img\i.gif" />
+    <Content Include="Approval\OrgTree\img\icon1.jpg" />
+    <Content Include="Approval\OrgTree\img\l.gif" />
+    <Content Include="Approval\OrgTree\img\noexpand.gif" />
+    <Content Include="Approval\OrgTree\img\OrgRoot.gif" />
+    <Content Include="Approval\OrgTree\img\r.gif" />
+    <Content Include="Approval\OrgTree\img\t.gif" />
+    <Content Include="Approval\OrgTree\img\top_left.jpg" />
+    <Content Include="Approval\OrgTree\img\top_right.jpg" />
+    <Content Include="Approval\OrgTree\OrgTree.aspx" />
+    <Content Include="Approval\OrgTree\Orgtree.css" />
+    <Content Include="Approval\OrgTree\OrgTree.js" />
+    <Content Include="Approval\rejected.gif" />
+    <Content Include="Approval\Elements.xml" />
+    <Content Include="Approval\today\r_banner_01.jpg" />
+    <Content Include="Approval\today\r_banner_02_15.jpg" />
+    <Content Include="Approval\today\r_banner_03_.jpg" />
+    <Content Include="Approval\today\r_banner_04_.jpg" />
+    <Content Include="DeptInfo\ListsDeptInfo_pages\Elements.xml" />
+    <Content Include="eApprovalTemplate\Elements.xml" />
+    <Content Include="eApprovalTemplate\ListseApprovalTemplate_pages\Elements.xml" />
+    <Content Include="eApprovalTemplate\Schema.xml" />
+    <Content Include="eApproval\Elements.xml" />
+    <Content Include="eApproval\ListseApproval_pages1\Elements.xml" />
+    <Content Include="eApproval\ListseApproval_pages\Elements.xml" />
+    <Content Include="eApproval\ListseApproval_pages\Files\Lists\eApproval\eApprovalRequestcopy.aspx" />
+    <Content Include="eApproval\ListseApproval_pages\Files\Lists\eApproval\eApprovalEdit.aspx" />
+    <Content Include="eApproval\ListseApproval_pages\Files\Lists\eApproval\eApprovalRequest.aspx" />
+    <Content Include="eApproval\ListseApproval_pages\Files\Lists\eApproval\eApprovalView.aspx" />
+    <Content Include="eApproval\Schema.xml" />
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
+    <Content Include="DeptInfo\Elements.xml" />
+    <Content Include="DeptInfo\Schema.xml" />
+    <Content Include="orgUsers\Elements.xml" />
+    <Content Include="orgUsers\ListsorgUsers_pages\Elements.xml" />
+    <Content Include="orgUsers\Schema.xml" />
+    <Content Include="PropertyBags\Elements.xml" />
+    <Content Include="SignImage\Elements.xml" />
+    <Content Include="SignImage\Schema.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

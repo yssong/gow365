@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <PropertyBag Url="Lists/DeptInfo" ParentType="Folder" RootWebOnly="FALSE" AlwaysCreateFolder="TRUE" xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Property Name="vti_hassubdirs" Value="true" Type="string" />
+    <Property Name="vti_listbasetype" Value="0" Type="int" />
+    <Property Name="vti_listrequirecheckout" Value="false" Type="string" />
+    <Property Name="vti_dirlateststamp" Value="2013-03-08T13:20:56Z" Type="DateTime" />
+    <Property Name="vti_replid" Value="rid:{E24A80D7-1A2D-4961-A640-2ED725645F6D}" Type="string" />
+    <Property Name="vti_rtag" Value="rt:E24A80D7-1A2D-4961-A640-2ED725645F6D@00000000000" Type="string" />
+    <Property Name="vti_isbrowsable" Value="true" Type="string" />
+    <Property Name="vti_listservertemplate" Value="100" Type="int" />
+    <Property Name="vti_modifiedby" Value="i:0#.w|gowit\youngsik.song" Type="string" />
+    <Property Name="vti_parentid" Value="{1ED877E6-7782-4D56-A4FD-EB815BFF6159}" Type="string" />
+    <Property Name="vti_listenableminorversions" Value="false" Type="string" />
+    <Property Name="vti_level" Value="1" Type="int" />
+    <Property Name="vti_isscriptable" Value="false" Type="string" />
+    <Property Name="vti_isexecutable" Value="false" Type="string" />
+    <Property Name="vti_HasUpdatedTitle" Value="1" Type="int" />
+    <Property Name="vti_listenablemoderation" Value="false" Type="string" />
+    <Property Name="vti_listenableversioning" Value="false" Type="string" />
+    <Property Name="vti_foldersubfolderitemcount" Value="0" Type="int" />
+    <Property Name="vti_listtitle" Value="DeptInfo" Type="string" />
+    <Property Name="vti_metainfoversion" Value="2" Type="int" />
+    <Property Name="vti_docstoretype" Value="1" Type="int" />
+    <Property Name="vti_folderitemcount" Value="14" Type="int" />
+    <Property Name="vti_timelastmodified" Value="2013-01-28T05:42:15Z" Type="DateTime" />
+    <Property Name="vti_candeleteversion" Value="true" Type="string" />
+    <Property Name="vti_nexttolasttimemodified" Value="2013-01-24T04:58:26Z" Type="DateTime" />
+    <Property Name="vti_listname" Value="{$ListId:Lists/DeptInfo;}" Type="string" />
+    <Property Name="vti_etag" Value="&quot;{E24A80D7-1A2D-4961-A640-2ED725645F6D},0&quot;" Type="string" />
+    <Property Name="vti_timecreated" Value="2013-01-24T04:46:12Z" Type="DateTime" />
+  </PropertyBag>
+</Elements>

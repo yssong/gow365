@@ -196,13 +196,13 @@ if (typeof jQuery == 'undefined') {
         // warning, global var
     }
 
-	function getScript(url, success)
+	function " + this.ClientID + @"getScript(url, success)
 	{
 	    var script     = document.createElement('script');
 	    script.src = url;
 	
 	    var head = document.getElementsByTagName('head')[0];
-	    "+this.ClientID+@"done = false;
+	    " +this.ClientID+@"done = false;
 	
 	    // Attach handlers for all browsers
 	    script.onload = script.onreadystatechange = function()
@@ -220,14 +220,14 @@ if (typeof jQuery == 'undefined') {
 	    head.appendChild(script);
 	};
 
-	getScript('" + imgUrl + @"jquery-1.9.1.min.js', function()
+	" + this.ClientID + @"getScript('" + imgUrl + @"jquery-1.9.1.min.js', function()
 	{
 		if (typeof jQuery=='undefined') {
 		 // Super failsafe - still somehow failed...
 		}
 		else
 		{
-			getScript('" + imgUrl + @"jquery-ui-1.10.0.min.js',function(){
+			 " + this.ClientID + @"getScript('" + imgUrl + @"jquery-ui-1.10.0.min.js',function(){
 		    	$(document).ready(function () {
 					$('#" + this.ClientID + @"_tab').tabs();
 				});
@@ -239,7 +239,7 @@ else
 {
 // jQuery was already loaded
 // Run your jQuery Code
-	getScript('" + imgUrl + @"jquery-ui-1.10.0.min.js',function(){
+	" + this.ClientID + @"getScript('" + imgUrl + @"jquery-ui-1.10.0.min.js',function(){
 		$(document).ready(function () {
 			$('#" + this.ClientID + @"_tab').tabs();
 		});

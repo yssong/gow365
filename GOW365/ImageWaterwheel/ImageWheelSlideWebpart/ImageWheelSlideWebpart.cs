@@ -272,7 +272,7 @@ if (typeof jQuery == 'undefined') {
         // warning, global var
     }
 
-	function getScript(url, success)
+	function  " + this.ClientID + @"getScript(url, success)
 	{
 	    var script     = document.createElement('script');
 	    script.src = url;
@@ -296,14 +296,14 @@ if (typeof jQuery == 'undefined') {
 	    head.appendChild(script);
 	};
 
-	getScript('" + JsUrl + @"jquery-1.9.1.min.js', function()
+	 " + this.ClientID + @"getScript('" + JsUrl + @"jquery-1.9.1.min.js', function()
 	{
 		if (typeof jQuery=='undefined') {
 		 // Super failsafe - still somehow failed...
 		}
 		else
 		{
-			getScript('" + JsUrl + @"jquery.waterwheelCarousel.js',function(){
+			 " + this.ClientID + @"getScript('" + JsUrl + @"jquery.waterwheelCarousel.js',function(){
 		    	$(document).ready(function () {
 		        	var wwcarousel = $('#" + this.ClientID + @"_WaterWheel').waterwheelCarousel
 		            ({
@@ -333,7 +333,7 @@ else
 {
 // jQuery was already loaded
 // Run your jQuery Code
-	getScript('" + JsUrl + @"jquery.waterwheelCarousel.js',function(){
+	 " + this.ClientID + @"getScript('" + JsUrl + @"jquery.waterwheelCarousel.js',function(){
 		$(document).ready(function () {
 			var wwcarousel = $('#" + this.ClientID + @"_WaterWheel').waterwheelCarousel({
 				separation :200,flankingItems: 3, autoPlay:3000, 

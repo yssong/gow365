@@ -1,0 +1,1224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="ListseApproval_pages" HyperlinkBaseUrl="http://develop.gowit.co.kr/workflow" Url="Lists/eApproval" SetupPath="pages" RootWebOnly="FALSE" Path="Files\Lists\eApproval" xmlns="http://schemas.microsoft.com/sharepoint/">
+    <File Url="DispForm.aspx" Type="Ghostable" Level="Published" Path="form.aspx">
+      <AllUsersWebPart WebPartOrder="1" WebPartZoneID="Main" ID="g_4f7e31f2_98ed_4fd4_a0f9_6d5d606b642e">
+        <![CDATA[<WebPart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WebPart/v2">
+  <Title />
+  <FrameType>Default</FrameType>
+  <Description />
+  <IsIncluded>true</IsIncluded>
+  <ZoneID>Main</ZoneID>
+  <PartOrder>1</PartOrder>
+  <FrameState>Normal</FrameState>
+  <Height />
+  <Width />
+  <AllowRemove>true</AllowRemove>
+  <AllowZoneChange>true</AllowZoneChange>
+  <AllowMinimize>true</AllowMinimize>
+  <AllowConnect>true</AllowConnect>
+  <AllowEdit>true</AllowEdit>
+  <AllowHide>true</AllowHide>
+  <IsVisible>true</IsVisible>
+  <DetailLink />
+  <HelpLink />
+  <HelpMode>Modeless</HelpMode>
+  <Dir>Default</Dir>
+  <PartImageSmall />
+  <MissingAssembly>이 웹 파트를 가져올 수 없습니다.</MissingAssembly>
+  <PartImageLarge />
+  <IsIncludedFilter />
+  <Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+  <TypeName>Microsoft.SharePoint.WebPartPages.ListFormWebPart</TypeName>
+  <ListName xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">{$ListId:Lists/eApproval;}</ListName>
+  <ListId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">$ListId:Lists/eApproval;</ListId>
+  <PageType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">PAGE_DISPLAYFORM</PageType>
+  <FormType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">4</FormType>
+  <ControlMode xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Display</ControlMode>
+  <ViewFlag xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">1</ViewFlag>
+  <ViewFlags xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Html</ViewFlags>
+  <ListItemId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">0</ListItemId>
+</WebPart>]]>
+      </AllUsersWebPart>
+    </File>
+    <File Url="EditForm.aspx" Type="Ghostable" Level="Published" Path="form.aspx">
+      <AllUsersWebPart WebPartOrder="1" WebPartZoneID="Main" ID="g_d569cdf3_00bd_4ae0_bbfc_7d84af9e85ab">
+        <![CDATA[<WebPart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WebPart/v2">
+  <Title />
+  <FrameType>Default</FrameType>
+  <Description />
+  <IsIncluded>true</IsIncluded>
+  <ZoneID>Main</ZoneID>
+  <PartOrder>1</PartOrder>
+  <FrameState>Normal</FrameState>
+  <Height />
+  <Width />
+  <AllowRemove>true</AllowRemove>
+  <AllowZoneChange>true</AllowZoneChange>
+  <AllowMinimize>true</AllowMinimize>
+  <AllowConnect>true</AllowConnect>
+  <AllowEdit>true</AllowEdit>
+  <AllowHide>true</AllowHide>
+  <IsVisible>true</IsVisible>
+  <DetailLink />
+  <HelpLink />
+  <HelpMode>Modeless</HelpMode>
+  <Dir>Default</Dir>
+  <PartImageSmall />
+  <MissingAssembly>이 웹 파트를 가져올 수 없습니다.</MissingAssembly>
+  <PartImageLarge />
+  <IsIncludedFilter />
+  <Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+  <TypeName>Microsoft.SharePoint.WebPartPages.ListFormWebPart</TypeName>
+  <ListName xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">{$ListId:Lists/eApproval;}</ListName>
+  <ListId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">$ListId:Lists/eApproval;</ListId>
+  <PageType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">PAGE_EDITFORM</PageType>
+  <FormType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">6</FormType>
+  <ControlMode xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">Edit</ControlMode>
+  <ViewFlag xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">0</ViewFlag>
+  <ListItemId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">0</ListItemId>
+</WebPart>]]>
+      </AllUsersWebPart>
+    </File>
+    <File Url="new.aspx" Type="Ghostable" Level="Published" Path="form.aspx">
+      <AllUsersWebPart WebPartOrder="0" WebPartZoneID="Main" ID="g_0a62ff75_43ff_4460_a664_965d6c047ffc">
+        <![CDATA[<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Microsoft.SharePoint.WebPartPages.DataFormWebPart, Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+      <importErrorMessage>이 웹 파트를 가져올 수 없습니다.</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="InitialAsyncDataFetch" type="bool">False</property>
+        <property name="ChromeType" type="chrometype">None</property>
+        <property name="UseSQLDataSourcePaging" type="bool">True</property>
+        <property name="Height" type="string" />
+        <property name="CacheXslStorage" type="bool">True</property>
+        <property name="XslLink" type="string" null="true" />
+        <property name="AllowZoneChange" type="bool">True</property>
+        <property name="AutoRefresh" type="bool">False</property>
+        <property name="XmlDefinitionLink" type="string" />
+        <property name="DataFields" type="string" />
+        <property name="NoDefaultStyle" type="string">TRUE</property>
+        <property name="ViewFlag" type="string">8</property>
+        <property name="CatalogIconImageUrl" type="string" />
+        <property name="ListUrl" type="string" null="true" />
+        <property name="AutoRefreshInterval" type="int">60</property>
+        <property name="AllowConnect" type="bool">True</property>
+        <property name="AllowClose" type="bool">True</property>
+        <property name="HelpMode" type="helpmode">Modeless</property>
+        <property name="Xsl" type="string">
+&lt;xsl:stylesheet xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:dsp="http://schemas.microsoft.com/sharepoint/dsp" version="1.0" exclude-result-prefixes="xsl msxsl ddwrt" xmlns:ddwrt="http://schemas.microsoft.com/WebParts/v2/DataView/runtime" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:SharePoint="Microsoft.SharePoint.WebControls"&gt;
+	&lt;xsl:output method="html" indent="no"/&gt;
+	&lt;xsl:decimal-format NaN=""/&gt;
+	&lt;xsl:param name="dvt_apos"&gt;'&lt;/xsl:param&gt;
+	&lt;xsl:param name="ManualRefresh"&gt;&lt;/xsl:param&gt;
+	&lt;xsl:variable name="dvt_1_automode"&gt;0&lt;/xsl:variable&gt;
+	&lt;xsl:template match="/"&gt;
+		&lt;xsl:choose&gt;
+			&lt;xsl:when test="($ManualRefresh = 'True')"&gt;
+				&lt;table width="100%" border="0" cellpadding="0" cellspacing="0"&gt;
+					&lt;tr&gt;
+						&lt;td valign="top"&gt;
+							&lt;xsl:call-template name="dvt_1"/&gt;
+						&lt;/td&gt;
+						&lt;td width="1%" class="ms-vb" valign="top"&gt;
+							&lt;img src="/_layouts/15/images/staticrefresh.gif" id="ManualRefresh" border="0" onclick="javascript: {ddwrt:GenFireServerEvent('__cancel')}" alt="Click here to refresh the dataview."/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/xsl:when&gt;
+			&lt;xsl:otherwise&gt;
+				&lt;xsl:call-template name="dvt_1"/&gt;
+			&lt;/xsl:otherwise&gt;
+		&lt;/xsl:choose&gt;
+	&lt;/xsl:template&gt;
+	&lt;xsl:template name="dvt_1"&gt;
+		&lt;xsl:variable name="dvt_StyleName"&gt;ListForm&lt;/xsl:variable&gt;
+		&lt;xsl:variable name="Rows" select="/dsQueryResponse/Rows/Row"/&gt;
+		&lt;div&gt;
+			&lt;span id="part1"&gt;
+				&lt;table border="0" width="100%"&gt;
+					&lt;xsl:call-template name="dvt_1.body"&gt;
+						&lt;xsl:with-param name="Rows" select="$Rows"/&gt;
+					&lt;/xsl:call-template&gt;
+				&lt;/table&gt;
+			&lt;/span&gt;
+			&lt;SharePoint:AttachmentUpload runat="server" ControlMode="New"/&gt;
+			&lt;SharePoint:ItemHiddenVersion runat="server" ControlMode="New"/&gt;
+		&lt;/div&gt;
+	&lt;/xsl:template&gt;
+	&lt;xsl:template name="dvt_1.body"&gt;
+		&lt;xsl:param name="Rows"/&gt;
+		&lt;tr&gt;
+			&lt;td class="ms-toolbar" nowrap="nowrap"&gt;
+				&lt;table&gt;
+					&lt;tr&gt;
+						&lt;td width="99%" class="ms-toolbar" nowrap="nowrap"&gt;&lt;IMG SRC="/_layouts/15/images/blank.gif" width="1" height="18"/&gt;&lt;/td&gt;
+						&lt;td class="ms-toolbar" nowrap="nowrap"&gt;
+							&lt;SharePoint:SaveButton runat="server" ControlMode="New" id="savebutton1"/&gt;
+						&lt;/td&gt;
+						&lt;td class="ms-separator"&gt; &lt;/td&gt;
+						&lt;td class="ms-toolbar" nowrap="nowrap" align="right"&gt;
+							&lt;SharePoint:GoBackButton runat="server" ControlMode="New" id="gobackbutton1"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class="ms-toolbar" nowrap="nowrap"&gt;
+				&lt;SharePoint:FormToolBar runat="server" ControlMode="New"/&gt;
+				&lt;SharePoint:ItemValidationFailedMessage runat="server" ControlMode="New"/&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;xsl:call-template name="dvt_1.rowedit"/&gt;
+		&lt;tr&gt;
+			&lt;td class="ms-toolbar" nowrap="nowrap"&gt;
+				&lt;table&gt;
+					&lt;tr&gt;
+						&lt;td width="99%" class="ms-toolbar" nowrap="nowrap"&gt;&lt;IMG SRC="/_layouts/15/images/blank.gif" width="1" height="18"/&gt;&lt;/td&gt;
+						&lt;td class="ms-toolbar" nowrap="nowrap"&gt;
+							&lt;SharePoint:SaveButton runat="server" ControlMode="New" id="savebutton2"/&gt;
+						&lt;/td&gt;
+						&lt;td class="ms-separator"&gt; &lt;/td&gt;
+						&lt;td class="ms-toolbar" nowrap="nowrap" align="right"&gt;
+							&lt;SharePoint:GoBackButton runat="server" ControlMode="New" id="gobackbutton2"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/xsl:template&gt;
+	&lt;xsl:template name="dvt_1.rowedit"&gt;
+		&lt;xsl:param name="Pos" select="position()"/&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				&lt;table border="0" cellspacing="0" width="100%"&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;제목&lt;span class="ms-formvalidation"&gt; *&lt;/span&gt;
+								&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff1{$Pos}" ControlMode="New" FieldName="Title" __designer:bind="{ddwrt:DataBind('i',concat('ff1',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@Title')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff1description{$Pos}" FieldName="Title" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;eApproval&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff2{$Pos}" ControlMode="New" FieldName="eApproval" __designer:bind="{ddwrt:DataBind('i',concat('ff2',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@eApproval')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff2description{$Pos}" FieldName="eApproval" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;상태&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff3{$Pos}" ControlMode="New" FieldName="aprStatus" __designer:bind="{ddwrt:DataBind('i',concat('ff3',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@aprStatus')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff3description{$Pos}" FieldName="aprStatus" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;검토자&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff4{$Pos}" ControlMode="New" FieldName="approver1" __designer:bind="{ddwrt:DataBind('i',concat('ff4',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@approver1')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff4description{$Pos}" FieldName="approver1" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;확인자&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff5{$Pos}" ControlMode="New" FieldName="approver2" __designer:bind="{ddwrt:DataBind('i',concat('ff5',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@approver2')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff5description{$Pos}" FieldName="approver2" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;심사자&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff6{$Pos}" ControlMode="New" FieldName="approver3" __designer:bind="{ddwrt:DataBind('i',concat('ff6',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@approver3')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff6description{$Pos}" FieldName="approver3" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;승인자&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff7{$Pos}" ControlMode="New" FieldName="approver4" __designer:bind="{ddwrt:DataBind('i',concat('ff7',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@approver4')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff7description{$Pos}" FieldName="approver4" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;합의자&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff8{$Pos}" ControlMode="New" FieldName="reviewer" __designer:bind="{ddwrt:DataBind('i',concat('ff8',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@reviewer')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff8description{$Pos}" FieldName="reviewer" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;참조자&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff9{$Pos}" ControlMode="New" FieldName="referrer" __designer:bind="{ddwrt:DataBind('i',concat('ff9',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@referrer')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff9description{$Pos}" FieldName="referrer" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;검토결과&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff10{$Pos}" ControlMode="New" FieldName="aprStatus1" __designer:bind="{ddwrt:DataBind('i',concat('ff10',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@aprStatus1')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff10description{$Pos}" FieldName="aprStatus1" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;확인결과&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff11{$Pos}" ControlMode="New" FieldName="aprStatus2" __designer:bind="{ddwrt:DataBind('i',concat('ff11',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@aprStatus2')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff11description{$Pos}" FieldName="aprStatus2" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;심사결과&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff12{$Pos}" ControlMode="New" FieldName="aprStatus3" __designer:bind="{ddwrt:DataBind('i',concat('ff12',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@aprStatus3')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff12description{$Pos}" FieldName="aprStatus3" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;승인결과&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff13{$Pos}" ControlMode="New" FieldName="aprStatus4" __designer:bind="{ddwrt:DataBind('i',concat('ff13',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@aprStatus4')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff13description{$Pos}" FieldName="aprStatus4" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;검토완료일&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff14{$Pos}" ControlMode="New" FieldName="aprDate1" __designer:bind="{ddwrt:DataBind('i',concat('ff14',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@aprDate1')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff14description{$Pos}" FieldName="aprDate1" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;확인완료일&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff15{$Pos}" ControlMode="New" FieldName="aprDate2" __designer:bind="{ddwrt:DataBind('i',concat('ff15',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@aprDate2')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff15description{$Pos}" FieldName="aprDate2" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;심사완료일&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff16{$Pos}" ControlMode="New" FieldName="aprDate3" __designer:bind="{ddwrt:DataBind('i',concat('ff16',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@aprDate3')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff16description{$Pos}" FieldName="aprDate3" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;승인완료일&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff17{$Pos}" ControlMode="New" FieldName="aprDate4" __designer:bind="{ddwrt:DataBind('i',concat('ff17',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@aprDate4')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff17description{$Pos}" FieldName="aprDate4" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;검토의견&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff18{$Pos}" ControlMode="New" FieldName="aprOpinion1" __designer:bind="{ddwrt:DataBind('i',concat('ff18',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@aprOpinion1')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff18description{$Pos}" FieldName="aprOpinion1" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;확인의견&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff19{$Pos}" ControlMode="New" FieldName="aprOpinion2" __designer:bind="{ddwrt:DataBind('i',concat('ff19',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@aprOpinion2')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff19description{$Pos}" FieldName="aprOpinion2" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;심사의견&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff20{$Pos}" ControlMode="New" FieldName="aprOpinion3" __designer:bind="{ddwrt:DataBind('i',concat('ff20',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@aprOpinion3')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff20description{$Pos}" FieldName="aprOpinion3" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;승인의견&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff21{$Pos}" ControlMode="New" FieldName="aprOpinion4" __designer:bind="{ddwrt:DataBind('i',concat('ff21',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@aprOpinion4')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff21description{$Pos}" FieldName="aprOpinion4" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;문서번호&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff22{$Pos}" ControlMode="New" FieldName="docNo" __designer:bind="{ddwrt:DataBind('i',concat('ff22',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@docNo')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff22description{$Pos}" FieldName="docNo" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;보안구분&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff23{$Pos}" ControlMode="New" FieldName="secureLevel" __designer:bind="{ddwrt:DataBind('i',concat('ff23',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@secureLevel')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff23description{$Pos}" FieldName="secureLevel" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;내용&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff24{$Pos}" ControlMode="New" FieldName="aprBody" __designer:bind="{ddwrt:DataBind('i',concat('ff24',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@aprBody')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff24description{$Pos}" FieldName="aprBody" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;결재결과&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff25{$Pos}" ControlMode="New" FieldName="aprResult" __designer:bind="{ddwrt:DataBind('i',concat('ff25',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@aprResult')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff25description{$Pos}" FieldName="aprResult" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;blankperson&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff26{$Pos}" ControlMode="New" FieldName="blankperson" __designer:bind="{ddwrt:DataBind('i',concat('ff26',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@blankperson')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff26description{$Pos}" FieldName="blankperson" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;eApproval&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff27{$Pos}" ControlMode="New" FieldName="eApproval_x0028_1_x0029_" __designer:bind="{ddwrt:DataBind('i',concat('ff27',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@eApproval_x0028_1_x0029_')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff27description{$Pos}" FieldName="eApproval_x0028_1_x0029_" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;합의상태&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff28{$Pos}" ControlMode="New" FieldName="reviewStatus" __designer:bind="{ddwrt:DataBind('i',concat('ff28',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@reviewStatus')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff28description{$Pos}" FieldName="reviewStatus" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;제출일&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff29{$Pos}" ControlMode="New" FieldName="submitted" __designer:bind="{ddwrt:DataBind('i',concat('ff29',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@submitted')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff29description{$Pos}" FieldName="submitted" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;현재결재자&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff30{$Pos}" ControlMode="New" FieldName="curApprover" __designer:bind="{ddwrt:DataBind('i',concat('ff30',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@curApprover')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff30description{$Pos}" FieldName="curApprover" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;양식명&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff31{$Pos}" ControlMode="New" FieldName="formname" __designer:bind="{ddwrt:DataBind('i',concat('ff31',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@formname')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff31description{$Pos}" FieldName="formname" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;보존연한&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff32{$Pos}" ControlMode="New" FieldName="retention" __designer:bind="{ddwrt:DataBind('i',concat('ff32',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@retention')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff32description{$Pos}" FieldName="retention" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;만료일&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;SharePoint:FormField runat="server" id="ff33{$Pos}" ControlMode="New" FieldName="expireDate" __designer:bind="{ddwrt:DataBind('i',concat('ff33',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@expireDate')}"/&gt;
+							&lt;SharePoint:FieldDescription runat="server" id="ff33description{$Pos}" FieldName="expireDate" ControlMode="New"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr id="idAttachmentsRow"&gt;
+						&lt;td nowrap="true" valign="top" class="ms-formlabel" width="20%"&gt;
+							&lt;SharePoint:FieldLabel ControlMode="New" FieldName="Attachments" runat="server"/&gt;
+						&lt;/td&gt;
+						&lt;td valign="top" class="ms-formbody" width="80%"&gt;
+							&lt;SharePoint:FormField runat="server" id="AttachmentsField" ControlMode="New" FieldName="Attachments" __designer:bind="{ddwrt:DataBind('i','AttachmentsField','Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@Attachments')}"/&gt;
+							&lt;script&gt;
+          var elm = document.getElementById("idAttachmentsTable");
+          if (elm == null || elm.rows.length == 0)
+          document.getElementById("idAttachmentsRow").style.display='none';
+        &lt;/script&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;xsl:if test="$dvt_1_automode = '1'" ddwrt:cf_ignore="1"&gt;
+						&lt;tr&gt;
+							&lt;td colspan="99" class="ms-vb"&gt;
+								&lt;span ddwrt:amkeyfield="ID" ddwrt:amkeyvalue="ddwrt:EscapeDelims(string(@ID))" ddwrt:ammode="view"&gt;&lt;/span&gt;
+							&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/xsl:if&gt;
+				&lt;/table&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;	</property>
+        <property name="EnableOriginalValue" type="bool">False</property>
+        <property name="Hidden" type="bool">False</property>
+        <property name="ListName" type="string">{$ListId:Lists/eApproval;}</property>
+        <property name="DataSourceID" type="string" />
+        <property name="CacheXslTimeOut" type="int">86400</property>
+        <property name="ListDisplayName" type="string" null="true" />
+        <property name="ManualRefresh" type="bool">False</property>
+        <property name="ViewFlags" type="Microsoft.SharePoint.SPViewFlags, Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">Hidden</property>
+        <property name="ChromeState" type="chromestate">Normal</property>
+        <property name="SampleData" type="string" null="true" />
+        <property name="AllowHide" type="bool">True</property>
+        <property name="PageSize" type="int">-1</property>
+        <property name="ParameterBindings" type="string">&lt;ParameterBinding Name="ListItemId" Location="QueryString(ID)" DefaultValue="0"/&gt;&lt;ParameterBinding Name="weburl" Location="None" DefaultValue="http://develop.gowit.co.kr/workflow"/&gt;&lt;ParameterBinding Name="ListID" Location="None" DefaultValue="{$ListId:Lists/eApproval;}"/&gt;&lt;ParameterBinding Name="dvt_apos" Location="Postback;Connection"/&gt;&lt;ParameterBinding Name="ManualRefresh" Location="WPProperty[ManualRefresh]"/&gt;&lt;ParameterBinding Name="UserID" Location="CAMLVariable" DefaultValue="CurrentUserName"/&gt;&lt;ParameterBinding Name="Today" Location="CAMLVariable" DefaultValue="CurrentDate"/&gt;</property>
+        <property name="AsyncRefresh" type="bool">False</property>
+        <property name="FireInitialRow" type="bool">True</property>
+        <property name="Title" type="string">eApproval</property>
+        <property name="ListId" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">$ListId:Lists/eApproval;</property>
+        <property name="Description" type="string" />
+        <property name="AllowMinimize" type="bool">True</property>
+        <property name="TitleUrl" type="string" />
+        <property name="DataSourcesString" type="string">&lt;%@ Register TagPrefix="cc1" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %&gt;&lt;%@ Register TagPrefix="cc2" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %&gt;&lt;cc1:SPDataSource runat="server" DataSourceMode="ListItem" SelectCommand="&amp;lt;View&amp;gt;&amp;lt;Query&amp;gt;&amp;lt;Where&amp;gt;&amp;lt;Eq&amp;gt;&amp;lt;FieldRef Name=&amp;quot;ContentType&amp;quot;/&amp;gt;&amp;lt;Value Type=&amp;quot;Text&amp;quot;&amp;gt;항목&amp;lt;/Value&amp;gt;&amp;lt;/Eq&amp;gt;&amp;lt;/Where&amp;gt;&amp;lt;/Query&amp;gt;&amp;lt;/View&amp;gt;" UpdateCommand="" InsertCommand="" DeleteCommand="" UseInternalName="True" UseServerDataFormat="True"&gt;&lt;SelectParameters&gt;
+&lt;cc2:DataFormParameter ParameterKey="ListItemId" PropertyName="ParameterValues" DefaultValue="0" Name="ListItemId"&gt;&lt;/cc2:DataFormParameter&gt;
+&lt;cc2:DataFormParameter ParameterKey="weburl" PropertyName="ParameterValues" DefaultValue="http://develop.gowit.co.kr/workflow" Name="weburl"&gt;&lt;/cc2:DataFormParameter&gt;
+&lt;cc2:DataFormParameter ParameterKey="ListID" PropertyName="ParameterValues" DefaultValue="{$ListId:Lists/eApproval;}" Name="ListID"&gt;&lt;/cc2:DataFormParameter&gt;
+&lt;/SelectParameters&gt;
+&lt;UpdateParameters&gt;
+&lt;cc2:DataFormParameter ParameterKey="ListItemId" PropertyName="ParameterValues" DefaultValue="0" Name="ListItemId"&gt;&lt;/cc2:DataFormParameter&gt;
+&lt;cc2:DataFormParameter ParameterKey="weburl" PropertyName="ParameterValues" DefaultValue="http://develop.gowit.co.kr/workflow" Name="weburl"&gt;&lt;/cc2:DataFormParameter&gt;
+&lt;cc2:DataFormParameter ParameterKey="ListID" PropertyName="ParameterValues" DefaultValue="{$ListId:Lists/eApproval;}" Name="ListID"&gt;&lt;/cc2:DataFormParameter&gt;
+&lt;/UpdateParameters&gt;
+&lt;InsertParameters&gt;
+&lt;cc2:DataFormParameter ParameterKey="ListItemId" PropertyName="ParameterValues" DefaultValue="0" Name="ListItemId"&gt;&lt;/cc2:DataFormParameter&gt;
+&lt;cc2:DataFormParameter ParameterKey="weburl" PropertyName="ParameterValues" DefaultValue="http://develop.gowit.co.kr/workflow" Name="weburl"&gt;&lt;/cc2:DataFormParameter&gt;
+&lt;cc2:DataFormParameter ParameterKey="ListID" PropertyName="ParameterValues" DefaultValue="{$ListId:Lists/eApproval;}" Name="ListID"&gt;&lt;/cc2:DataFormParameter&gt;
+&lt;/InsertParameters&gt;
+&lt;DeleteParameters&gt;
+&lt;cc2:DataFormParameter ParameterKey="ListItemId" PropertyName="ParameterValues" DefaultValue="0" Name="ListItemId"&gt;&lt;/cc2:DataFormParameter&gt;
+&lt;cc2:DataFormParameter ParameterKey="weburl" PropertyName="ParameterValues" DefaultValue="http://develop.gowit.co.kr/workflow" Name="weburl"&gt;&lt;/cc2:DataFormParameter&gt;
+&lt;cc2:DataFormParameter ParameterKey="ListID" PropertyName="ParameterValues" DefaultValue="{$ListId:Lists/eApproval;}" Name="ListID"&gt;&lt;/cc2:DataFormParameter&gt;
+&lt;/DeleteParameters&gt;
+&lt;/cc1:SPDataSource&gt;
+</property>
+        <property name="DisplayName" type="string">eApproval</property>
+        <property name="PageType" type="Microsoft.SharePoint.PAGETYPE, Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">PAGE_NEWFORM</property>
+        <property name="Width" type="string" />
+        <property name="AllowEdit" type="bool">True</property>
+        <property name="ExportMode" type="exportmode">All</property>
+        <property name="Direction" type="direction">NotSet</property>
+        <property name="ViewContentTypeId" type="string" />
+        <property name="HelpUrl" type="string" />
+        <property name="XmlDefinition" type="string" />
+        <property name="ShowWithSampleData" type="bool">False</property>
+        <property name="Default" type="string">FALSE</property>
+        <property name="TitleIconImageUrl" type="string" />
+        <property name="MissingAssembly" type="string">이 웹 파트를 가져올 수 없습니다.</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>]]>
+      </AllUsersWebPart>
+    </File>
+    <File Url="NewForm.aspx" Type="Ghostable" Level="Published" Path="form.aspx">
+      <AllUsersWebPart WebPartOrder="1" WebPartZoneID="Main" ID="g_75bbde8b_4e8d_4223_8a47_706ddc40a57d">
+        <![CDATA[<WebPart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WebPart/v2">
+  <Title />
+  <FrameType>Default</FrameType>
+  <Description />
+  <IsIncluded>true</IsIncluded>
+  <ZoneID>Main</ZoneID>
+  <PartOrder>1</PartOrder>
+  <FrameState>Normal</FrameState>
+  <Height />
+  <Width />
+  <AllowRemove>true</AllowRemove>
+  <AllowZoneChange>true</AllowZoneChange>
+  <AllowMinimize>true</AllowMinimize>
+  <AllowConnect>true</AllowConnect>
+  <AllowEdit>true</AllowEdit>
+  <AllowHide>true</AllowHide>
+  <IsVisible>true</IsVisible>
+  <DetailLink />
+  <HelpLink />
+  <HelpMode>Modeless</HelpMode>
+  <Dir>Default</Dir>
+  <PartImageSmall />
+  <MissingAssembly>이 웹 파트를 가져올 수 없습니다.</MissingAssembly>
+  <PartImageLarge />
+  <IsIncludedFilter />
+  <Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+  <TypeName>Microsoft.SharePoint.WebPartPages.ListFormWebPart</TypeName>
+  <ListName xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">{$ListId:Lists/eApproval;}</ListName>
+  <ListId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">$ListId:Lists/eApproval;</ListId>
+  <PageType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">PAGE_NEWFORM</PageType>
+  <FormType xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">8</FormType>
+  <ControlMode xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">New</ControlMode>
+  <ViewFlag xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">0</ViewFlag>
+  <ListItemId xmlns="http://schemas.microsoft.com/WebPart/v2/ListForm">0</ListItemId>
+</WebPart>]]>
+      </AllUsersWebPart>
+    </File>
+    <File Url="testdisp.aspx" Type="Ghostable" Level="Published" Path="form.aspx">
+      <AllUsersWebPart WebPartOrder="0" WebPartZoneID="Main" ID="g_e99fa46e_4b4e_4b24_86d6_a66c56f61e01">
+        <![CDATA[<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Microsoft.SharePoint.WebPartPages.DataFormWebPart, Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+      <importErrorMessage>이 웹 파트를 가져올 수 없습니다.</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="InitialAsyncDataFetch" type="bool">False</property>
+        <property name="ChromeType" type="chrometype">None</property>
+        <property name="UseSQLDataSourcePaging" type="bool">True</property>
+        <property name="Height" type="string" />
+        <property name="CacheXslStorage" type="bool">True</property>
+        <property name="XslLink" type="string" null="true" />
+        <property name="AllowZoneChange" type="bool">True</property>
+        <property name="AutoRefresh" type="bool">False</property>
+        <property name="XmlDefinitionLink" type="string" />
+        <property name="DataFields" type="string" />
+        <property name="NoDefaultStyle" type="string">TRUE</property>
+        <property name="ViewFlag" type="string">8</property>
+        <property name="CatalogIconImageUrl" type="string" />
+        <property name="ListUrl" type="string" null="true" />
+        <property name="AutoRefreshInterval" type="int">60</property>
+        <property name="AllowConnect" type="bool">True</property>
+        <property name="AllowClose" type="bool">True</property>
+        <property name="HelpMode" type="helpmode">Modeless</property>
+        <property name="Xsl" type="string">
+&lt;xsl:stylesheet xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:dsp="http://schemas.microsoft.com/sharepoint/dsp" version="1.0" exclude-result-prefixes="xsl msxsl ddwrt" xmlns:ddwrt="http://schemas.microsoft.com/WebParts/v2/DataView/runtime" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:SharePoint="Microsoft.SharePoint.WebControls"&gt;
+	&lt;xsl:output method="html" indent="no"/&gt;
+	&lt;xsl:decimal-format NaN=""/&gt;
+	&lt;xsl:param name="dvt_apos"&gt;'&lt;/xsl:param&gt;
+	&lt;xsl:param name="ManualRefresh"&gt;&lt;/xsl:param&gt;
+	&lt;xsl:variable name="dvt_1_automode"&gt;0&lt;/xsl:variable&gt;
+	&lt;xsl:template match="/"&gt;
+		&lt;xsl:choose&gt;
+			&lt;xsl:when test="($ManualRefresh = 'True')"&gt;
+				&lt;table width="100%" border="0" cellpadding="0" cellspacing="0"&gt;
+					&lt;tr&gt;
+						&lt;td valign="top"&gt;
+							&lt;xsl:call-template name="dvt_1"/&gt;
+						&lt;/td&gt;
+						&lt;td width="1%" class="ms-vb" valign="top"&gt;
+							&lt;img src="/_layouts/15/images/staticrefresh.gif" id="ManualRefresh" border="0" onclick="javascript: {ddwrt:GenFireServerEvent('__cancel')}" alt="Click here to refresh the dataview."/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/xsl:when&gt;
+			&lt;xsl:otherwise&gt;
+				&lt;xsl:call-template name="dvt_1"/&gt;
+			&lt;/xsl:otherwise&gt;
+		&lt;/xsl:choose&gt;
+	&lt;/xsl:template&gt;
+	&lt;xsl:template name="dvt_1"&gt;
+		&lt;xsl:variable name="dvt_StyleName"&gt;ListForm&lt;/xsl:variable&gt;
+		&lt;xsl:variable name="Rows" select="/dsQueryResponse/Rows/Row"/&gt;
+		&lt;xsl:variable name="dvt_RowCount" select="count($Rows)"/&gt;
+		&lt;xsl:variable name="dvt_IsEmpty" select="$dvt_RowCount = 0"/&gt;
+		&lt;xsl:choose&gt;
+			&lt;xsl:when test="$dvt_IsEmpty"&gt;
+				&lt;xsl:call-template name="dvt_1.empty"/&gt;
+			&lt;/xsl:when&gt;
+			&lt;xsl:otherwise&gt;
+				&lt;table border="0" width="100%"&gt;
+					&lt;xsl:call-template name="dvt_1.body"&gt;
+						&lt;xsl:with-param name="Rows" select="$Rows"/&gt;
+					&lt;/xsl:call-template&gt;
+				&lt;/table&gt;
+			&lt;/xsl:otherwise&gt;
+		&lt;/xsl:choose&gt;
+	&lt;/xsl:template&gt;
+	&lt;xsl:template name="dvt_1.body"&gt;
+		&lt;xsl:param name="Rows"/&gt;
+		&lt;tr&gt;
+			&lt;td class="ms-toolbar" nowrap="nowrap"&gt;
+				&lt;table&gt;
+					&lt;tr&gt;
+						&lt;td width="99%" class="ms-toolbar" nowrap="nowrap"&gt;&lt;IMG SRC="/_layouts/15/images/blank.gif" width="1" height="18"/&gt;&lt;/td&gt;
+						&lt;td class="ms-toolbar" nowrap="nowrap" align="right"&gt;
+							&lt;SharePoint:GoBackButton runat="server" ControlMode="Display" id="gobackbutton1"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class="ms-toolbar" nowrap="nowrap"&gt;
+				&lt;SharePoint:FormToolBar runat="server" ControlMode="Display"/&gt;
+				&lt;SharePoint:ItemValidationFailedMessage runat="server" ControlMode="Display"/&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;xsl:for-each select="$Rows"&gt;
+			&lt;xsl:call-template name="dvt_1.rowview"/&gt;
+		&lt;/xsl:for-each&gt;
+		&lt;tr&gt;
+			&lt;td class="ms-toolbar" nowrap="nowrap"&gt;
+				&lt;table&gt;
+					&lt;tr&gt;
+						&lt;td class="ms-descriptiontext" nowrap="nowrap"&gt;
+							&lt;SharePoint:CreatedModifiedInfo ControlMode="Display" runat="server"/&gt;
+						&lt;/td&gt;
+						&lt;td width="99%" class="ms-toolbar" nowrap="nowrap"&gt;&lt;IMG SRC="/_layouts/15/images/blank.gif" width="1" height="18"/&gt;&lt;/td&gt;
+						&lt;td class="ms-toolbar" nowrap="nowrap" align="right"&gt;
+							&lt;SharePoint:GoBackButton runat="server" ControlMode="Display" id="gobackbutton2"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/xsl:template&gt;
+	&lt;xsl:template name="dvt_1.rowview"&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				&lt;table border="0" cellspacing="0" width="100%"&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;제목&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@Title"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;eApproval&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;a href="{substring-before(@eApproval, ', ')}"&gt;
+								&lt;xsl:value-of select="substring-after(@eApproval, ', ')"/&gt;
+							&lt;/a&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;상태&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@aprStatus"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;검토자&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@approver1" disable-output-escaping="yes"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;확인자&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@approver2" disable-output-escaping="yes"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;심사자&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@approver3" disable-output-escaping="yes"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;승인자&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@approver4" disable-output-escaping="yes"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;합의자&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@reviewer"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;참조자&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@referrer"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;검토결과&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@aprStatus1"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;확인결과&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@aprStatus2"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;심사결과&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@aprStatus3"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;승인결과&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@aprStatus4"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;검토완료일&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@aprDate1"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;확인완료일&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@aprDate2"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;심사완료일&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@aprDate3"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;승인완료일&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@aprDate4"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;검토의견&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@aprOpinion1"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;확인의견&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@aprOpinion2"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;심사의견&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@aprOpinion3"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;승인의견&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@aprOpinion4"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;문서번호&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@docNo"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;보안구분&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@secureLevel"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;내용&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@aprBody" disable-output-escaping="yes"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;결재결과&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@aprResult"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;blankperson&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@blankperson"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;eApproval&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;a href="{substring-before(@eApproval_x0028_1_x0029_, ', ')}"&gt;
+								&lt;xsl:value-of select="substring-after(@eApproval_x0028_1_x0029_, ', ')"/&gt;
+							&lt;/a&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;합의상태&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@reviewStatus"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;submitted&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@submitted"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;현재결재자&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@curApprover"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="190px" valign="top" class="ms-formlabel"&gt;
+							&lt;H3 class="ms-standardheader"&gt;
+								&lt;nobr&gt;양식명&lt;/nobr&gt;
+							&lt;/H3&gt;
+						&lt;/td&gt;
+						&lt;td width="400px" valign="top" class="ms-formbody"&gt;
+							&lt;xsl:value-of select="@formname"/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr id="idAttachmentsRow"&gt;
+						&lt;td nowrap="true" valign="top" class="ms-formlabel" width="20%"&gt;
+							&lt;SharePoint:FieldLabel ControlMode="Display" FieldName="Attachments" runat="server"/&gt;
+						&lt;/td&gt;
+						&lt;td valign="top" class="ms-formbody" width="80%"&gt;
+							&lt;SharePoint:FormField runat="server" id="AttachmentsField" ControlMode="Display" FieldName="Attachments" __designer:bind="{ddwrt:DataBind('u','AttachmentsField','Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@Attachments')}"/&gt;
+							&lt;script&gt;
+          var elm = document.getElementById("idAttachmentsTable");
+          if (elm == null || elm.rows.length == 0)
+          document.getElementById("idAttachmentsRow").style.display='none';
+        &lt;/script&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;xsl:if test="$dvt_1_automode = '1'" ddwrt:cf_ignore="1"&gt;
+						&lt;tr&gt;
+							&lt;td colspan="99" class="ms-vb"&gt;
+								&lt;span ddwrt:amkeyfield="ID" ddwrt:amkeyvalue="ddwrt:EscapeDelims(string(@ID))" ddwrt:ammode="view"&gt;&lt;/span&gt;
+							&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/xsl:if&gt;
+				&lt;/table&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/xsl:template&gt;
+	&lt;xsl:template name="dvt_1.empty"&gt;
+		&lt;xsl:variable name="dvt_ViewEmptyText"&gt;이 보기에 표시할 항목이 없습니다.&lt;/xsl:variable&gt;
+		&lt;table border="0" width="100%"&gt;
+			&lt;tr&gt;
+				&lt;td class="ms-vb"&gt;
+					&lt;xsl:value-of select="$dvt_ViewEmptyText"/&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/table&gt;
+	&lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;	</property>
+        <property name="EnableOriginalValue" type="bool">False</property>
+        <property name="Hidden" type="bool">False</property>
+        <property name="ListName" type="string">{$ListId:Lists/eApproval;}</property>
+        <property name="DataSourceID" type="string" />
+        <property name="CacheXslTimeOut" type="int">86400</property>
+        <property name="ListDisplayName" type="string" null="true" />
+        <property name="ManualRefresh" type="bool">False</property>
+        <property name="ViewFlags" type="Microsoft.SharePoint.SPViewFlags, Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">Hidden</property>
+        <property name="ChromeState" type="chromestate">Normal</property>
+        <property name="SampleData" type="string" null="true" />
+        <property name="AllowHide" type="bool">True</property>
+        <property name="PageSize" type="int">-1</property>
+        <property name="ParameterBindings" type="string">&lt;ParameterBinding Name="ListItemId" Location="QueryString(ID)" DefaultValue="0"/&gt;&lt;ParameterBinding Name="weburl" Location="None" DefaultValue="http://develop.gowit.co.kr/workflow"/&gt;&lt;ParameterBinding Name="ListID" Location="None" DefaultValue="{$ListId:Lists/eApproval;}"/&gt;&lt;ParameterBinding Name="dvt_apos" Location="Postback;Connection"/&gt;&lt;ParameterBinding Name="ManualRefresh" Location="WPProperty[ManualRefresh]"/&gt;&lt;ParameterBinding Name="UserID" Location="CAMLVariable" DefaultValue="CurrentUserName"/&gt;&lt;ParameterBinding Name="Today" Location="CAMLVariable" DefaultValue="CurrentDate"/&gt;</property>
+        <property name="AsyncRefresh" type="bool">False</property>
+        <property name="FireInitialRow" type="bool">True</property>
+        <property name="Title" type="string">eApproval</property>
+        <property name="ListId" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">$ListId:Lists/eApproval;</property>
+        <property name="Description" type="string" />
+        <property name="AllowMinimize" type="bool">True</property>
+        <property name="TitleUrl" type="string" />
+        <property name="DataSourcesString" type="string">&lt;%@ Register TagPrefix="cc1" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %&gt;&lt;%@ Register TagPrefix="cc2" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %&gt;&lt;cc1:SPDataSource runat="server" DataSourceMode="ListItem" SelectCommand="&amp;lt;View&amp;gt;&amp;lt;Query&amp;gt;&amp;lt;Where&amp;gt;&amp;lt;Eq&amp;gt;&amp;lt;FieldRef Name=&amp;quot;ContentType&amp;quot;/&amp;gt;&amp;lt;Value Type=&amp;quot;Text&amp;quot;&amp;gt;항목&amp;lt;/Value&amp;gt;&amp;lt;/Eq&amp;gt;&amp;lt;/Where&amp;gt;&amp;lt;/Query&amp;gt;&amp;lt;/View&amp;gt;" UpdateCommand="" InsertCommand="" DeleteCommand="" UseInternalName="True" UseServerDataFormat="True"&gt;&lt;SelectParameters&gt;
+&lt;cc2:DataFormParameter ParameterKey="ListItemId" PropertyName="ParameterValues" DefaultValue="0" Name="ListItemId"&gt;&lt;/cc2:DataFormParameter&gt;
+&lt;cc2:DataFormParameter ParameterKey="weburl" PropertyName="ParameterValues" DefaultValue="http://develop.gowit.co.kr/workflow" Name="weburl"&gt;&lt;/cc2:DataFormParameter&gt;
+&lt;cc2:DataFormParameter ParameterKey="ListID" PropertyName="ParameterValues" DefaultValue="{$ListId:Lists/eApproval;}" Name="ListID"&gt;&lt;/cc2:DataFormParameter&gt;
+&lt;/SelectParameters&gt;
+&lt;UpdateParameters&gt;
+&lt;cc2:DataFormParameter ParameterKey="ListItemId" PropertyName="ParameterValues" DefaultValue="0" Name="ListItemId"&gt;&lt;/cc2:DataFormParameter&gt;
+&lt;cc2:DataFormParameter ParameterKey="weburl" PropertyName="ParameterValues" DefaultValue="http://develop.gowit.co.kr/workflow" Name="weburl"&gt;&lt;/cc2:DataFormParameter&gt;
+&lt;cc2:DataFormParameter ParameterKey="ListID" PropertyName="ParameterValues" DefaultValue="{$ListId:Lists/eApproval;}" Name="ListID"&gt;&lt;/cc2:DataFormParameter&gt;
+&lt;/UpdateParameters&gt;
+&lt;InsertParameters&gt;
+&lt;cc2:DataFormParameter ParameterKey="ListItemId" PropertyName="ParameterValues" DefaultValue="0" Name="ListItemId"&gt;&lt;/cc2:DataFormParameter&gt;
+&lt;cc2:DataFormParameter ParameterKey="weburl" PropertyName="ParameterValues" DefaultValue="http://develop.gowit.co.kr/workflow" Name="weburl"&gt;&lt;/cc2:DataFormParameter&gt;
+&lt;cc2:DataFormParameter ParameterKey="ListID" PropertyName="ParameterValues" DefaultValue="{$ListId:Lists/eApproval;}" Name="ListID"&gt;&lt;/cc2:DataFormParameter&gt;
+&lt;/InsertParameters&gt;
+&lt;DeleteParameters&gt;
+&lt;cc2:DataFormParameter ParameterKey="ListItemId" PropertyName="ParameterValues" DefaultValue="0" Name="ListItemId"&gt;&lt;/cc2:DataFormParameter&gt;
+&lt;cc2:DataFormParameter ParameterKey="weburl" PropertyName="ParameterValues" DefaultValue="http://develop.gowit.co.kr/workflow" Name="weburl"&gt;&lt;/cc2:DataFormParameter&gt;
+&lt;cc2:DataFormParameter ParameterKey="ListID" PropertyName="ParameterValues" DefaultValue="{$ListId:Lists/eApproval;}" Name="ListID"&gt;&lt;/cc2:DataFormParameter&gt;
+&lt;/DeleteParameters&gt;
+&lt;/cc1:SPDataSource&gt;
+</property>
+        <property name="DisplayName" type="string">eApproval</property>
+        <property name="PageType" type="Microsoft.SharePoint.PAGETYPE, Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">PAGE_DISPLAYFORM</property>
+        <property name="Width" type="string" />
+        <property name="AllowEdit" type="bool">True</property>
+        <property name="ExportMode" type="exportmode">All</property>
+        <property name="Direction" type="direction">NotSet</property>
+        <property name="ViewContentTypeId" type="string" />
+        <property name="HelpUrl" type="string" />
+        <property name="XmlDefinition" type="string" />
+        <property name="ShowWithSampleData" type="bool">False</property>
+        <property name="Default" type="string">FALSE</property>
+        <property name="TitleIconImageUrl" type="string" />
+        <property name="MissingAssembly" type="string">이 웹 파트를 가져올 수 없습니다.</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>]]>
+      </AllUsersWebPart>
+    </File>
+    <File Url="view5.aspx" Type="Ghostable" Level="Published" Path="viewpage.aspx">
+      <View List="Lists/eApproval" DisplayName="완료된 문서" Url="" DefaultView="FALSE" BaseViewID="1" Type="HTML" WebPartOrder="1" WebPartZoneID="Main" ContentTypeID="0x" ID="g_71832b35_6d93_4cc5_9e61_bf0e6f7edd60" Hidden="FALSE">
+        <BinarySerializedWebPart>
+          <GUIDMap>
+            <GUID Id="c6cfbf1d_dbca_4225_ae3b_21337d1dc5d8" ListUrl="Lists/eApproval" />
+          </GUIDMap>
+          <WebPart ID="{71832b35-6d93-4cc5-9e61-bf0e6f7edd60}" WebId="00000000-0000-0000-0000-000000000000" List="{$ListId:Lists/eApproval;}" Type="1" Flags="8388613" DisplayName="완료된 문서" Version="23" Url="/workflow/Lists/eApproval/view5.aspx" WebPartOrder="1" WebPartZoneID="Main" IsIncluded="True" FrameState="0" WPTypeId="{a6524906-3fd2-ee4e-23ee-252d3c6e0dc9}" AllUsers="B6Dt/i4AAAABAAAAAAAAAAEAAAAvd29ya2Zsb3cvTGlzdHMvZUFwcHJvdmFsAP8BFCsAGgICAgMCAwEEAAIBAg8BAQACBAUIVmlld0d1aWQFJns3MTgzMkIzNS02RDkzLTRDQzUtOUU2MS1CRjBFNkY3RURENjB9BQxDbGllbnRSZW5kZXJnAQAAAgwCfQUZL3dvcmtmbG93L0xpc3RzL2VBcHByb3ZhbAIQBRDsmYTro4zrkJwg66y47IScBQlWaWV3RmxhZ3MoKXpNaWNyb3NvZnQuU2hhcmVQb2ludC5TUFZpZXdGbGFncywgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTUuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YxlIdG1sLCBUYWJ1bGFyVmlldywgTW9iaWxlBQ1YbWxEZWZpbml0aW9uBfALPFZpZXcgTmFtZT0iezcxODMyQjM1LTZEOTMtNENDNS05RTYxLUJGMEU2RjdFREQ2MH0iIE1vYmlsZVZpZXc9IlRSVUUiIFR5cGU9IkhUTUwiIERpc3BsYXlOYW1lPSLsmYTro4zrkJwg66y47IScIiBVcmw9Ii93b3JrZmxvdy9MaXN0cy9lQXBwcm92YWwvdmlldzUuYXNweCIgTGV2ZWw9IjEiIEJhc2VWaWV3SUQ9IjEiIENvbnRlbnRUeXBlSUQ9IjB4IiBJbWFnZVVybD0iL19sYXlvdXRzLzE1L2ltYWdlcy9nZW5lcmljLnBuZz9yZXY9MjMiID48UXVlcnk+PE9yZGVyQnk+PEZpZWxkUmVmIE5hbWU9InN1Ym1pdHRlZCIgQXNjZW5kaW5nPSJGQUxTRSIvPjwvT3JkZXJCeT48V2hlcmU+PEFuZD48QW5kPjxBbmQ+PE9yPjxPcj48T3I+PE9yPjxFcT48RmllbGRSZWYgTmFtZT0iYXBwcm92ZXIxIi8+PFZhbHVlIFR5cGU9IkludGVnZXIiPjxVc2VySUQgVHlwZT0iSW50ZWdlciIvPjwvVmFsdWU+PC9FcT48RXE+PEZpZWxkUmVmIE5hbWU9ImFwcHJvdmVyMiIvPjxWYWx1ZSBUeXBlPSJJbnRlZ2VyIj48VXNlcklEIFR5cGU9IkludGVnZXIiLz48L1ZhbHVlPjwvRXE+PC9Pcj48RXE+PEZpZWxkUmVmIE5hbWU9ImFwcHJvdmVyMyIvPjxWYWx1ZSBUeXBlPSJJbnRlZ2VyIj48VXNlcklEIFR5cGU9IkludGVnZXIiLz48L1ZhbHVlPjwvRXE+PC9Pcj48RXE+PEZpZWxkUmVmIE5hbWU9ImFwcHJvdmVyNCIvPjxWYWx1ZSBUeXBlPSJJbnRlZ2VyIj48VXNlcklEIFR5cGU9IkludGVnZXIiLz48L1ZhbHVlPjwvRXE+PC9Pcj48RXE+PEZpZWxkUmVmIE5hbWU9InJldmlld2VyIi8+PFZhbHVlIFR5cGU9IkludGVnZXIiPjxVc2VySUQgVHlwZT0iSW50ZWdlciIvPjwvVmFsdWU+PC9FcT48L09yPjxOZXE+PEZpZWxkUmVmIE5hbWU9ImFwclN0YXR1cyIvPjxWYWx1ZSBUeXBlPSJUZXh0Ij7snoTsi5zsoIDsnqU8L1ZhbHVlPjwvTmVxPjwvQW5kPjxFcT48RmllbGRSZWYgTmFtZT0iYXByU3RhdHVzIi8+PFZhbHVlIFR5cGU9IlRleHQiPuyKueyduOyZhOujjDwvVmFsdWU+PC9FcT48L0FuZD48TmVxPjxGaWVsZFJlZiBOYW1lPSJhcHJTdGF0dXMiLz48VmFsdWUgVHlwZT0iVGV4dCI+67CY66CkPC9WYWx1ZT48L05lcT48L0FuZD48L1doZXJlPjwvUXVlcnk+PFZpZXdGaWVsZHM+PEZpZWxkUmVmIE5hbWU9ImZvcm1uYW1lIi8+PEZpZWxkUmVmIE5hbWU9IkxpbmtUaXRsZU5vTWVudSIvPjxGaWVsZFJlZiBOYW1lPSJBdXRob3IiLz48RmllbGRSZWYgTmFtZT0iYXByU3RhdHVzIi8+PEZpZWxkUmVmIE5hbWU9InN1Ym1pdHRlZCIvPjxGaWVsZFJlZiBOYW1lPSJjdXJBcHByb3ZlciIvPjxGaWVsZFJlZiBOYW1lPSJhcHJSZXN1bHQiLz48RmllbGRSZWYgTmFtZT0iZUFwcHJvdmEiLz48L1ZpZXdGaWVsZHM+PFJvd0xpbWl0IFBhZ2VkPSJUUlVFIj4zMDwvUm93TGltaXQ+PEFnZ3JlZ2F0aW9ucyBWYWx1ZT0iT2ZmIi8+PEpTTGluaz5jbGllbnR0ZW1wbGF0ZXMuanM8L0pTTGluaz48WHNsTGluayBEZWZhdWx0PSJUUlVFIj5tYWluLnhzbDwvWHNsTGluaz48VG9vbGJhciBUeXBlPSJTdGFuZGFyZCIvPjwvVmlldz4FFUluaXRpYWxBc3luY0RhdGFGZXRjaGgFEVBhcmFtZXRlckJpbmRpbmdzBa4GPFBhcmFtZXRlckJpbmRpbmcgTmFtZT0iZHZ0X3NvcnRkaXIiIExvY2F0aW9uPSJQb3N0YmFjaztDb25uZWN0aW9uIiAvPjxQYXJhbWV0ZXJCaW5kaW5nIE5hbWU9ImR2dF9zb3J0ZmllbGQiIExvY2F0aW9uPSJQb3N0YmFjaztDb25uZWN0aW9uIiAvPjxQYXJhbWV0ZXJCaW5kaW5nIE5hbWU9ImR2dF9zdGFydHBvc2l0aW9uIiBMb2NhdGlvbj0iUG9zdGJhY2siIERlZmF1bHRWYWx1ZT0iIiAvPjxQYXJhbWV0ZXJCaW5kaW5nIE5hbWU9ImR2dF9maXJzdHJvdyIgTG9jYXRpb249IlBvc3RiYWNrO0Nvbm5lY3Rpb24iIC8+PFBhcmFtZXRlckJpbmRpbmcgTmFtZT0iT3Blbk1lbnVLZXlBY2Nlc3NpYmxlIiBMb2NhdGlvbj0iUmVzb3VyY2Uod3NzLE9wZW5NZW51S2V5QWNjZXNzaWJsZSkiIC8+PFBhcmFtZXRlckJpbmRpbmcgTmFtZT0ib3Blbl9tZW51IiBMb2NhdGlvbj0iUmVzb3VyY2Uod3NzLG9wZW5fbWVudSkiIC8+PFBhcmFtZXRlckJpbmRpbmcgTmFtZT0ic2VsZWN0X2Rlc2VsZWN0X2FsbCIgTG9jYXRpb249IlJlc291cmNlKHdzcyxzZWxlY3RfZGVzZWxlY3RfYWxsKSIgLz48UGFyYW1ldGVyQmluZGluZyBOYW1lPSJpZFByZXNFbmFibGVkIiBMb2NhdGlvbj0iUmVzb3VyY2Uod3NzLGlkUHJlc0VuYWJsZWQpIiAvPjxQYXJhbWV0ZXJCaW5kaW5nIE5hbWU9Ik5vQW5ub3VuY2VtZW50cyIgTG9jYXRpb249IlJlc291cmNlKHdzcyxub1hpbnZpZXdvZllfTElTVCkiIC8+PFBhcmFtZXRlckJpbmRpbmcgTmFtZT0iTm9Bbm5vdW5jZW1lbnRzSG93VG8iIExvY2F0aW9uPSJSZXNvdXJjZSh3c3Msbm9YaW52aWV3b2ZZX0RFRkFVTFQpIiAvPg==" View="qKkwMQwAAACzBAAAeJy1lM1OwkAQx1+l2RdoFI9tkxogIeEjAuJ5odOysd3W7S7KzQMn9QE0UUKi3j3qM9GHcLslWHHFRMKhnc38Z36daWbWGhC4rBMIvdSxlO2Cb7RxBDbyYxZReULmD6lJ6Hmf8BDacQuo0ES4go9jphFwwnocc5FqtFQMI8I5eBptJJibJCyewC/ULqQi5BoNijycS2a53/xcxRxL/4kANnWsDvOAHU+3FGa46QioR2hgo7rb7NUUdZ13NgYGjuVSr/zqsO9P7ULTQNHbQc4b4FCA0Z8mUmhQDoHs2bFOU2CN6oZb9ZSHS5tjt6APd0Sbf5Re2TP/aE98BhM5CEXCrvg26OovTXz5A3244sjJ5rPs9jFbXGfz1y+iAplqerS/ZDvy5iN7es8eZsvnu40iFfEfVS7f7peLF2195mrozdUSuUHAIMCcxDQ1VLyNOr6fc1vxkIRgFKbBIWoSuVc2qqCVr0eiJIT1kupumk+Zkp0B" />
+        </BinarySerializedWebPart>
+      </View>
+    </File>
+  </Module>
+</Elements>

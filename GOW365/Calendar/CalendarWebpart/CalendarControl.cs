@@ -151,7 +151,7 @@ namespace GOW365.CalendarWebpart
                                 <table width='100%' border='0' cellpadding='0' cellspacing='0'>
                                     <tr> 
                                         <td style='font-size:0' height='24' width='23'><img src='" + imgUrl + @"date_m_9.jpg' width='23' height='24'></td>
-                                        <td bgcolor='e5e5e5' style='font-size:12px;text-align:center; color:#3a3a3a; font-weight:bold;'>" + day.Date.ToString("d", System.Globalization.CultureInfo.CreateSpecificCulture(System.Threading.Thread.CurrentThread.CurrentUICulture.Name)) + @"<div style='cursor:pointer; float:right; display:none;' onclick='javascript:" + this.Parent.ClientID + @"_defaultCalendar();'>×</div></td>
+                                        <td bgcolor='e5e5e5' style='font-size:12px;text-align:center; color:#3a3a3a; font-weight:bold;'>" + day.Date.ToString("yyyy-MM-dd") + @"<div style='cursor:pointer; float:right; display:none;' onclick='javascript:" + this.Parent.ClientID + @"_defaultCalendar();'>×</div></td>
                                         <td style='font-size:0' height='24' width='23'><img src='" + imgUrl + @"date_m_10.jpg' width='23' height='24'></td>
                                     </tr>
                                 </table>
