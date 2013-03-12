@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="GOW365\" Type="ElementManifest" />
+    <ProjectItemFile Source="GetSurveyList\Sample.txt" Target="GOW365\GetSurveyList\" Type="ElementFile" />
+    <ProjectItemFile Source="GetSurveyList\more_button.gif" Target="GOW365\GetSurveyList\" Type="ElementFile" />
+    <ProjectItemFile Source="GetSurveyList\survey_bottom.gif" Target="GOW365\GetSurveyList\" Type="ElementFile" />
+    <ProjectItemFile Source="GetSurveyList\survey_bottom_l.gif" Target="GOW365\GetSurveyList\" Type="ElementFile" />
+    <ProjectItemFile Source="GetSurveyList\survey_bottom_r.gif" Target="GOW365\GetSurveyList\" Type="ElementFile" />
+    <ProjectItemFile Source="GetSurveyList\survey_box_bg.gif" Target="GOW365\GetSurveyList\" Type="ElementFile" />
+    <ProjectItemFile Source="GetSurveyList\survey_box_left.gif" Target="GOW365\GetSurveyList\" Type="ElementFile" />
+    <ProjectItemFile Source="GetSurveyList\survey_box_left_b.gif" Target="GOW365\GetSurveyList\" Type="ElementFile" />
+    <ProjectItemFile Source="GetSurveyList\survey_box_right.gif" Target="GOW365\GetSurveyList\" Type="ElementFile" />
+    <ProjectItemFile Source="GetSurveyList\survey_box_right_b.gif" Target="GOW365\GetSurveyList\" Type="ElementFile" />
+    <ProjectItemFile Source="GetSurveyList\survey_box_top.gif" Target="GOW365\GetSurveyList\" Type="ElementFile" />
+    <ProjectItemFile Source="GetSurveyList\survey_box_top_bg.gif" Target="GOW365\GetSurveyList\" Type="ElementFile" />
+    <ProjectItemFile Source="GetSurveyList\survey_box_top_l.gif" Target="GOW365\GetSurveyList\" Type="ElementFile" />
+    <ProjectItemFile Source="GetSurveyList\survey_box_top_r.gif" Target="GOW365\GetSurveyList\" Type="ElementFile" />
+    <ProjectItemFile Source="GetSurveyList\survey_box_top_re.gif" Target="GOW365\GetSurveyList\" Type="ElementFile" />
+    <ProjectItemFile Source="GetSurveyList\survey_image.gif" Target="GOW365\GetSurveyList\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

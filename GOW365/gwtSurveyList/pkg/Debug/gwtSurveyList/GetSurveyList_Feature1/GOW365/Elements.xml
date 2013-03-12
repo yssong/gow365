@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="GOW365">
+    <File Path="GOW365\GetSurveyList\Sample.txt" Url="GOW365/GetSurveyList/Sample.txt" />
+    <File Path="GOW365\GetSurveyList\more_button.gif" Url="GOW365/GetSurveyList/more_button.gif" />
+    <File Path="GOW365\GetSurveyList\survey_bottom.gif" Url="GOW365/GetSurveyList/survey_bottom.gif" />
+    <File Path="GOW365\GetSurveyList\survey_bottom_l.gif" Url="GOW365/GetSurveyList/survey_bottom_l.gif" />
+    <File Path="GOW365\GetSurveyList\survey_bottom_r.gif" Url="GOW365/GetSurveyList/survey_bottom_r.gif" />
+    <File Path="GOW365\GetSurveyList\survey_box_bg.gif" Url="GOW365/GetSurveyList/survey_box_bg.gif" />
+    <File Path="GOW365\GetSurveyList\survey_box_left.gif" Url="GOW365/GetSurveyList/survey_box_left.gif" />
+    <File Path="GOW365\GetSurveyList\survey_box_left_b.gif" Url="GOW365/GetSurveyList/survey_box_left_b.gif" />
+    <File Path="GOW365\GetSurveyList\survey_box_right.gif" Url="GOW365/GetSurveyList/survey_box_right.gif" />
+    <File Path="GOW365\GetSurveyList\survey_box_right_b.gif" Url="GOW365/GetSurveyList/survey_box_right_b.gif" />
+    <File Path="GOW365\GetSurveyList\survey_box_top.gif" Url="GOW365/GetSurveyList/survey_box_top.gif" />
+    <File Path="GOW365\GetSurveyList\survey_box_top_bg.gif" Url="GOW365/GetSurveyList/survey_box_top_bg.gif" />
+    <File Path="GOW365\GetSurveyList\survey_box_top_l.gif" Url="GOW365/GetSurveyList/survey_box_top_l.gif" />
+    <File Path="GOW365\GetSurveyList\survey_box_top_r.gif" Url="GOW365/GetSurveyList/survey_box_top_r.gif" />
+    <File Path="GOW365\GetSurveyList\survey_box_top_re.gif" Url="GOW365/GetSurveyList/survey_box_top_re.gif" />
+    <File Path="GOW365\GetSurveyList\survey_image.gif" Url="GOW365/GetSurveyList/survey_image.gif" />
+  </Module>
+</Elements>

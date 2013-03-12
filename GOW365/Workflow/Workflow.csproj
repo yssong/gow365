@@ -40,10 +40,17 @@
     <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Activities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.WorkflowServices.Activities, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.Activities" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel.Activities" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.SharePoint" />
@@ -77,6 +84,9 @@
     <None Include="Features\Feature1\Feature1.feature">
       <FeatureId>{85b34453-608f-418c-a652-e444a686cb08}</FeatureId>
     </None>
+    <None Include="Features\Feature2\Feature2.feature">
+      <FeatureId>{b0bacd1f-1c5e-4a00-b7ac-5b8bcf0eb0e7}</FeatureId>
+    </None>
     <None Include="key.snk" />
     <None Include="DeptInfo\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{3e249d60-e9cf-4131-807d-26d09cc90f14}</SharePointProjectItemId>
@@ -100,7 +110,6 @@
       <SharePointProjectItemId>{5384d89d-ee07-41b7-a205-6d765d2c31a6}</SharePointProjectItemId>
     </None>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="Approval\Approval.css" />
     <Content Include="Approval\Approval.html" />
@@ -219,6 +228,9 @@
     </Content>
     <Content Include="DeptInfo\Elements.xml" />
     <Content Include="DeptInfo\Schema.xml" />
+    <Content Include="Features\Feature2\Feature2.Template.xml">
+      <DependentUpon>Feature2.feature</DependentUpon>
+    </Content>
     <Content Include="orgUsers\Elements.xml" />
     <Content Include="orgUsers\ListsorgUsers_pages\Elements.xml" />
     <Content Include="orgUsers\Schema.xml" />

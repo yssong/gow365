@@ -2,3 +2,7 @@ C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\Workflow
 C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\Workflow\bin\Debug\Workflow.pdb
 C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\Workflow\obj\Debug\Workflow.dll
 C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\Workflow\obj\Debug\Workflow.pdb
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\Workflow\obj\Debug\Workflow.csprojResolveAssemblyReference.cache
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\Workflow\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\Workflow\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\Workflow\bin\Debug\ko\System.Net.Http.Formatting.resources.dll

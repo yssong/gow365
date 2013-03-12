@@ -5,5 +5,6 @@
   </Assemblies>
   <FeatureManifests>
     <FeatureManifest Location="Workflow_Feature1\Feature.xml" />
+    <FeatureManifest Location="Workflow_Feature2\Feature.xml" />
   </FeatureManifests>
 </Solution>

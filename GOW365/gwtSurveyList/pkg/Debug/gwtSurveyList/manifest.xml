@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="a6178ac0-bf5d-47c6-9f79-b17700585621" SharePointProductVersion="15.0">
+  <Assemblies>
+    <Assembly Location="GetSurveyList.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="GetSurveyList, Version=1.0.0.0, Culture=neutral, PublicKeyToken=830f09bb02746b6c" Namespace="GOW365.SurveyList" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <FeatureManifests>
+    <FeatureManifest Location="GetSurveyList_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

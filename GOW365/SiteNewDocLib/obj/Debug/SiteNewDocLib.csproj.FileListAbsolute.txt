@@ -1,0 +1,5 @@
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\SiteNewDocLib\bin\Debug\SiteNewDocLib.dll
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\SiteNewDocLib\bin\Debug\SiteNewDocLib.pdb
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\SiteNewDocLib\obj\Debug\SiteNewDocLib.csprojResolveAssemblyReference.cache
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\SiteNewDocLib\obj\Debug\SiteNewDocLib.dll
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\SiteNewDocLib\obj\Debug\SiteNewDocLib.pdb

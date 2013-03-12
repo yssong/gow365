@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="374369e8-f875-4cee-9c92-c33460fe0150" SharePointProductVersion="15.0">
+  <Assemblies>
+    <Assembly Location="SiteNewDocLib.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="SiteNewDocLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=370689f2b6f9f095" Namespace="GOW365.SiteNewDocsWebPart" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <FeatureManifests>
+    <FeatureManifest Location="SiteNewDocLib_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

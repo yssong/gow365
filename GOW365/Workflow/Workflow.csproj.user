@@ -4,4 +4,13 @@
     <SharePointSiteUrl>http://gtsesvsp/workflowtemp/</SharePointSiteUrl>
     <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{C1CDDADD-2546-481F-9697-4EA41081F2FC}">
+        <ProjectStore>
+          <IsWorkflowDebuggingEnabled>false</IsWorkflowDebuggingEnabled>
+        </ProjectStore>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

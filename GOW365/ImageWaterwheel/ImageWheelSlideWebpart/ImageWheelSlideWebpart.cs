@@ -14,8 +14,8 @@ namespace GOW365.ImageWheelSlideWebpart
 
     public class ImageWheelSlideWebpart : WebPart
     {
-        private string imgWidth = "320";
-        private string imgHeight = "180";
+        private string imgWidth = "160";
+        private string imgHeight = "110";
         private string webName = string.Empty;
         private string listName = string.Empty;
         private int itemCount = 50;
@@ -179,12 +179,10 @@ namespace GOW365.ImageWheelSlideWebpart
                 listName = value;
             }
         }
-
         #endregion
 
         protected override void CreateChildControls()
         {
-
             JsUrl = (SPContext.Current.Site.ServerRelativeUrl.EndsWith("/") ? SPContext.Current.Site.ServerRelativeUrl + JsUrl : SPContext.Current.Site.ServerRelativeUrl + "/" + JsUrl);
             noUrl = new Label();
             this.noUrl.Text = "Check Site Address or List Name.";
@@ -380,7 +378,7 @@ else
                         string strTitle = spl["NameOrTitle"].ToString();
                         strTitle = strTitle.Contains(".") ? strTitle.Split('.')[0] : strTitle;
                         strTitle = strTitle.Contains("__") ? strTitle.Replace("__", "<br>") : strTitle;
-                        
+                        //string thumnail = spl["EncodedAbsThumbnailUrl"].ToString();
                         if (List.Fields.ContainsField("URL"))
                         {
                             if (spl["URL"] == null)
@@ -401,7 +399,7 @@ else
                             linkurl = List.DefaultDisplayFormUrl.ToString() + "?ID=" + spl["ID"].ToString();
                         }
 
-                        returnValue += @"<img src='" + spl["FileRef"].ToString() + @"' width='" + ImgWidth + "px' height='" + ImgHeight + "px'   id='" + spl["ID"].ToString() + "'/>";
+                        returnValue += @"<img src='" + spl["EncodedAbsThumbnailUrl"].ToString().Replace("/_t/","/_w/") + @"' width='" + ImgWidth + "px' height='" + ImgHeight + "px'   id='" + spl["ID"].ToString() + "'/>";
 
                     }
 
