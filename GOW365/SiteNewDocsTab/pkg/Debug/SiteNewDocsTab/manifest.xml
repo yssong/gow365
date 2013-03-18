@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="faa90e73-b545-4f8f-b640-8b0293286cab" SharePointProductVersion="15.0">
+  <Assemblies>
+    <Assembly Location="SiteNewDocsTab.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="SiteNewDocsTab, Version=1.0.0.0, Culture=neutral, PublicKeyToken=af6940f6ed1abbdc" Namespace="SiteNewDocsTab.NewDocsTabWebPart" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <FeatureManifests>
+    <FeatureManifest Location="SiteNewDocsTab_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="4f407497-9757-4dab-84e8-8869b8d828b2" Scope="Site" Title="SearchContact Feature1">
+  <ElementManifests>
+    <ElementManifest Location="ContactSearchWebPart\Elements.xml" />
+    <ElementFile Location="ContactSearchWebPart\ContactSearchWebPart.webpart" />
+    <ElementManifest Location="GOW365\Elements.xml" />
+    <ElementFile Location="GOW365\SearchContact\Sample.txt" />
+  </ElementManifests>
+</Feature>

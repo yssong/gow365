@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="4a8346cb-cbdb-4515-91d3-a3475e8e9953" SharePointProductVersion="15.0">
+  <Assemblies>
+    <Assembly Location="NewBlogPost.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="NewBlogPost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=959355df4fca143a" Namespace="GOW365.NewPostWebpart" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <FeatureManifests>
+    <FeatureManifest Location="NewBlogPost_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="SubSitesTab Feature1" Id="a97cd9bf-50c0-4dec-8807-cb7ae82758a3" Scope="Site">
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="a97cd9bf-50c0-4dec-8807-cb7ae82758a3" Scope="Site" Title="SubSitesTab Feature1">
   <ElementManifests>
     <ElementManifest Location="SubSitesTabWebpart\Elements.xml" />
     <ElementFile Location="SubSitesTabWebpart\SubSitesTabWebpart.webpart" />

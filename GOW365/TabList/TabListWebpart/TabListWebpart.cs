@@ -9,24 +9,15 @@ using Microsoft.SharePoint.WebControls;
 using System.Web.UI.HtmlControls;
 using System.Collections.Generic;
 using System.Data;
+using Microsoft.SharePoint.Utilities;
 
 namespace GOW365.TabListWebpart
 {
     [ToolboxItemAttribute(false)]
     public class TabListWebpart : WebPart
     {
-        private HtmlGenericControl TabWebPartCSS = null;
-
         //배포 전에 ImgUrl을 수정해주세요. 
-        private string ImgUrl = "/GOW365/TabList/";
-        private HtmlInputHidden hhdList;
-        private HtmlInputHidden hdtxt;
-        private HtmlInputHidden hhdSelectedSite;
-        private Label lblWrongSiteUrl;
-        private string moreInfo;
-
-        private static SPWeb web = null;
-        private static SPList list = null;
+        private string ImgUrl = "GOW365/TabList/";
 
         #region Properties
 
@@ -36,7 +27,7 @@ namespace GOW365.TabListWebpart
         private string listName2 = string.Empty;
         private string webName3 = string.Empty;
         private string listName3 = string.Empty;
-        private int listItemCount = 5;
+        private int listItemCount = 7;
 
         [Personalizable(PersonalizationScope.Shared),
         WebBrowsable(true),
@@ -121,506 +112,228 @@ namespace GOW365.TabListWebpart
 
         #endregion
 
-        public TabListWebpart()
-        {
-            //this.ExportMode = WebPartExportMode.All;
-            //ImgUrl = SPContext.Current.Site.Url + ImgUrl;
-        }
-
-        protected override void OnPreRender(EventArgs e)
-        {
-            try
-            {
-                if (ListName1 != string.Empty)
-                {
-                    web = SPContext.Current.Site.OpenWeb(WebName1);
-                    list = web.Lists[ListName1];
-
-                    moreInfo = list.RootFolder.ServerRelativeUrl;
-                    hhdSelectedSite.Value += list.RootFolder.ServerRelativeUrl + ";";
-                    if (web != null) { web.Close(); web.Dispose(); }
-                }
-                if (ListName2 != string.Empty)
-                {
-                    web = SPContext.Current.Site.OpenWeb(WebName2);
-                    list = web.Lists[ListName2];
-
-                    hhdSelectedSite.Value += list.RootFolder.ServerRelativeUrl + ";";
-                    if (web != null) { web.Close(); web.Dispose(); }
-                }
-                if (ListName3 != string.Empty)
-                {
-                    web = SPContext.Current.Site.OpenWeb(WebName3);
-                    list = web.Lists[ListName3];
-
-                    hhdSelectedSite.Value += list.RootFolder.ServerRelativeUrl + ";";
-                    if (web != null) { web.Close(); web.Dispose(); }
-                }
-            }
-            catch (Exception ex)
-            {
-            }
-        }
-
         protected override void CreateChildControls()
         {
-            this.hhdSelectedSite = new HtmlInputHidden();
-            this.hhdSelectedSite.ID = this.hhdSelectedSite.ClientID;
-            this.hhdSelectedSite.Value = string.Empty;
-            this.Controls.Add(hhdSelectedSite);
+            ImgUrl = (SPContext.Current.Site.ServerRelativeUrl.EndsWith("/")?SPContext.Current.Site.ServerRelativeUrl+ImgUrl:SPContext.Current.Site.ServerRelativeUrl+"/"+ImgUrl);
 
-            hhdList = new HtmlInputHidden();
-            hhdList.Attributes["id"] = "hhdList_" + this.ClientID;
-            this.Controls.Add(this.hhdList);
-
-            hdtxt = new HtmlInputHidden();
-            hdtxt.Attributes["id"] = "hdtxt_" + this.ClientID;
-            this.Controls.Add(this.hdtxt);
-
-            lblWrongSiteUrl = new Label();
-            lblWrongSiteUrl.Text = "Check WebName or ListName.";
-            this.Controls.Add(lblWrongSiteUrl);
-
-            base.CreateChildControls();
         }
-
-        public bool webCheck(string wName, string lName)
-        {
-            bool check = false;
-            try
-            {
-                web = SPContext.Current.Site.OpenWeb(wName);
-                if (lName == string.Empty)
-                { check = true; }
-                else
-                {
-                    SPList list = web.Lists[lName];
-                    if (list.BaseTemplate.ToString() == SPListTemplateType.PictureLibrary.ToString())
-                    {
-                        check = true;
-                    }
-                }
-            }
-            catch (Exception)
-            {
-
-            }
-            finally
-            {
-                if (web != null)
-                {
-                    web.Close();
-                    web.Dispose();
-                }
-            }
-            return check;
-        }
-
+        
         protected override void Render(HtmlTextWriter writer)
         {
-            this.ImgUrl = SPContext.Current.Site.Url + this.ImgUrl;
+            writer.Write("<link rel='stylesheet' type='text/css' href='"+ImgUrl+"TabStyle.css'/>");
+            
+            renderTabScript(writer);
+            renderTab(writer);
+            
 
-            hhdSelectedSite.RenderControl(writer);
-            hhdList.RenderControl(writer);
-            hdtxt.RenderControl(writer);
-
-            string _hd_ID = hdtxt.Attributes["id"].ToString();
-            string _hhdList_ID = hhdList.Attributes["id"].ToString();
-
-            if (!webCheck(WebName1, ListName1) || !webCheck(WebName2, ListName2) || !webCheck(WebName3, ListName3))
-            {
-                this.RenderCSS(writer);
-                this.RenderMainTable(writer);
-                this.RenderScript(writer);
-            }
-            else
-            {
-                this.lblWrongSiteUrl.RenderControl(writer);
-            }
         }
-
-        private void RenderMainTable(HtmlTextWriter writer)
+        private void renderTab(HtmlTextWriter writer)
         {
-            writer.WriteLine(@"
-                            <table width='100%' border='0' cellspacing='0' cellpadding='0'>
-                                <tr>");
-            List<ListItem> tabs = new List<ListItem>();
-            if (ListName1 != "")
-            {
-                tabs.Add(new ListItem(WebName1, ListName1));
-            }
-            if (ListName2 != "")
-            {
-                tabs.Add(new ListItem(WebName2, ListName2));
-            }
-            if (ListName3 != "")
-            {
-                tabs.Add(new ListItem(WebName3, ListName3));
-            }
+            string tabhead = @"<div id='"+this.ClientID+"_container' class='container'>";
 
-            for (int i = 0; i < tabs.Count; i++)
+            tabhead += @"<div id='tabhead'><ul id='nav'>";
+            if(ListName1!="")
             {
-                string textStyle;
-                string imgTapOver;
-                if (i == 0)
-                {
-                    textStyle = "selectedNewTab";
-                    imgTapOver = "Selected_tab.gif";
-                }
-                else
-                {
-                    textStyle = "unselectedNewTab";
-                    imgTapOver = "Unselected_tab.gif";
-                }
-
-                writer.WriteLine(@"<td width='100' height='31'>
-                                        <table width='100%' onclick='" + string.Format("javascript:{0}_table({1})", this.ClientID, i) + @"' cellspacing='0' cellpadding='0' style='cursor:pointer'>
-                                            <tr>
-                                                <td id='" + this.ClientID + "_iconTD" + i + "' width='100%' height='31' align='center' background='" + ImgUrl + imgTapOver + "' class='" + textStyle + @"' style='padding-top: 8px;background-repeat: no-repeat; background-position:bottom'>
-                                                    " + tabs[i].Value + @"
-                                                    <img id='" + this.ClientID + "_iconIMG" + i + "' name='" + this.UniqueID + "$Image" + i + @"' src='" + ImgUrl + imgTapOver + @"' style='display: none' />
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>");
+                tabhead += "<li><a class='active' href='#' onclick='"+this.ClientID+"_changeClass(this,\""+this.ClientID+"_tab1\")'>"+ListName1+"</a></li>";
             }
-            writer.WriteLine("      <td height='31' background='" + ImgUrl + @"section_center.gif' style='background-repeat: repeat-x; background-position:bottom'>");
-            writer.WriteLine("          <p align='right'><img id='" + this.ClientID + "_morebutton' src='" + ImgUrl + "more_button.gif' width='31' height='14' style='cursor:pointer' linkinfo='" + moreInfo + "' onclick='javascript:" + this.ClientID + "_GoMoreList(this);' /></p>");
-            writer.WriteLine("      </td>");
-            writer.WriteLine("  </tr>");
-            writer.WriteLine("</table>");
-
-            writer.WriteLine(@"
-                <table width='100%' border='0' cellspacing='0' cellpadding='0'>
-            	    <tr>
-                        <td>
-            			    <div id='" + this.ClientID + "_table' style='width:100%;height:100%'>");
+            if(ListName2!="")
+            {
+                tabhead += "<li><a  href='#' onclick='" + this.ClientID + "_changeClass(this,\"" + this.ClientID + "_tab2\")'>" + ListName2 + "</a></li>";
+            }
+            if(ListName3!="")
+            {
+                tabhead += "<li><a  href='#' onclick='" + this.ClientID + "_changeClass(this,\"" + this.ClientID + "_tab3\")'>" + ListName3 + "</a></li>";
+            }
+            
             SPWeb web = null;
-            int divcnt = 0;
-
-            foreach (ListItem li in tabs)
-            {
-                try
-                {
-                    web = SPContext.Current.Site.OpenWeb(li.Text);
-                    if (divcnt == 0)
-                    {
-                        writer.WriteLine("<div id='" + this.ClientID + "_content_" + divcnt.ToString() + @"'>");
-                        divcnt++;
-                    }
-                    else
-                    {
-                        writer.WriteLine("<div id='" + this.ClientID + "_content_" + divcnt.ToString() + @"' style='display:none'>");
-                        divcnt++;
-                    }
-
-                    writer.WriteLine(@"
-                        <table width='100%' border='0' cellspacing='0' cellpadding='0'>
-                            <tr>
-                                <td width='4' background='" + ImgUrl + @"section_centerleft.gif' style='background-repeat: repeat-y;'></td>
-                                <td>");
-                    if (li.Value != string.Empty)
-                    {
-                        writer.WriteLine(GetListHtml(li.Text, li.Value, ListItemCount).ToString());
-                    }
-                    writer.WriteLine(@"
-                                </td>
-                                <td width='4' background='" + ImgUrl + @"section_centerright.gif' style='background-repeat: repeat-y;'></td>
-                            </tr>
-
-                            <tr>
-                                <td width='4' height='4' background='" + ImgUrl + @"section_bottomleft.gif' style='background-repeat: no-repeat; background-position:bottom'></td>
-                                <td height='4' background='" + ImgUrl + @"section_bottomcenter.gif' style='background-repeat: repeat-x; background-position:bottom'></td>
-                                <td width='4' height='4' background='" + ImgUrl + @"section_bottomright.gif' style='background-repeat: no-repeat; background-position:bottom'></td>
-                            </tr>
-                        </table>");
-                }
-                catch (Exception ex)
-                {
-
-                }
-                finally
-                {
-                    if (web != null)
-                    {
-                        web.Close();
-                        web.Dispose();
-                    }
-                    writer.WriteLine(@"
-                                </div>");
-                }
-            }
-
-            writer.WriteLine(@"
-                            </div>
-                        </td>
-                    </tr>
-                </table>");
-        }
-
-        public string GetListHtml(string wName, string lName, int iListCount)
-        {
-            string returnValue = string.Empty;
-
+            tabhead += @"</ul></div>";
+            string weburl = "";
+            string listName = "";
             try
             {
-                web = SPContext.Current.Site.OpenWeb(wName);
-                list = web.Lists[lName];
-
-                SPQuery query = new SPQuery();
-                DataTable dt = new DataTable();
-
-                query.ViewAttributes = "Scope=\"Recursive\"";
-                query.IncludeAllUserPermissions = true;
-                string sQuery = "<Where><Neq><FieldRef Name='ContentType' /><Value Type='Text'>Folder</Value> </Neq></Where>";
-                query.RowLimit = (uint)iListCount;
-                query.Query = sQuery;
-
-                if (list.BaseTemplate.ToString() != SPListTemplateType.DiscussionBoard.ToString())
+                for (int i = 0; i < 3; i++)
                 {
-                    SPListItemCollection itemColl = list.GetItems(query);
-                    dt = itemColl.GetDataTable();
-                }
-                else
-                {
-                    SPListItemCollection folderColl = list.Folders;
-                    dt = folderColl.GetDataTable();
-                }
-
-                returnValue = "";
-                returnValue += "<table width='100%' border='0' cellspacing='0' cellpadding='0'>";
-                returnValue += "  <tr>";
-                returnValue += "    <td  width='10'>&nbsp;</td>";
-                returnValue += "    <td  width='70%' class='title_text'>" + "Title"/*BizUtility.GetLocalizedString("_Title")*/ + "</td>";
-                returnValue += "    <td  width='15%' class='title_text'>" + "Createdby"/*BizUtility.GetLocalizedString("_Createdby")*/ + "</td>";
-                returnValue += "    <td  width='13%' class='title_text'>" + "Created"/*BizUtility.GetLocalizedString("_Created")*/ + "</td>";
-                returnValue += "  </tr>";
-
-                DataRow[] foundRows = (dt == null ? null : dt.Select("", "Created DESC"));
-
-                for (int i = 0; i < iListCount; i++)
-                {
-                    if (foundRows != null && foundRows.Length > i)
+                    switch (i)
                     {
-                        if (list.BaseType == SPBaseType.DocumentLibrary)
-                        {
-                            returnValue += "<tr>";
-
-                            returnValue += "<td  width='10' height='20' background='" + ImgUrl + "section_dotline.gif' style='background-repeat: repeat-x;background-position: bottom'>";
-                            returnValue += "<img src='" + ImgUrl + "section_icon.gif' width='3' height='5' />";
-                            returnValue += "</td>";
-                            returnValue += "<td  width='70%' background='" + ImgUrl + "section_dotline.gif' class='basic_text' style='background-repeat: repeat-x;background-position: bottom'>";
-                            returnValue += "<a href=\"#\" onclick=\"javascript:openDialog('" + list.DefaultDisplayFormUrl + "?ID=" + foundRows[i]["ID"] + "'); return false;\">";
-                            if (foundRows[i]["Title"].ToString() != string.Empty)
+                        case 0:
+                            if (webName1 == "")
                             {
-                                returnValue += foundRows[i]["Title"].ToString();
+                                weburl = SPContext.Current.Web.ServerRelativeUrl;
                             }
                             else
                             {
-                                returnValue += foundRows[i]["FileLeafRef"].ToString().Split('.')[0];
+                                weburl = WebName1;
                             }
-                            returnValue += "</a>";
-                            returnValue += "</td>";
-                            returnValue += "<td  width='15%' background='" + ImgUrl + "section_dotline.gif' class='basic_text' style='background-repeat: repeat-x;background-position: bottom'>";
-                            returnValue += foundRows[i]["Author"].ToString();
-                            returnValue += "</td>";
-                            returnValue += "<td  width='13%' background='" + ImgUrl + "section_dotline.gif' class='basic_text' style='background-repeat: repeat-x;background-position: bottom'>";
-                            returnValue += Convert.ToDateTime(foundRows[i]["Created"].ToString()).ToShortDateString();
-                            returnValue += "</td>";
-
-                            returnValue += "</tr>";
-                        }
-                        else if (list.BaseTemplate.ToString() == SPListTemplateType.Links.ToString())
-                        {
-                            returnValue += "<tr>";
-
-                            returnValue += "<td  width='10' height='20' background='" + ImgUrl + "section_dotline.gif' style='background-repeat: repeat-x;background-position: bottom'>";
-                            returnValue += "<img src='" + ImgUrl + "section_icon.gif' width='3' height='5' />";
-                            returnValue += "</td>";
-                            returnValue += "<td  width='70%' background='" + ImgUrl + "section_dotline.gif' class='basic_text' style='background-repeat: repeat-x;background-position: bottom'>";
-                            returnValue += "<a href=\"#\" onclick=\"javascript:openDialog('" + list.DefaultDisplayFormUrl + "?ID=" + foundRows[i]["ID"] + "'); return false;\">";
-                            returnValue += foundRows[i]["URL"].ToString().Split(',')[1];
-                            returnValue += "</a>";
-                            returnValue += "</td>";
-                            returnValue += "<td  width='15%' background='" + ImgUrl + "section_dotline.gif' class='basic_text' style='background-repeat: repeat-x;background-position: bottom'>";
-                            returnValue += foundRows[i]["Author"].ToString();
-                            returnValue += "</td>";
-                            returnValue += "<td  width='13%' background='" + ImgUrl + "section_dotline.gif' class='basic_text' style='background-repeat: repeat-x;background-position: bottom'>";
-                            returnValue += Convert.ToDateTime(foundRows[i]["Created"].ToString()).ToShortDateString();
-                            returnValue += "</td>";
-
-                            returnValue += "</tr>";
-                        }
-                        else if (list.BaseTemplate.ToString() == SPListTemplateType.DiscussionBoard.ToString())
-                        {
-                            returnValue += "<tr>";
-
-                            returnValue += "<td  width='10' height='20' background='" + ImgUrl + "section_dotline.gif' style='background-repeat: repeat-x;background-position: bottom'>";
-                            returnValue += "<img src='" + ImgUrl + "section_icon.gif' width='3' height='5' />";
-                            returnValue += "</td>";
-                            returnValue += "<td  width='70%' background='" + ImgUrl + "section_dotline.gif' class='basic_text' style='background-repeat: repeat-x;background-position: bottom'>";
-                            returnValue += "<a href=\"#\" onclick=\"javascript:openDialog('" + list.DefaultDisplayFormUrl + "?ID=" + foundRows[i]["ID"] + "'); return false;\">";
-                            returnValue += foundRows[i]["Title"].ToString() + "(" + foundRows[i]["ItemChildCount"] + ")";
-                            returnValue += "</a>";
-                            returnValue += "</td>";
-                            returnValue += "<td  width='15%' background='" + ImgUrl + "section_dotline.gif' class='basic_text' style='background-repeat: repeat-x;background-position: bottom'>";
-                            returnValue += foundRows[i]["Author"].ToString();
-                            returnValue += "</td>";
-                            returnValue += "<td  width='13%' background='" + ImgUrl + "section_dotline.gif' class='basic_text' style='background-repeat: repeat-x;background-position: bottom'>";
-                            returnValue += Convert.ToDateTime(foundRows[i]["Created"].ToString()).ToShortDateString();
-                            returnValue += "</td>";
-
-                            returnValue += "</tr>";
-                        }
-                        else
-                        {
-                            returnValue += "<tr>";
-
-                            returnValue += "<td  width='10' height='20' background='" + ImgUrl + "section_dotline.gif' style='background-repeat: repeat-x;background-position: bottom'>";
-                            returnValue += "<img src='" + ImgUrl + "section_icon.gif' width='3' height='5' />";
-                            returnValue += "</td>";
-                            returnValue += "<td  width='70%' background='" + ImgUrl + "section_dotline.gif' class='basic_text' style='background-repeat: repeat-x;background-position: bottom'>";
-                            returnValue += "<a href=\"#\" onclick=\"javascript:openDialog('" + list.DefaultDisplayFormUrl + "?ID=" + foundRows[i]["ID"] + "&IsDlg=1'); return false;\">";
-                            returnValue += foundRows[i]["Title"].ToString();
-                            returnValue += "</a>";
-                            returnValue += "</td>";
-                            returnValue += "<td  width='15%' background='" + ImgUrl + "section_dotline.gif' class='basic_text' style='background-repeat: repeat-x;background-position: bottom'>";
-                            returnValue += foundRows[i]["Author"].ToString();
-                            returnValue += "</td>";
-                            returnValue += "<td  width='13%' background='" + ImgUrl + "section_dotline.gif' class='basic_text' style='background-repeat: repeat-x;background-position: bottom'>";
-                            returnValue += Convert.ToDateTime(foundRows[i]["Created"].ToString()).ToShortDateString();
-                            returnValue += "</td>";
-
-                            returnValue += "</tr>";
-                        }
+                            listName = ListName1;
+                            break;
+                        case 1:
+                            if (webName2 == "")
+                            {
+                                weburl = SPContext.Current.Web.ServerRelativeUrl;
+                            }
+                            else
+                            {
+                                weburl = WebName2;
+                            }
+                            listName = ListName2;
+                            break;
+                        case 2:
+                            if (webName3 == "")
+                            {
+                                weburl = SPContext.Current.Web.ServerRelativeUrl;
+                            }
+                            else
+                            {
+                                weburl = WebName3;
+                            }
+                            listName = ListName3;
+                            break;
+                        default:
+                            break;
                     }
-                    else
+
+                    web = SPContext.Current.Site.OpenWeb(weburl);
+
+                    try
                     {
-                        returnValue += "<tr>";
-                        returnValue += "<td colspan='4' height='20'  background='" + ImgUrl + "section_dotline.gif' class='basic_text' style='background-repeat: repeat-x;background-position: bottom'>&nbsp;</td>";
-                        returnValue += "</tr>";
+                        SPList list = web.Lists[listName];
+
+                        SPQuery query = new SPQuery();
+                        DataTable dt = new DataTable();
+
+                        if (list.BaseTemplate.ToString() != SPListTemplateType.DiscussionBoard.ToString()) query.ViewAttributes = "Scope=\"Recursive\"";
+                        query.IncludeAllUserPermissions = true;
+                        string sQuery = "<Where><Neq><FieldRef Name='ContentType' /><Value Type='Computed'>Folder</Value> </Neq></Where><OrderBy><FieldRef Name='Modified' Ascending='FALSE' /></OrderBy>";
+                        query.RowLimit = (uint)ListItemCount;
+                        query.Query = sQuery;
+
+                        
+                        SPListItemCollection itemColl = list.GetItems(query);
+                        tabhead += "<div id='" + this.ClientID + "_tab" + (i+1).ToString() + "' class='tab' "+(i==0?"":"style='display:none;'")+"><ul>";
+                        foreach (SPListItem item in itemColl)
+                        {                            
+                            if (list.BaseType == SPBaseType.DocumentLibrary)
+                            {
+                                tabhead += "<li><span class='tabTitle'><a href=\"#\" onclick=\"javascript:openDialog('" + list.DefaultDisplayFormUrl + "?ID=" + item["ID"] + "'); return false;\">";
+                                tabhead += item.DisplayName;
+                                tabhead += "</a>";
+                                tabhead += "</span><span class='tabName'>" + item["Author"].ToString().Split('#')[1] + "</span><span  class='tabDate'>" + Convert.ToDateTime(item["Created"].ToString()).ToShortDateString() + "</span></li>";
+
+                                
+                            }
+                            else if (list.BaseTemplate.ToString() == SPListTemplateType.Links.ToString())
+                            {
+                                tabhead += "<li><span class='tabTitle'><a href=\"#\" onclick=\"javascript:openDialog('" + list.DefaultDisplayFormUrl + "?ID=" + item["ID"] + "'); return false;\">";
+                                tabhead += item["URL"].ToString().Split(',')[1];
+                                tabhead += "</a>";
+                                tabhead += "</a>";
+                                tabhead += "</span><span class='tabName'>" + item["Author"].ToString().Split('#')[1] + "</span><span  class='tabDate'>" + Convert.ToDateTime(item["Created"].ToString()).ToShortDateString() + "</span></li>";
+                            }
+                            else if (list.BaseTemplate.ToString() == SPListTemplateType.DiscussionBoard.ToString())
+                            {
+                                //tabhead += "<li><span class='tabTitle'><a href=\"#\" onclick=\"javascript:openDialog('" + "/" + item["ReplyNoGif"].ToString() + "/flat.aspx?rootfolder=" + HttpUtility.UrlEncode("/" +item["ReplyNoGif"].ToString() + "/" + item["Title"].ToString()) + "&FolderCTID=" + list.ContentTypes[0].Id.ToString() + "'); return false;\">";
+                                //tabhead += "<li><span class='tabTitle'><a href='#' onclick=\"javascript:openDialog('" +list.DefaultDisplayFormUrl.Substring(0,list.DefaultDisplayFormUrl.LastIndexOf('/')) +"/flat.aspx?rootfolder="+ HttpUtility.UrlEncode((weburl=="/"?weburl:weburl+"/")+item.Url)+"&FolderCTID=" + list.ContentTypes[0].Id.ToString() + "'); return false;\">";
+                                tabhead += "<li><span class='tabTitle'><a href='#' onclick=\"javascript:openDialog('" + list.DefaultDisplayFormUrl.Substring(0, list.DefaultDisplayFormUrl.LastIndexOf('/')) + "/Flat.aspx?rootfolder=" + SPEncode.UrlEncode((weburl == "/" ? weburl : weburl + "/") + item.Url) + "&FolderCTID=" + list.ContentTypes[0].Id.ToString() + "'); return false;\">";
+                                tabhead += item.DisplayName + "(" + item["ItemChildCount"].ToString() + ")";
+                                tabhead += "</a>";
+                                tabhead += "</span><span class='tabName'>" + item["Author"].ToString().Split('#')[1] + "</span><span  class='tabDate'>" + Convert.ToDateTime(item["Created"].ToString()).ToShortDateString() + "</span></li>";
+                            }
+                            else
+                            {
+                                tabhead += "<li><span class='tabTitle'><a href=\"#\" onclick=\"javascript:openDialog('" + list.DefaultDisplayFormUrl + "?ID=" + item["ID"] + "'); return false;\">";
+                                tabhead += item.DisplayName;
+                                tabhead += "</a>";
+                                tabhead += "</span><span class='tabName'>" + item["Author"].ToString().Split('#')[1] + "</span><span  class='tabDate'>" + Convert.ToDateTime(item["Created"].ToString()).ToShortDateString() + "</span></li>";
+                            }
+                        }
+                        tabhead += @"</ul>
+    <div style='width:100%'><span style='float:right'><a href='"+list.DefaultViewUrl+@"'>more</a></span></div>
+</div>";
+                        
+                    }
+                    catch (Exception ex)
+                    {
+                    }
+                    finally
+                    {
                     }
                 }
-
-                returnValue += "</table>";
-            }
+             }
             catch (Exception ex)
             {
+
             }
             finally
             {
-                if (web != null)
-                {
-                    web.Close();
-                    web.Dispose();
-                }
+
             }
 
-            return returnValue;
+            tabhead += @"<!--container-->";
+            tabhead += @"</div>";
+            writer.Write(tabhead);
+                
         }
 
-        private void RenderScript(HtmlTextWriter writer)
+        private void renderTabScript(HtmlTextWriter writer)
         {
-            writer.Write(@"
-                <script language='JavaScript'>
-                                var " + this.ClientID + @"_selected_iconTD  = document.getElementById('" + this.ClientID + @"_iconTD0'); 
-                                
-                                var " + this.ClientID + @"_selectedSite = document.getElementById('" + this.hhdSelectedSite.ClientID + @"').value;
-                                var " + this.ClientID + @"_moreButton = document.getElementById('" + this.ClientID + @"_morebutton');
-                                " + this.ClientID + @"_moreButton.linkinfo = " + this.ClientID + @"_selectedSite.split(';')[0];
+            string script = @"
+<script type='text/javascript'>
+// Only do anything if jQuery isn't defined
+if (typeof jQuery == 'undefined') {
+    if (typeof $ == 'function') {
+        // warning, global var
+    }
+	function  " + this.ClientID + @"getScript(url, success)
+	{
+	    var script     = document.createElement('script');
+	    script.src = url;
+	
+	    var head = document.getElementsByTagName('head')[0];
+	    " + this.ClientID + @"done = false;
+	
+	    // Attach handlers for all browsers
+	    script.onload = script.onreadystatechange = function()
+	    {
+	        if (!" + this.ClientID + @"done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete'))
+	        {
+		        " + this.ClientID + @"done = true;
+		        // callback function provided as param
+		        success();
+		
+		        script.onload = script.onreadystatechange = null;
+		        head.removeChild(script);
+	        };
+	    };
+	    head.appendChild(script);
+	};
 
-                                function openDialog(_url) {  
-                                    var options = {  url: _url ,  width: 800, height: 600, };  
-                                    SP.UI.ModalDialog.showModalDialog(options);  
-                                }
+	 " + this.ClientID + @"getScript('" + ImgUrl + @"jquery-1.9.1.min.js', function()
+	{
+		if (typeof jQuery=='undefined') {
+		 // Super failsafe - still somehow failed...
+		}
+		else
+		{
+		}
+	});
+}
+else
+{
+}
 
-                                function " + this.ClientID + @"_table(nSelectedTab) {
-                                    var table = document.getElementById('" + this.ClientID + @"_table');
+function openDialog(_url) {  
+    var options = {  url: _url ,  width: 800, height: 600, };  
+    SP.UI.ModalDialog.showModalDialog(options);  
+}
+function "+this.ClientID+@"_changeClass(obj,tabname){
+		$('#" + this.ClientID + @"_container #nav li > a').removeClass('active');
+		$(obj).addClass('active');
+		$('#" + this.ClientID+@"_container .tab').hide();
+		$('#'+tabname).show();
+}
+</script>";
 
-                                    " + this.ClientID + @"_moreButton.linkinfo = " + this.ClientID + @"_selectedSite.split(';')[nSelectedTab];
-                                    
-                                    
-                                    try
-                                    {
-                                        for(var i=0;i<3;i++) {
-                                            var fimg    = document.getElementById('" + this.ClientID + @"_fimg'+i);
-                                            var iconTD  = document.getElementById('" + this.ClientID + @"_iconTD'+i); 
-                                            var iconIMG = document.getElementById('" + this.ClientID + @"_iconIMG'+i); 
-                                            var bimg    = document.getElementById('" + this.ClientID + @"_bimg'+i);
-                                            var Content = document.getElementById('" + this.ClientID + @"_content_'+i);
-                            
-                                            if(i !=  nSelectedTab) {
-                                                iconTD.className = 'unselectedNewTab';
-                                                iconTD.background = '" + ImgUrl + @"Unselected_tab.gif';
-                                                iconIMG.src = '" + ImgUrl + @"@Unselected_tab.gif';
-                                                Content.style.display='none';
-                                            } else {
-                                                " + this.ClientID + @"_selected_iconTD = iconTD;
-                                                iconTD.className = 'selectedNewTab';
-                                                iconTD.background = '" + ImgUrl + @"Selected_tab.gif';
-                                                iconIMG.src = '" + ImgUrl + @"Selected_tab.gif';
-                                                Content.style.display='';
-                                            }
-                                        }                            
-                                    }
-                                    catch(e)
-                                    {
-                                    }                          
-                                }
-
-                                function " + this.ClientID + @"_GoMoreList(sender) {
-                                    if (sender.linkinfo != '') { 
-                                        if (sender.linkinfo != undefined) {
-                                            window.open(sender.linkinfo);
-                                        }
-                                    }
-                                }
-
-                                function " + this.ClientID + @"_GetInfo(url) { 
-                                    var xmlRequest = DoCallback(url); 
-                                    return xmlRequest.responseText; 
-                                } 
-
-                                function " + this.ClientID + @"_DoCallback(pageUrl) { 
-                                    var xmlRequest = new ActiveXObject('Microsoft.XMLHTTP'); 
-                                    xmlRequest.Open('POST', pageUrl, false); 
-                                    xmlRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-                                    xmlRequest.Send(null); 
-                                    return xmlRequest; 
-                                }     
-
-                            </script>");
-        }
-
-        private void RenderCSS(HtmlTextWriter writer)
-        {
-            writer.WriteLine("<style type='text/css'>");
-            writer.WriteLine(".title_text {");
-            writer.WriteLine("  padding-top:4px;");
-            writer.WriteLine("  padding-bottom:4px;");
-            writer.WriteLine("	font-family: '돋움';");
-            writer.WriteLine("	font-size: 12px;");
-            writer.WriteLine("  color: #0a56a3; ");
-            writer.WriteLine("}");
-            writer.WriteLine(".basic_text {");
-            writer.WriteLine("	font-family: '돋움';");
-            writer.WriteLine("	font-size: 12px;");
-            writer.WriteLine("	color: #333333;");
-            writer.WriteLine("}");
-
-            writer.WriteLine(".unselectedNewTab {");
-            writer.WriteLine("	background-image: url('" + ImgUrl + "Unselected_tab.gif');");
-            writer.WriteLine("}");
-            writer.WriteLine(".selectedNewTab {");
-            writer.WriteLine("	background-image: url('" + ImgUrl + "Selected_tab.gif');");
-            writer.WriteLine("}");
-
-            writer.WriteLine(".basic_text A:link { text-decoration:none; color:333333}");
-            writer.WriteLine(".basic_text A:visited { text-decoration:none; color:333333}");
-            writer.WriteLine(".basic_text A:active { text-decoration:none; color:333333}");
-            writer.WriteLine(".basic_text A:hover {text-decoration:none; color:#333333}");
-
-            writer.WriteLine("</style>");
+            writer.Write(script);
         }
 
     }

@@ -101,5 +101,6 @@
     <ProjectItemFile Source="today\r_banner_02_15.jpg" Target="Approval\today\" Type="ElementFile" />
     <ProjectItemFile Source="today\r_banner_03_.jpg" Target="Approval\today\" Type="ElementFile" />
     <ProjectItemFile Source="today\r_banner_04_.jpg" Target="Approval\today\" Type="ElementFile" />
+    <ProjectItemFile Source="OrgTree\MicrosoftAjax.js" Target="Approval\OrgTree\" Type="ElementFile" />
   </Files>
 </ProjectItem>

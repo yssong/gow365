@@ -1,0 +1,4 @@
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\NewBlogPost\bin\Debug\NewBlogPost.dll
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\NewBlogPost\bin\Debug\NewBlogPost.pdb
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\NewBlogPost\obj\Debug\NewBlogPost.dll
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\NewBlogPost\obj\Debug\NewBlogPost.pdb

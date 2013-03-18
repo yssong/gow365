@@ -196,62 +196,12 @@ namespace GOW365.SlideShowWebpart
         {
             if (ListName != string.Empty)
             {
-                if (WebName != string.Empty && WebName.StartsWith("https"))
-                {
-                    //배포 전에 WebName을 수정해주세요.
-                    WebName = WebName.Replace("https://ishare.spiraxsarco.com/companies/asia-pac/kr", "");
-                    WebName = WebName.StartsWith("/") ? WebName.Remove(0, 1) : WebName;
-                    WebName = WebName.EndsWith("/") ? WebName.Remove(WebName.Length - 1, 1) : WebName;
-                }
-                else if (WebName == string.Empty)
-                {
-                    SPWeb w = SPContext.Current.Web;
-                    WebName = w.ServerRelativeUrl.ToString();
-                    w.Close();
-                    w.Dispose();
-                }
-
-                if (ListCheck(WebName, ListName))
-                {
-                    this.RenderHtml(writer);
-                }
+                this.RenderHtml(writer);
             }
             else
             {
                 this.noUrl.RenderControl(writer);
             }
-        }
-
-        private bool ListCheck(string url, string name)
-        {
-            bool check = false;
-            try
-            {
-                web = SPContext.Current.Site.OpenWeb(url);
-                if (name == string.Empty)
-                { check = true; }
-                else
-                {
-                    SPList list = web.Lists[name];
-                    if (list.BaseTemplate.ToString() == SPListTemplateType.PictureLibrary.ToString())
-                    {
-                        check = true;
-                    }
-                }
-            }
-            catch (Exception)
-            {
-
-            }
-            finally
-            {
-                if (web != null)
-                {
-                    web.Close();
-                    web.Dispose();
-                }
-            }
-            return check;
         }
 
         protected void RenderHtml(HtmlTextWriter writer)

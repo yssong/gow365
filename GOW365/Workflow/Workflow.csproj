@@ -57,6 +57,12 @@
     <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\Feature1\Feature1.EventReceiver.cs">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Feature2\Feature2.EventReceiver.cs">
+      <DependentUpon>Feature2.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -202,6 +208,7 @@
     <Content Include="Approval\OrgTree\img\t.gif" />
     <Content Include="Approval\OrgTree\img\top_left.jpg" />
     <Content Include="Approval\OrgTree\img\top_right.jpg" />
+    <Content Include="Approval\OrgTree\MicrosoftAjax.js" />
     <Content Include="Approval\OrgTree\OrgTree.aspx" />
     <Content Include="Approval\OrgTree\Orgtree.css" />
     <Content Include="Approval\OrgTree\OrgTree.js" />
@@ -238,6 +245,7 @@
     <Content Include="SignImage\Elements.xml" />
     <Content Include="SignImage\Schema.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">11.0</VisualStudioVersion>

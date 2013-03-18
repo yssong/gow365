@@ -78,7 +78,7 @@
       <DependentUpon>Feature1.feature</DependentUpon>
     </Content>
     <Content Include="GOW365\Elements.xml" />
-    <Content Include="GOW365\SiteMap\Sample.txt" />
+    <Content Include="GOW365\SiteMap\sitemapStyle.css" />
     <Content Include="SiteMapWebpart\Elements.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

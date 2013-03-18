@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="GOW365">
+    <File Path="GOW365\SiteNewDocsTab\Sample.txt" Url="GOW365/SiteNewDocsTab/Sample.txt" />
+    <File Path="GOW365\SiteNewDocsTab\jquery-1.9.1.min.js" Url="GOW365/SiteNewDocsTab/jquery-1.9.1.min.js" />
+    <File Path="GOW365\SiteNewDocsTab\Rounded.gif" Url="GOW365/SiteNewDocsTab/Rounded.gif" />
+    <File Path="GOW365\SiteNewDocsTab\TabStyle.css" Url="GOW365/SiteNewDocsTab/TabStyle.css" />
+  </Module>
+</Elements>

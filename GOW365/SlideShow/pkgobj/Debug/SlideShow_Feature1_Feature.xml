@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="SlideShow" Description="그림라이브러리의 내용을 슬라이드쇼로 보여 줍니다." Id="8ee511f7-c7e0-4c9f-adfd-145fad384753" Scope="Site">
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Description="그림라이브러리의 내용을 슬라이드쇼로 보여 줍니다." Id="8ee511f7-c7e0-4c9f-adfd-145fad384753" Scope="Site" Title="SlideShow">
   <ElementManifests>
     <ElementManifest Location="SlideShowWebpart\Elements.xml" />
     <ElementFile Location="SlideShowWebpart\SlideShowWebpart.webpart" />

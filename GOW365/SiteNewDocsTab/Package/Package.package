@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="faa90e73-b545-4f8f-b640-8b0293286cab" solutionId="faa90e73-b545-4f8f-b640-8b0293286cab" resetWebServer="false" sharePointProductVersion="15.0" name="SiteNewDocsTab" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="9d1b9003-a580-4fa1-8b71-e22de384c81d" />
+  </features>
+</package>

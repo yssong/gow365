@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="01d5bc0d-de70-4313-8685-9cb99526e8f7" Scope="Site" Title="NewBlogPost Feature1">
+  <ElementManifests>
+    <ElementManifest Location="NewPostWebpart\Elements.xml" />
+    <ElementFile Location="NewPostWebpart\NewPostWebpart.webpart" />
+  </ElementManifests>
+</Feature>

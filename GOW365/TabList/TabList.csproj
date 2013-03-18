@@ -13,6 +13,7 @@
     <TargetOfficeVersion>15.0</TargetOfficeVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>True</SandboxedSolution>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -78,7 +79,9 @@
       <DependentUpon>Feature1.feature</DependentUpon>
     </Content>
     <Content Include="GOW365\Elements.xml" />
-    <Content Include="GOW365\TabList\Sample.txt" />
+    <Content Include="GOW365\TabList\jquery-1.9.1.min.js" />
+    <Content Include="GOW365\TabList\Rounded.gif" />
+    <Content Include="GOW365\TabList\TabStyle.css" />
     <Content Include="TabListWebpart\Elements.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

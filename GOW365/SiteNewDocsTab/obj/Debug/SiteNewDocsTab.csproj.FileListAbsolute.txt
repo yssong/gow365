@@ -1,0 +1,4 @@
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\SiteNewDocsTab\bin\Debug\SiteNewDocsTab.dll
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\SiteNewDocsTab\bin\Debug\SiteNewDocsTab.pdb
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\SiteNewDocsTab\obj\Debug\SiteNewDocsTab.dll
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\SiteNewDocsTab\obj\Debug\SiteNewDocsTab.pdb

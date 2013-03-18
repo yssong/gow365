@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="287c11ba-ca71-46d8-9e06-2996c70bfac2" SharePointProductVersion="15.0">
+  <Assemblies>
+    <Assembly Location="SearchContact.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="SearchContact, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5f78611f42a0db12" Namespace="GOW365.ContactSearchWebPart" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <FeatureManifests>
+    <FeatureManifest Location="SearchContact_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

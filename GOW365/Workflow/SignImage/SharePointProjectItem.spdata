@@ -4,4 +4,7 @@
     <ProjectItemFile Source="Schema.xml" Target="Files\SignImage\" Type="ElementFile" />
     <ProjectItemFile Source="Elements.xml" Target="SignImage\" Type="ElementManifest" />
   </Files>
+  <ExtensionData>
+    <ExtensionDataItem Key="DeploymentConflictResolutionBehavior" Value="Automatic" />
+  </ExtensionData>
 </ProjectItem>

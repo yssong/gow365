@@ -100,5 +100,6 @@
     <File Path="Approval\today\r_banner_02_15.jpg" Url="Approval/today/r_banner_02_15.jpg" />
     <File Path="Approval\today\r_banner_03_.jpg" Url="Approval/today/r_banner_03_.jpg" />
     <File Path="Approval\today\r_banner_04_.jpg" Url="Approval/today/r_banner_04_.jpg" />
+    <File Path="Approval\OrgTree\MicrosoftAjax.js" Url="Approval/OrgTree/MicrosoftAjax.js" />
   </Module>
 </Elements>

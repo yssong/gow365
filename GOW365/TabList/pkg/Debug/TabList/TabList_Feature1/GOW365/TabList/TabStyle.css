@@ -1,0 +1,81 @@
+﻿.container {
+    width: 100%;
+    /**padding: 15px;**/
+    /**margin: 3px 0 20px 0;*/
+    /**border: 1px solid #ccc;**/
+    background: #fff;
+	font-family:"맑은 고딕","돋움",dotum,Helvetica,sans-serif;
+	font-size:9pt;
+}
+
+/* rounded */
+
+#nav {
+        margin: 0;
+        padding: 0 0 20px 10px;
+        border-bottom: 1px solid #9FB1BC;
+}
+
+#nav li {
+        margin: 0;
+        padding: 0;
+        display: inline;
+        list-style-type: none;
+}
+
+#nav a:link, #nav a:visited {
+        float: left;
+        font-size: 10pt;
+        line-height: 16px;
+        font-weight: bold;
+        padding: 0 12px 6px 12px;
+        text-decoration: none;
+        color: #708491;
+}
+
+#nav a:link.active, #nav a:visited.active, #nav a:hover {
+        color: #000;
+        background: url(rounded.gif) no-repeat bottom center;
+}
+
+.tab ul 
+{
+	margin-top: 10px;
+	margin-left: 5px;
+    padding: 0;        
+    list-style-type: none;
+}
+.tab li 
+{
+	padding-left:10px;
+	margin-left:0px;
+    padding: 0;
+	line-height:23px;        
+    height:23px; 
+    list-style-type: none;
+	border-bottom-width: 1px; 
+	border-bottom-style: dotted; 
+	border-bottom-color: #908491;
+}
+.container .tabTitle
+{
+	float:left;
+	width:300px;
+	white-space:noWrap;
+	overflow:hidden; 
+	text-overflow:ellipsis;
+}
+.container .tabName
+{
+	float: right;
+	color:#979797;
+	padding-left:8px;
+	margin-left:3px;
+}
+.container .tabDate
+{
+	float: right;
+	color:#979797;
+	padding-left:8px;
+	margin-left:3px;
+}

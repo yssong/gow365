@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="f4ed9248-b328-418c-9dcd-e87dd0abd3cb" Scope="Site" Title="SiteNewDocsTab Feature1">
+  <ElementManifests>
+    <ElementManifest Location="NewDocsTabWebPart\Elements.xml" />
+    <ElementFile Location="NewDocsTabWebPart\NewDocsTabWebPart.webpart" />
+    <ElementManifest Location="GOW365\Elements.xml" />
+    <ElementFile Location="GOW365\SiteNewDocsTab\Sample.txt" />
+    <ElementFile Location="GOW365\SiteNewDocsTab\jquery-1.9.1.min.js" />
+    <ElementFile Location="GOW365\SiteNewDocsTab\Rounded.gif" />
+    <ElementFile Location="GOW365\SiteNewDocsTab\TabStyle.css" />
+  </ElementManifests>
+</Feature>

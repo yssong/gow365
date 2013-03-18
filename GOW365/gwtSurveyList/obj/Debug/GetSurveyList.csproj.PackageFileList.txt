@@ -1,1 +1,1 @@
-bin\Debug\gwtSurveyList.wsp
+bin\Debug\getSurveyList.wsp

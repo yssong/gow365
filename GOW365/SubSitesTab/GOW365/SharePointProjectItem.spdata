@@ -2,7 +2,6 @@
 <ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
   <Files>
     <ProjectItemFile Source="Elements.xml" Target="GOW365\" Type="ElementManifest" />
-    <ProjectItemFile Source="SubSitesTab\Sample.txt" Target="GOW365\SubSitesTab\" Type="ElementFile" />
     <ProjectItemFile Source="SubSitesTab\jquery-1.9.1.min.js" Target="GOW365\SubSitesTab\" Type="ElementFile" />
     <ProjectItemFile Source="SubSitesTab\jquery-ui-1.10.0.min.js" Target="GOW365\SubSitesTab\" Type="ElementFile" />
     <ProjectItemFile Source="SubSitesTab\jquery-ui-1.10.0.custom.min.css" Target="GOW365\SubSitesTab\" Type="ElementFile" />

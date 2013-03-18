@@ -95,7 +95,7 @@ namespace GOW365.SubSitesTabWebpart
         protected override void CreateChildControls()
         {
             imgUrl = (SPContext.Current.Site.ServerRelativeUrl.EndsWith("/") ? SPContext.Current.Site.ServerRelativeUrl + imgUrl : SPContext.Current.Site.ServerRelativeUrl + "/" + imgUrl);
-            base.CreateChildControls();
+            //base.CreateChildControls();
         }
 
         protected override void Render(HtmlTextWriter writer)
@@ -168,6 +168,7 @@ namespace GOW365.SubSitesTabWebpart
                         {
                             SPWebCollection webs = null;
                             webs = oSPWeb.GetSubwebsForCurrentUser();
+                            
                             foreach (SPWeb web in webs)
                             {
                                 retHtml += @"<li><a href='" + web.Url + "' target='_new'>" + web.Title + "</a></li>";
@@ -214,7 +215,7 @@ if (typeof jQuery == 'undefined') {
 		        success();
 		
 		        script.onload = script.onreadystatechange = null;
-		        head.removeChild(script);
+		        //head.removeChild(script);
 	        };
 	    };
 	    head.appendChild(script);

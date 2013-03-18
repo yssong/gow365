@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Module Name="GOW365">
-    <File Path="GOW365\TabList\Sample.txt" Url="GOW365/TabList/Sample.txt" />
+    <File Path="GOW365\TabList\TabStyle.css" Url="GOW365/TabList/TabStyle.css" />
+    <File Path="GOW365\TabList\Rounded.gif" Url="GOW365/TabList/Rounded.gif" />
+    <File Path="GOW365\TabList\jquery-1.9.1.min.js" Url="GOW365/TabList/jquery-1.9.1.min.js" />
   </Module>
 </Elements>

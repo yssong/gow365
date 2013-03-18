@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="309fedb7-e5ef-4c2b-a783-4db228e2cc75" Scope="Site" Title="CircleLogicPortal Feature1">
+  <ElementManifests>
+    <ElementManifest Location="TabListWebpart\Elements.xml" />
+    <ElementFile Location="TabListWebpart\TabListWebpart.webpart" />
+    <ElementManifest Location="SubSitesTabWepart\Elements.xml" />
+    <ElementFile Location="SubSitesTabWepart\SubSitesTabWepart.webpart" />
+    <ElementManifest Location="ImageWheelWebpart\Elements.xml" />
+    <ElementFile Location="ImageWheelWebpart\ImageWheelWebpart.webpart" />
+    <ElementManifest Location="GOW365\Elements.xml" />
+    <ElementFile Location="GOW365\Sample.txt" />
+    <ElementFile Location="GOW365\TabList\MicrosoftAjax.js" />
+  </ElementManifests>
+</Feature>

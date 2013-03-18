@@ -1,0 +1,43 @@
+﻿.SiteMap 
+{
+    background-color:#e4e1e1;
+    width:100%;
+    overflow:auto;
+    font-family:"맑은 고딕","돋움",dotum,Helvetica,sans-serif;
+	font-size:9pt;
+}
+.mapHead 
+{
+    padding-left:5px;
+    background-color:white;
+    list-style-type: none;
+    height:23px;
+    line-height:23px;
+}
+.map
+{
+    padding-left:15px;
+    float:left;
+}
+.maplink 
+{
+    width:250px;
+    padding-left:5px;
+    list-style-type: none;
+    white-space:noWrap;
+	overflow:hidden; 
+	text-overflow:ellipsis;
+    height:23px;
+    line-height:23px;
+}
+.submaplink 
+{
+    padding-left:15px;
+    width:200px;
+    list-style-type: none;
+    white-space:noWrap;
+	overflow:hidden; 
+	text-overflow:ellipsis;
+    height:23px;
+    line-height:23px;
+}

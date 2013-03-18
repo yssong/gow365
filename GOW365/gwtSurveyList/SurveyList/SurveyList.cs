@@ -113,26 +113,26 @@ namespace GOW365.SurveyList
             writer.WriteLine(@"
                 <style type='text/css'>
                     .selectedBestTab {
-                        font-family: '돋움';
+                        font-family: '맑은 고딕','돋움';
                         font-size: 12px;
                         font-weight: bold;
                         color: #595959;
                     }
                     .unselectedBestTab {
-                        font-family: '돋움';
+                        font-family: '맑은 고딕','돋움';
                         font-size: 12px;
                         color: #838383;
                     }
                     .title_text {
                         padding-top:4px;
                         padding-bottom:4px;
-                        font-family: '돋움';
+                        font-family: '맑은 고딕','돋움';
                         font-size: 12px;
                         color: #0a56a3;
                     }
                     .basic_text {
-                        font-family: '돋움', '굴림', 'seoul', 'arial', 'helvetica';
-                        font-size: 9px;
+                        font-family: '맑은 고딕','돋움', '굴림', 'seoul', 'arial', 'helvetica';
+                        font-size: 12px;
                         color: #4c4c4c;
                     }
                     .basic_text A:link { text-decoration:none; color:333333}

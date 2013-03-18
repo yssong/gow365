@@ -13,6 +13,7 @@
     <TargetOfficeVersion>15.0</TargetOfficeVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>True</SandboxedSolution>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -94,7 +95,6 @@
     <Content Include="GOW365\SubSitesTab\jquery-1.9.1.min.js" />
     <Content Include="GOW365\SubSitesTab\jquery-ui-1.10.0.custom.min.css" />
     <Content Include="GOW365\SubSitesTab\jquery-ui-1.10.0.min.js" />
-    <Content Include="GOW365\SubSitesTab\Sample.txt" />
     <Content Include="SubSitesTabWebpart\Elements.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

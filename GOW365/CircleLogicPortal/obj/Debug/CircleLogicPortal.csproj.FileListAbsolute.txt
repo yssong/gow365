@@ -1,0 +1,5 @@
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\CircleLogicPortal\bin\Debug\CircleLogicPortal.dll
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\CircleLogicPortal\bin\Debug\CircleLogicPortal.pdb
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\CircleLogicPortal\obj\Debug\CircleLogicPortal.dll
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\CircleLogicPortal\obj\Debug\CircleLogicPortal.pdb
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\CircleLogicPortal\obj\Debug\CircleLogicPortal.csprojResolveAssemblyReference.cache

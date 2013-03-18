@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="GOW365\" Type="ElementManifest" />
+    <ProjectItemFile Source="SiteNewDocsTab\Sample.txt" Target="GOW365\SiteNewDocsTab\" Type="ElementFile" />
+    <ProjectItemFile Source="SiteNewDocsTab\jquery-1.9.1.min.js" Target="GOW365\SiteNewDocsTab\" Type="ElementFile" />
+    <ProjectItemFile Source="SiteNewDocsTab\Rounded.gif" Target="GOW365\SiteNewDocsTab\" Type="ElementFile" />
+    <ProjectItemFile Source="SiteNewDocsTab\TabStyle.css" Target="GOW365\SiteNewDocsTab\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

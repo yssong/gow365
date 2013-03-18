@@ -14,11 +14,11 @@ namespace GOW365.ImageWheelSlideWebpart
 
     public class ImageWheelSlideWebpart : WebPart
     {
-        private string imgWidth = "160";
-        private string imgHeight = "110";
+        private string imgWidth = "210";
+        private string imgHeight = "140";
         private string webName = string.Empty;
         private string listName = string.Empty;
-        private int itemCount = 50;
+        private int itemCount = 15;
         private int viewCount = 3;
         private int displayTime = 5000;
         private bool autoPlay = true;
@@ -184,75 +184,19 @@ namespace GOW365.ImageWheelSlideWebpart
         protected override void CreateChildControls()
         {
             JsUrl = (SPContext.Current.Site.ServerRelativeUrl.EndsWith("/") ? SPContext.Current.Site.ServerRelativeUrl + JsUrl : SPContext.Current.Site.ServerRelativeUrl + "/" + JsUrl);
-            noUrl = new Label();
-            this.noUrl.Text = "Check Site Address or List Name.";
-            this.Controls.Add(noUrl);
-
-            wrongViewCount = new Label();
-            this.wrongViewCount.Text = "ViewCount number is bigger than items count number.";
-            this.Controls.Add(wrongViewCount);
         }
 
         protected override void Render(HtmlTextWriter writer)
         {
             if (ListName != string.Empty)
             {
-                if (WebName != string.Empty && WebName.StartsWith("https"))
-                {
-                    //배포 전에 WebName을 수정해주세요.
-                    WebName = WebName.Replace("https://ishare.spiraxsarco.com/companies/asia-pac/kr", "");
-                    WebName = WebName.StartsWith("/") ? WebName.Remove(0, 1) : WebName;
-                    WebName = WebName.EndsWith("/") ? WebName.Remove(WebName.Length - 1, 1) : WebName;
-                }
-                else if (WebName == string.Empty)
-                {
-                    SPWeb w = SPContext.Current.Web;
-                    WebName = w.ServerRelativeUrl.ToString();
-                    w.Close();
-                    w.Dispose();
-                }
-
-                if (ListCheck(WebName, ListName))
-                {
-                    this.RenderHtml(writer);
-                }
+                this.RenderHtml(writer);
             }
             else
             {
-                this.noUrl.RenderControl(writer);
+                //this.noUrl.RenderControl(writer);
+                writer.Write("Please Select the Picture Library");
             }
-        }
-
-        private bool ListCheck(string url, string name)
-        {
-            bool check = false;
-            try
-            {
-                web = SPContext.Current.Site.OpenWeb(url);
-                if (name == string.Empty)
-                { check = true; }
-                else
-                {
-                    SPList list = web.Lists[name];
-                    if (list.BaseTemplate.ToString() == SPListTemplateType.PictureLibrary.ToString())
-                    {
-                        check = true;
-                    }
-                }
-            }
-            catch (Exception)
-            {
-
-            }
-            finally
-            {
-                if (web != null)
-                {
-                    web.Close();
-                    web.Dispose();
-                }
-            }
-            return check;
         }
 
         protected void RenderHtml(HtmlTextWriter writer)
@@ -288,7 +232,7 @@ if (typeof jQuery == 'undefined') {
 		        success();
 		
 		        script.onload = script.onreadystatechange = null;
-		        head.removeChild(script);
+		        //head.removeChild(script);
 	        };
 	    };
 	    head.appendChild(script);
@@ -305,7 +249,7 @@ if (typeof jQuery == 'undefined') {
 		    	$(document).ready(function () {
 		        	var wwcarousel = $('#" + this.ClientID + @"_WaterWheel').waterwheelCarousel
 		            ({
-		                separation :200,flankingItems: 3, autoPlay:3000, 
+		                separation :170,flankingItems: 3, autoPlay:3000, 
 		                movingToCenter: function ($item) {
 		                $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
 		                },
@@ -334,7 +278,7 @@ else
 	 " + this.ClientID + @"getScript('" + JsUrl + @"jquery.waterwheelCarousel.js',function(){
 		$(document).ready(function () {
 			var wwcarousel = $('#" + this.ClientID + @"_WaterWheel').waterwheelCarousel({
-				separation :200,flankingItems: 3, autoPlay:3000, 
+				separation :170,flankingItems: 3, autoPlay:3000, 
 				movingToCenter: function ($item) {
 				$('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
 				},
@@ -364,6 +308,7 @@ else
             {
                 web = SPContext.Current.Site.OpenWeb(WebName);
                 List = web.Lists[ListName];
+                
                 string linkurl = string.Empty;
                 if (List.BaseTemplate.ToString() == SPListTemplateType.PictureLibrary.ToString())
                 {
@@ -399,7 +344,7 @@ else
                             linkurl = List.DefaultDisplayFormUrl.ToString() + "?ID=" + spl["ID"].ToString();
                         }
 
-                        returnValue += @"<img src='" + spl["EncodedAbsThumbnailUrl"].ToString().Replace("/_t/","/_w/") + @"' width='" + ImgWidth + "px' height='" + ImgHeight + "px'   id='" + spl["ID"].ToString() + "'/>";
+                        returnValue += @"<img src='" + spl["EncodedAbsThumbnailUrl"].ToString() + @"' width='" + ImgWidth + "px' height='" + ImgHeight + "px'   id='" + spl["ID"].ToString() + "'/>";
 
                     }
 
@@ -413,6 +358,7 @@ else
                         }
                     }
                 }
+               
             }
             catch (Exception ex)
             {
