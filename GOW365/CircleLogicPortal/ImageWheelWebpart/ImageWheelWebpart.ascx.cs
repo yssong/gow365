@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.SharePoint;
+using System;
 using System.ComponentModel;
 using System.Web.UI.WebControls.WebParts;
 
@@ -154,6 +155,7 @@ namespace CircleLogicPortal.ImageWheelWebpart
             }
         }
 
+        
 
         public ImageWheelWebpart()
         {
@@ -161,6 +163,7 @@ namespace CircleLogicPortal.ImageWheelWebpart
 
         protected override void OnInit(EventArgs e)
         {
+            ImgUrl = (SPContext.Current.Site.ServerRelativeUrl.EndsWith("/") ? SPContext.Current.Site.ServerRelativeUrl + ImgUrl : SPContext.Current.Site.ServerRelativeUrl + "/" + ImgUrl);
             base.OnInit(e);
             InitializeControl();
         }

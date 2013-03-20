@@ -50,23 +50,32 @@ namespace CircleLogicPortal.TabListWebpart {
         
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void @__Render__control1(System.Web.UI.HtmlTextWriter @__w, System.Web.UI.Control parameterContainer) {
-            @__w.Write(@"
+            @__w.Write("\r\n\r\n<link rel=\"stylesheet\" type=\"text/css\" href=\"");
+                                     @__w.Write(ImgUrl);
 
+            @__w.Write("TabStyle.css\"/>\r\n<script type=\"text/javascript\">\r\n   \r\n    ExecuteOrDelayUntilScr" +
+                    "iptLoaded(");
+                            @__w.Write(this.ClientID);
 
-<script type=""text/javascript"">
-   
-    ExecuteOrDelayUntilScriptLoaded(Initialize, ""sp.js"");
-    function openDialog(_url) {  
-        var options = {  url: _url ,  width: 800, height: 600, };  
-        SP.UI.ModalDialog.showModalDialog(options);  
-    }
+            @__w.Write("Initialize, \"sp.js\");\r\n\r\n    function openDialog(_url) {  \r\n        var options =" +
+                    " {  url: _url ,  width: 800, height: 600, };  \r\n        SP.UI.ModalDialog.showMo" +
+                    "dalDialog(options);  \r\n    }\r\n    function ");
+     @__w.Write(this.ClientID);
 
-    //Retrieve  the Tab items
-function Initialize() {
+            @__w.Write("_changeClass(obj,tabname){\r\n\t\t$(\'#");
+@__w.Write(this.ClientID);
+
+            @__w.Write("_container #nav li > a\').removeClass(\'active\');\r\n\t\t$(obj).addClass(\'active\');\r\n\t\t" +
+                    "$(\'#");
+@__w.Write(this.ClientID);
+
+            @__w.Write("_container .tab\').hide();\r\n\t\t$(\'#\'+tabname).show();\r\n    }  \r\n\r\n\r\n    //Retrieve " +
+                    " the Tab items\r\nfunction ");
+ @__w.Write(this.ClientID);
+
+            @__w.Write(@"Initialize() {
     //Get the current SP context
-    clientContext = new SP.ClientContext.get_current();
-    web = clientContext.get_web();
-    
+
 	var camlQuery = new SP.CamlQuery();
 	
     var q = ""<View><Query><Where><Neq><FieldRef Name='ContentType' /><Value Type='Computed'>Folder</Value> </Neq></Where><OrderBy><FieldRef Name='Modified' Ascending='FALSE' /></OrderBy><QueryOptions><RowLimit>");
@@ -74,130 +83,390 @@ function Initialize() {
 
             @__w.Write("</RowLimit></QueryOptions></Query></View>\";\r\n    camlQuery.set_viewXml(q);\r\n\r\n   " +
                     " ");
-       if (ListName1!="")    { 
-            @__w.Write("\r\n    this.list1 = web.get_lists().getByTitle(\'");
-                                     @__w.Write(ListName1);
+       if (ListName1.Trim()!="")    { 
+       if (WebName1.Trim() != "")
+       { 
+            @__w.Write("\r\n    clientContext1 = new SP.ClientContext(\"");
+                                   @__w.Write(WebName1.Trim());
 
-            @__w.Write("\');\r\n    this.listItems1 = list1.getItems(camlQuery);\r\n    clientContext.load(lis" +
-                    "t1);\r\n    clientContext.load(listItems1);\r\n    ");
+            @__w.Write("\");\r\n    ");
+       }else { 
+            @__w.Write("\r\n    clientContext1 = new SP.ClientContext.get_current();\r\n    ");
        } 
-       if (ListName2!="")    { 
-            @__w.Write("\r\n    this.list2 = web.get_lists().getByTitle(\'");
-                                     @__w.Write(ListName2);
+            @__w.Write("\r\n    web = clientContext1.get_web();\r\n    this.");
+ @__w.Write(this.ClientID );
 
-            @__w.Write("\');\r\n    this.listItems2 = list2.getItems(camlQuery);\r\n    clientContext.load(lis" +
-                    "t2);\r\n    clientContext.load(listItems2);\r\n    ");
+            @__w.Write("list1 = web.get_lists().getByTitle(\'");
+                                                        @__w.Write(ListName1.Trim());
+
+            @__w.Write("\');\r\n    this.");
+ @__w.Write(this.ClientID );
+
+            @__w.Write("listContentTypes1 = this.");
+                                             @__w.Write(this.ClientID );
+
+            @__w.Write("list1.get_contentTypes();\r\n    \r\n    this.");
+ @__w.Write(this.ClientID );
+
+            @__w.Write("listItems1 = ");
+                                 @__w.Write(this.ClientID );
+
+            @__w.Write("list1.getItems(camlQuery);\r\n    \r\n    clientContext1.load(");
+                @__w.Write(this.ClientID );
+
+            @__w.Write("list1,\"DefaultDisplayFormUrl\",\"BaseTemplate\",\"RootFolder\");\r\n    clientContext1.l" +
+                    "oad(");
+                @__w.Write(this.ClientID );
+
+            @__w.Write("listContentTypes1);\r\n    clientContext1.load(");
+                @__w.Write(this.ClientID );
+
+            @__w.Write("listItems1);\r\n    \r\n    clientContext1.executeQueryAsync(Function.createDelegate(" +
+                    "this, this.");
+                                                                @__w.Write(this.ClientID);
+
+            @__w.Write("onListItemsLoadSuccess1), Function.createDelegate(this, this.onListItemsLoadFaile" +
+                    "d));\r\n    ");
        } 
-       if (ListName3!="")    { 
-            @__w.Write("\r\n    this.list3 = web.get_lists().getByTitle(\'");
-                                     @__w.Write(ListName3);
+       if (ListName2.Trim()!="")    { 
+       if (WebName2.Trim()!="")    { 
+            @__w.Write("\r\n    clientContext2 = new SP.ClientContext(\"");
+                                   @__w.Write(WebName2.Trim());
 
-            @__w.Write("\');\r\n    this.listItems3 = list3.getItems(camlQuery);\r\n    clientContext.load(lis" +
-                    "t3);\r\n    clientContext.load(listItems3);\r\n    ");
+            @__w.Write("\");\r\n    ");
+       }else { 
+            @__w.Write("\r\n    clientContext2 = new SP.ClientContext.get_current();\r\n    ");
        } 
-            @__w.Write(@"
+            @__w.Write("\r\n    web = clientContext2.get_web();\r\n    this.");
+ @__w.Write(this.ClientID );
 
-    clientContext.executeQueryAsync(Function.createDelegate(this, this.onListItemsLoadSuccess), Function.createDelegate(this, this.onListItemsLoadFailed));
-}
+            @__w.Write("list2 = web.get_lists().getByTitle(\'");
+                                                        @__w.Write(ListName2.Trim());
 
-/*
-*
-* Initialize delegate function: this function adds the returned items to the HTML lists.
-*
-*/
+            @__w.Write("\');\r\n    this.");
+ @__w.Write(this.ClientID );
 
-function onListItemsLoadSuccess(sender, args) {
-	");
+            @__w.Write("listContentTypes2 = this.");
+                                             @__w.Write(this.ClientID );
+
+            @__w.Write("list2.get_contentTypes();\r\n    \r\n    this.");
+ @__w.Write(this.ClientID );
+
+            @__w.Write("listItems2 = ");
+                                 @__w.Write(this.ClientID );
+
+            @__w.Write("list2.getItems(camlQuery);\r\n    \r\n    clientContext2.load(");
+                @__w.Write(this.ClientID );
+
+            @__w.Write("list2,\"DefaultDisplayFormUrl\",\"BaseTemplate\",\"RootFolder\");\r\n    clientContext2.l" +
+                    "oad(");
+                @__w.Write(this.ClientID );
+
+            @__w.Write("listContentTypes2);\r\n    clientContext2.load(");
+                @__w.Write(this.ClientID );
+
+            @__w.Write("listItems2);\r\n\r\n    clientContext2.executeQueryAsync(Function.createDelegate(this" +
+                    ", this.");
+                                                                @__w.Write(this.ClientID);
+
+            @__w.Write("onListItemsLoadSuccess2), Function.createDelegate(this, this.onListItemsLoadFaile" +
+                    "d));\r\n    ");
+       } 
+       if (ListName3.Trim()!="")    { 
+       if (WebName3.Trim()!="")    { 
+            @__w.Write("\r\n    clientContext3 = new SP.ClientContext(\"");
+                                   @__w.Write(WebName3.Trim());
+
+            @__w.Write("\");\r\n    \r\n    ");
+       }else { 
+            @__w.Write("\r\n    clientContext3 = new SP.ClientContext.get_current();\r\n    \r\n    ");
+       } 
+            @__w.Write("\r\n    web = clientContext3.get_web();\r\n    this.");
+ @__w.Write(this.ClientID );
+
+            @__w.Write("list3 = web.get_lists().getByTitle(\'");
+                                                        @__w.Write(ListName3.Trim());
+
+            @__w.Write("\');\r\n    this.");
+ @__w.Write(this.ClientID );
+
+            @__w.Write("listContentTypes3 = this.");
+                                             @__w.Write(this.ClientID );
+
+            @__w.Write("list3.get_contentTypes();\r\n    \r\n    this.");
+ @__w.Write(this.ClientID );
+
+            @__w.Write("listItems3 = ");
+                                 @__w.Write(this.ClientID );
+
+            @__w.Write("list3.getItems(camlQuery);\r\n    \r\n    clientContext3.load(");
+                @__w.Write(this.ClientID );
+
+            @__w.Write("list3,\"DefaultDisplayFormUrl\",\"BaseTemplate\",\"RootFolder\");\r\n    clientContext3.l" +
+                    "oad(");
+                @__w.Write(this.ClientID );
+
+            @__w.Write("listContentTypes3);\r\n    clientContext3.load(");
+                @__w.Write(this.ClientID );
+
+            @__w.Write("listItems3);\r\n\r\n    clientContext3.executeQueryAsync(Function.createDelegate(this" +
+                    ", this.");
+                                                                @__w.Write(this.ClientID);
+
+            @__w.Write("onListItemsLoadSuccess3), Function.createDelegate(this, this.onListItemsLoadFaile" +
+                    "d));\r\n    ");
+       } 
+            @__w.Write("\r\n\r\n    \r\n}\r\n\r\nfunction onListItemsLoadFailed(sender, args) {\r\n\tSP.UI.Notify.addN" +
+                    "otification(\"List items load failed: \" + args.get_message(), false);\r\n}\r\nfunctio" +
+                    "n ");
+ @__w.Write(this.ClientID);
+
+            @__w.Write("onListItemsLoadSuccess1(sender, args) {\r\n\t");
     if (ListName1!="")    { 
-            @__w.Write("\r\n    $(\'#");
-@__w.Write(this.ClientID );
+            @__w.Write("\r\n    try{\r\n        $(\'#");
+    @__w.Write(this.ClientID );
 
-            @__w.Write(@"_tab1 ul li').remove();
-    var listtype1 = list1.get_baseTemplate()
-    var listEnumerator = this.listItems1.getEnumerator();
-    while (listEnumerator.moveNext()) {
-        //Retrieve the current list item
-        var oListItem = listEnumerator.get_current();
-		//Add the items to the list
-		var itemHtml = ""<li ref='"" + oListItem.get_item('ID') + ""'>"";
-			itemHtml += ""<a href='#' title='Mark as completed' onClick='javascript:MarkAsComplete("" + oListItem.get_item('ID') + ""); return false;'><img src='/_layouts/images/CHECK.GIF' /></a>"";
-			itemHtml += ""<a href='#' title='Delete to-do item' onClick='javascript:DeleteItem("" + oListItem.get_item('ID') + ""); return false;'><img src='/_layouts/images/delete.GIF' /></a>"";
-			itemHtml += oListItem.get_item('Title') + ""</li>"";
-		$('#");
-@__w.Write(this.ClientID );
+            @__w.Write("_tab1 ul li\').remove();\r\n        var listtype1 = ");
+                @__w.Write(this.ClientID );
 
-            @__w.Write("_tab1 ul\').append(itemHtml);\r\n    }\r\n    ");
-       } 
-       if (ListName2!="")    { 
-            @__w.Write("\r\n    $(\'#");
-@__w.Write(this.ClientID );
+            @__w.Write("list1.get_baseTemplate();\r\n        //var DisplayURL1 = ");
+                    @__w.Write(this.ClientID );
 
-            @__w.Write(@"_tab2 ul li').remove();
-    var listtype2 = list2.get_baseTemplate()
-	listEnumerator = this.listItems2.getEnumerator();
-    while (listEnumerator.moveNext()) {
-        //Retrieve the current list item
-        var oListItem = listEnumerator.get_current();
-		//Add the items to the list
-		var itemHtml = ""<li ref='"" + oListItem.get_item('ID') + ""'>"";
-			itemHtml += ""<a href='#' onClick='javascript:MarkAsComplete("" + oListItem.get_item('ID') + ""); return false;'><img src='/_layouts/images/CHECK.GIF' /></a>"";
-			itemHtml += ""<a href='#' onClick='javascript:DeleteItem("" + oListItem.get_item('ID') + ""); return false;'><img src='/_layouts/images/delete.GIF' /></a>"";
-			itemHtml += oListItem.get_item('Title') + ""</li>"";
-		$('#");
-@__w.Write(this.ClientID );
-
-            @__w.Write("_tab2 ul\').append(itemHtml);\r\n    }\r\n    ");
-       } 
-       if (ListName3!="")    { 
-            @__w.Write("\r\n    $(\'#");
-@__w.Write(this.ClientID );
-
-            @__w.Write(@"_tab3 ul li').remove();
-    var listtype3 = list3.get_baseTemplate()
-    listEnumerator3 = this.listItems3.getEnumerator();
-    while (listEnumerator.moveNext()) {
-        //Retrieve the current list item
-        var oListItem = listEnumerator.get_current();
-		//Add the items to the list
-		var itemHtml = ""<li ref='"" + oListItem.get_item('ID') + ""'>"";
-			itemHtml += ""<a href='#' title='Mark as completed' onClick='javascript:MarkAsComplete("" + oListItem.get_item('ID') + ""); return false;'><img src='/_layouts/images/CHECK.GIF' /></a>"";
-			itemHtml += ""<a href='#' title='Delete to-do item' onClick='javascript:DeleteItem("" + oListItem.get_item('ID') + ""); return false;'><img src='/_layouts/images/delete.GIF' /></a>"";
-			itemHtml += oListItem.get_item('Title') + ""</li>"";
-		$('#");
-@__w.Write(this.ClientID );
-
-            @__w.Write("_tab3 ul\').append(itemHtml);\r\n    }\r\n\t");
-    } 
-            @__w.Write("\r\n}\r\nfunction onListItemsLoadFailed(sender, args) {\r\n\tSP.UI.Notify.addNotificatio" +
-                    "n(\"List items load failed: \" + args.get_message(), false);\r\n}\r\n    \r\n</script>\r\n" +
-                    "\r\n\r\n");
-@__w.Write(ImgUrl);
-
-            @__w.Write("<br />\r\n");
-@__w.Write(ListItemCount );
-
-            @__w.Write("<br />\r\n");
-@__w.Write(WebName1);
-
-            @__w.Write("<br />\r\n");
-@__w.Write(WebName2);
-
-            @__w.Write("<br />\r\n");
-@__w.Write(WebName3);
-
-            @__w.Write("<br />\r\n");
-@__w.Write(ListName1);
-
-            @__w.Write("<br />\r\n");
-@__w.Write(ListName2);
-
-            @__w.Write("<br />\r\n");
-@__w.Write(ListName3);
-
-            @__w.Write("<br />\r\n<div class=\"container\" id=\"");
+            @__w.Write("list1.get_defaultDisplayFormUrl();\r\n\r\n        var contenttype1 = ");
                    @__w.Write(this.ClientID );
 
-            @__w.Write("\"_container\">\r\n <div id=\"tabhead\">\r\n  <ul id=\"nav\">\r\n");
+            @__w.Write("listContentTypes1.itemAt(0).get_id();\r\n    \r\n        var listEnumerator = this.");
+                          @__w.Write(this.ClientID );
+
+            @__w.Write("listItems1.getEnumerator();\r\n        var listurl = ");
+              @__w.Write(this.ClientID );
+
+            @__w.Write(@"list1.get_rootFolder().get_serverRelativeUrl();
+
+        while (listEnumerator.moveNext()) {
+            //Retrieve the current list item
+            var oListItem = listEnumerator.get_current();
+            itemHtml = """";
+		    //Add the items to the list
+            if (listtype1 == SP.BaseType.DocumentLibrary)
+            {
+                itemHtml += ""<li><span class='tabTitle'><a href=\""#\"" onclick=\""javascript:openDialog('"" + ");
+                                                                                                   @__w.Write(this.ClientID );
+
+            @__w.Write(@"list1.get_defaultDisplayFormUrl()
+     + ""?ID="" + oListItem.get_item('ID') + ""'); return false;\"">"";
+                itemHtml += oListItem.get_item('DisplayName');
+                itemHtml += ""</a>"";
+                itemHtml += ""</span><span class='tabName'>"" + oListItem.get_item(""Editor"").get_lookupValue() + ""</span><span  class='tabDate'>"" + oListItem.get_item(""Modified"").format(""yyyy-MM-dd"") + ""</span></li>"";
+
+                                
+            }
+            else if (listtype1 == SP.ListTemplateType.links)
+            {
+                itemHtml += ""<li><span class='tabTitle'><a href=\""#\"" onclick=\""javascript:openDialog('"" + ");
+                                                                                                   @__w.Write(this.ClientID );
+
+            @__w.Write(@"list1.DefaultDisplayFormUrl + ""?ID="" +  oListItem.get_item('ID') + ""'); return false;\"">"";
+                itemHtml += oListItem.get_item(""URL"");
+                itemHtml += ""</a>"";
+                itemHtml += ""</span><span class='tabName'>"" + oListItem.get_item(""Editor"").get_lookupValue() + ""</span><span  class='tabDate'>"" + oListItem.get_item(""Modified"").format(""yyyy-MM-dd"") + ""</span></li>"";
+            }
+            else if (listtype1 == SP.ListTemplateType.discussionBoard)
+            {
+                var rooturl = escape(listurl+""/""+oListItem.get_item(""Title""));
+                itemHtml += ""<li><span class='tabTitle'><a href='#' onclick=\""javascript:openDialog('"" + listurl + ""/Flat.aspx?rootfolder="" + rooturl + ""&FolderCTID="" + contenttype1 + ""'); return false;\"">"";
+                itemHtml += oListItem.get_item(""Title"") + ""("" + oListItem.get_item(""ItemChildCount"") + "")"";
+                itemHtml += ""</a>"";
+                itemHtml += ""</span><span class='tabName'>"" + oListItem.get_item(""Editor"").get_lookupValue() + ""</span><span  class='tabDate'>"" + oListItem.get_item(""Modified"").format(""yyyy-MM-dd"") + ""</span></li>"";
+            }
+            else
+            {
+                itemHtml += ""<li><span class='tabTitle'><a href=\""#\"" onclick=\""javascript:openDialog('"" + ");
+                                                                                                   @__w.Write(this.ClientID );
+
+            @__w.Write(@"list1.get_defaultDisplayFormUrl() + ""?ID="" +  oListItem.get_item('ID') + ""'); return false;\"">"";
+                itemHtml += oListItem.get_item(""Title"");
+                itemHtml += ""</a>"";
+                itemHtml += ""</span><span class='tabName'>"" + oListItem.get_item(""Editor"").get_lookupValue() + ""</span><span  class='tabDate'>"" + oListItem.get_item(""Modified"").format(""yyyy-MM-dd"") + ""</span></li>"";
+            }
+		
+		    $('#");
+  @__w.Write(this.ClientID );
+
+            @__w.Write("_tab1 ul\').append(itemHtml);\r\n        }\r\n        $(\'#");
+    @__w.Write(this.ClientID );
+
+            @__w.Write("_link1\').attr(\"href\",");
+                                            @__w.Write(this.ClientID );
+
+            @__w.Write("list1.get_rootFolder().get_serverRelativeUrl());\r\n    }\r\n    catch(err)\r\n    {\r\n " +
+                    "   }\r\n    ");
+       } 
+            @__w.Write("\r\n\r\n}\r\nfunction ");
+ @__w.Write(this.ClientID);
+
+            @__w.Write("onListItemsLoadSuccess2(sender, args) {\r\n    ");
+       if (ListName2!="")    { 
+            @__w.Write("\r\n    try\r\n    {\r\n        $(\'#");
+    @__w.Write(this.ClientID );
+
+            @__w.Write("_tab2 ul li\').remove();\r\n        var listtype1 = ");
+                @__w.Write(this.ClientID );
+
+            @__w.Write("list2.get_baseTemplate();\r\n        var contenttype2 = ");
+                   @__w.Write(this.ClientID );
+
+            @__w.Write("listContentTypes2.itemAt(0).get_id();\r\n    \r\n        var listEnumerator = this.");
+                          @__w.Write(this.ClientID );
+
+            @__w.Write("listItems2.getEnumerator();\r\n        var listurl = ");
+              @__w.Write(this.ClientID );
+
+            @__w.Write(@"list2.get_rootFolder().get_serverRelativeUrl();
+
+        while (listEnumerator.moveNext()) {
+            //Retrieve the current list item
+            var oListItem = listEnumerator.get_current();
+            itemHtml = """";
+		    //Add the items to the list
+            if (listtype1 == SP.BaseType.DocumentLibrary)
+            {
+                itemHtml += ""<li><span class='tabTitle'><a href=\""#\"" onclick=\""javascript:openDialog('"" + ");
+                                                                                                   @__w.Write(this.ClientID );
+
+            @__w.Write(@"list2.get_defaultDisplayFormUrl()
+     + ""?ID="" + oListItem.get_item('ID') + ""'); return false;\"">"";
+                itemHtml += oListItem.get_item('DisplayName');
+                itemHtml += ""</a>"";
+                itemHtml += ""</span><span class='tabName'>"" + oListItem.get_item(""Editor"").get_lookupValue() + ""</span><span  class='tabDate'>"" + oListItem.get_item(""Modified"").format(""yyyy-MM-dd"") + ""</span></li>"";
+
+            }
+            else if (listtype1 == SP.ListTemplateType.links)
+            {
+                itemHtml += ""<li><span class='tabTitle'><a href=\""#\"" onclick=\""javascript:openDialog('"" + ");
+                                                                                                   @__w.Write(this.ClientID );
+
+            @__w.Write(@"list2.DefaultDisplayFormUrl + ""?ID="" +  oListItem.get_item('ID') + ""'); return false;\"">"";
+                itemHtml += oListItem.get_item(""URL"");
+                itemHtml += ""</a>"";
+                itemHtml += ""</span><span class='tabName'>"" + oListItem.get_item(""Editor"").get_lookupValue() + ""</span><span  class='tabDate'>"" + oListItem.get_item(""Modified"").format(""yyyy-MM-dd"") + ""</span></li>"";
+            }
+            else if (listtype1 == SP.ListTemplateType.discussionBoard)
+            {
+                var rooturl = escape(listurl+""/""+oListItem.get_item(""Title""));
+                itemHtml += ""<li><span class='tabTitle'><a href='#' onclick=\""javascript:openDialog('"" + listurl + ""/Flat.aspx?rootfolder="" + rooturl + ""&FolderCTID="" + contenttype2 + ""'); return false;\"">"";
+                itemHtml += oListItem.get_item(""Title"") + ""("" + oListItem.get_item(""ItemChildCount"") + "")"";
+                itemHtml += ""</a>"";
+                itemHtml += ""</span><span class='tabName'>"" + oListItem.get_item(""Editor"").get_lookupValue() + ""</span><span  class='tabDate'>"" + oListItem.get_item(""Modified"").format(""yyyy-MM-dd"") + ""</span></li>"";
+            }
+            else
+            {
+                itemHtml += ""<li><span class='tabTitle'><a href=\""#\"" onclick=\""javascript:openDialog('"" + ");
+                                                                                                   @__w.Write(this.ClientID );
+
+            @__w.Write(@"list2.get_defaultDisplayFormUrl() + ""?ID="" +  oListItem.get_item('ID') + ""'); return false;\"">"";
+                itemHtml += oListItem.get_item(""Title"");
+                itemHtml += ""</a>"";
+                itemHtml += ""</span><span class='tabName'>"" + oListItem.get_item(""Editor"").get_lookupValue() + ""</span><span  class='tabDate'>"" + oListItem.get_item(""Modified"").format(""yyyy-MM-dd"") + ""</span></li>"";
+            }
+		
+		    $('#");
+  @__w.Write(this.ClientID );
+
+            @__w.Write("_tab2 ul\').append(itemHtml);\r\n        }\r\n        $(\'#");
+    @__w.Write(this.ClientID );
+
+            @__w.Write("_link2\').attr(\"href\",");
+                                            @__w.Write(this.ClientID );
+
+            @__w.Write("list2.get_rootFolder().get_serverRelativeUrl());\r\n     }\r\n    catch(err)\r\n    {\r\n" +
+                    "    }\r\n    ");
+       } 
+            @__w.Write("\r\n\r\n}\r\nfunction ");
+ @__w.Write(this.ClientID);
+
+            @__w.Write("onListItemsLoadSuccess3(sender, args) {\r\n\t\r\n    ");
+       if (ListName3!="")    { 
+            @__w.Write("\r\n    try\r\n    {\r\n        $(\'#");
+    @__w.Write(this.ClientID );
+
+            @__w.Write("_tab3 ul li\').remove();\r\n        var listtype1 = ");
+                @__w.Write(this.ClientID );
+
+            @__w.Write("list3.get_baseTemplate();\r\n    \r\n        var contenttype3 = ");
+                   @__w.Write(this.ClientID );
+
+            @__w.Write("listContentTypes3.itemAt(0).get_id();\r\n    \r\n        var listEnumerator = this.");
+                          @__w.Write(this.ClientID );
+
+            @__w.Write("listItems3.getEnumerator();\r\n        var listurl = ");
+              @__w.Write(this.ClientID );
+
+            @__w.Write(@"list3.get_rootFolder().get_serverRelativeUrl();
+
+        while (listEnumerator.moveNext()) {
+            //Retrieve the current list item
+            var oListItem = listEnumerator.get_current();
+            itemHtml = """";
+		    //Add the items to the list
+            if (listtype1 == SP.BaseType.DocumentLibrary)
+            {
+                itemHtml += ""<li><span class='tabTitle'><a href=\""#\"" onclick=\""javascript:openDialog('"" + ");
+                                                                                                   @__w.Write(this.ClientID );
+
+            @__w.Write(@"list3.get_defaultDisplayFormUrl()
+     + ""?ID="" + oListItem.get_item('ID') + ""'); return false;\"">"";
+                itemHtml += oListItem.get_item('DisplayName');
+                itemHtml += ""</a>"";
+                itemHtml += ""</span><span class='tabName'>"" + oListItem.get_item(""Editor"").get_lookupValue() + ""</span><span  class='tabDate'>"" + oListItem.get_item(""Modified"").format(""yyyy-MM-dd"") + ""</span></li>"";
+
+                                
+            }
+            else if (listtype1 == SP.ListTemplateType.links)
+            {
+                itemHtml += ""<li><span class='tabTitle'><a href=\""#\"" onclick=\""javascript:openDialog('"" + ");
+                                                                                                   @__w.Write(this.ClientID );
+
+            @__w.Write(@"list3.DefaultDisplayFormUrl + ""?ID="" +  oListItem.get_item('ID') + ""'); return false;\"">"";
+                itemHtml += oListItem.get_item(""URL"");
+                itemHtml += ""</a>"";
+                itemHtml += ""</span><span class='tabName'>"" + oListItem.get_item(""Editor"").get_lookupValue() + ""</span><span  class='tabDate'>"" + oListItem.get_item(""Modified"").format(""yyyy-MM-dd"") + ""</span></li>"";
+            }
+            else if (listtype1 == SP.ListTemplateType.discussionBoard)
+            {
+                var rooturl = escape(listurl+""/""+oListItem.get_item(""Title""));
+                itemHtml += ""<li><span class='tabTitle'><a href='#' onclick=\""javascript:openDialog('"" + listurl + ""/Flat.aspx?rootfolder="" + rooturl + ""&FolderCTID="" + contenttype3 + ""'); return false;\"">"";
+                itemHtml += oListItem.get_item(""Title"") + ""("" + oListItem.get_item(""ItemChildCount"") + "")"";
+                itemHtml += ""</a>"";
+                itemHtml += ""</span><span class='tabName'>"" + oListItem.get_item(""Editor"").get_lookupValue() + ""</span><span  class='tabDate'>"" + oListItem.get_item(""Modified"").format(""yyyy-MM-dd"") + ""</span></li>"";
+            }
+            else
+            {
+                itemHtml += ""<li><span class='tabTitle'><a href=\""#\"" onclick=\""javascript:openDialog('"" + ");
+                                                                                                   @__w.Write(this.ClientID );
+
+            @__w.Write(@"list3.get_defaultDisplayFormUrl() + ""?ID="" +  oListItem.get_item('ID') + ""'); return false;\"">"";
+                itemHtml += oListItem.get_item(""Title"");
+                itemHtml += ""</a>"";
+                itemHtml += ""</span><span class='tabName'>"" + oListItem.get_item(""Editor"").get_lookupValue() + ""</span><span  class='tabDate'>"" + oListItem.get_item(""Modified"").format(""yyyy-MM-dd"") + ""</span></li>"";
+            }
+		
+		    $('#");
+  @__w.Write(this.ClientID );
+
+            @__w.Write("_tab3 ul\').append(itemHtml);\r\n        }\r\n        $(\'#");
+    @__w.Write(this.ClientID );
+
+            @__w.Write("_link3\').attr(\"href\",");
+                                            @__w.Write(this.ClientID );
+
+            @__w.Write("list3.get_rootFolder().get_serverRelativeUrl());\r\n    }\r\n    catch(err)\r\n    {\r\n " +
+                    "   }\r\n\t");
+    } 
+            @__w.Write("\r\n}\r\n\r\n\r\n</script>\r\n<div class=\"container\" id=\"");
+                   @__w.Write(this.ClientID );
+
+            @__w.Write("_container\">\r\n <div id=\"tabhead\">\r\n  <ul id=\"nav\">\r\n");
    if (ListName1!="")    { 
             @__w.Write("\r\n   <li>\r\n    <a class=\"active\" onclick=\'");
                        @__w.Write(this.ClientID );

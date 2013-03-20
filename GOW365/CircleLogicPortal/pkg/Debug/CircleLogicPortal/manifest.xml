@@ -6,6 +6,11 @@
         <SafeControl Assembly="CircleLogicPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fbf14c1666825aaf" Namespace="CircleLogicPortal.TabListWebpart" TypeName="*" />
         <SafeControl Assembly="CircleLogicPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fbf14c1666825aaf" Namespace="CircleLogicPortal.SubSitesTabWepart" TypeName="*" />
         <SafeControl Assembly="CircleLogicPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fbf14c1666825aaf" Namespace="CircleLogicPortal.ImageWheelWebpart" TypeName="*" />
+        <SafeControl Assembly="CircleLogicPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fbf14c1666825aaf" Namespace="CircleLogicPortal.NewDocsTabWebPart" TypeName="*" />
+        <SafeControl Assembly="CircleLogicPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fbf14c1666825aaf" Namespace="CircleLogicPortal.DropDownLinkWebPart" TypeName="*" />
+        <SafeControl Assembly="CircleLogicPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fbf14c1666825aaf" Namespace="CircleLogicPortal.GetSurveyWebPart" TypeName="*" />
+        <SafeControl Assembly="CircleLogicPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fbf14c1666825aaf" Namespace="CircleLogicPortal.CalendarWebPart" TypeName="*" />
+        <SafeControl Assembly="CircleLogicPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fbf14c1666825aaf" Namespace="CircleLogicPortal.ImageSlideWebPart" TypeName="*" />
       </SafeControls>
     </Assembly>
   </Assemblies>

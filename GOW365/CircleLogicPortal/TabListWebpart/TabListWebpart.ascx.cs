@@ -9,8 +9,12 @@ namespace CircleLogicPortal.TabListWebpart
     public partial class TabListWebpart : WebPart
     {
         //배포 전에 ImgUrl을 수정해주세요. 
-        protected string ImgUrl = "GOW365/TabList/";
-        
+        private string imgUrl = "GOW365/TabList/";
+        public string ImgUrl
+        {
+            get { return imgUrl; }
+            set { imgUrl = value; }
+        }
 
         #region Properties
 
@@ -111,17 +115,21 @@ namespace CircleLogicPortal.TabListWebpart
         // [System.Security.Permissions.SecurityPermission(System.Security.Permissions.SecurityAction.Assert, UnmanagedCode = true)]
         public TabListWebpart()
         {
-        }
 
+        }
+        protected override void CreateChildControls()
+        {
+            
+        }
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            InitializeControl();
-            ImgUrl = (SPContext.Current.Site.ServerRelativeUrl.EndsWith("/") ? SPContext.Current.Site.ServerRelativeUrl + ImgUrl : SPContext.Current.Site.ServerRelativeUrl + "/" + ImgUrl);
+            InitializeControl();   
         }
-
+        
         protected void Page_Load(object sender, EventArgs e)
         {
+            ImgUrl = (SPContext.Current.Site.ServerRelativeUrl.EndsWith("/") ? SPContext.Current.Site.ServerRelativeUrl + ImgUrl : SPContext.Current.Site.ServerRelativeUrl + "/" + ImgUrl);
         }
     }
 }

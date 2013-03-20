@@ -54,6 +54,38 @@
     <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalendarWebPart\CalendarWebPart.ascx.cs">
+      <DependentUpon>CalendarWebPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CalendarWebPart\CalendarWebPart.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CalendarWebPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DropDownLinkWebPart\DropDownLinkWebPart.ascx.cs">
+      <DependentUpon>DropDownLinkWebPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DropDownLinkWebPart\DropDownLinkWebPart.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DropDownLinkWebPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GetSurveyWebPart\GetSurveyWebPart.ascx.cs">
+      <DependentUpon>GetSurveyWebPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GetSurveyWebPart\GetSurveyWebPart.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetSurveyWebPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ImageSlideWebPart\ImageSlideWebPart.ascx.cs">
+      <DependentUpon>ImageSlideWebPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ImageSlideWebPart\ImageSlideWebPart.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImageSlideWebPart.ascx</DependentUpon>
+    </Compile>
     <Compile Include="ImageWheelWebpart\ImageWheelWebpart.ascx.cs">
       <DependentUpon>ImageWheelWebpart.ascx</DependentUpon>
     </Compile>
@@ -62,6 +94,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ImageWheelWebpart.ascx</DependentUpon>
     </Compile>
+    <Compile Include="NewDocsTabWebPart\NewDocsTabWebPart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SubSitesTabWepart\SubSitesTabWepart.ascx.cs">
       <DependentUpon>SubSitesTabWepart.ascx</DependentUpon>
@@ -81,17 +114,37 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="CalendarWebPart\CalendarWebPart.webpart" />
+    <None Include="CalendarWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e8117820-90eb-41e6-aeea-2db1cb85cc80}</SharePointProjectItemId>
+    </None>
+    <None Include="DropDownLinkWebPart\DropDownLinkWebPart.webpart" />
+    <None Include="DropDownLinkWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9e920532-82cb-4564-98f1-de366fb514c2}</SharePointProjectItemId>
+    </None>
     <None Include="Features\Feature1\Feature1.feature">
       <FeatureId>{527c493c-9e44-45ca-b2a9-84d792431084}</FeatureId>
     </None>
+    <None Include="GetSurveyWebPart\GetSurveyWebPart.webpart" />
+    <None Include="GetSurveyWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{95dada23-a442-465e-8db5-95186345c10d}</SharePointProjectItemId>
+    </None>
     <None Include="GOW365\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{49c7977d-1654-4e17-85d4-87dbdb4ad867}</SharePointProjectItemId>
+    </None>
+    <None Include="ImageSlideWebPart\ImageSlideWebPart.webpart" />
+    <None Include="ImageSlideWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{938880ca-de8a-4da2-9662-157b3e792650}</SharePointProjectItemId>
     </None>
     <None Include="ImageWheelWebpart\ImageWheelWebpart.webpart" />
     <None Include="ImageWheelWebpart\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{2245a7c5-8a58-4717-a0cf-65f3a15427cf}</SharePointProjectItemId>
     </None>
     <None Include="key.snk" />
+    <None Include="NewDocsTabWebPart\NewDocsTabWebPart.webpart" />
+    <None Include="NewDocsTabWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e02fd849-5c68-406d-8366-95efad27b662}</SharePointProjectItemId>
+    </None>
     <None Include="Package\Package.package">
       <PackageId>{302802c1-c295-4c83-9932-fcded6710e88}</PackageId>
     </None>
@@ -108,17 +161,114 @@
     <None Include="TabListWebpart\TabListWebpart.webpart" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CalendarWebPart\CalendarWebPart.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>CalendarWebPart.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="CalendarWebPart\Elements.xml" />
+    <Content Include="DropDownLinkWebPart\DropDownLinkWebPart.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>DropDownLinkWebPart.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="DropDownLinkWebPart\Elements.xml" />
     <Content Include="Features\Feature1\Feature1.Template.xml">
       <DependentUpon>Feature1.feature</DependentUpon>
     </Content>
+    <Content Include="GetSurveyWebPart\Elements.xml" />
+    <Content Include="GetSurveyWebPart\GetSurveyWebPart.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>GetSurveyWebPart.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="GOW365\Calendar\images\animated-overlay.gif" />
+    <Content Include="GOW365\Calendar\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="GOW365\Calendar\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="GOW365\Calendar\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="GOW365\Calendar\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="GOW365\Calendar\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="GOW365\Calendar\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="GOW365\Calendar\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="GOW365\Calendar\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="GOW365\Calendar\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="GOW365\Calendar\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="GOW365\Calendar\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="GOW365\Calendar\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="GOW365\Calendar\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="GOW365\Calendar\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="GOW365\Calendar\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="GOW365\Calendar\jQBlogCalendar.js" />
+    <Content Include="GOW365\Calendar\jQBlogCalendar.min.js" />
+    <Content Include="GOW365\Calendar\jquery-1.8.2.min.js" />
+    <Content Include="GOW365\Calendar\jquery-ui-1.10.1.custom.min.css" />
+    <Content Include="GOW365\Calendar\jquery.ui.core.min.js" />
+    <Content Include="GOW365\Calendar\jquery.ui.datepicker.min.css" />
+    <Content Include="GOW365\Calendar\jquery.ui.datepicker.min.js" />
     <Content Include="GOW365\Elements.xml" />
-    <Content Include="GOW365\Sample.txt" />
+    <Content Include="GOW365\GetSurveyList\more_button.gif" />
+    <Content Include="GOW365\GetSurveyList\SurveyStyle.css" />
+    <Content Include="GOW365\GetSurveyList\survey_bottom.gif" />
+    <Content Include="GOW365\GetSurveyList\survey_bottom_l.gif" />
+    <Content Include="GOW365\GetSurveyList\survey_bottom_r.gif" />
+    <Content Include="GOW365\GetSurveyList\survey_box_bg.gif" />
+    <Content Include="GOW365\GetSurveyList\survey_box_left.gif" />
+    <Content Include="GOW365\GetSurveyList\survey_box_left_b.gif" />
+    <Content Include="GOW365\GetSurveyList\survey_box_right.gif" />
+    <Content Include="GOW365\GetSurveyList\survey_box_right_b.gif" />
+    <Content Include="GOW365\GetSurveyList\survey_box_top.gif" />
+    <Content Include="GOW365\GetSurveyList\survey_box_top_bg.gif" />
+    <Content Include="GOW365\GetSurveyList\survey_box_top_l.gif" />
+    <Content Include="GOW365\GetSurveyList\survey_box_top_r.gif" />
+    <Content Include="GOW365\GetSurveyList\survey_box_top_re.gif" />
+    <Content Include="GOW365\GetSurveyList\survey_image.gif" />
+    <Content Include="GOW365\ImageSlide\jquery-1.9.1.min.js" />
+    <Content Include="GOW365\ImageSlide\jquery.infinitecarousel2.js" />
+    <Content Include="GOW365\ImageSlide\left.gif" />
+    <Content Include="GOW365\ImageSlide\playpause.gif" />
+    <Content Include="GOW365\ImageSlide\right.gif" />
+    <Content Include="GOW365\ImageWaterWheel\jquery-1.9.1.min.js" />
+    <Content Include="GOW365\ImageWaterWheel\jquery.waterwheelCarousel.js" />
+    <Content Include="GOW365\ImageWaterWheel\jquery.waterwheelCarousel.min.js" />
+    <Content Include="GOW365\ImageWaterWheel\Sample.txt" />
+    <Content Include="GOW365\ImageWaterWheel\WaterWheel.css" />
+    <Content Include="GOW365\SiteNewDocsTab\jquery-1.9.1.min.js" />
+    <Content Include="GOW365\SiteNewDocsTab\Rounded.gif" />
+    <Content Include="GOW365\SiteNewDocsTab\tabbgimg.gif" />
+    <Content Include="GOW365\SiteNewDocsTab\tabbgimg_hover.gif" />
+    <Content Include="GOW365\SiteNewDocsTab\tabbgimg_ov.gif" />
+    <Content Include="GOW365\SiteNewDocsTab\TabStyle.css" />
+    <Content Include="GOW365\SiteNewDocsTab\tab_aline.gif" />
+    <Content Include="GOW365\SubSitesTab\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="GOW365\SubSitesTab\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="GOW365\SubSitesTab\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="GOW365\SubSitesTab\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="GOW365\SubSitesTab\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="GOW365\SubSitesTab\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="GOW365\SubSitesTab\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="GOW365\SubSitesTab\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="GOW365\SubSitesTab\images\ui-icons_222222_256x240.png" />
+    <Content Include="GOW365\SubSitesTab\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="GOW365\SubSitesTab\images\ui-icons_454545_256x240.png" />
+    <Content Include="GOW365\SubSitesTab\images\ui-icons_888888_256x240.png" />
+    <Content Include="GOW365\SubSitesTab\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="GOW365\SubSitesTab\jquery-1.9.1.min.js" />
+    <Content Include="GOW365\SubSitesTab\jquery-ui-1.10.0.custom.min.css" />
+    <Content Include="GOW365\SubSitesTab\jquery-ui-1.10.0.min.js" />
     <Content Include="GOW365\TabList\MicrosoftAjax.js" />
+    <Content Include="GOW365\TabList\tabbgimg.gif" />
+    <Content Include="GOW365\TabList\tabbgimg_hover.gif" />
+    <Content Include="GOW365\TabList\tabbgimg_ov.gif" />
+    <Content Include="GOW365\TabList\TabStyle.css" />
+    <Content Include="GOW365\TabList\tab_aline.gif" />
+    <Content Include="ImageSlideWebPart\Elements.xml" />
+    <Content Include="ImageSlideWebPart\ImageSlideWebPart.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>ImageSlideWebPart.ascx.g.cs</LastGenOutput>
+    </Content>
     <Content Include="ImageWheelWebpart\Elements.xml" />
     <Content Include="ImageWheelWebpart\ImageWheelWebpart.ascx">
       <Generator>SharePointWebPartCodeGenerator</Generator>
       <LastGenOutput>ImageWheelWebpart.ascx.g.cs</LastGenOutput>
     </Content>
+    <Content Include="NewDocsTabWebPart\Elements.xml" />
     <Content Include="SubSitesTabWepart\Elements.xml" />
     <Content Include="SubSitesTabWepart\SubSitesTabWepart.ascx">
       <Generator>SharePointWebPartCodeGenerator</Generator>

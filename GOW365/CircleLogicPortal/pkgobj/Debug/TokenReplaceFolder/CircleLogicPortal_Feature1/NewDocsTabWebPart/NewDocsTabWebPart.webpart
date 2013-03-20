@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="CircleLogicPortal.NewDocsTabWebPart.NewDocsTabWebPart, CircleLogicPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fbf14c1666825aaf" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">CircleLogicPortal - NewDocsTabWebPart</property>
+        <property name="Description" type="string">내 웹 파트</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

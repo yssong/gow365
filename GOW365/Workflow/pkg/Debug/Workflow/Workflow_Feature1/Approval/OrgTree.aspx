@@ -9,14 +9,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=10" />
 
 <!-- 결재 관련 모듈 loading-->
-	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/4.0/1/MicrosoftAjax.js"/>
-	<SharePoint:ScriptLink runat="server" id="ScriptLink1" Name="sp.init.js" Localizable="False" />
 	
-	<SharePoint:ScriptLink runat="server" id="ScriptLink6" Name="sp.js" LoadAfterUI="True" Localizable="False" />
 
-	<SharePoint:ScriptLink runat="server" id="ScriptLink5" Name="sp.runtime.js" LoadAfterUI="True" Localizable="False"  />
-	
-	<SharePoint:ScriptLink runat="server" id="ScriptLink8" Name="sp.core.js"  Localizable="False"/>
+<script type="text/javascript" src="./MicrosoftAjax.js" />
+<SharePoint:ScriptLink runat="server" id="ScriptLink2" Name="sp.init.js" Localizable="False"/>
+
+<SharePoint:ScriptLink runat="server" id="ScriptLink3" Name="sp.js" LoadAfterUI="True" Localizable="False"/>
+
+<SharePoint:ScriptLink runat="server" id="ScriptLink4" Name="sp.runtime.js" LoadAfterUI="True" Localizable="False"/>
+
+<SharePoint:ScriptLink runat="server" id="ScriptLink7" Name="sp.core.js"  Localizable="False"/>
+
 		
 	<script type="text/javascript" src="OrgTree/OrgTree.js"></script>
 	<link id="OrgTreeCss" href="OrgTree/Orgtree.css" rel="stylesheet" type="text/css"/>

@@ -8,119 +8,280 @@
 <%@ Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="TabListWebpart.ascx.cs" Inherits="CircleLogicPortal.TabListWebpart.TabListWebpart" %>
 
-
+<link rel="stylesheet" type="text/css" href="<%=ImgUrl%>TabStyle.css"/>
 <script type="text/javascript">
    
-    ExecuteOrDelayUntilScriptLoaded(Initialize, "sp.js");
+    ExecuteOrDelayUntilScriptLoaded(<%=this.ClientID%>Initialize, "sp.js");
+
     function openDialog(_url) {  
         var options = {  url: _url ,  width: 800, height: 600, };  
         SP.UI.ModalDialog.showModalDialog(options);  
     }
+    function <%=this.ClientID%>_changeClass(obj,tabname){
+		$('#<%=this.ClientID%>_container #nav li > a').removeClass('active');
+		$(obj).addClass('active');
+		$('#<%=this.ClientID%>_container .tab').hide();
+		$('#'+tabname).show();
+    }  
+
 
     //Retrieve  the Tab items
-function Initialize() {
+function <%=this.ClientID%>Initialize() {
     //Get the current SP context
-    clientContext = new SP.ClientContext.get_current();
-    web = clientContext.get_web();
-    
+
 	var camlQuery = new SP.CamlQuery();
 	
     var q = "<View><Query><Where><Neq><FieldRef Name='ContentType' /><Value Type='Computed'>Folder</Value> </Neq></Where><OrderBy><FieldRef Name='Modified' Ascending='FALSE' /></OrderBy><QueryOptions><RowLimit><%=ListItemCount%></RowLimit></QueryOptions></Query></View>";
     camlQuery.set_viewXml(q);
 
-    <% if (ListName1!="")    { %>
-    this.list1 = web.get_lists().getByTitle('<%=ListName1%>');
-    this.listItems1 = list1.getItems(camlQuery);
-    clientContext.load(list1);
-    clientContext.load(listItems1);
+    <% if (ListName1.Trim()!="")    { %>
+    <% if (WebName1.Trim() != "")
+       { %>
+    clientContext1 = new SP.ClientContext("<%=WebName1.Trim()%>");
+    <% }else { %>
+    clientContext1 = new SP.ClientContext.get_current();
+    <% } %>
+    web = clientContext1.get_web();
+    this.<%=this.ClientID %>list1 = web.get_lists().getByTitle('<%=ListName1.Trim()%>');
+    this.<%=this.ClientID %>listContentTypes1 = this.<%=this.ClientID %>list1.get_contentTypes();
+    
+    this.<%=this.ClientID %>listItems1 = <%=this.ClientID %>list1.getItems(camlQuery);
+    
+    clientContext1.load(<%=this.ClientID %>list1,"DefaultDisplayFormUrl","BaseTemplate","RootFolder");
+    clientContext1.load(<%=this.ClientID %>listContentTypes1);
+    clientContext1.load(<%=this.ClientID %>listItems1);
+    
+    clientContext1.executeQueryAsync(Function.createDelegate(this, this.<%=this.ClientID%>onListItemsLoadSuccess1), Function.createDelegate(this, this.onListItemsLoadFailed));
     <% } %>
 
-    <% if (ListName2!="")    { %>
-    this.list2 = web.get_lists().getByTitle('<%=ListName2%>');
-    this.listItems2 = list2.getItems(camlQuery);
-    clientContext.load(list2);
-    clientContext.load(listItems2);
+    <% if (ListName2.Trim()!="")    { %>
+    <% if (WebName2.Trim()!="")    { %>
+    clientContext2 = new SP.ClientContext("<%=WebName2.Trim()%>");
+    <% }else { %>
+    clientContext2 = new SP.ClientContext.get_current();
+    <% } %>
+    web = clientContext2.get_web();
+    this.<%=this.ClientID %>list2 = web.get_lists().getByTitle('<%=ListName2.Trim()%>');
+    this.<%=this.ClientID %>listContentTypes2 = this.<%=this.ClientID %>list2.get_contentTypes();
+    
+    this.<%=this.ClientID %>listItems2 = <%=this.ClientID %>list2.getItems(camlQuery);
+    
+    clientContext2.load(<%=this.ClientID %>list2,"DefaultDisplayFormUrl","BaseTemplate","RootFolder");
+    clientContext2.load(<%=this.ClientID %>listContentTypes2);
+    clientContext2.load(<%=this.ClientID %>listItems2);
+
+    clientContext2.executeQueryAsync(Function.createDelegate(this, this.<%=this.ClientID%>onListItemsLoadSuccess2), Function.createDelegate(this, this.onListItemsLoadFailed));
     <% } %>
 
-    <% if (ListName3!="")    { %>
-    this.list3 = web.get_lists().getByTitle('<%=ListName3%>');
-    this.listItems3 = list3.getItems(camlQuery);
-    clientContext.load(list3);
-    clientContext.load(listItems3);
+    <% if (ListName3.Trim()!="")    { %>
+    <% if (WebName3.Trim()!="")    { %>
+    clientContext3 = new SP.ClientContext("<%=WebName3.Trim()%>");
+    
+    <% }else { %>
+    clientContext3 = new SP.ClientContext.get_current();
+    
+    <% } %>
+    web = clientContext3.get_web();
+    this.<%=this.ClientID %>list3 = web.get_lists().getByTitle('<%=ListName3.Trim()%>');
+    this.<%=this.ClientID %>listContentTypes3 = this.<%=this.ClientID %>list3.get_contentTypes();
+    
+    this.<%=this.ClientID %>listItems3 = <%=this.ClientID %>list3.getItems(camlQuery);
+    
+    clientContext3.load(<%=this.ClientID %>list3,"DefaultDisplayFormUrl","BaseTemplate","RootFolder");
+    clientContext3.load(<%=this.ClientID %>listContentTypes3);
+    clientContext3.load(<%=this.ClientID %>listItems3);
+
+    clientContext3.executeQueryAsync(Function.createDelegate(this, this.<%=this.ClientID%>onListItemsLoadSuccess3), Function.createDelegate(this, this.onListItemsLoadFailed));
     <% } %>
 
-    clientContext.executeQueryAsync(Function.createDelegate(this, this.onListItemsLoadSuccess), Function.createDelegate(this, this.onListItemsLoadFailed));
+    
 }
 
-/*
-*
-* Initialize delegate function: this function adds the returned items to the HTML lists.
-*
-*/
-
-function onListItemsLoadSuccess(sender, args) {
-	<% if (ListName1!="")    { %>
-    $('#<%=this.ClientID %>_tab1 ul li').remove();
-    var listtype1 = list1.get_baseTemplate()
-    var listEnumerator = this.listItems1.getEnumerator();
-    while (listEnumerator.moveNext()) {
-        //Retrieve the current list item
-        var oListItem = listEnumerator.get_current();
-		//Add the items to the list
-		var itemHtml = "<li ref='" + oListItem.get_item('ID') + "'>";
-			itemHtml += "<a href='#' title='Mark as completed' onClick='javascript:MarkAsComplete(" + oListItem.get_item('ID') + "); return false;'><img src='/_layouts/images/CHECK.GIF' /></a>";
-			itemHtml += "<a href='#' title='Delete to-do item' onClick='javascript:DeleteItem(" + oListItem.get_item('ID') + "); return false;'><img src='/_layouts/images/delete.GIF' /></a>";
-			itemHtml += oListItem.get_item('Title') + "</li>";
-		$('#<%=this.ClientID %>_tab1 ul').append(itemHtml);
-    }
-    <% } %>
-    <% if (ListName2!="")    { %>
-    $('#<%=this.ClientID %>_tab2 ul li').remove();
-    var listtype2 = list2.get_baseTemplate()
-	listEnumerator = this.listItems2.getEnumerator();
-    while (listEnumerator.moveNext()) {
-        //Retrieve the current list item
-        var oListItem = listEnumerator.get_current();
-		//Add the items to the list
-		var itemHtml = "<li ref='" + oListItem.get_item('ID') + "'>";
-			itemHtml += "<a href='#' onClick='javascript:MarkAsComplete(" + oListItem.get_item('ID') + "); return false;'><img src='/_layouts/images/CHECK.GIF' /></a>";
-			itemHtml += "<a href='#' onClick='javascript:DeleteItem(" + oListItem.get_item('ID') + "); return false;'><img src='/_layouts/images/delete.GIF' /></a>";
-			itemHtml += oListItem.get_item('Title') + "</li>";
-		$('#<%=this.ClientID %>_tab2 ul').append(itemHtml);
-    }
-    <% } %>
-    <% if (ListName3!="")    { %>
-    $('#<%=this.ClientID %>_tab3 ul li').remove();
-    var listtype3 = list3.get_baseTemplate()
-    listEnumerator3 = this.listItems3.getEnumerator();
-    while (listEnumerator.moveNext()) {
-        //Retrieve the current list item
-        var oListItem = listEnumerator.get_current();
-		//Add the items to the list
-		var itemHtml = "<li ref='" + oListItem.get_item('ID') + "'>";
-			itemHtml += "<a href='#' title='Mark as completed' onClick='javascript:MarkAsComplete(" + oListItem.get_item('ID') + "); return false;'><img src='/_layouts/images/CHECK.GIF' /></a>";
-			itemHtml += "<a href='#' title='Delete to-do item' onClick='javascript:DeleteItem(" + oListItem.get_item('ID') + "); return false;'><img src='/_layouts/images/delete.GIF' /></a>";
-			itemHtml += oListItem.get_item('Title') + "</li>";
-		$('#<%=this.ClientID %>_tab3 ul').append(itemHtml);
-    }
-	<% } %>
-}
 function onListItemsLoadFailed(sender, args) {
 	SP.UI.Notify.addNotification("List items load failed: " + args.get_message(), false);
 }
+function <%=this.ClientID%>onListItemsLoadSuccess1(sender, args) {
+	<% if (ListName1!="")    { %>
+    try{
+        $('#<%=this.ClientID %>_tab1 ul li').remove();
+        var listtype1 = <%=this.ClientID %>list1.get_baseTemplate();
+        //var DisplayURL1 = <%=this.ClientID %>list1.get_defaultDisplayFormUrl();
+
+        var contenttype1 = <%=this.ClientID %>listContentTypes1.itemAt(0).get_id();
     
+        var listEnumerator = this.<%=this.ClientID %>listItems1.getEnumerator();
+        var listurl = <%=this.ClientID %>list1.get_rootFolder().get_serverRelativeUrl();
+
+        while (listEnumerator.moveNext()) {
+            //Retrieve the current list item
+            var oListItem = listEnumerator.get_current();
+            itemHtml = "";
+		    //Add the items to the list
+            if (listtype1 == SP.BaseType.DocumentLibrary)
+            {
+                itemHtml += "<li><span class='tabTitle'><a href=\"#\" onclick=\"javascript:openDialog('" + <%=this.ClientID %>list1.get_defaultDisplayFormUrl()
+     + "?ID=" + oListItem.get_item('ID') + "'); return false;\">";
+                itemHtml += oListItem.get_item('DisplayName');
+                itemHtml += "</a>";
+                itemHtml += "</span><span class='tabName'>" + oListItem.get_item("Editor").get_lookupValue() + "</span><span  class='tabDate'>" + oListItem.get_item("Modified").format("yyyy-MM-dd") + "</span></li>";
+
+                                
+            }
+            else if (listtype1 == SP.ListTemplateType.links)
+            {
+                itemHtml += "<li><span class='tabTitle'><a href=\"#\" onclick=\"javascript:openDialog('" + <%=this.ClientID %>list1.DefaultDisplayFormUrl + "?ID=" +  oListItem.get_item('ID') + "'); return false;\">";
+                itemHtml += oListItem.get_item("URL");
+                itemHtml += "</a>";
+                itemHtml += "</span><span class='tabName'>" + oListItem.get_item("Editor").get_lookupValue() + "</span><span  class='tabDate'>" + oListItem.get_item("Modified").format("yyyy-MM-dd") + "</span></li>";
+            }
+            else if (listtype1 == SP.ListTemplateType.discussionBoard)
+            {
+                var rooturl = escape(listurl+"/"+oListItem.get_item("Title"));
+                itemHtml += "<li><span class='tabTitle'><a href='#' onclick=\"javascript:openDialog('" + listurl + "/Flat.aspx?rootfolder=" + rooturl + "&FolderCTID=" + contenttype1 + "'); return false;\">";
+                itemHtml += oListItem.get_item("Title") + "(" + oListItem.get_item("ItemChildCount") + ")";
+                itemHtml += "</a>";
+                itemHtml += "</span><span class='tabName'>" + oListItem.get_item("Editor").get_lookupValue() + "</span><span  class='tabDate'>" + oListItem.get_item("Modified").format("yyyy-MM-dd") + "</span></li>";
+            }
+            else
+            {
+                itemHtml += "<li><span class='tabTitle'><a href=\"#\" onclick=\"javascript:openDialog('" + <%=this.ClientID %>list1.get_defaultDisplayFormUrl() + "?ID=" +  oListItem.get_item('ID') + "'); return false;\">";
+                itemHtml += oListItem.get_item("Title");
+                itemHtml += "</a>";
+                itemHtml += "</span><span class='tabName'>" + oListItem.get_item("Editor").get_lookupValue() + "</span><span  class='tabDate'>" + oListItem.get_item("Modified").format("yyyy-MM-dd") + "</span></li>";
+            }
+		
+		    $('#<%=this.ClientID %>_tab1 ul').append(itemHtml);
+        }
+        $('#<%=this.ClientID %>_link1').attr("href",<%=this.ClientID %>list1.get_rootFolder().get_serverRelativeUrl());
+    }
+    catch(err)
+    {
+    }
+    <% } %>
+
+}
+function <%=this.ClientID%>onListItemsLoadSuccess2(sender, args) {
+    <% if (ListName2!="")    { %>
+    try
+    {
+        $('#<%=this.ClientID %>_tab2 ul li').remove();
+        var listtype1 = <%=this.ClientID %>list2.get_baseTemplate();
+        var contenttype2 = <%=this.ClientID %>listContentTypes2.itemAt(0).get_id();
+    
+        var listEnumerator = this.<%=this.ClientID %>listItems2.getEnumerator();
+        var listurl = <%=this.ClientID %>list2.get_rootFolder().get_serverRelativeUrl();
+
+        while (listEnumerator.moveNext()) {
+            //Retrieve the current list item
+            var oListItem = listEnumerator.get_current();
+            itemHtml = "";
+		    //Add the items to the list
+            if (listtype1 == SP.BaseType.DocumentLibrary)
+            {
+                itemHtml += "<li><span class='tabTitle'><a href=\"#\" onclick=\"javascript:openDialog('" + <%=this.ClientID %>list2.get_defaultDisplayFormUrl()
+     + "?ID=" + oListItem.get_item('ID') + "'); return false;\">";
+                itemHtml += oListItem.get_item('DisplayName');
+                itemHtml += "</a>";
+                itemHtml += "</span><span class='tabName'>" + oListItem.get_item("Editor").get_lookupValue() + "</span><span  class='tabDate'>" + oListItem.get_item("Modified").format("yyyy-MM-dd") + "</span></li>";
+
+            }
+            else if (listtype1 == SP.ListTemplateType.links)
+            {
+                itemHtml += "<li><span class='tabTitle'><a href=\"#\" onclick=\"javascript:openDialog('" + <%=this.ClientID %>list2.DefaultDisplayFormUrl + "?ID=" +  oListItem.get_item('ID') + "'); return false;\">";
+                itemHtml += oListItem.get_item("URL");
+                itemHtml += "</a>";
+                itemHtml += "</span><span class='tabName'>" + oListItem.get_item("Editor").get_lookupValue() + "</span><span  class='tabDate'>" + oListItem.get_item("Modified").format("yyyy-MM-dd") + "</span></li>";
+            }
+            else if (listtype1 == SP.ListTemplateType.discussionBoard)
+            {
+                var rooturl = escape(listurl+"/"+oListItem.get_item("Title"));
+                itemHtml += "<li><span class='tabTitle'><a href='#' onclick=\"javascript:openDialog('" + listurl + "/Flat.aspx?rootfolder=" + rooturl + "&FolderCTID=" + contenttype2 + "'); return false;\">";
+                itemHtml += oListItem.get_item("Title") + "(" + oListItem.get_item("ItemChildCount") + ")";
+                itemHtml += "</a>";
+                itemHtml += "</span><span class='tabName'>" + oListItem.get_item("Editor").get_lookupValue() + "</span><span  class='tabDate'>" + oListItem.get_item("Modified").format("yyyy-MM-dd") + "</span></li>";
+            }
+            else
+            {
+                itemHtml += "<li><span class='tabTitle'><a href=\"#\" onclick=\"javascript:openDialog('" + <%=this.ClientID %>list2.get_defaultDisplayFormUrl() + "?ID=" +  oListItem.get_item('ID') + "'); return false;\">";
+                itemHtml += oListItem.get_item("Title");
+                itemHtml += "</a>";
+                itemHtml += "</span><span class='tabName'>" + oListItem.get_item("Editor").get_lookupValue() + "</span><span  class='tabDate'>" + oListItem.get_item("Modified").format("yyyy-MM-dd") + "</span></li>";
+            }
+		
+		    $('#<%=this.ClientID %>_tab2 ul').append(itemHtml);
+        }
+        $('#<%=this.ClientID %>_link2').attr("href",<%=this.ClientID %>list2.get_rootFolder().get_serverRelativeUrl());
+     }
+    catch(err)
+    {
+    }
+    <% } %>
+
+}
+function <%=this.ClientID%>onListItemsLoadSuccess3(sender, args) {
+	
+    <% if (ListName3!="")    { %>
+    try
+    {
+        $('#<%=this.ClientID %>_tab3 ul li').remove();
+        var listtype1 = <%=this.ClientID %>list3.get_baseTemplate();
+    
+        var contenttype3 = <%=this.ClientID %>listContentTypes3.itemAt(0).get_id();
+    
+        var listEnumerator = this.<%=this.ClientID %>listItems3.getEnumerator();
+        var listurl = <%=this.ClientID %>list3.get_rootFolder().get_serverRelativeUrl();
+
+        while (listEnumerator.moveNext()) {
+            //Retrieve the current list item
+            var oListItem = listEnumerator.get_current();
+            itemHtml = "";
+		    //Add the items to the list
+            if (listtype1 == SP.BaseType.DocumentLibrary)
+            {
+                itemHtml += "<li><span class='tabTitle'><a href=\"#\" onclick=\"javascript:openDialog('" + <%=this.ClientID %>list3.get_defaultDisplayFormUrl()
+     + "?ID=" + oListItem.get_item('ID') + "'); return false;\">";
+                itemHtml += oListItem.get_item('DisplayName');
+                itemHtml += "</a>";
+                itemHtml += "</span><span class='tabName'>" + oListItem.get_item("Editor").get_lookupValue() + "</span><span  class='tabDate'>" + oListItem.get_item("Modified").format("yyyy-MM-dd") + "</span></li>";
+
+                                
+            }
+            else if (listtype1 == SP.ListTemplateType.links)
+            {
+                itemHtml += "<li><span class='tabTitle'><a href=\"#\" onclick=\"javascript:openDialog('" + <%=this.ClientID %>list3.DefaultDisplayFormUrl + "?ID=" +  oListItem.get_item('ID') + "'); return false;\">";
+                itemHtml += oListItem.get_item("URL");
+                itemHtml += "</a>";
+                itemHtml += "</span><span class='tabName'>" + oListItem.get_item("Editor").get_lookupValue() + "</span><span  class='tabDate'>" + oListItem.get_item("Modified").format("yyyy-MM-dd") + "</span></li>";
+            }
+            else if (listtype1 == SP.ListTemplateType.discussionBoard)
+            {
+                var rooturl = escape(listurl+"/"+oListItem.get_item("Title"));
+                itemHtml += "<li><span class='tabTitle'><a href='#' onclick=\"javascript:openDialog('" + listurl + "/Flat.aspx?rootfolder=" + rooturl + "&FolderCTID=" + contenttype3 + "'); return false;\">";
+                itemHtml += oListItem.get_item("Title") + "(" + oListItem.get_item("ItemChildCount") + ")";
+                itemHtml += "</a>";
+                itemHtml += "</span><span class='tabName'>" + oListItem.get_item("Editor").get_lookupValue() + "</span><span  class='tabDate'>" + oListItem.get_item("Modified").format("yyyy-MM-dd") + "</span></li>";
+            }
+            else
+            {
+                itemHtml += "<li><span class='tabTitle'><a href=\"#\" onclick=\"javascript:openDialog('" + <%=this.ClientID %>list3.get_defaultDisplayFormUrl() + "?ID=" +  oListItem.get_item('ID') + "'); return false;\">";
+                itemHtml += oListItem.get_item("Title");
+                itemHtml += "</a>";
+                itemHtml += "</span><span class='tabName'>" + oListItem.get_item("Editor").get_lookupValue() + "</span><span  class='tabDate'>" + oListItem.get_item("Modified").format("yyyy-MM-dd") + "</span></li>";
+            }
+		
+		    $('#<%=this.ClientID %>_tab3 ul').append(itemHtml);
+        }
+        $('#<%=this.ClientID %>_link3').attr("href",<%=this.ClientID %>list3.get_rootFolder().get_serverRelativeUrl());
+    }
+    catch(err)
+    {
+    }
+	<% } %>
+}
+
+
 </script>
-
-
-<%=ImgUrl%><br />
-<%=ListItemCount %><br />
-<%=WebName1%><br />
-<%=WebName2%><br />
-<%=WebName3%><br />
-<%=ListName1%><br />
-<%=ListName2%><br />
-<%=ListName3%><br />
-<div class="container" id="<%=this.ClientID %>"_container">
+<div class="container" id="<%=this.ClientID %>_container">
  <div id="tabhead">
   <ul id="nav">
 <% if (ListName1!="")    { %>

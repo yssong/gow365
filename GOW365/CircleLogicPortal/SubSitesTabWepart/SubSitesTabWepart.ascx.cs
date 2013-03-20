@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.SharePoint;
+using System;
 using System.ComponentModel;
 using System.Web.UI.WebControls.WebParts;
 
@@ -105,6 +106,7 @@ namespace CircleLogicPortal.SubSitesTabWepart
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            ImgUrl = (SPContext.Current.Site.ServerRelativeUrl.EndsWith("/") ? SPContext.Current.Site.ServerRelativeUrl + ImgUrl : SPContext.Current.Site.ServerRelativeUrl + "/" + ImgUrl);
         }
     }
 }

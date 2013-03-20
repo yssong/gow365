@@ -50,27 +50,208 @@ namespace CircleLogicPortal.SubSitesTabWepart {
         
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void @__Render__control1(System.Web.UI.HtmlTextWriter @__w, System.Web.UI.Control parameterContainer) {
-@__w.Write(ImgUrl);
+            @__w.Write("\r\n\r\n<link rel=\"stylesheet\" type=\"text/css\" href=\"");
+                                     @__w.Write(ImgUrl);
 
-            @__w.Write("<br />\r\n");
-@__w.Write(WebName1);
+            @__w.Write("jquery-ui-1.10.0.custom.min.css\"/>\r\n<script type=\"text/javascript\" src=\"");
+                            @__w.Write(ImgUrl);
 
-            @__w.Write("<br />\r\n");
-@__w.Write(WebName2);
+            @__w.Write("jquery-ui-1.10.0.min.js\"></script>\r\n<script type=\"text/javascript\">\r\n   \r\n    Exe" +
+                    "cuteOrDelayUntilScriptLoaded(");
+                            @__w.Write(this.ClientID);
 
-            @__w.Write("<br />\r\n");
-@__w.Write(WebName3);
+            @__w.Write("Initialize, \"sp.js\");\r\n       \r\n    //Retrieve  the Tab items\r\nfunction ");
+ @__w.Write(this.ClientID);
 
-            @__w.Write("<br />\r\n");
-@__w.Write(TabTitle1);
+            @__w.Write("Initialize() {\r\n    //Get the current SP context\r\n\r\n    ");
+       if (TabTitle1.Trim() != "")
+       { 
+       if (WebName1.Trim() != "")
+       { 
+            @__w.Write("\r\n    clientContext1 = new SP.ClientContext(\"");
+                                   @__w.Write(WebName1.Trim());
 
-            @__w.Write("<br />\r\n");
-@__w.Write(TabTitle2);
+            @__w.Write("\");\r\n    ");
+       }else { 
+            @__w.Write("\r\n    clientContext1 = new SP.ClientContext.get_current();\r\n    ");
+       } 
+            @__w.Write("\r\n    web = clientContext1.get_web();\r\n    this.");
+ @__w.Write(this.ClientID );
 
-            @__w.Write("<br />\r\n");
-@__w.Write(TabTitle3);
+            @__w.Write("webcols1 = web.getSubwebsForCurrentUser(null)\r\n    clientContext1.load(");
+                @__w.Write(this.ClientID );
 
-            @__w.Write("<br />");
+            @__w.Write("webcols1);\r\n    try{\r\n    clientContext1.executeQueryAsync(Function.createDelegat" +
+                    "e(this, this.");
+                                                                @__w.Write(this.ClientID);
+
+            @__w.Write("subSitesLoadSuccess1), Function.createDelegate(this, this.onListItemsLoadFailed))" +
+                    ";\r\n    }catch(err)\r\n    {\r\n    }\r\n    $(\'#");
+@__w.Write(this.ClientID);
+
+            @__w.Write("_tab\').tabs();\r\n    ");
+       } 
+       if (TabTitle2.Trim() != "")
+       { 
+       if (WebName2.Trim()!="")    { 
+            @__w.Write("\r\n    clientContext2 = new SP.ClientContext(\"");
+                                   @__w.Write(WebName2.Trim());
+
+            @__w.Write("\");\r\n    ");
+       }else { 
+            @__w.Write("\r\n    clientContext2 = new SP.ClientContext.get_current();\r\n    ");
+       } 
+            @__w.Write("\r\n    web = clientContext2.get_web();\r\n    this.");
+ @__w.Write(this.ClientID );
+
+            @__w.Write("webcols2 = web.getSubwebsForCurrentUser(null)\r\n    clientContext2.load(");
+                @__w.Write(this.ClientID );
+
+            @__w.Write("webcols2);\r\n    try{\r\n    clientContext2.executeQueryAsync(Function.createDelegat" +
+                    "e(this, this.");
+                                                                @__w.Write(this.ClientID);
+
+            @__w.Write("subSitesLoadSuccess2), Function.createDelegate(this, this.onListItemsLoadFailed))" +
+                    ";\r\n    }catch(err)\r\n    {\r\n    }\r\n    ");
+       } 
+       if (TabTitle3.Trim() != "")
+       { 
+       if (WebName3.Trim()!="")    { 
+            @__w.Write("\r\n    clientContext3 = new SP.ClientContext(\"");
+                                   @__w.Write(WebName3.Trim());
+
+            @__w.Write("\");\r\n    \r\n    ");
+       }else { 
+            @__w.Write("\r\n    clientContext3 = new SP.ClientContext.get_current();\r\n    \r\n    ");
+       } 
+            @__w.Write("\r\n    web = clientContext3.get_web();\r\n    this.");
+ @__w.Write(this.ClientID );
+
+            @__w.Write("webcols3 = web.getSubwebsForCurrentUser(null)\r\n    clientContext3.load(");
+                @__w.Write(this.ClientID );
+
+            @__w.Write("webcols3);\r\n    try{\r\n    clientContext3.executeQueryAsync(Function.createDelegat" +
+                    "e(this, this.");
+                                                                @__w.Write(this.ClientID);
+
+            @__w.Write("subSitesLoadSuccess3), Function.createDelegate(this, this.onListItemsLoadFailed))" +
+                    ";\r\n    }catch(err)\r\n    {\r\n    }\r\n    ");
+       } 
+            @__w.Write("\r\n\r\n    \r\n}\r\n\r\nfunction onListItemsLoadFailed(sender, args) {\r\n\tSP.UI.Notify.addN" +
+                    "otification(\"List items load failed: \" + args.get_message(), false);\r\n}\r\nfunctio" +
+                    "n ");
+ @__w.Write(this.ClientID);
+
+            @__w.Write("subSitesLoadSuccess1(sender, args) {\r\n\t");
+    if (TabTitle1!="")    { 
+            @__w.Write("\r\n    try{\r\n        var webEnumerator = this.");
+                         @__w.Write(this.ClientID );
+
+            @__w.Write(@"webcols1.getEnumerator();
+        
+        while (webEnumerator.moveNext())
+        {
+            var oWeb = webEnumerator.get_current();
+		    var itemHtml =""<li><span class='weblist'><a href='""+oWeb.get_url()+""' target='_new'>""+oWeb.get_title()+""</a></span></li>"";
+		    $('#");
+  @__w.Write(this.ClientID );
+
+            @__w.Write("_tab1 ul\').append(itemHtml);\r\n        }\r\n    }\r\n    catch(err)\r\n    {\r\n    }\r\n   " +
+                    " ");
+       } 
+            @__w.Write("\r\n\r\n}\r\n\r\nfunction ");
+ @__w.Write(this.ClientID);
+
+            @__w.Write("subSitesLoadSuccess2(sender, args) {\r\n\t");
+    if (TabTitle2!="")    { 
+            @__w.Write("\r\n    try{\r\n        var webEnumerator = this.");
+                         @__w.Write(this.ClientID );
+
+            @__w.Write(@"webcols2.getEnumerator();
+        
+        while (webEnumerator.moveNext())
+        {
+            var oWeb = webEnumerator.get_current();
+		    var itemHtml =""<li><span class='weblist'><a href='""+oWeb.get_url()+""' target='_new'>""+oWeb.get_title()+""</a></span></li>"";
+		    		
+		    $('#");
+  @__w.Write(this.ClientID );
+
+            @__w.Write("_tab2 ul\').append(itemHtml);\r\n        }\r\n    }\r\n    catch(err)\r\n    {\r\n    }\r\n   " +
+                    " ");
+       } 
+            @__w.Write("\r\n\r\n}\r\nfunction ");
+ @__w.Write(this.ClientID);
+
+            @__w.Write("subSitesLoadSuccess3(sender, args) {\r\n\t");
+    if (TabTitle3!="")    { 
+            @__w.Write("\r\n    try{\r\n        var webEnumerator = this.");
+                         @__w.Write(this.ClientID );
+
+            @__w.Write(@"webcols3.getEnumerator();
+        
+        while (webEnumerator.moveNext())
+        {
+            var oWeb = webEnumerator.get_current();
+		    var itemHtml =""<li><span class='weblist'><a href='""+oWeb.get_url()+""' target='_new'>""+oWeb.get_title()+""</a></span></li>"";
+		    		
+		    $('#");
+  @__w.Write(this.ClientID );
+
+            @__w.Write("_tab3 ul\').append(itemHtml);\r\n        }\r\n    }\r\n    catch(err)\r\n    {\r\n    }\r\n   " +
+                    " ");
+       } 
+            @__w.Write("\r\n\r\n}\r\n\r\n</script>\r\n\r\n\r\n\r\n\r\n\r\n<div id=\'");
+ @__w.Write(this.ClientID );
+
+            @__w.Write("_tab\' >\r\n    <ul>\r\n        ");
+          if(TabTitle1.Trim()!=""){ 
+            @__w.Write("\r\n        <li>\r\n            <a href=\'#");
+              @__w.Write(this.ClientID );
+
+            @__w.Write("_tab1\'>");
+                                        @__w.Write(TabTitle1);
+
+            @__w.Write("</a>\r\n        </li>\r\n        ");
+          } 
+          if(TabTitle2.Trim()!=""){ 
+            @__w.Write("\r\n        <li>\r\n            <a href=\'#");
+              @__w.Write(this.ClientID );
+
+            @__w.Write("_tab2\'>");
+                                        @__w.Write(TabTitle2);
+
+            @__w.Write("</a>\r\n        </li>\r\n        ");
+          } 
+          if(TabTitle3.Trim()!=""){ 
+            @__w.Write("\r\n        <li>\r\n            <a href=\'#");
+              @__w.Write(this.ClientID );
+
+            @__w.Write("_tab3\'>");
+                                        @__w.Write(TabTitle3);
+
+            @__w.Write("</a>\r\n        </li>\r\n        ");
+          } 
+            @__w.Write("\r\n    </ul>\r\n    ");
+      if(TabTitle1.Trim()!=""){ 
+            @__w.Write("\r\n    <div id=\'");
+     @__w.Write(this.ClientID );
+
+            @__w.Write("_tab1\'>\r\n        <ul>\r\n            \r\n\r\n        </ul>\r\n\r\n    </div>\r\n    ");
+      } 
+      if(TabTitle2.Trim()!=""){ 
+            @__w.Write("\r\n    <div id=\'");
+     @__w.Write(this.ClientID );
+
+            @__w.Write("_tab2\'>\r\n        <ul>\r\n        </ul>\r\n    </div>\r\n    ");
+      } 
+      if(TabTitle3.Trim()!=""){ 
+            @__w.Write("\r\n    <div id=\'");
+     @__w.Write(this.ClientID );
+
+            @__w.Write("_tab3\'>\r\n        <ul>\r\n        </ul>\r\n    </div>\r\n    ");
+      } 
+            @__w.Write("\r\n</div>");
         }
         
         private void InitializeControl() {

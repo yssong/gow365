@@ -128,6 +128,24 @@ namespace GOW365.SlideShowWebpart
          Personalizable(PersonalizationScope.Shared),
          DefaultValue("false"),
          Category("Picture"),
+         WebDisplayName("AutoPlay"),
+         WebDescription("AutoPlay")]
+        public bool ShowButton
+        {
+            get
+            {
+                return showbutton;
+            }
+            set
+            {
+                showbutton = value;
+            }
+        }
+
+        [WebBrowsable(true),
+         Personalizable(PersonalizationScope.Shared),
+         DefaultValue("false"),
+         Category("Picture"),
          WebDisplayName("DisplayTime (1 sec = 1000 )"),
          WebDescription("DisplayTime (1 sec = 1000 )")]
         public int DisplayTime
