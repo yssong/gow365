@@ -94,6 +94,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ImageWheelWebpart.ascx</DependentUpon>
     </Compile>
+    <Compile Include="MemberSearch\MemberSearch.ascx.cs">
+      <DependentUpon>MemberSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberSearch\MemberSearch.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MemberSearch.ascx</DependentUpon>
+    </Compile>
     <Compile Include="NewDocsTabWebPart\NewDocsTabWebPart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SubSitesTabWepart\SubSitesTabWepart.ascx.cs">
@@ -141,6 +149,10 @@
       <SharePointProjectItemId>{2245a7c5-8a58-4717-a0cf-65f3a15427cf}</SharePointProjectItemId>
     </None>
     <None Include="key.snk" />
+    <None Include="MemberSearch\MemberSearch.webpart" />
+    <None Include="MemberSearch\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{31f3d91f-fc2b-48cf-8b75-dbd8afd1f549}</SharePointProjectItemId>
+    </None>
     <None Include="NewDocsTabWebPart\NewDocsTabWebPart.webpart" />
     <None Include="NewDocsTabWebPart\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{e02fd849-5c68-406d-8366-95efad27b662}</SharePointProjectItemId>
@@ -229,6 +241,12 @@
     <Content Include="GOW365\ImageWaterWheel\jquery.waterwheelCarousel.min.js" />
     <Content Include="GOW365\ImageWaterWheel\Sample.txt" />
     <Content Include="GOW365\ImageWaterWheel\WaterWheel.css" />
+    <Content Include="GOW365\MemberSearch\membersearch.css" />
+    <Content Include="GOW365\MemberSearch\nopicture.gif" />
+    <Content Include="GOW365\MemberSearch\search_btn.gif" />
+    <Content Include="GOW365\MemberSearch\search_btn_32.gif" />
+    <Content Include="GOW365\MemberSearch\search_head.gif" />
+    <Content Include="GOW365\MemberSearch\search_img.gif" />
     <Content Include="GOW365\SiteNewDocsTab\jquery-1.9.1.min.js" />
     <Content Include="GOW365\SiteNewDocsTab\Rounded.gif" />
     <Content Include="GOW365\SiteNewDocsTab\tabbgimg.gif" />
@@ -258,6 +276,7 @@
     <Content Include="GOW365\TabList\tabbgimg_ov.gif" />
     <Content Include="GOW365\TabList\TabStyle.css" />
     <Content Include="GOW365\TabList\tab_aline.gif" />
+    <Content Include="GOW365\Today\today_calenderbg.gif" />
     <Content Include="ImageSlideWebPart\Elements.xml" />
     <Content Include="ImageSlideWebPart\ImageSlideWebPart.ascx">
       <Generator>SharePointWebPartCodeGenerator</Generator>
@@ -267,6 +286,11 @@
     <Content Include="ImageWheelWebpart\ImageWheelWebpart.ascx">
       <Generator>SharePointWebPartCodeGenerator</Generator>
       <LastGenOutput>ImageWheelWebpart.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="MemberSearch\Elements.xml" />
+    <Content Include="MemberSearch\MemberSearch.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>MemberSearch.ascx.g.cs</LastGenOutput>
     </Content>
     <Content Include="NewDocsTabWebPart\Elements.xml" />
     <Content Include="SubSitesTabWepart\Elements.xml" />
@@ -280,6 +304,7 @@
       <LastGenOutput>TabListWebpart.ascx.g.cs</LastGenOutput>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">11.0</VisualStudioVersion>

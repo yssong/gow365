@@ -62,15 +62,15 @@ namespace CircleLogicPortal.TabListWebpart {
                     "dalDialog(options);  \r\n    }\r\n    function ");
      @__w.Write(this.ClientID);
 
-            @__w.Write("_changeClass(obj,tabname){\r\n\t\t$(\'#");
-@__w.Write(this.ClientID);
+            @__w.Write("_changeClass(obj,tabname){\r\n\t\tjQuery(\'#");
+   @__w.Write(this.ClientID);
 
-            @__w.Write("_container #nav li > a\').removeClass(\'active\');\r\n\t\t$(obj).addClass(\'active\');\r\n\t\t" +
-                    "$(\'#");
-@__w.Write(this.ClientID);
+            @__w.Write("_container #nav li > a\').removeClass(\'active\');\r\n\t\tjQuery(obj).addClass(\'active\')" +
+                    ";\r\n\t\tjQuery(\'#");
+   @__w.Write(this.ClientID);
 
-            @__w.Write("_container .tab\').hide();\r\n\t\t$(\'#\'+tabname).show();\r\n    }  \r\n\r\n\r\n    //Retrieve " +
-                    " the Tab items\r\nfunction ");
+            @__w.Write("_container .tab\').hide();\r\n\t\tjQuery(\'#\'+tabname).show();\r\n    }  \r\n\r\n\r\n    //Retr" +
+                    "ieve  the Tab items\r\nfunction ");
  @__w.Write(this.ClientID);
 
             @__w.Write(@"Initialize() {
@@ -223,8 +223,8 @@ namespace CircleLogicPortal.TabListWebpart {
 
             @__w.Write("onListItemsLoadSuccess1(sender, args) {\r\n\t");
     if (ListName1!="")    { 
-            @__w.Write("\r\n    try{\r\n        $(\'#");
-    @__w.Write(this.ClientID );
+            @__w.Write("\r\n    try{\r\n        jQuery(\'#");
+         @__w.Write(this.ClientID );
 
             @__w.Write("_tab1 ul li\').remove();\r\n        var listtype1 = ");
                 @__w.Write(this.ClientID );
@@ -290,14 +290,14 @@ namespace CircleLogicPortal.TabListWebpart {
                 itemHtml += ""</span><span class='tabName'>"" + oListItem.get_item(""Editor"").get_lookupValue() + ""</span><span  class='tabDate'>"" + oListItem.get_item(""Modified"").format(""yyyy-MM-dd"") + ""</span></li>"";
             }
 		
-		    $('#");
-  @__w.Write(this.ClientID );
+		    jQuery('#");
+       @__w.Write(this.ClientID );
 
-            @__w.Write("_tab1 ul\').append(itemHtml);\r\n        }\r\n        $(\'#");
-    @__w.Write(this.ClientID );
+            @__w.Write("_tab1 ul\').append(itemHtml);\r\n        }\r\n        jQuery(\'#");
+         @__w.Write(this.ClientID );
 
             @__w.Write("_link1\').attr(\"href\",");
-                                            @__w.Write(this.ClientID );
+                                                 @__w.Write(this.ClientID );
 
             @__w.Write("list1.get_rootFolder().get_serverRelativeUrl());\r\n    }\r\n    catch(err)\r\n    {\r\n " +
                     "   }\r\n    ");
@@ -307,8 +307,8 @@ namespace CircleLogicPortal.TabListWebpart {
 
             @__w.Write("onListItemsLoadSuccess2(sender, args) {\r\n    ");
        if (ListName2!="")    { 
-            @__w.Write("\r\n    try\r\n    {\r\n        $(\'#");
-    @__w.Write(this.ClientID );
+            @__w.Write("\r\n    try\r\n    {\r\n        jQuery(\'#");
+         @__w.Write(this.ClientID );
 
             @__w.Write("_tab2 ul li\').remove();\r\n        var listtype1 = ");
                 @__w.Write(this.ClientID );
@@ -370,14 +370,14 @@ namespace CircleLogicPortal.TabListWebpart {
                 itemHtml += ""</span><span class='tabName'>"" + oListItem.get_item(""Editor"").get_lookupValue() + ""</span><span  class='tabDate'>"" + oListItem.get_item(""Modified"").format(""yyyy-MM-dd"") + ""</span></li>"";
             }
 		
-		    $('#");
-  @__w.Write(this.ClientID );
+		    jQuery('#");
+       @__w.Write(this.ClientID );
 
-            @__w.Write("_tab2 ul\').append(itemHtml);\r\n        }\r\n        $(\'#");
-    @__w.Write(this.ClientID );
+            @__w.Write("_tab2 ul\').append(itemHtml);\r\n        }\r\n        jQuery(\'#");
+         @__w.Write(this.ClientID );
 
             @__w.Write("_link2\').attr(\"href\",");
-                                            @__w.Write(this.ClientID );
+                                                 @__w.Write(this.ClientID );
 
             @__w.Write("list2.get_rootFolder().get_serverRelativeUrl());\r\n     }\r\n    catch(err)\r\n    {\r\n" +
                     "    }\r\n    ");
@@ -387,8 +387,8 @@ namespace CircleLogicPortal.TabListWebpart {
 
             @__w.Write("onListItemsLoadSuccess3(sender, args) {\r\n\t\r\n    ");
        if (ListName3!="")    { 
-            @__w.Write("\r\n    try\r\n    {\r\n        $(\'#");
-    @__w.Write(this.ClientID );
+            @__w.Write("\r\n    try\r\n    {\r\n        jQuery(\'#");
+         @__w.Write(this.ClientID );
 
             @__w.Write("_tab3 ul li\').remove();\r\n        var listtype1 = ");
                 @__w.Write(this.ClientID );
@@ -451,14 +451,14 @@ namespace CircleLogicPortal.TabListWebpart {
                 itemHtml += ""</span><span class='tabName'>"" + oListItem.get_item(""Editor"").get_lookupValue() + ""</span><span  class='tabDate'>"" + oListItem.get_item(""Modified"").format(""yyyy-MM-dd"") + ""</span></li>"";
             }
 		
-		    $('#");
-  @__w.Write(this.ClientID );
+		    jQuery('#");
+       @__w.Write(this.ClientID );
 
-            @__w.Write("_tab3 ul\').append(itemHtml);\r\n        }\r\n        $(\'#");
-    @__w.Write(this.ClientID );
+            @__w.Write("_tab3 ul\').append(itemHtml);\r\n        }\r\n        jQuery(\'#");
+         @__w.Write(this.ClientID );
 
             @__w.Write("_link3\').attr(\"href\",");
-                                            @__w.Write(this.ClientID );
+                                                 @__w.Write(this.ClientID );
 
             @__w.Write("list3.get_rootFolder().get_serverRelativeUrl());\r\n    }\r\n    catch(err)\r\n    {\r\n " +
                     "   }\r\n\t");

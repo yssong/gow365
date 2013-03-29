@@ -18,10 +18,10 @@
         SP.UI.ModalDialog.showModalDialog(options);  
     }
     function <%=this.ClientID%>_changeClass(obj,tabname){
-		$('#<%=this.ClientID%>_container #nav li > a').removeClass('active');
-		$(obj).addClass('active');
-		$('#<%=this.ClientID%>_container .tab').hide();
-		$('#'+tabname).show();
+		jQuery('#<%=this.ClientID%>_container #nav li > a').removeClass('active');
+		jQuery(obj).addClass('active');
+		jQuery('#<%=this.ClientID%>_container .tab').hide();
+		jQuery('#'+tabname).show();
     }  
 
 
@@ -103,7 +103,7 @@ function onListItemsLoadFailed(sender, args) {
 function <%=this.ClientID%>onListItemsLoadSuccess1(sender, args) {
 	<% if (ListName1!="")    { %>
     try{
-        $('#<%=this.ClientID %>_tab1 ul li').remove();
+        jQuery('#<%=this.ClientID %>_tab1 ul li').remove();
         var listtype1 = <%=this.ClientID %>list1.get_baseTemplate();
         //var DisplayURL1 = <%=this.ClientID %>list1.get_defaultDisplayFormUrl();
 
@@ -150,9 +150,9 @@ function <%=this.ClientID%>onListItemsLoadSuccess1(sender, args) {
                 itemHtml += "</span><span class='tabName'>" + oListItem.get_item("Editor").get_lookupValue() + "</span><span  class='tabDate'>" + oListItem.get_item("Modified").format("yyyy-MM-dd") + "</span></li>";
             }
 		
-		    $('#<%=this.ClientID %>_tab1 ul').append(itemHtml);
+		    jQuery('#<%=this.ClientID %>_tab1 ul').append(itemHtml);
         }
-        $('#<%=this.ClientID %>_link1').attr("href",<%=this.ClientID %>list1.get_rootFolder().get_serverRelativeUrl());
+        jQuery('#<%=this.ClientID %>_link1').attr("href",<%=this.ClientID %>list1.get_rootFolder().get_serverRelativeUrl());
     }
     catch(err)
     {
@@ -164,7 +164,7 @@ function <%=this.ClientID%>onListItemsLoadSuccess2(sender, args) {
     <% if (ListName2!="")    { %>
     try
     {
-        $('#<%=this.ClientID %>_tab2 ul li').remove();
+        jQuery('#<%=this.ClientID %>_tab2 ul li').remove();
         var listtype1 = <%=this.ClientID %>list2.get_baseTemplate();
         var contenttype2 = <%=this.ClientID %>listContentTypes2.itemAt(0).get_id();
     
@@ -208,9 +208,9 @@ function <%=this.ClientID%>onListItemsLoadSuccess2(sender, args) {
                 itemHtml += "</span><span class='tabName'>" + oListItem.get_item("Editor").get_lookupValue() + "</span><span  class='tabDate'>" + oListItem.get_item("Modified").format("yyyy-MM-dd") + "</span></li>";
             }
 		
-		    $('#<%=this.ClientID %>_tab2 ul').append(itemHtml);
+		    jQuery('#<%=this.ClientID %>_tab2 ul').append(itemHtml);
         }
-        $('#<%=this.ClientID %>_link2').attr("href",<%=this.ClientID %>list2.get_rootFolder().get_serverRelativeUrl());
+        jQuery('#<%=this.ClientID %>_link2').attr("href",<%=this.ClientID %>list2.get_rootFolder().get_serverRelativeUrl());
      }
     catch(err)
     {
@@ -223,7 +223,7 @@ function <%=this.ClientID%>onListItemsLoadSuccess3(sender, args) {
     <% if (ListName3!="")    { %>
     try
     {
-        $('#<%=this.ClientID %>_tab3 ul li').remove();
+        jQuery('#<%=this.ClientID %>_tab3 ul li').remove();
         var listtype1 = <%=this.ClientID %>list3.get_baseTemplate();
     
         var contenttype3 = <%=this.ClientID %>listContentTypes3.itemAt(0).get_id();
@@ -269,9 +269,9 @@ function <%=this.ClientID%>onListItemsLoadSuccess3(sender, args) {
                 itemHtml += "</span><span class='tabName'>" + oListItem.get_item("Editor").get_lookupValue() + "</span><span  class='tabDate'>" + oListItem.get_item("Modified").format("yyyy-MM-dd") + "</span></li>";
             }
 		
-		    $('#<%=this.ClientID %>_tab3 ul').append(itemHtml);
+		    jQuery('#<%=this.ClientID %>_tab3 ul').append(itemHtml);
         }
-        $('#<%=this.ClientID %>_link3').attr("href",<%=this.ClientID %>list3.get_rootFolder().get_serverRelativeUrl());
+        jQuery('#<%=this.ClientID %>_link3').attr("href",<%=this.ClientID %>list3.get_rootFolder().get_serverRelativeUrl());
     }
     catch(err)
     {

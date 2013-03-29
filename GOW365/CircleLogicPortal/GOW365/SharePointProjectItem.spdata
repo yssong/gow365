@@ -80,5 +80,12 @@
     <ProjectItemFile Source="ImageSlide\left.gif" Target="GOW365\ImageSlide\" Type="ElementFile" />
     <ProjectItemFile Source="ImageSlide\playpause.gif" Target="GOW365\ImageSlide\" Type="ElementFile" />
     <ProjectItemFile Source="ImageSlide\right.gif" Target="GOW365\ImageSlide\" Type="ElementFile" />
+    <ProjectItemFile Source="Today\today_calenderbg.gif" Target="GOW365\Today\" Type="ElementFile" />
+    <ProjectItemFile Source="MemberSearch\membersearch.css" Target="GOW365\MemberSearch\" Type="ElementFile" />
+    <ProjectItemFile Source="MemberSearch\search_btn.gif" Target="GOW365\MemberSearch\" Type="ElementFile" />
+    <ProjectItemFile Source="MemberSearch\search_img.gif" Target="GOW365\MemberSearch\" Type="ElementFile" />
+    <ProjectItemFile Source="MemberSearch\search_head.gif" Target="GOW365\MemberSearch\" Type="ElementFile" />
+    <ProjectItemFile Source="MemberSearch\search_btn_32.gif" Target="GOW365\MemberSearch\" Type="ElementFile" />
+    <ProjectItemFile Source="MemberSearch\nopicture.gif" Target="GOW365\MemberSearch\" Type="ElementFile" />
   </Files>
 </ProjectItem>

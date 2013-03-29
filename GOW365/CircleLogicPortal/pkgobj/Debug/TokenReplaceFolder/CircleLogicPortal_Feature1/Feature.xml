@@ -86,6 +86,13 @@
     <ElementFile Location="GOW365\ImageSlide\left.gif" />
     <ElementFile Location="GOW365\ImageSlide\playpause.gif" />
     <ElementFile Location="GOW365\ImageSlide\right.gif" />
+    <ElementFile Location="GOW365\Today\today_calenderbg.gif" />
+    <ElementFile Location="GOW365\MemberSearch\membersearch.css" />
+    <ElementFile Location="GOW365\MemberSearch\search_btn.gif" />
+    <ElementFile Location="GOW365\MemberSearch\search_img.gif" />
+    <ElementFile Location="GOW365\MemberSearch\search_head.gif" />
+    <ElementFile Location="GOW365\MemberSearch\search_btn_32.gif" />
+    <ElementFile Location="GOW365\MemberSearch\nopicture.gif" />
     <ElementManifest Location="NewDocsTabWebPart\Elements.xml" />
     <ElementFile Location="NewDocsTabWebPart\NewDocsTabWebPart.webpart" />
     <ElementManifest Location="DropDownLinkWebPart\Elements.xml" />
@@ -96,5 +103,7 @@
     <ElementFile Location="CalendarWebPart\CalendarWebPart.webpart" />
     <ElementManifest Location="ImageSlideWebPart\Elements.xml" />
     <ElementFile Location="ImageSlideWebPart\ImageSlideWebPart.webpart" />
+    <ElementManifest Location="MemberSearch\Elements.xml" />
+    <ElementFile Location="MemberSearch\MemberSearch.webpart" />
   </ElementManifests>
 </Feature>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="GOW365">
+    <File Path="GOW365\GOW365UI.css" Url="GOW365/GOW365UI.css" />
+    <File Path="GOW365\GOW365UI_blue.css" Url="GOW365/GOW365UI_blue.css" />
+    <File Path="GOW365\Masterpage\GowMaster.master" Url="GOW365/Masterpage/GowMaster.master" />
+    <File Path="GOW365\Masterpage\GowMaster_blue.master" Url="GOW365/Masterpage/GowMaster_blue.master" />
+  </Module>
+</Elements>

@@ -1,0 +1,93 @@
+﻿.membersearch{
+	width:196px;
+	padding-left:12px;
+    padding-right:12px;
+    padding-top:5px;
+    padding-bottom:5px;
+
+	background:url(./search_img.gif) no-repeat 180px 7px;
+}
+.search_head{
+	padding-bottom:10px;
+	padding-left:3px;
+    height:25px;
+    line-height:25px;
+    padding-top:5px;
+    font-weight: bold;
+    font-size: 11pt;
+    color: #666666;
+}
+.search_content table{
+	width:100%;
+}
+.search_btn{
+	padding-left:5px;
+}
+.searchItems {
+        margin: 0;
+        padding: 0;
+        display: inline;
+        list-style-type: none;
+}
+.searchresult {
+    width:190px;
+    min-height:40px;
+    height:auto;
+    margin-top:3px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    line-height:inherit;
+    list-style-type: none;
+    border-top-color:#dbdbde;
+    border-top-width:1px;
+    border-top-style:solid;
+    vertical-align:top;
+    position:relative;
+}
+.member {
+    width:190px;
+    min-height:40px;
+    height:auto;
+}
+.photo {
+    padding:0px;
+    margin:0px;
+    width:40px;
+    height:45px;
+    position:relative;
+    float:left;
+    margin-right:5px;
+}
+.userInfo {
+    padding:0px;
+    margin:0px;
+    margin-left:40px;
+    width:140px;
+    min-height:45px;
+    height:auto;
+}
+.uName {
+    width:150px;
+    line-height:inherit;
+    word-break:break-all;
+    word-wrap:break-word;
+}
+.uDept {
+    width:150px;
+    line-height:inherit;
+    word-break:break-all;
+    word-wrap:break-word;
+}
+.uPhone {
+    width:150px;
+    line-height:inherit;
+    word-break:break-all;
+    word-wrap:break-word;
+}
+.uMail {
+    width:150px;
+    line-height:inherit;
+    word-break:break-all;
+    word-wrap:break-word;
+}

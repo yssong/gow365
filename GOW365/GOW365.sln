@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewBlogPost", "NewBlogPost\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CircleLogicPortal", "CircleLogicPortal\CircleLogicPortal.csproj", "{B51AA481-3188-45C8-ADCD-CD566F9E1A2E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CircleLogicPortalUI", "CircleLogicPortalUI\CircleLogicPortalUI.csproj", "{4569CB92-739E-4727-84C7-6A1D48F6EBFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -119,6 +121,12 @@ Global
 		{B51AA481-3188-45C8-ADCD-CD566F9E1A2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B51AA481-3188-45C8-ADCD-CD566F9E1A2E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B51AA481-3188-45C8-ADCD-CD566F9E1A2E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{4569CB92-739E-4727-84C7-6A1D48F6EBFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4569CB92-739E-4727-84C7-6A1D48F6EBFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4569CB92-739E-4727-84C7-6A1D48F6EBFC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4569CB92-739E-4727-84C7-6A1D48F6EBFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4569CB92-739E-4727-84C7-6A1D48F6EBFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4569CB92-739E-4727-84C7-6A1D48F6EBFC}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

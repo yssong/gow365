@@ -1,0 +1,300 @@
+﻿#siteIcon
+{
+	display:none;
+	/*
+	height:0px;
+	overflow:hidden;
+	*/
+}
+.ms-core-deltaSuiteLinks
+{
+	vertical-align:top;
+}
+#s4-ribboncont, #suiteBarRight, #globalNavBox
+{
+	/**background-color:rgb(0, 114, 198);**/
+	background-color:#565656;
+}
+.ms-core-needIEFilter #globalNavBox
+{
+	filter:"";
+	background-color:#565656;
+}
+.ms-cui-topBar2, .ms-browseTabContainer.ms-cui-topBar2
+{
+	/**border-bottom-color:rgb(0, 114, 198);**/
+	border-bottom-color:#565656;
+}
+.ms-cui-ribbon, .ms-cui-menu, .ms-cui-toolbar-toolbar
+{
+	color:#565656;
+}
+.ms-browseTabContainer.ms-cui-topBar2
+{
+	/**border-bottom-color:rgb(0, 114, 198);**/
+	background-color:#565656;
+}
+.ms-welcome-root > a.ms-core-menu-root
+{
+	color:#ffffff;
+}
+.ms-welcome-hover > a.ms-core-menu-root, .ms-signInLink:hover
+{
+	color:#444;
+}
+.ms-promotedActionButton-text
+{
+	color:#aaaaaa;
+}
+.ms-cui-tt-s.ms-browseTab > .ms-cui-tt-a > .ms-cui-tt-span,.ms-cui-tt-a > .ms-cui-tt-span
+{
+	color:#aaaaaa !important;
+}
+#suiteBarLeft
+{
+	background-color:#565656;
+}
+.ms-core-needIEFilter #suiteBarLeft
+{
+	filter:"";
+	background-color:#565656;
+}
+#suiteBarRight
+{
+	background-color:#565656;
+}
+.ms-core-needIEFilter #suiteBarRight
+{
+	filter:"";
+	background-color:#565656;
+}
+#pageTitle
+{
+	display:none;
+}
+#s4-titlerow
+{
+	height:20px;
+	padding-top:5px;
+	padding-bottom:18px;
+	/*background-color:#e4e5e7;*/
+	/*background-color:rgb(0, 114, 198);*/
+	background-color:#565656;
+	border-bottom:3px #1F7EC2 solid;
+	text-align:left;
+}
+#titleAreaBox
+{
+	/*background-color: #44649f;*/
+	background-color: #565656;
+	margin-left:0px;
+	margin-right:0px;
+	padding-left:20px;
+	height:38px;
+}
+#titleAreaRow > .ms-verticalAlignTop
+{
+	vertical-align:middle;
+}
+#titleAreaRow > a, .ms-link:visited
+{
+	color:#ffffff;
+}
+#DeltaTopNavigation .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:link, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:visited, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected, .ms-tv-selected:link
+{
+	color:#ffffff;
+}
+#DeltaTopNavigation .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:link, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:visited, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected, .ms-tv-selected:link
+{
+	color:#ffffff;
+}
+#DeltaTopNavigation .ms-core-listMenu-horizontalBox a.ms-core-listMenu-item:hover, .ms-core-listMenu-horizontalBox a.ms-core-listMenu-selected.ms-core-listMenu-item:hover, a.ms-tv-item:hover, a.ms-tv-header:hover
+{
+	color:#ebeded;
+}
+#DeltaTopNavigation .ms-core-listMenu-item, .ms-core-listMenu-item:link, .ms-core-listMenu-item:visited, .ms-tv-item:link, .ms-tv-item:visited, .ms-tv-header:link, .ms-tv-header:visited
+{
+	color:#aaaaaa;
+}
+.ms-breadcrumb-top
+{
+	text-align:center;
+}
+#sideNavBox .menu-item-text
+{
+	color:#666666;
+}
+.ms-breadcrumb-box
+{
+	height:20px;
+}
+#searchInputBox
+{
+	margin-bottom:6px;
+	margin-top:6px;
+	margin-right:6px;
+	float:right;
+}
+.ms-srch-sb
+{
+	background-color:#ffffff;
+}
+#s4-bodyContainer
+{
+	width:100%;   
+	text-align:center;   
+}
+#s4-workspace
+{
+	background-color:#dbdbdb;
+}
+/* IE8 */
+.ms-core-needIEFilter .ms-core-overlay
+{
+	filter:"";
+}
+#contentRow
+{
+	padding-top:8px;
+	margin:0 auto;
+	width:1000px;
+	text-align:left;
+}
+#sideNavBox
+{
+	margin-top:0px;
+	margin-right:0px;
+	margin-left:0px;
+	/*background-color:#e4e5e7;*/
+	height:100%;
+	color:#666666;
+}
+#contentBox
+{
+	/*background-color:#ffffff;*/
+	margin-top:0px;
+	margin-left:190px;
+	min-height: 500px;
+}
+
+
+.ms-core-sideNavBox-removeLeftMargin
+{
+	margin-left:0px;
+}
+.ms-listviewtable
+{
+	width:100%;
+}
+table.ms-listviewtable TH
+{
+	/* orange under line */
+/* 	border-bottom:2px #ff8000 solid;*/
+	/* Grey under line */	
+ 	border-bottom:1px #aaaaaa solid;
+}
+
+table.ms-listviewtable  td.ms-cellstyle
+{
+	border-bottom:1px #dedede dotted;
+}
+
+table.ms-listviewtable td.ms-vb-imgFirstCell
+{
+	border-bottom:1px #dedede dotted;
+}
+.ms-webpart-chrome-title, .ms-webpart-titleText
+{
+	font-size:12pt;
+}
+
+.ms-webpartzone-cell
+{
+	background-color:#ffffff;
+	padding:10px;
+	border-radius: 8px;
+	margin-bottom:8px;
+	margin-left:5px;
+}
+.ms-core-listMenu-verticalBox
+{
+	background-color:#ffffff;
+	padding:10px;
+	border-radius: 8px;
+	margin-bottom:8px;
+}
+.ms-webpart-titleText
+{
+	font-size:10pt;
+}
+/**Today**/
+.today{
+	width:180px;
+	min-height:100px;
+	background-color:#fff;
+	border-radius: 8px;
+	margin-bottom:8px;
+}
+.day_left{
+	width:70px;
+	margin-top:22px;
+	float:left;
+}
+.calender{
+	background:url(Today/today_calenderbg.gif) no-repeat;
+	width:54px;
+	height:64px;
+	margin-left:10px;
+	/*margin-left:16px;*/
+	/*margin-bottom:16px;*/
+}
+.cal_month{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#fff;
+	font-size:10px;
+	font-weight:bold;
+	width:54px;
+	text-align:center;
+	padding-top:6px;
+}
+.cal_day{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#333;
+	font-size:32px;
+	padding-top:1px;
+	text-align:center;
+}
+.day_right{
+	margin-top:22px;
+	float:left;
+}
+.day_name{
+	width:100px;
+	border-bottom:solid 2px #0972b6;
+	padding-left:8px;
+	padding-bottom:6px;
+	padding-top:6px;
+	font-size:12px;
+	font-family:Dotum,'돋움';
+}
+.day_name span{
+	font-weight:bold;
+}
+.name_mail table{
+	width:112px;
+	font-size:12px;
+	font-family:Dotum,'돋움';
+}
+.name_mail table tr{
+	height:26px;
+}
+.name_mail table th{
+	height:26px;
+	line-height:26px;
+	color:#5a5a5a
+}
+.name_mail table td{
+	height:26px;
+	line-height:26px;
+	color:#dd5600;
+}

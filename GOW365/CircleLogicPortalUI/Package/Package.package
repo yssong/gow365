@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="986ded42-f031-4a77-9d6a-70b415355b04" solutionId="986ded42-f031-4a77-9d6a-70b415355b04" resetWebServer="false" sharePointProductVersion="15.0" name="CircleLogicPortalUI" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="5bc3aa59-d467-43f8-991e-58a887758a7d" />
+  </features>
+</package>

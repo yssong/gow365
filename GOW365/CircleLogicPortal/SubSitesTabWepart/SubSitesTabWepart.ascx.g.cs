@@ -86,8 +86,8 @@ namespace CircleLogicPortal.SubSitesTabWepart {
                                                                 @__w.Write(this.ClientID);
 
             @__w.Write("subSitesLoadSuccess1), Function.createDelegate(this, this.onListItemsLoadFailed))" +
-                    ";\r\n    }catch(err)\r\n    {\r\n    }\r\n    $(\'#");
-@__w.Write(this.ClientID);
+                    ";\r\n    }catch(err)\r\n    {\r\n    }\r\n    jQuery(\'#");
+     @__w.Write(this.ClientID);
 
             @__w.Write("_tab\').tabs();\r\n    ");
        } 
@@ -153,8 +153,8 @@ namespace CircleLogicPortal.SubSitesTabWepart {
         {
             var oWeb = webEnumerator.get_current();
 		    var itemHtml =""<li><span class='weblist'><a href='""+oWeb.get_url()+""' target='_new'>""+oWeb.get_title()+""</a></span></li>"";
-		    $('#");
-  @__w.Write(this.ClientID );
+		    jQuery('#");
+       @__w.Write(this.ClientID );
 
             @__w.Write("_tab1 ul\').append(itemHtml);\r\n        }\r\n    }\r\n    catch(err)\r\n    {\r\n    }\r\n   " +
                     " ");
@@ -174,8 +174,8 @@ namespace CircleLogicPortal.SubSitesTabWepart {
             var oWeb = webEnumerator.get_current();
 		    var itemHtml =""<li><span class='weblist'><a href='""+oWeb.get_url()+""' target='_new'>""+oWeb.get_title()+""</a></span></li>"";
 		    		
-		    $('#");
-  @__w.Write(this.ClientID );
+		    jQuery('#");
+       @__w.Write(this.ClientID );
 
             @__w.Write("_tab2 ul\').append(itemHtml);\r\n        }\r\n    }\r\n    catch(err)\r\n    {\r\n    }\r\n   " +
                     " ");
@@ -195,8 +195,8 @@ namespace CircleLogicPortal.SubSitesTabWepart {
             var oWeb = webEnumerator.get_current();
 		    var itemHtml =""<li><span class='weblist'><a href='""+oWeb.get_url()+""' target='_new'>""+oWeb.get_title()+""</a></span></li>"";
 		    		
-		    $('#");
-  @__w.Write(this.ClientID );
+		    jQuery('#");
+       @__w.Write(this.ClientID );
 
             @__w.Write("_tab3 ul\').append(itemHtml);\r\n        }\r\n    }\r\n    catch(err)\r\n    {\r\n    }\r\n   " +
                     " ");

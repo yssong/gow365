@@ -137,7 +137,7 @@ namespace CircleLogicPortal.ImageSlideWebPart {
             filename = dir + '/' + filename;
             itemHtml +=""<li>""+
                             ""<table width='");
-                                   @__w.Write(ImgWidth);
+                                   @__w.Write(Convert.ToInt32(ImgWidth) + 10);
 
             @__w.Write("px\' padding=\'0\' margin=\'0\' border=\'0\'>\"+\r\n                                \"<tr>\"+" +
                     "\r\n                                    \"<td width=\'");
@@ -155,16 +155,6 @@ namespace CircleLogicPortal.ImageSlideWebPart {
                                         ""</a>""+
                                     ""</td>""+
                                 ""</tr>""+
-                                ""<tr>""+
-                                    ""<td width='");
-                                        @__w.Write(ImgWidth);
-
-            @__w.Write(@"px' style='word-break:break-all;' align='center' valign='middle'>""+
-                                        ""<a href='"" + filename + ""' onfocus='this.blur()'>""+
-                                            ""<span>"" + oListItem.get_item('FileLeafRef') +""</span>""+
-                                        ""</a>""+
-                                    ""</td>""+
-                               ""</tr>""+
                             ""</table>""+
                         ""</li>"";
             //itemHtml += ""<img src='"" + filename + ""' width='");
@@ -173,24 +163,24 @@ namespace CircleLogicPortal.ImageSlideWebPart {
             @__w.Write("px\' height=\'");
                                                                                @__w.Write(ImgHeight);
 
-            @__w.Write("px\'   id=\'\" + oListItem.get_item(\"ID\") + \"\'/>\";\r\n\t\t    $(\'#");
-  @__w.Write(this.ClientID );
+            @__w.Write("px\'   id=\'\" + oListItem.get_item(\"ID\") + \"\'/>\";\r\n\t\t    jQuery(\'#");
+       @__w.Write(this.ClientID );
 
-            @__w.Write("_carousel ul\').append(itemHtml);\r\n        }\r\n        //$(\'#");
-      @__w.Write(this.ClientID );
+            @__w.Write("_carousel ul\').append(itemHtml);\r\n        }\r\n        //jQuery(\'#");
+           @__w.Write(this.ClientID );
 
             @__w.Write("_link1\').attr(\"href\",");
-                                              @__w.Write(this.ClientID );
+                                                   @__w.Write(this.ClientID );
 
-            @__w.Write("list1.get_rootFolder().get_serverRelativeUrl());\r\n        \r\n        $(function(){" +
-                    "\r\n\t        $(\'#");
-     @__w.Write(this.ClientID );
+            @__w.Write("list1.get_rootFolder().get_serverRelativeUrl());\r\n        \r\n        jQuery(functi" +
+                    "on(){\r\n\t        jQuery(\'#");
+          @__w.Write(this.ClientID );
 
             @__w.Write("_carousel\').infiniteCarousel(\r\n            {\r\n                imgWidth:");
-                 @__w.Write(ImgWidth);
+                 @__w.Write(Convert.ToInt32(ImgWidth) + 10);
 
             @__w.Write(",\r\n                imgHeight:");
-                  @__w.Write(ImgHeight);
+                  @__w.Write(Convert.ToInt32(ImgHeight)+10);
 
             @__w.Write(",\r\n                imagePath:\'");
                    @__w.Write(ImgUrl);
@@ -207,13 +197,13 @@ namespace CircleLogicPortal.ImageSlideWebPart {
             @__w.Write(",\r\n                showControls:");
                      @__w.Write(ShowButton.ToString().ToLower());
 
-            @__w.Write("\r\n            });\r\n            $(\'#");
-        @__w.Write(this.ClientID );
+            @__w.Write("\r\n            });\r\n            jQuery(\'#");
+             @__w.Write(this.ClientID );
 
-            @__w.Write("_carousel\').css(\'display\',\'block\');\r\n        });\r\n\r\n    }\r\n    catch(err)\r\n    {\r" +
-                    "\n    }\r\n    ");
+            @__w.Write("_carousel\').css(\'display\',\'block\');\r\n        });\r\n    }\r\n    catch(err)\r\n    {\r\n " +
+                    "   }\r\n    ");
        } 
-            @__w.Write("\r\n\r\n}\r\n</script>\r\n<div id=\'");
+            @__w.Write("\r\n}\r\n</script>\r\n<div id=\'");
  @__w.Write(this.ClientID );
 
             @__w.Write("_carousel\' style=\'display:none;\'>\r\n<ul>\r\n\r\n</ul>\r\n</div>");

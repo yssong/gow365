@@ -33,7 +33,7 @@ function <%=this.ClientID%>Initialize() {
     }catch(err)
     {
     }
-    $('#<%=this.ClientID%>_tab').tabs();
+    jQuery('#<%=this.ClientID%>_tab').tabs();
     <% } %>
 
     <% if (TabTitle2.Trim() != "")
@@ -87,7 +87,7 @@ function <%=this.ClientID%>subSitesLoadSuccess1(sender, args) {
         {
             var oWeb = webEnumerator.get_current();
 		    var itemHtml ="<li><span class='weblist'><a href='"+oWeb.get_url()+"' target='_new'>"+oWeb.get_title()+"</a></span></li>";
-		    $('#<%=this.ClientID %>_tab1 ul').append(itemHtml);
+		    jQuery('#<%=this.ClientID %>_tab1 ul').append(itemHtml);
         }
     }
     catch(err)
@@ -107,7 +107,7 @@ function <%=this.ClientID%>subSitesLoadSuccess2(sender, args) {
             var oWeb = webEnumerator.get_current();
 		    var itemHtml ="<li><span class='weblist'><a href='"+oWeb.get_url()+"' target='_new'>"+oWeb.get_title()+"</a></span></li>";
 		    		
-		    $('#<%=this.ClientID %>_tab2 ul').append(itemHtml);
+		    jQuery('#<%=this.ClientID %>_tab2 ul').append(itemHtml);
         }
     }
     catch(err)
@@ -126,7 +126,7 @@ function <%=this.ClientID%>subSitesLoadSuccess3(sender, args) {
             var oWeb = webEnumerator.get_current();
 		    var itemHtml ="<li><span class='weblist'><a href='"+oWeb.get_url()+"' target='_new'>"+oWeb.get_title()+"</a></span></li>";
 		    		
-		    $('#<%=this.ClientID %>_tab3 ul').append(itemHtml);
+		    jQuery('#<%=this.ClientID %>_tab3 ul').append(itemHtml);
         }
     }
     catch(err)

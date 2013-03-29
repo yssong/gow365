@@ -67,7 +67,7 @@ function <%=this.ClientID%>onListItemsLoadSuccess(sender, args) {
             //filename = dir + '/_t/' + filename;
             filename = dir + '/' + filename;
             itemHtml +="<li>"+
-                            "<table width='<%=ImgWidth%>px' padding='0' margin='0' border='0'>"+
+                            "<table width='<%=Convert.ToInt32(ImgWidth) + 10%>px' padding='0' margin='0' border='0'>"+
                                 "<tr>"+
                                     "<td width='<%=ImgWidth%>px' align='center' valign='top'>"+
                                         "<a href='" + filename + "' onfocus='this.blur()'>"+
@@ -75,40 +75,31 @@ function <%=this.ClientID%>onListItemsLoadSuccess(sender, args) {
                                         "</a>"+
                                     "</td>"+
                                 "</tr>"+
-                                "<tr>"+
-                                    "<td width='<%=ImgWidth%>px' style='word-break:break-all;' align='center' valign='middle'>"+
-                                        "<a href='" + filename + "' onfocus='this.blur()'>"+
-                                            "<span>" + oListItem.get_item('FileLeafRef') +"</span>"+
-                                        "</a>"+
-                                    "</td>"+
-                               "</tr>"+
                             "</table>"+
                         "</li>";
             //itemHtml += "<img src='" + filename + "' width='<%=ImgWidth%>px' height='<%=ImgHeight%>px'   id='" + oListItem.get_item("ID") + "'/>";
-		    $('#<%=this.ClientID %>_carousel ul').append(itemHtml);
+		    jQuery('#<%=this.ClientID %>_carousel ul').append(itemHtml);
         }
-        //$('#<%=this.ClientID %>_link1').attr("href",<%=this.ClientID %>list1.get_rootFolder().get_serverRelativeUrl());
+        //jQuery('#<%=this.ClientID %>_link1').attr("href",<%=this.ClientID %>list1.get_rootFolder().get_serverRelativeUrl());
         
-        $(function(){
-	        $('#<%=this.ClientID %>_carousel').infiniteCarousel(
+        jQuery(function(){
+	        jQuery('#<%=this.ClientID %>_carousel').infiniteCarousel(
             {
-                imgWidth:<%=ImgWidth%>,
-                imgHeight:<%=ImgHeight%>,
+                imgWidth:<%=Convert.ToInt32(ImgWidth) + 10%>,
+                imgHeight:<%=Convert.ToInt32(ImgHeight)+10%>,
                 imagePath:'<%=ImgUrl%>',
                 advance:<%=ViewCount%>,
                 autoStart:<%=AutoPlay.ToString().ToLower()%>,
                 displayTime:<%=DisplayTime%>,
                 showControls:<%=ShowButton.ToString().ToLower()%>
             });
-            $('#<%=this.ClientID %>_carousel').css('display','block');
+            jQuery('#<%=this.ClientID %>_carousel').css('display','block');
         });
-
     }
     catch(err)
     {
     }
     <% } %>
-
 }
 </script>
 <div id='<%=this.ClientID %>_carousel' style='display:none;'>

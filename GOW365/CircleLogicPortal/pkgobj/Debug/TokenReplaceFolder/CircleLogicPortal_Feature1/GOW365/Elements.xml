@@ -79,5 +79,12 @@
     <File Path="GOW365\ImageSlide\left.gif" Url="GOW365/ImageSlide/left.gif" />
     <File Path="GOW365\ImageSlide\playpause.gif" Url="GOW365/ImageSlide/playpause.gif" />
     <File Path="GOW365\ImageSlide\right.gif" Url="GOW365/ImageSlide/right.gif" />
+    <File Path="GOW365\Today\today_calenderbg.gif" Url="GOW365/Today/today_calenderbg.gif" />
+    <File Path="GOW365\MemberSearch\membersearch.css" Url="GOW365/MemberSearch/membersearch.css" />
+    <File Path="GOW365\MemberSearch\search_btn.gif" Url="GOW365/MemberSearch/search_btn.gif" />
+    <File Path="GOW365\MemberSearch\search_img.gif" Url="GOW365/MemberSearch/search_img.gif" />
+    <File Path="GOW365\MemberSearch\search_head.gif" Url="GOW365/MemberSearch/search_head.gif" />
+    <File Path="GOW365\MemberSearch\search_btn_32.gif" Url="GOW365/MemberSearch/search_btn_32.gif" />
+    <File Path="GOW365\MemberSearch\nopicture.gif" Url="GOW365/MemberSearch/nopicture.gif" />
   </Module>
 </Elements>

@@ -144,36 +144,36 @@ namespace CircleLogicPortal.ImageWheelWebpart {
             @__w.Write("px\' height=\'");
                                                                              @__w.Write(ImgHeight);
 
-            @__w.Write("px\'   id=\'\" + oListItem.get_item(\"ID\") + \"\'/>\";\r\n\t\t    $(\'#");
-  @__w.Write(this.ClientID );
+            @__w.Write("px\'   id=\'\" + oListItem.get_item(\"ID\") + \"\'/>\";\r\n\t\t    jQuery(\'#");
+       @__w.Write(this.ClientID );
 
-            @__w.Write("_WaterWheel\').append(itemHtml);\r\n        }\r\n        //$(\'#");
-      @__w.Write(this.ClientID );
+            @__w.Write("_WaterWheel\').append(itemHtml);\r\n        }\r\n        //jQuery(\'#");
+           @__w.Write(this.ClientID );
 
             @__w.Write("_link1\').attr(\"href\",");
-                                              @__w.Write(this.ClientID );
+                                                   @__w.Write(this.ClientID );
 
             @__w.Write("list1.get_rootFolder().get_serverRelativeUrl());\r\n        \r\n        var wwcarouse" +
-                    "l = $(\'#");
-                     @__w.Write(this.ClientID );
+                    "l = jQuery(\'#");
+                          @__w.Write(this.ClientID );
 
             @__w.Write(@"_WaterWheel').waterwheelCarousel
 		            ({
 		                separation :170,flankingItems: 3, autoPlay:3000, 
 		                movingToCenter: function ($item) {
-		                $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
+		                jQuery('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
 		                },
 		                movedToCenter: function ($item) {
-		                $('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
+		                jQuery('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
 		                },
 		                movingFromCenter: function ($item) {
-		                $('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
+		                jQuery('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
 		                },
 		                movedFromCenter: function ($item) {
-		                $('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
+		                jQuery('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
 		                },
 		                clickedCenter: function ($item) {
-		                $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
+		                jQuery('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
 		                }
 		            });
 

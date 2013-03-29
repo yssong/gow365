@@ -68,27 +68,27 @@ function <%=this.ClientID%>onListItemsLoadSuccess(sender, args) {
             filename = dir + '/_t/' + filename;
 
             itemHtml += "<img src='" + filename + "' width='<%=ImgWidth%>px' height='<%=ImgHeight%>px'   id='" + oListItem.get_item("ID") + "'/>";
-		    $('#<%=this.ClientID %>_WaterWheel').append(itemHtml);
+		    jQuery('#<%=this.ClientID %>_WaterWheel').append(itemHtml);
         }
-        //$('#<%=this.ClientID %>_link1').attr("href",<%=this.ClientID %>list1.get_rootFolder().get_serverRelativeUrl());
+        //jQuery('#<%=this.ClientID %>_link1').attr("href",<%=this.ClientID %>list1.get_rootFolder().get_serverRelativeUrl());
         
-        var wwcarousel = $('#<%=this.ClientID %>_WaterWheel').waterwheelCarousel
+        var wwcarousel = jQuery('#<%=this.ClientID %>_WaterWheel').waterwheelCarousel
 		            ({
 		                separation :170,flankingItems: 3, autoPlay:3000, 
 		                movingToCenter: function ($item) {
-		                $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
+		                jQuery('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
 		                },
 		                movedToCenter: function ($item) {
-		                $('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
+		                jQuery('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
 		                },
 		                movingFromCenter: function ($item) {
-		                $('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
+		                jQuery('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
 		                },
 		                movedFromCenter: function ($item) {
-		                $('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
+		                jQuery('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
 		                },
 		                clickedCenter: function ($item) {
-		                $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
+		                jQuery('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
 		                }
 		            });
 
