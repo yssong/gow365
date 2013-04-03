@@ -1,0 +1,4 @@
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\CircleLogicPortalUI\bin\Debug\CircleLogicPortalUI.dll
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\CircleLogicPortalUI\bin\Debug\CircleLogicPortalUI.pdb
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\CircleLogicPortalUI\obj\Debug\CircleLogicPortalUI.dll
+C:\Users\sFarmAdmin\Documents\Visual Studio 2012\Projects\gow365\GOW365\CircleLogicPortalUI\obj\Debug\CircleLogicPortalUI.pdb

@@ -7,5 +7,6 @@
     <ProjectItemFile Source="Masterpage\GowMaster.master" Target="GOW365\Masterpage\" Type="ElementFile" />
     <ProjectItemFile Source="Masterpage\GowMaster_blue.master" Target="GOW365\Masterpage\" Type="ElementFile" />
     <ProjectItemFile Source="Gow365UI_GreyOrange.css" Target="GOW365\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-1.9.1.min.js" Target="GOW365\" Type="ElementFile" />
   </Files>
 </ProjectItem>

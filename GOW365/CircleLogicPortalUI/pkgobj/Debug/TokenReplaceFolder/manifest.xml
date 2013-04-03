@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="986ded42-f031-4a77-9d6a-70b415355b04" SharePointProductVersion="15.0">
+  <FeatureManifests>
+    <FeatureManifest Location="CircleLogicPortalUI_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

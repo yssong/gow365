@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="7a06917f-33eb-4011-ad0d-cea128fb34c3" Scope="Web" Title="CircleLogicPortalUI Feature1">
+  <ElementManifests>
+    <ElementManifest Location="GOW365\Elements.xml" />
+    <ElementFile Location="GOW365\GOW365UI.css" />
+    <ElementFile Location="GOW365\GOW365UI_blue.css" />
+    <ElementFile Location="GOW365\Masterpage\GowMaster.master" />
+    <ElementFile Location="GOW365\Masterpage\GowMaster_blue.master" />
+    <ElementFile Location="GOW365\Gow365UI_GreyOrange.css" />
+    <ElementFile Location="GOW365\jquery-1.9.1.min.js" />
+  </ElementManifests>
+</Feature>

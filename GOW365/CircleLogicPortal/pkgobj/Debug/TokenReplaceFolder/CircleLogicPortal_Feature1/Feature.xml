@@ -102,6 +102,7 @@
     <ElementFile Location="GOW365\SiteMap\sitemap_h4.gif" />
     <ElementFile Location="GOW365\SiteMap\sitemap_h5.gif" />
     <ElementFile Location="GOW365\SiteMap\sitemap_head.gif" />
+    <ElementFile Location="GOW365\Today\banner_gowit.gif" />
     <ElementManifest Location="NewDocsTabWebPart\Elements.xml" />
     <ElementFile Location="NewDocsTabWebPart\NewDocsTabWebPart.webpart" />
     <ElementManifest Location="DropDownLinkWebPart\Elements.xml" />
