@@ -87,5 +87,15 @@
     <ProjectItemFile Source="MemberSearch\search_head.gif" Target="GOW365\MemberSearch\" Type="ElementFile" />
     <ProjectItemFile Source="MemberSearch\search_btn_32.gif" Target="GOW365\MemberSearch\" Type="ElementFile" />
     <ProjectItemFile Source="MemberSearch\nopicture.gif" Target="GOW365\MemberSearch\" Type="ElementFile" />
+    <ProjectItemFile Source="SiteMap\SiteMap.css" Target="GOW365\SiteMap\" Type="ElementFile" />
+    <ProjectItemFile Source="SiteMap\site_icon.gif" Target="GOW365\SiteMap\" Type="ElementFile" />
+    <ProjectItemFile Source="SiteMap\site_li_border.gif" Target="GOW365\SiteMap\" Type="ElementFile" />
+    <ProjectItemFile Source="SiteMap\sitemap_h1.gif" Target="GOW365\SiteMap\" Type="ElementFile" />
+    <ProjectItemFile Source="SiteMap\sitemap_h2.gif" Target="GOW365\SiteMap\" Type="ElementFile" />
+    <ProjectItemFile Source="SiteMap\sitemap_h3.gif" Target="GOW365\SiteMap\" Type="ElementFile" />
+    <ProjectItemFile Source="SiteMap\sitemap_h4.gif" Target="GOW365\SiteMap\" Type="ElementFile" />
+    <ProjectItemFile Source="SiteMap\sitemap_h5.gif" Target="GOW365\SiteMap\" Type="ElementFile" />
+    <ProjectItemFile Source="SiteMap\sitemap_head.gif" Target="GOW365\SiteMap\" Type="ElementFile" />
+    <ProjectItemFile Source="Today\banner_gowit.gif" Target="GOW365\Today\" Type="ElementFile" />
   </Files>
 </ProjectItem>

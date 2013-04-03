@@ -50,7 +50,7 @@ function onListItemsLoadFailed(sender, args) {
 function <%=this.ClientID%>onListItemsLoadSuccess(sender, args) {
 	<% if (ListName!="")    { %>
      try{
-        $('#<%=this.ClientID %>_tab1 ul li').remove();
+        jQuery('#<%=this.ClientID %>_tab1 ul li').remove();
         var listtype1 = <%=this.ClientID %>list.get_baseTemplate();
          
         var listEnumerator = this.<%=this.ClientID %>listItems.getEnumerator();
@@ -75,7 +75,7 @@ function <%=this.ClientID%>onListItemsLoadSuccess(sender, args) {
                 itemHtml += oListItem.get_item("Title");
                 itemHtml += "</option>";
             }
-            $('#<%=this.ClientID %>_select').append(itemHtml);
+            jQuery('#<%=this.ClientID %>_select').append(itemHtml);
         }
         
     }

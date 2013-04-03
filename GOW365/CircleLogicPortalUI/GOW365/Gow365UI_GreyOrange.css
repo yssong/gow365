@@ -1,0 +1,380 @@
+﻿#siteIcon
+{
+	display:none;
+	/*
+	height:0px;
+	overflow:hidden;
+	*/
+}
+.ms-core-deltaSuiteLinks
+{
+	vertical-align:top;
+}
+#s4-ribboncont, #suiteBarRight, #globalNavBox
+{
+	/**background-color:rgb(0, 114, 198);**/
+	background-color:#383a46;
+}
+.ms-core-needIEFilter #globalNavBox
+{
+	filter:"";
+	background-color:#383a46;
+}
+.ms-cui-topBar2, .ms-browseTabContainer.ms-cui-topBar2
+{
+	/**border-bottom-color:rgb(0, 114, 198);**/
+	border-bottom-color:#383a46;
+}
+.ms-cui-ribbon, .ms-cui-menu, .ms-cui-toolbar-toolbar
+{
+	color:#383a46;
+}
+.ms-browseTabContainer.ms-cui-topBar2
+{
+	/**border-bottom-color:rgb(0, 114, 198);**/
+	background-color:#383a46;
+}
+.ms-welcome-root > a.ms-core-menu-root
+{
+	color:#ffffff;
+}
+.ms-welcome-hover > a.ms-core-menu-root, .ms-signInLink:hover
+{
+	color:#444;
+}
+.ms-promotedActionButton-text
+{
+	color:#aaaaaa;
+}
+.ms-cui-tt-s.ms-browseTab > .ms-cui-tt-a > .ms-cui-tt-span,.ms-cui-tt-a > .ms-cui-tt-span
+{
+	color:#aaaaaa !important;
+}
+#suiteBarLeft
+{
+	background-color:#383a46;
+}
+.ms-core-needIEFilter #suiteBarLeft
+{
+	filter:"";
+	background-color:#383a46;
+}
+#suiteBarRight
+{
+	background-color:#383a46;
+}
+.ms-core-needIEFilter #suiteBarRight
+{
+	filter:"";
+	background-color:#383a46;
+}
+#pageTitle
+{
+	display:none;
+}
+#s4-titlerow
+{
+	height:20px;
+	padding-top:5px;
+	padding-bottom:18px;
+	/*background-color:#e4e5e7;*/
+	/*background-color:rgb(0, 114, 198);*/
+	background-color:#383a46;
+	border-bottom:5px #f86d08 solid;
+	text-align:left;
+}
+#titleAreaBox
+{
+	/*background-color: #44649f;*/
+	background-color: #4c4f5e;
+	margin-left:0px;
+	margin-right:0px;
+	padding-left:20px;
+	height:38px;
+}
+#titleAreaRow > .ms-verticalAlignTop
+{
+	vertical-align:middle;
+}
+#titleAreaRow > a, .ms-link:visited
+{
+	color:#ffffff;
+}
+#DeltaTopNavigation .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:link, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:visited, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected, .ms-tv-selected:link
+{
+	color:#ffffff;
+}
+#DeltaTopNavigation .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:link, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:visited, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected, .ms-tv-selected:link
+{
+	color:#ffffff;
+}
+#DeltaTopNavigation .ms-core-listMenu-horizontalBox a.ms-core-listMenu-item:hover, .ms-core-listMenu-horizontalBox a.ms-core-listMenu-selected.ms-core-listMenu-item:hover, a.ms-tv-item:hover, a.ms-tv-header:hover
+{
+	color:#efefef;
+}
+#DeltaTopNavigation .ms-core-listMenu-item, .ms-core-listMenu-item:link, .ms-core-listMenu-item:visited, .ms-tv-item:link, .ms-tv-item:visited, .ms-tv-header:link, .ms-tv-header:visited
+{
+	color:#cccccc;
+}
+#DeltaTopNavigation li.dynamic .ms-core-listMenu-item, li.dynamic .ms-core-listMenu-item:link,li.dynamic .ms-core-listMenu-item:visited
+{
+	color:#666666;
+}
+#DeltaTopNavigation li.dynamic a.ms-core-listMenu-item:hover, li.dynamic a.ms-core-listMenu-selected.ms-core-listMenu-item:hover
+{
+	color:#888888;
+}
+
+.ms-breadcrumb-top
+{
+	text-align:center;
+}
+#sideNavBox .menu-item-text
+{
+	color:#666666;
+}
+.ms-breadcrumb-box
+{
+	height:20px;
+}
+#searchInputBox
+{
+	margin-bottom:6px;
+	margin-top:6px;
+	margin-right:6px;
+	float:right;
+}
+.ms-srch-sb
+{
+	background-color:#ffffff;
+}
+#s4-bodyContainer
+{
+	width:100%;   
+	text-align:center;   
+}
+#s4-workspace
+{
+	background-color:#e4e5e7;
+}
+/* IE8 */
+.ms-core-needIEFilter .ms-core-overlay
+{
+	filter:"";
+}
+#contentRow
+{
+	padding-top:8px;
+	margin:0 auto;
+	/*width:1000px;*/
+	text-align:left;
+}
+#sideNavBox
+{
+	margin-top:0px;
+	margin-right:0px;
+	margin-left:0px;
+	/*background-color:#e4e5e7;*/
+	height:100%;
+	color:#666666;
+}
+#contentBox
+{
+	/*background-color:#ffffff;*/
+	margin-top:0px;
+	min-height: 500px;
+}
+
+#sideNavBox .ms-webpartzone-cell, #sideNavBox .ms-WPBody 
+{
+	margin-left:0px;
+	padding:5px;
+}
+.ms-core-sideNavBox-removeLeftMargin
+{
+	margin-left:0px;
+}
+.ms-listviewtable
+{
+	width:100%;
+}
+table.ms-listviewtable TH
+{
+	/* orange under line */
+	/* 	border-bottom:2px #ff8000 solid;*/
+	/* Grey under line */	
+ 	border-bottom:1px #aaaaaa solid;
+}
+
+table.ms-listviewtable  td.ms-cellstyle
+{
+	border-bottom:1px #dedede dotted;
+}
+
+table.ms-listviewtable td.ms-vb-imgFirstCell
+{
+	border-bottom:1px #dedede dotted;
+}
+.ms-webpart-chrome-title, .ms-webpart-titleText
+{
+	font-size:12pt;
+}
+.ms-webpart-zone
+{
+	/*margin-left:8px;*/
+}
+.ms-webpartzone-cell
+{
+	background-color:#ffffff;
+	border-radius: 8px;
+	padding:10px;
+	margin-bottom:8px;
+}
+.ms-webpartzone-cell .ms-WPBody
+{
+	margin:10px;
+}
+.ms-core-listMenu-verticalBox
+{
+	background-color:#ffffff;
+	padding:10px;
+	border-radius: 8px;
+	margin-bottom:8px;
+}
+.ms-webpart-titleText
+{
+	font-size:10pt;
+}
+.contentRowNodialog
+{
+	width:1000px;
+}
+.contentBoxNodialog
+{
+	margin-left:185px;
+}
+a, .ms-link:visited
+{
+	color:#565656;
+}
+.ms-webpart-titleText img
+{
+	float:right;
+	width:32px;
+	height:32px;
+}
+/*blog design*/
+#sideNavBox .ms-WPBody 
+{
+	margin-left:0px;
+	padding-left:0px;
+}
+.ms-blog-LeftColumn
+{
+	padding-left:8px;
+}
+.ms-blog-quickLinksEntry
+{
+	color:#999999;	
+}
+.ms-blog-listMenu-root
+{
+	width:150px;
+}
+#sideNavBox .ms-core-listMenu-item, li.dynamic .ms-core-listMenu-item:link,li.dynamic .ms-core-listMenu-item:visited
+{
+	color:#666666;
+}
+#sideNavBox a.ms-core-listMenu-item:hover, li.dynamic a.ms-core-listMenu-selected.ms-core-listMenu-item:hover
+{
+	color:#888888;
+}
+.ms-accentText, .ms-accentText:visited
+{
+	color:#f86d08;
+}
+
+
+/*Today*/
+.today{
+	width:180px;
+	min-height:125px;
+	background-color:#fff;
+	border-radius: 8px;
+	margin-bottom:8px;
+}
+.day_left{
+	width:70px;
+	margin-top:37px;
+	float:left;
+}
+.calender{
+	background:url(Today/today_calenderbg.gif) no-repeat;
+	width:54px;
+	height:64px;
+	margin-left:10px;
+	/*margin-left:16px;*/
+	/*margin-bottom:16px;*/
+}
+.cal_month{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#fff;
+	font-size:10px;
+	font-weight:bold;
+	width:54px;
+	text-align:center;
+	padding-top:6px;
+}
+.cal_day{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#333;
+	font-size:32px;
+	padding-top:1px;
+	text-align:center;
+}
+.day_right{
+	margin-top:12px;
+	float:left;
+}
+.day_name{
+	width:100px;
+	border-bottom:solid 2px #f86d08;
+	padding-left:8px;
+	padding-bottom:6px;
+	padding-top:6px;
+	font-size:12px;
+	font-family:Dotum,'돋움';
+}
+.day_name span{
+	font-weight:bold;
+}
+.name_mail table{
+	width:112px;
+	font-size:12px;
+	font-family:Dotum,'돋움';
+}
+.name_mail div{
+	height:26px;
+	line-height:26px;
+}
+.name_mail .aprTitle{
+	font-size:12px;
+	height:26px;
+	line-height:26px;
+	color:#5a5a5a
+}
+.name_mail .aprContent{
+	height:26px;
+	line-height:26px;
+	color:#dd5600;
+}
+.homepage
+{
+	width:180px;
+	height:auto;
+	background-color:#fff;
+	border-radius: 8px;
+	padding-top:12px;
+	padding-bottom:12px;
+	margin-bottom:8px;
+}

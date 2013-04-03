@@ -1,330 +1,55 @@
-﻿/**
-.TextStyleTitle {
-	color: rgb(14, 99, 141); font-family: "돋움"; font-size: 12px; font-weight: bold;
+﻿.FormTypeTitle {
+	font-size: 20pt;
 }
-.TextStyleContent {
-	color: rgb(113, 113, 113); font-family: "돋움"; font-size: 12px; font-weight: bold;
-}
-.TextStyleContentNoBorder {
-	color: rgb(113, 113, 113); font-family: "돋움"; font-size: 12px;
-}
-.approval-toolbar {
-	border: 0px currentColor;
-}
-#divSignInfoDetail {
-	height: 0px;
-}
-.approval-separator {
-	border-left-color: silver; border-left-width: 1px; border-left-style: solid;
-}
-.approval-title {
-	color: rgb(113, 113, 113); font-family: "돋움"; font-size: 12px; font-weight: bold;
-}
-.approval-leftcontrolmenu {
-	color: rgb(0, 51, 102); font-family: "돋움"; font-size: 12px; font-weight: bold;
-}
-.approval-leftcontrolmenu2 {
-	color: rgb(0, 51, 102); font-family: "돋움"; font-size: 12px;
-}
-.approval-leftcontrolmenuadmintext {
-	color: rgb(14, 99, 141); font-family: "돋움"; font-size: 12px; font-weight: bold;
-}
-.approval-leftmenuBottom {
-	height: 10px; border-bottom-color: rgb(133, 190, 204); border-bottom-width: 0px; border-bottom-style: solid;
-}
-table.approval-topmenu {
-	width: 180px; background-image: url("/_layouts/images/hicompass/approvalleftcontrol/e_bg.gif");
-}
-table.approval-MiddleMenu {
-	width: 180px; background-image: url("/_layouts/images/hicompass/approvalleftcontrol/e_d_bg.gif");
-}
-table.Approval-AdminMenu {
-	width: 180px; background-image: url("/_layouts/images/hicompass/approvalleftcontrol/e_bg.gif");
-}
-.approval-listBoxTitleleftTD {
-	width: 6px; height: 35px; background-image: url("/_layouts/images/hicompass/approval/approval_2leftbg.gif"); background-repeat: no-repeat;
-}
-.approval-listBoxTitlecenterTD {
-	font-size: 120%; font-weight: 700; vertical-align: middle; background-image: url("/_layouts/images/hicompass/approval/approval_2centertbg.gif"); background-repeat: repeat-x;
-}
-.approval-listBoxTitlerightTD {
-	width: 6px; background-image: url("/_layouts/images/hicompass/approval/approval_2rightbg.gif"); background-repeat: no-repeat;
-}
-.approval-listheaderTR {
-	height: 31px; background-color: rgb(224, 239, 244);
-}
-.approval-listth {
-	border-bottom-color: rgb(165, 193, 203); border-bottom-width: 1px; border-bottom-style: solid;
-}
-.approval-listtableinTH {
-	
-}
-.approval-HeadMenuTD {
-	border-width: 1px 0px; border-style: solid; border-color: rgb(204, 204, 204); color: rgb(102, 102, 102); padding-left: 5px; font-family: "굴림"; font-size: 12px; font-weight: bold;
-}
-.approval-HeadMenuTD-NoPadding {
-	border-width: 1px 0px; border-style: solid; border-color: rgb(204, 204, 204); color: rgb(102, 102, 102); padding-left: 0px; font-family: "굴림"; font-size: 12px; font-weight: bold;
-}
-.toptext {
-	color: rgb(41, 88, 109); font-family: "돋움"; font-size: 13px; font-weight: bold;
-}
-.menutext {
-	color: rgb(255, 255, 255); font-family: "돋움"; font-size: 12px; font-weight: bold;
-}
-.text {
-	color: rgb(51, 51, 51); font-family: "돋움"; font-size: 12px;
-}
-.b_text {
-	color: rgb(102, 102, 102); font-family: "돋움"; font-size: 12px; font-weight: bold;
-}
-.text span {
-	width: 360px; color: rgb(102, 102, 102); overflow: hidden; font-family: "굴림"; font-size: 12px; white-space: nowrap; -ms-text-overflow: ellipsis;
-}
-.number {
-	color: rgb(102, 102, 102); font-family: "굴림"; font-size: 12px;
-}
-.titletext {
-	border-width: 1px 0px; border-style: solid; border-color: rgb(204, 204, 204); color: rgb(102, 102, 102); font-family: "굴림"; font-size: 12px; font-weight: bold;
-}
-.selectiontext {
-	color: rgb(255, 102, 0); font-family: "굴림"; font-size: 12px; font-weight: bold; border-bottom-color: rgb(229, 229, 229); border-bottom-width: 1px; border-bottom-style: solid;
-}
-.selectionnumber {
-	color: rgb(27, 128, 207); font-family: "굴림"; font-size: 12px; font-weight: bold;
-}
-.TdFormTitle {
-	text-align: center;
-}
-.SpanFormTitle {
-	font-family: HY견명조;
-}
-.spanFormTypeBottom {
-	font-family: HY신명조; font-size: 10pt;
-}
-#SignInfoBoxTD {
-	white-space: nowrap; -ms-word-break: break-all;
-}
-.approvaltextbox {
-	border: 1px solid rgb(171, 173, 179); background-color: rgb(255, 255, 255);
-}
-.ajax__calendar_days {
-	background-color: rgb(255, 255, 255);
-}
-.ajax__calendar_header {
-	background-color: rgb(255, 255, 255);
-}
-.tabtext {
-	color: rgb(51, 51, 51); font-family: "굴림"; font-size: 12px; font-weight: bold;
-}
-.btext {
-	color: rgb(102, 102, 102); font-family: "굴림"; font-size: 12px; font-weight: bold;
-}
-.text {
-	color: rgb(102, 102, 102); font-family: "굴림"; font-size: 12px;
-}
-.organizationTreeDIV {
-	width: 100%; height: 100%; overflow: auto; border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-left-color: rgb(204, 204, 204); border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid;
-}
-.groupSearchTable {
-	border: 1px solid rgb(204, 204, 204); margin-top: 8px; margin-left: 5px;
-}
-.groupSearchTD1 {
-	color: rgb(102, 102, 102); padding-left: 8px; font-family: "굴림"; font-size: 12px; font-weight: bold; border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid;
-}
-.groupSearchTD2 {
-	padding-left: 3px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;
-}
-.groupSearchTD3 {
-	color: rgb(102, 102, 102); padding-left: 8px; font-family: "굴림"; font-size: 12px; font-weight: bold; border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid;
-}
-.groupSearchTD4 {
-	padding-left: 3px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;
-}
-.groupSearchTD5 {
-	color: rgb(102, 102, 102); padding-left: 8px; font-family: "굴림"; font-size: 12px; font-weight: bold; border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid;
-}
-.groupSearchTD6 {
-	padding-left: 3px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;
-}
-.approvallinetoptext {
-	color: rgb(0, 51, 102); padding-bottom: 0px; font-family: "굴림"; font-size: 12px; font-weight: bold; vertical-align: middle;
-}
-.approvallinetoptext span {
-	color: rgb(0, 51, 102); padding-bottom: 0px; padding-left: 5px; font-family: "굴림"; font-size: 12px; font-weight: bold; vertical-align: middle;
-}
-.ApprovalLineReferencetoptext {
-	color: rgb(0, 51, 102); padding-bottom: 0px; padding-left: 33px; font-family: "굴림"; font-size: 12px; font-weight: bold; vertical-align: middle;
-}
-.approvallinebottomcentertd {
-	padding-bottom: 3px; vertical-align: bottom;
-}
-.approvallinebtext {
-	color: rgb(102, 102, 102); padding-left: 5px; font-family: "굴림"; font-size: 12px; font-weight: bold;
-}
-.approvallineselectText {
-	height: 23px; color: rgb(102, 102, 102); font-family: "굴림"; font-size: 12px; border-bottom-color: rgb(229, 229, 229); border-bottom-width: 1px; border-bottom-style: solid;
-}
-.approvalLineSave {
-	color: rgb(0, 51, 102); padding-bottom: 0px; padding-left: 0px; font-family: "굴림"; font-size: 12px; font-weight: bold; vertical-align: middle;
-}
-.approvalLineSave span {
-	padding-left: 5px;
-}
-.DOCPermissiontoptext {
-	color: rgb(0, 51, 102); padding-bottom: 0px; padding-left: 0px; font-family: "굴림"; font-size: 12px; font-weight: bold; vertical-align: middle;
-}
-.DOCPermissiontoptext span {
-	padding-left: 5px;
-}
-.FOCtoptext {
-	color: rgb(0, 51, 102); font-family: "굴림"; font-size: 12px; font-weight: bold;
-}
-.tabtext {
-	color: rgb(51, 51, 51); font-family: "굴림"; font-size: 12px; font-weight: bold;
-}
-.textbg {
-	color: rgb(102, 102, 102); font-family: "굴림"; font-size: 12px;
-}
-.p_Ptext {
-	color: rgb(0, 0, 0); font-family: "궁서"; font-size: 12px;
-}
-.p_toptext {
-	color: rgb(0, 0, 0); padding-top: 5px; font-family: "굴림"; font-size: 12px;
-}
-.p_basistext {
-	padding: 2px; color: rgb(0, 0, 0); font-family: "궁서"; font-size: 14px; font-weight: bold;
-}
-.p_toptext12 {
-	font-size: 14px; font-weight: bold;
-}
-.btext {
-	color: rgb(102, 102, 102); font-family: "굴림"; font-size: 12px; font-weight: bold;
-}
-.p_bigtext {
-	font-family: "궁서"; font-size: 26px; font-weight: bold;
-}
-.p_bigtext span {
-	vertical-align: middle;
-}
-.p_bigtext img {
-	vertical-align: middle;
-}
-.P_officePrintContent {
-	
-}
-.stamp {
-	color: rgb(153, 153, 153); font-family: "궁서"; font-size: 12px;
-}
-.p_basistext1 {
-	padding: 5px; color: rgb(0, 0, 0); font-family: "궁서"; font-size: 14px;
-}
-.p_basiscontenttext {
-	padding: 5px; color: rgb(0, 0, 0); font-size: 9pt;
-}
-.aligntexttd {
-	width: 86px; font-family: 바탕체; font-size: 18px; font-weight: bold;
-}
-.aligntexttd span {
-	text-align: right; font-family: "궁서"; font-size: 18px; font-weight: bold; float: left; display: block;
-}
-.aligntexttd span.n2 {
-	width: 68px; padding-right: 2px;
-}
-.aligntexttd span.n3 {
-	width: 34px; padding-right: 2px;
-}
-.aligntexttd span.n4 {
-	width: 22px;
-}
-.name4 span.first {
-	padding-right: 2px;
-}
-.logo_toptext {
-	padding: 3px; color: rgb(0, 0, 0); font-family: "굴림"; font-size: 14px; font-weight: bold;
-}
-.logo_basictext {
-	padding: 3px; color: rgb(0, 0, 0); line-height: 15px; font-family: "굴림"; font-size: 12px;
-}
-.d_text {
-	color: rgb(0, 0, 0); font-family: "굴림"; font-size: 14px;
-}
-.adress_text {
-	color: rgb(0, 0, 0); font-family: "돋움"; font-size: 12px;
-}
-.http_text {
-	color: rgb(0, 0, 0); font-family: "바탕체"; font-size: 10px; word-spacing: -10pt;
-}
-.title_text {
-	color: rgb(0, 0, 0); font-family: "돋움"; font-size: 16px; font-weight: bold;
-}
-#divStamp {
-	left: 463px; top: 961px; width: 74px; height: 10px; position: absolute; z-index: 100;
-}
-#divSampleStamp {
-	left: 91px; top: 360px; width: 586px; height: 157px; position: absolute; z-index: 100;
-}
-**/
-
-
-.FormTypeTitle {
-	/*font-family: HY신명조;*/ font-size: 20pt;
-}
-
 .TdFormTypeTitle {
 	text-align: center; vertical-align: text-top;
 }
-
 .FormTableTitleTDFirst {
-	border-width: 2px 1px 1px 2px; border-style: solid; border-color: rgb(0, 0, 0); text-align: center; /*font-family: gulim;*/ font-size: 9pt; font-weight: bold;
+	border-width: 2px 1px 1px 2px; border-style: solid; border-color: rgb(0, 0, 0); text-align: center; font-size: 9pt; font-weight: bold;
 }
 .FormTableContentTDFirst {
-	text-align: center;  /*font-family: gulim;*/ font-size: 9pt; border-top-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid;
+	text-align: center; font-size: 9pt; border-top-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid;
 }
 .FormTableTitleTD {
-	text-align: center;  /*font-family: gulim;*/ font-size: 9pt; font-weight: bold; border-right-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-bottom-width: 1px; border-left-width: 2px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid;
+	text-align: center; font-size: 9pt; font-weight: bold; border-right-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-bottom-width: 1px; border-left-width: 2px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid;
 }
 .FormTableContentTD {
-	text-align: center;  /*font-family: gulim;*/ font-size: 9pt; border-right-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-right-width: 2px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid;
+	text-align: center; font-size: 9pt; border-right-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-right-width: 2px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid;
 }
 .FormTableTitleTDMid {
-	text-align: center;  /*font-family: gulim;*/ font-size: 9pt; font-weight: bold; border-right-color: rgb(0, 0, 0); border-left-color: rgb(0, 0, 0); border-right-width: 1px;  border-left-width: 2px; border-right-style: solid;  border-left-style: solid;
+	text-align: center; font-size: 9pt; font-weight: bold; border-right-color: rgb(0, 0, 0); border-left-color: rgb(0, 0, 0); border-right-width: 1px;  border-left-width: 2px; border-right-style: solid;  border-left-style: solid;
 }
 .FormTableContentTDMid {
-	text-align: center;  /*font-family: gulim;*/ font-size: 9pt; border-right-color: rgb(0, 0, 0); border-right-width: 2px; border-bottom-width: 1px; border-right-style: solid; 
+	text-align: center; font-size: 9pt; border-right-color: rgb(0, 0, 0); border-right-width: 2px; border-bottom-width: 1px; border-right-style: solid; 
 }
 
 .FormTableTitleTDLast {
-	text-align: center;  /*font-family: gulim;*/ font-size: 9pt; font-weight: bold; border-right-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-bottom-width: 2px; border-left-width: 2px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid;
+	text-align: center;font-size: 9pt; font-weight: bold; border-right-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-bottom-width: 2px; border-left-width: 2px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid;
 }
 .FormTableContentTDLast {
-	text-align: left;  /*font-family: gulim;*/ font-size: 9pt; border-right-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-right-width: 2px; border-bottom-width: 2px; border-right-style: solid; border-bottom-style: solid;
+	text-align: left; font-size: 9pt; border-right-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-right-width: 2px; border-bottom-width: 2px; border-right-style: solid; border-bottom-style: solid;
 }
 .FormTableAllTDLast {
-	text-align: center;  /*font-family: gulim;*/ font-size: 9pt; font-weight: bold; border-right-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-color: rgb(0, 0, 0); border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid;
+	text-align: center; font-size: 9pt; font-weight: bold; border-right-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-color: rgb(0, 0, 0); border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid;
 }
-
 .FormTableTitleTDHidden {
-	border-width: 0px 2px 1px; border-style: solid; border-color: rgb(0, 0, 0); text-align: center;  /*font-family: gulim;*/ font-size: 9pt; font-weight: bold;
+	border-width: 0px 2px 1px; border-style: solid; border-color: rgb(0, 0, 0); text-align: center;  /**font-family: gulim;**/ font-size: 9pt; font-weight: bold;
 }
 .FormTableMainContentTD {
 	border-width: 0px 2px 2px; border-style: solid; border-color: rgb(0, 0, 0); -ms-word-break: break-all; min-height:400px;
 }
-
 /* Sharepoint Style Override */
-
 .ms-usereditor
 {
-	/*width:auto;*/
 	width:100%;
 }
-
 div.ms-inputuserfield
 {
 	padding-top:10px;
 }
 #eApprovalMainArea
 {
-	/*width:640px;*/
+	/**width:640px;**/
 	width:710px;
 }
 .headTitle {
@@ -357,11 +82,10 @@ div.ms-inputuserfield
 .opinionBody {
 	font-family: "맑은 고딕", 굴림, Arial, san-serif;
 	font-size: 10pt;
-	/*height: 35px;*/
+	/**height: 35px;**/
 	border-bottom-style: dotted;
 	border-bottom-width: 1px;
 	border-bottom-color: #C0C0C0;
-
 }
 .opinionBody div{
 	font-family: "맑은 고딕", 굴림, Arial, san-serif;
@@ -369,8 +93,7 @@ div.ms-inputuserfield
 	padding-bottom:8px;
 	padding-top:8px;
 	min-height:30px;
-    height:auto !important; 
-
+    height:auto;
 }
 #approvalOpinion
 {

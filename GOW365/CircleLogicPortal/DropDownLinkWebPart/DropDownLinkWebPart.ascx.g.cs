@@ -110,8 +110,8 @@ namespace CircleLogicPortal.DropDownLinkWebPart {
 
             @__w.Write("onListItemsLoadSuccess(sender, args) {\r\n\t");
     if (ListName!="")    { 
-            @__w.Write("\r\n     try{\r\n        $(\'#");
-    @__w.Write(this.ClientID );
+            @__w.Write("\r\n     try{\r\n        jQuery(\'#");
+         @__w.Write(this.ClientID );
 
             @__w.Write("_tab1 ul li\').remove();\r\n        var listtype1 = ");
                 @__w.Write(this.ClientID );
@@ -147,8 +147,8 @@ namespace CircleLogicPortal.DropDownLinkWebPart {
 
             @__w.Write("\"+oListItem.get_item(\"ID\")+\"\' value=\'\"+oListItem.get_item(\"LinkLocation\").get_url" +
                     "()+\"\'>\";\r\n                itemHtml += oListItem.get_item(\"Title\");\r\n            " +
-                    "    itemHtml += \"</option>\";\r\n            }\r\n            $(\'#");
-        @__w.Write(this.ClientID );
+                    "    itemHtml += \"</option>\";\r\n            }\r\n            jQuery(\'#");
+             @__w.Write(this.ClientID );
 
             @__w.Write("_select\').append(itemHtml);\r\n        }\r\n        \r\n    }\r\n    catch(err)\r\n    {\r\n " +
                     "   }\r\n    ");

@@ -5,5 +5,6 @@
     <File Path="GOW365\GOW365UI_blue.css" Url="GOW365/GOW365UI_blue.css" />
     <File Path="GOW365\Masterpage\GowMaster.master" Url="GOW365/Masterpage/GowMaster.master" />
     <File Path="GOW365\Masterpage\GowMaster_blue.master" Url="GOW365/Masterpage/GowMaster_blue.master" />
+    <File Path="GOW365\Gow365UI_GreyOrange.css" Url="GOW365/Gow365UI_GreyOrange.css" />
   </Module>
 </Elements>

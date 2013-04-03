@@ -54,6 +54,14 @@
     <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApprovalStatusWebPart\ApprovalStatusWebPart.ascx.cs">
+      <DependentUpon>ApprovalStatusWebPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ApprovalStatusWebPart\ApprovalStatusWebPart.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ApprovalStatusWebPart.ascx</DependentUpon>
+    </Compile>
     <Compile Include="CalendarWebPart\CalendarWebPart.ascx.cs">
       <DependentUpon>CalendarWebPart.ascx</DependentUpon>
     </Compile>
@@ -104,6 +112,14 @@
     </Compile>
     <Compile Include="NewDocsTabWebPart\NewDocsTabWebPart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SiteMap\SiteMap.ascx.cs">
+      <DependentUpon>SiteMap.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteMap\SiteMap.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SiteMap.ascx</DependentUpon>
+    </Compile>
     <Compile Include="SubSitesTabWepart\SubSitesTabWepart.ascx.cs">
       <DependentUpon>SubSitesTabWepart.ascx</DependentUpon>
     </Compile>
@@ -122,6 +138,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="ApprovalStatusWebPart\ApprovalStatusWebPart.webpart" />
+    <None Include="ApprovalStatusWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b698dfbb-a991-468d-ad1e-46fb03f104ce}</SharePointProjectItemId>
+    </None>
     <None Include="CalendarWebPart\CalendarWebPart.webpart" />
     <None Include="CalendarWebPart\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{e8117820-90eb-41e6-aeea-2db1cb85cc80}</SharePointProjectItemId>
@@ -163,6 +183,10 @@
     <None Include="Package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
     </None>
+    <None Include="SiteMap\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e191e8b4-9a1c-41a5-bb2c-787e4c6bc268}</SharePointProjectItemId>
+    </None>
+    <None Include="SiteMap\SiteMap.webpart" />
     <None Include="SubSitesTabWepart\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{a4790539-9371-4de6-8f38-c415e990c033}</SharePointProjectItemId>
     </None>
@@ -173,6 +197,11 @@
     <None Include="TabListWebpart\TabListWebpart.webpart" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ApprovalStatusWebPart\ApprovalStatusWebPart.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>ApprovalStatusWebPart.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="ApprovalStatusWebPart\Elements.xml" />
     <Content Include="CalendarWebPart\CalendarWebPart.ascx">
       <Generator>SharePointWebPartCodeGenerator</Generator>
       <LastGenOutput>CalendarWebPart.ascx.g.cs</LastGenOutput>
@@ -247,6 +276,15 @@
     <Content Include="GOW365\MemberSearch\search_btn_32.gif" />
     <Content Include="GOW365\MemberSearch\search_head.gif" />
     <Content Include="GOW365\MemberSearch\search_img.gif" />
+    <Content Include="GOW365\SiteMap\SiteMap.css" />
+    <Content Include="GOW365\SiteMap\sitemap_h1.gif" />
+    <Content Include="GOW365\SiteMap\sitemap_h2.gif" />
+    <Content Include="GOW365\SiteMap\sitemap_h3.gif" />
+    <Content Include="GOW365\SiteMap\sitemap_h4.gif" />
+    <Content Include="GOW365\SiteMap\sitemap_h5.gif" />
+    <Content Include="GOW365\SiteMap\sitemap_head.gif" />
+    <Content Include="GOW365\SiteMap\site_icon.gif" />
+    <Content Include="GOW365\SiteMap\site_li_border.gif" />
     <Content Include="GOW365\SiteNewDocsTab\jquery-1.9.1.min.js" />
     <Content Include="GOW365\SiteNewDocsTab\Rounded.gif" />
     <Content Include="GOW365\SiteNewDocsTab\tabbgimg.gif" />
@@ -276,6 +314,7 @@
     <Content Include="GOW365\TabList\tabbgimg_ov.gif" />
     <Content Include="GOW365\TabList\TabStyle.css" />
     <Content Include="GOW365\TabList\tab_aline.gif" />
+    <Content Include="GOW365\Today\banner_gowit.gif" />
     <Content Include="GOW365\Today\today_calenderbg.gif" />
     <Content Include="ImageSlideWebPart\Elements.xml" />
     <Content Include="ImageSlideWebPart\ImageSlideWebPart.ascx">
@@ -293,6 +332,11 @@
       <LastGenOutput>MemberSearch.ascx.g.cs</LastGenOutput>
     </Content>
     <Content Include="NewDocsTabWebPart\Elements.xml" />
+    <Content Include="SiteMap\Elements.xml" />
+    <Content Include="SiteMap\SiteMap.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>SiteMap.ascx.g.cs</LastGenOutput>
+    </Content>
     <Content Include="SubSitesTabWepart\Elements.xml" />
     <Content Include="SubSitesTabWepart\SubSitesTabWepart.ascx">
       <Generator>SharePointWebPartCodeGenerator</Generator>

@@ -6,127 +6,150 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <SharePoint:SPHtmlTag dir="<%$Resources:wss,multipages_direction_dir_value%>" ID="SPHtmlTag" runat="server" >
-<head runat="server">
+<head id="Head1" runat="server">
 	<meta name="GENERATOR" content="Microsoft SharePoint" />
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=10"/>
 	<meta http-equiv="Expires" content="0" />
-	<SharePoint:SPPinnedSiteTile runat="server" TileUrl="/_layouts/15/images/SharePointMetroAppTile.png" TileColor="#0072C6" />
-	<SharePoint:RobotsMetaTag runat="server"/>
-	<SharePoint:PageTitle runat="server"><asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server"><SharePoint:ProjectProperty Property="Title" runat="server" /></asp:ContentPlaceHolder></SharePoint:PageTitle>
-	<SharePoint:SPShortcutIcon runat="server" IconUrl="/_layouts/15/images/favicon.ico?rev=23" />
-	<SharePoint:StartScript runat="server" />
-	<SharePoint:CssLink runat="server" Version="15"/>
-	<SharePoint:CacheManifestLink runat="server"/>
-	<SharePoint:ScriptLink language="javascript" name="core.js" OnDemand="true" runat="server" Localizable="false" />
-	<SharePoint:ScriptLink language="javascript" name="menu.js" OnDemand="true" runat="server" Localizable="false" />
-	<SharePoint:ScriptLink language="javascript" name="callout.js" OnDemand="true" runat="server" Localizable="false" />
-	<SharePoint:ScriptLink language="javascript" name="sharing.js" OnDemand="true" runat="server" Localizable="false" />
-	<SharePoint:ScriptLink language="javascript" name="suitelinks.js" OnDemand="true" runat="server" Localizable="false" />
-	<SharePoint:CustomJSUrl runat="server" />
-	<SharePoint:SoapDiscoveryLink runat="server" />
+	<SharePoint:SPPinnedSiteTile ID="SPPinnedSiteTile1" runat="server" TileUrl="/_layouts/15/images/SharePointMetroAppTile.png" TileColor="#0072C6" />
+	<SharePoint:RobotsMetaTag ID="RobotsMetaTag1" runat="server"/>
+	<SharePoint:PageTitle ID="PageTitle1" runat="server"><asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server"><SharePoint:ProjectProperty ID="ProjectProperty1" Property="Title" runat="server" /></asp:ContentPlaceHolder></SharePoint:PageTitle>
+	<SharePoint:SPShortcutIcon ID="SPShortcutIcon1" runat="server" IconUrl="/_layouts/15/images/favicon.ico?rev=23" />
+	<SharePoint:StartScript ID="StartScript1" runat="server" />
+	<SharePoint:CssLink ID="CssLink1" runat="server" Version="15"/>
+	<SharePoint:CacheManifestLink ID="CacheManifestLink1" runat="server"/>
+	<SharePoint:ScriptLink ID="ScriptLink1" language="javascript" name="core.js" OnDemand="true" runat="server" Localizable="false" />
+	<SharePoint:ScriptLink ID="ScriptLink2" language="javascript" name="menu.js" OnDemand="true" runat="server" Localizable="false" />
+	<SharePoint:ScriptLink ID="ScriptLink3" language="javascript" name="callout.js" OnDemand="true" runat="server" Localizable="false" />
+	<SharePoint:ScriptLink ID="ScriptLink4" language="javascript" name="sharing.js" OnDemand="true" runat="server" Localizable="false" />
+	<SharePoint:ScriptLink ID="ScriptLink5" language="javascript" name="suitelinks.js" OnDemand="true" runat="server" Localizable="false" />
+	<SharePoint:CustomJSUrl ID="CustomJSUrl1" runat="server" />
+	<SharePoint:SoapDiscoveryLink ID="SoapDiscoveryLink1" runat="server" />
 	<SharePoint:AjaxDelta id="DeltaPlaceHolderAdditionalPageHead" Container="false" runat="server">
 		<asp:ContentPlaceHolder id="PlaceHolderAdditionalPageHead" runat="server" />
-		<SharePoint:DelegateControl runat="server" ControlId="AdditionalPageHead" AllowMultipleControls="true" />
+		<SharePoint:DelegateControl ID="DelegateControl1" runat="server" ControlId="AdditionalPageHead" AllowMultipleControls="true" />
 		<asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" runat="server" />
 	</SharePoint:AjaxDelta>
-	<SharePoint:CssRegistration Name="Themable/corev15.css" runat="server" />
+	<SharePoint:CssRegistration ID="CssRegistration1" Name="Themable/corev15.css" runat="server" />
 	<!--Custom design-->
 	<script type="text/javascript" src="/Gow365/jquery-1.9.1.min.js"></script>
-	<link rel="stylesheet" href="/Gow365/Gow365UI.css" />
+	<!--link id="gow365css" rel="stylesheet" href="/Gow365/Gow365UI.css" /-->
+	<link id="gow365css" rel="stylesheet" href="/Gow365/Gow365UI_GreyOrange.css" />
 
 </head>
 <body>
   <script type="text/javascript" >
-  jQuery.noConflict();
+      jQuery.noConflict();
 
-  jQuery(document).ready(function(){
-  	setToday();
-  	//setNavHeight();
-  	setTitleImg();
-  });
-  jQuery(window).resize(function(){
-  	setTitleImg();
-  	if(jQuery("#DeltaPlaceHolderLeftNavBar")!=null)
-  	{
-  		//setNavHeight();
-  	}
-  });
-  function setNavHeight(){
-    //nav 사이즈가 길수도 있고, Content Size가 길 수도 있고... 
-	var nav=(jQuery("#today").height()+jQuery("#DeltaPlaceHolderLeftNavBar").height());
-	var content = (jQuery("#contentBox").height()>nav?jQuery("#contentBox").height():nav);
-	
-	var navheight = jQuery(document).height()-jQuery("#sideNavBox").position().top-jQuery("#s4-ribbonrow").height()-jQuery("#suiteBar").height();
-	
-	if(navheight<content){
-		jQuery("#sideNavBox").height(content);
-	}
-	else
-	{
-		jQuery("#sideNavBox").height(navheight);
-	}
-	  	  
-  }
+      jQuery(document).ready(function () {
 
-	function setTitleImg(){
-		if(jQuery(".ms-siteicon-a")!==null)
-		{
-			var sitelogo = "<a title='홈으로' href='/'>"+jQuery(".ms-siteicon-a").html()+"</a>";
-			jQuery("#suiteBrandingBox").html(sitelogo );
-		}
-		
-		
-	}
-	function setToday()
-	{
-		var myDate=new Date();
-		var monthNames = [ "JAN", "FEB", "MAR", "APR", "MAY", "JUNE","JULY", "AUG", "SEP", "OCT", "NOV", "DEC" ];
-		jQuery(".cal_month").text(monthNames[myDate.getMonth()]);
-		jQuery(".cal_day").text(myDate.getDate());		
-	  	//$("#sideNavBox").html(todaystr+$("#sideNavBox").html());
-	}
+          setToday();
+          //setNavHeight();
+          setTitleImg();
+
+          if (getUrlVars()["IsDlg"] != "1") {
+              //jQuery("#gow365css").attr("href", "");
+              //jQuery('#contentRow').css('width','1000px');
+              jQuery('#contentRow').addClass("contentRowNodialog");
+              jQuery('#contentBox').addClass("contentBoxNodialog");
+              jQuery('#contentBox').css('margin-left', '185px');
+
+          }
+          else {
+              //jQuery("#gow365css").attr("href", "/Gow365/Gow365UI.css");
+          }
+
+      });
+      jQuery(window).resize(function () {
+          setTitleImg();
+          if (jQuery("#DeltaPlaceHolderLeftNavBar") != null) {
+              //setNavHeight();
+          }
+      });
+
+
+      function getUrlVars() {
+          var vars = [], hash;
+          var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+          for (var i = 0; i < hashes.length; i++) {
+              hash = hashes[i].split('=');
+              vars.push(hash[0]);
+              vars[hash[0]] = hash[1];
+          }
+          return vars;
+      }
+      function setNavHeight() {
+          //nav 사이즈가 길수도 있고, Content Size가 길 수도 있고... 
+          var nav = (jQuery("#today").height() + jQuery("#DeltaPlaceHolderLeftNavBar").height());
+          var content = (jQuery("#contentBox").height() > nav ? jQuery("#contentBox").height() : nav);
+
+          var navheight = jQuery(document).height() - jQuery("#sideNavBox").position().top - jQuery("#s4-ribbonrow").height() - jQuery("#suiteBar").height();
+
+          if (navheight < content) {
+              jQuery("#sideNavBox").height(content);
+          }
+          else {
+              jQuery("#sideNavBox").height(navheight);
+          }
+
+      }
+
+      function setTitleImg() {
+          if (jQuery(".ms-siteicon-a") !== null) {
+              var sitelogo = "<a title='홈으로' href='/'>" + jQuery(".ms-siteicon-a").html() + "</a>";
+              jQuery("#suiteBrandingBox").html(sitelogo);
+              jQuery(".ms-siteicon-img").css("margin-left", "20px");
+
+          }
+
+
+      }
+      function setToday() {
+          var myDate = new Date();
+          var monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUNE", "JULY", "AUG", "SEP", "OCT", "NOV", "DEC"];
+          jQuery(".cal_month").text(monthNames[myDate.getMonth()]);
+          jQuery(".cal_day").text(myDate.getDate());
+          //$("#sideNavBox").html(todaystr+$("#sideNavBox").html());
+
+      }
 
   </script>
-  <SharePoint:ImageLink runat="server"/>
-  <SharePoint:SPNoScript runat="server"/>
-  <SharePoint:SPClientIDGenerator runat="server" ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent" />
-  <SharePoint:SharePointForm runat="server" onsubmit="if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;}">
+  <SharePoint:ImageLink ID="ImageLink1" runat="server"/>
+  <SharePoint:SPNoScript ID="SPNoScript1" runat="server"/>
+  <SharePoint:SPClientIDGenerator ID="SPClientIDGenerator1" runat="server" ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent" />
+  <SharePoint:SharePointForm ID="SharePointForm1" runat="server" onsubmit="if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;}">
 	<script type="text/javascript"> var submitHook = function () { return false; }; theForm._spOldSubmit = theForm.submit; theForm.submit = function () { if (!submitHook()) { this._spOldSubmit(); } }; </script>
 	<SharePoint:AjaxDelta id="DeltaSPWebPartManager" runat="server">
-		<WebPartPages:SPWebPartManager runat="Server"/>
+		<WebPartPages:SPWebPartManager ID="SPWebPartManager1" runat="Server"/>
 	</SharePoint:AjaxDelta>
 	<asp:ScriptManager id="ScriptManager" runat="server" EnablePageMethods="false" EnablePartialRendering="true" EnableScriptGlobalization="false" EnableScriptLocalization="true" />
-	<SharePoint:AjaxDelta id="DeltaDelegateControls" runat="server" __designer:Preview="&lt;span id=&quot;ctl00_DeltaDelegateControls&quot;&gt;
-		
-		
-	&lt;/span&gt;" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;DeltaDelegateControls&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;">
-		<SharePoint:DelegateControl runat="server" ControlId="GlobalNavigation" />
-		<SharePoint:DelegateControl ControlId="GlobalSiteLink3" Scope="Farm" runat="server" Visible="false" />
+	<SharePoint:AjaxDelta id="DeltaDelegateControls" runat="server">
+		<SharePoint:DelegateControl ID="DelegateControl2" runat="server" ControlId="GlobalNavigation" />
+		<SharePoint:DelegateControl ID="DelegateControl3" ControlId="GlobalSiteLink3" Scope="Farm" runat="server" Visible="false" />
 	</SharePoint:AjaxDelta>
 <div id="TurnOnAccessibility" style="display:none" class="s4-notdlg noindex">
 	<a id="linkTurnOnAcc" href="#" class="ms-accessible ms-acc-button" onclick="SetIsAccessibilityFeatureEnabled(true);UpdateAccessibilityUI();document.getElementById('linkTurnOffAcc').focus();return false;">
-	<SharePoint:EncodedLiteral runat="server" text="<%$Resources:wss,master_turnonaccessibility%>" EncodeMethod="HtmlEncode" __designer:Preview="사용자 보조 액세스 모드 설정" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;ctl03&#39; /&gt;&lt;P N=&#39;Text&#39; Bound=&#39;True&#39; T=&#39;Resources:wss,master_turnonaccessibility&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;"/></a>
+	<SharePoint:EncodedLiteral ID="EncodedLiteral1" runat="server" text="<%$Resources:wss,master_turnonaccessibility%>" EncodeMethod="HtmlEncode"/></a>
 </div>
 <div id="TurnOffAccessibility" style="display:none" class="s4-notdlg noindex">
 	<a id="linkTurnOffAcc" href="#" class="ms-accessible ms-acc-button" onclick="SetIsAccessibilityFeatureEnabled(false);UpdateAccessibilityUI();document.getElementById('linkTurnOnAcc').focus();return false;">
-	<SharePoint:EncodedLiteral runat="server" text="<%$Resources:wss,master_turnoffaccessibility%>" EncodeMethod="HtmlEncode" __designer:Preview="사용자 보조 액세스 모드 해제" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;ctl04&#39; /&gt;&lt;P N=&#39;Text&#39; Bound=&#39;True&#39; T=&#39;Resources:wss,master_turnoffaccessibility&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;"/></a>
+	<SharePoint:EncodedLiteral ID="EncodedLiteral2" runat="server" text="<%$Resources:wss,master_turnoffaccessibility%>" EncodeMethod="HtmlEncode"/></a>
 </div>
 <div class="s4-notdlg s4-skipribbonshortcut noindex">
-	<a href="javascript:;" onclick="document.getElementById('startNavigation').focus();" class="ms-accessible ms-acc-button" accesskey="<%$Resources:wss,skipribbon_accesskey%>" runat="server">
-	<SharePoint:EncodedLiteral runat="server" text="<%$Resources:wss,skipRibbonCommandsLink%>" EncodeMethod="HtmlEncode" __designer:Preview="리본 명령 건너뛰기" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;ctl05&#39; /&gt;&lt;P N=&#39;Text&#39; Bound=&#39;True&#39; T=&#39;Resources:wss,skipRibbonCommandsLink&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;"/></a>
+	<a id="A1" href="javascript:;" onclick="document.getElementById('startNavigation').focus();" class="ms-accessible ms-acc-button" accesskey="<%$Resources:wss,skipribbon_accesskey%>" runat="server">
+	<SharePoint:EncodedLiteral ID="EncodedLiteral3" runat="server" text="<%$Resources:wss,skipRibbonCommandsLink%>" EncodeMethod="HtmlEncode"/></a>
 </div>
 <div class="s4-notdlg noindex">
-	<a href="javascript:;" onclick="document.getElementById('mainContent').focus();" class="ms-accessible ms-acc-button" runat="server">
-	<SharePoint:EncodedLiteral runat="server" text="<%$Resources:wss,mainContentLink%>" EncodeMethod="HtmlEncode" __designer:Preview="주 콘텐츠로 건너뛰기" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;ctl06&#39; /&gt;&lt;P N=&#39;Text&#39; Bound=&#39;True&#39; T=&#39;Resources:wss,mainContentLink&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;"/></a>
+	<a id="A2" href="javascript:;" onclick="document.getElementById('mainContent').focus();" class="ms-accessible ms-acc-button" runat="server">
+	<SharePoint:EncodedLiteral ID="EncodedLiteral4" runat="server" text="<%$Resources:wss,mainContentLink%>" EncodeMethod="HtmlEncode"/></a>
 </div>
 <div id="TurnOffAnimation" style="display:none;" class="s4-notdlg noindex">
 	<a id="linkTurnOffAnimation" href="#" class="ms-accessible ms-acc-button" onclick="ToggleAnimationStatus();return false;">
-	<SharePoint:EncodedLiteral runat="server" text="<%$Resources:wss,master_disableanimation%>" EncodeMethod="HtmlEncode" __designer:Preview="애니메이션 해제" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;ctl07&#39; /&gt;&lt;P N=&#39;Text&#39; Bound=&#39;True&#39; T=&#39;Resources:wss,master_disableanimation&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;"/></a>
+	<SharePoint:EncodedLiteral ID="EncodedLiteral5" runat="server" text="<%$Resources:wss,master_disableanimation%>" EncodeMethod="HtmlEncode"/></a>
 </div>
 <div id="TurnOnAnimation" style="display:none;" class="s4-notdlg noindex">
 	<a id="linkTurnOnAnimation" href="#" class="ms-accessible ms-acc-button" onclick="ToggleAnimationStatus();return false;">
-	<SharePoint:EncodedLiteral runat="server" text="<%$Resources:wss,master_enableanimation%>" EncodeMethod="HtmlEncode" __designer:Preview="애니메이션 설정" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;ctl08&#39; /&gt;&lt;P N=&#39;Text&#39; Bound=&#39;True&#39; T=&#39;Resources:wss,master_enableanimation&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;"/></a>
+	<SharePoint:EncodedLiteral ID="EncodedLiteral6" runat="server" text="<%$Resources:wss,master_enableanimation%>" EncodeMethod="HtmlEncode"/></a>
 </div>
 <a id="HiddenAnchor" href="javascript:;" style="display:none;"></a>
 <div id="suiteBar" class="ms-dialogHidden noindex">
@@ -134,15 +157,9 @@
 		<div class="ms-table ms-fullWidth">
 			<div class="ms-tableRow">
 				<div class="ms-tableCell ms-verticalAlignMiddle">
-					<SharePoint:DelegateControl id="ID_SuiteBarBrandingDelegate" ControlId="SuiteBarBrandingDelegate" runat="server" __designer:Preview="&lt;span id=&quot;suiteBrandingBox&quot; class=&quot;ms-core-brandingBox&quot;&gt;&lt;a id=&quot;suiteBrandingLink&quot;&gt;&lt;img id=&quot;suiteBrandingIcon&quot; Src=&quot;/_layouts/15/images/O365BrandSuite.png?rev=23&quot; /&gt;&lt;/a&gt;&lt;/span&gt;" __designer:Values="&lt;P N=&#39;ControlId&#39; T=&#39;SuiteBarBrandingDelegate&#39; /&gt;&lt;P N=&#39;ID&#39; T=&#39;ID_SuiteBarBrandingDelegate&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;"/>
+					<SharePoint:DelegateControl id="ID_SuiteBarBrandingDelegate" ControlId="SuiteBarBrandingDelegate" runat="server"/>
 				</div>
-				<SharePoint:AjaxDelta runat="server" id="DeltaSuiteLinks" BlockElement="true" CssClass="ms-core-deltaSuiteLinks" __designer:Preview="&lt;div id=&quot;ctl00_DeltaSuiteLinks&quot; class=&quot;ms-core-deltaSuiteLinks&quot;&gt;
-	
-						&lt;div id=&quot;suiteLinksBox&quot;&gt;
-							
-						&lt;/div&gt;
-				
-&lt;/div&gt;" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;DeltaSuiteLinks&#39; /&gt;&lt;P N=&#39;BlockElement&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;CssClass&#39; T=&#39;ms-core-deltaSuiteLinks&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;">
+				<SharePoint:AjaxDelta runat="server" id="DeltaSuiteLinks" BlockElement="true" CssClass="ms-core-deltaSuiteLinks">
 						<div id="suiteLinksBox">
 							<SharePoint:DelegateControl id="ID_SuiteLinksDelegate" ControlId="SuiteLinksDelegate" runat="server" />
 						</div>
@@ -151,28 +168,7 @@
 		</div>
 	</div>
 	<div id="suiteBarRight">
-		<SharePoint:AjaxDelta runat="server" id="DeltaSuiteBarRight" CssClass="ms-core-deltaSuiteBarRight" BlockElement="true" __designer:Preview="&lt;div id=&quot;ctl00_DeltaSuiteBarRight&quot; class=&quot;ms-core-deltaSuiteBarRight&quot;&gt;
-	
-				&lt;div id=&quot;welcomeMenuBox&quot;&gt;
-  
-				&lt;/div&gt;
-				&lt;div id=&quot;suiteBarButtons&quot;&gt;
-					   &lt;span class=&quot;ms-siteactions-root&quot; id=&quot;siteactiontd&quot;&gt;
-					   
-						
-						&lt;span style=&quot;display:none&quot;&gt;&lt;menu type=&#39;ServerMenu&#39; id=&quot;zz1_SiteActionsMenuMain&quot; hideicons=&quot;true&quot;&gt;&lt;ie:menuitem id=&quot;zz2_MenuItem_ShareThisSite&quot; type=&quot;option&quot; onMenuClick=&quot;EnsureScriptFunc(&amp;#39;sharing.js&amp;#39;, &amp;#39;DisplaySharedWithDialog&amp;#39;, function () { DisplaySharedWithDialog(&amp;#39;\u002f&amp;#39;); })&quot; menuGroupId=&quot;100&quot;&gt;&lt;/ie:menuitem&gt;
-	&lt;ie:menuitem id=&quot;zz3_MenuItem_CreatePage&quot; type=&quot;option&quot; iconSrc=&quot;/_layouts/15/images/NewContentPageHH.png?rev=23&quot; onMenuClick=&quot;OpenCreateWebPageDialog(&amp;#39;\u002f_layouts\u002f15\u002fcreatewebpage.aspx&amp;#39;)&quot; menuGroupId=&quot;200&quot;&gt;&lt;/ie:menuitem&gt;
-	&lt;ie:menuitem id=&quot;zz4_MenuItem_Create&quot; type=&quot;option&quot; onMenuClick=&quot;GoToPage(&amp;#39;\u002f_layouts\u002f15\u002faddanapp.aspx&amp;#39;)&quot; menuGroupId=&quot;200&quot;&gt;&lt;/ie:menuitem&gt;
-	&lt;ie:menuitem id=&quot;zz5_MenuItem_ViewAllSiteContents&quot; type=&quot;option&quot; iconSrc=&quot;/_layouts/15/images/allcontent32.png?rev=23&quot; onMenuClick=&quot;STSNavigate2(event,&amp;#39;/_layouts/15/viewlsts.aspx&amp;#39;);&quot; menuGroupId=&quot;200&quot;&gt;&lt;/ie:menuitem&gt;
-	&lt;ie:menuitem id=&quot;zz6_MenuItem_ChangeTheLook&quot; type=&quot;option&quot; onMenuClick=&quot;STSNavigate2(event,&amp;#39;/_layouts/15/designgallery.aspx&amp;#39;);&quot; menuGroupId=&quot;300&quot;&gt;&lt;/ie:menuitem&gt;
-	&lt;ie:menuitem id=&quot;zz7_MenuItem_Settings&quot; type=&quot;option&quot; iconSrc=&quot;/_layouts/15/images/settingsIcon.png?rev=23&quot; onMenuClick=&quot;GoToPage(&amp;#39;\u002f_layouts\u002f15\u002fsettings.aspx&amp;#39;)&quot; menuGroupId=&quot;300&quot;&gt;&lt;/ie:menuitem&gt;
-	&lt;/menu&gt;&lt;/span&gt;&lt;span id=&quot;zz8_SiteActionsMenu_t&quot; class=&quot;ms-siteactions-normal&quot; title=&quot;설정&quot; onmouseover=&quot;MMU_PopMenuIfShowing(this);MMU_EcbTableMouseOverOut(this, true)&quot; hoveractive=&quot;ms-siteactions-normal ms-siteactions-hover&quot; hoverinactive=&quot;ms-siteactions-normal&quot; onclick=&quot; CoreInvoke(&#39;MMU_Open&#39;,byid(&#39;&#39;), MMU_GetMenuFromClientId(&#39;zz8_SiteActionsMenu&#39;),event,true, null, 0); return false;&quot; foa=&quot;MMU_GetMenuFromClientId(&#39;zz8_SiteActionsMenu&#39;)&quot; oncontextmenu=&quot;ClkElmt(this); return false;&quot;&gt;&lt;a class=&quot;ms-core-menu-root&quot; id=&quot;zz8_SiteActionsMenu&quot; href=&quot;javascript:;&quot; title=&quot;설정&quot; onkeydown=&quot;MMU_EcbLinkOnKeyDown(byid(&#39;&#39;), MMU_GetMenuFromClientId(&#39;zz8_SiteActionsMenu&#39;));&quot; menutokenvalues=&quot;MENUCLIENTID=zz8_SiteActionsMenu,TEMPLATECLIENTID=zz1_SiteActionsMenuMain&quot; serverclientid=&quot;zz8_SiteActionsMenu&quot;&gt;&lt;span class=&quot;ms-siteactions-imgspan&quot;&gt;&lt;img class=&quot;ms-core-menu-buttonIcon&quot; src=&quot;/_layouts/15/images/spcommon.png?rev=23&quot; alt=&quot;설정&quot; title=&quot;설정&quot; /&gt;&lt;/span&gt;&lt;span class=&#39;ms-accessible&#39;&gt;새 창에서 메뉴를 열려면 &amp;lt;Shift+Enter&amp;gt;를 사용하십시오.&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span id=&quot;ms-help&quot;&gt;
-	&lt;a onmouseover=&quot;this.firstChild.firstChild.firstChild.style.left=&amp;#39;-1px&amp;#39;; this.firstChild.firstChild.firstChild.style.top=&amp;#39;-1px&amp;#39;;&quot; onmouseout=&quot;this.firstChild.firstChild.firstChild.style.left=&amp;#39;-19px&amp;#39;; this.firstChild.firstChild.firstChild.style.top=&amp;#39;-1px&amp;#39;;&quot; id=&quot;ctl00_TopHelpLink&quot; onclick=&quot;TopHelpButtonClick(&amp;#39;HelpHome&amp;#39;,event);return false&quot; Href=&quot;#&quot; style=&quot;display:inline-block;height:30px;width:30px;&quot;&gt;&lt;span style=&quot;display:inline-block;overflow:hidden;height:16px;width:16px;padding-left:7px;padding-top:7px;padding-right:7px;padding-bottom:7px;&quot;&gt;&lt;span style=&quot;height:16px;width:16px;position:relative;display:inline-block;overflow:hidden;&quot; class=&quot;s4-clust&quot;&gt;&lt;img src=&quot;/_layouts/15/1042/images/spintl.png?rev=23&quot; alt=&quot;&quot; style=&quot;border:0;position:absolute;left:-19px;top:-1px;&quot; /&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
-&lt;/span&gt;
-				&lt;/div&gt;
-		
-&lt;/div&gt;" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;DeltaSuiteBarRight&#39; /&gt;&lt;P N=&#39;BlockElement&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;CssClass&#39; T=&#39;ms-core-deltaSuiteBarRight&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;">
+		<SharePoint:AjaxDelta runat="server" id="DeltaSuiteBarRight" CssClass="ms-core-deltaSuiteBarRight" BlockElement="true">
 				<div id="welcomeMenuBox">
   <wssuc:Welcome id="IdWelcome" runat="server" EnableViewState="false" />
 				</div>
@@ -187,7 +183,7 @@
 						MenuNotVisibleHtml="&amp;nbsp;"
 						LargeIconMode="false"
 						><CustomTemplate>
-						<SharePoint:FeatureMenuTemplate runat="server"
+						<SharePoint:FeatureMenuTemplate ID="FeatureMenuTemplate1" runat="server"
 							FeatureScope="Site"
 							Location="Microsoft.SharePoint.StandardMenu"
 							GroupId="SiteActions"
@@ -303,35 +299,12 @@
 		<div id="globalNavBox" class="noindex">
 <div id="ribbonBox">
 	<div id="s4-ribboncont">
-		<SharePoint:AjaxDelta id="DeltaSPRibbon" BlockElement="true" runat="server" __designer:Preview="&lt;div id=&quot;ctl00_DeltaSPRibbon&quot;&gt;
-	
-			
-
-			&lt;input id=&quot;RibbonContainer_activeTabId&quot; name=&quot;ctl00$ctl12&quot; type=&quot;hidden&quot; value=&quot;&quot;/&gt;&lt;div id=&#39;RibbonContainer&#39;&gt;&lt;div class=&quot;ms-cui-ribbon ms-cui-needIEFilter&quot; id=&quot;Ribbon&quot; unselectable=&quot;on&quot; aria-describedby=&quot;ribboninstructions&quot; oncontextmenu=&quot;return false&quot; role=&quot;toolbar&quot;&gt;&lt;span class=&quot;ms-cui-hidden&quot; id=&quot;ribboninstructions&quot; unselectable=&quot;on&quot;&gt;리본을 탐색하려면 표준 브라우저 탐색 키를 사용하십시오. 그룹 간을 건너뛰려면 Ctrl+왼쪽 화살표 또는 Ctrl+오른쪽 화살표를 사용하십시오. 첫 번째 리본 탭으로 이동하려면 Ctrl+[를 사용하고 선택한 마지막 명령으로 이동하려면 Ctrl+]를 사용하십시오. 명령을 활성화하려면 Enter 키를 사용하십시오.&lt;/span&gt;&lt;div class=&quot;ms-cui-ribbonTopBars&quot; unselectable=&quot;on&quot;&gt;&lt;div class=&quot;ms-cui-topBar1&quot; unselectable=&quot;on&quot; style=&quot;display:none&quot;&gt;&lt;div class=&quot;ms-cui-qat-container&quot; unselectable=&quot;on&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;ms-cui-topBar2&quot; unselectable=&quot;on&quot;&gt;&lt;div class=&quot;ms-cui-jewel-container&quot; id=&quot;jewelcontainer&quot; unselectable=&quot;on&quot; style=&quot;display:none&quot;&gt;&lt;/div&gt;&lt;div class=&quot;ms-cui-TabRowLeft ms-core-defaultFont ms-dialogHidden&quot; id=&quot;RibbonContainer-TabRowLeft&quot; unselectable=&quot;on&quot;&gt;
-				&lt;/div&gt;&lt;ul class=&quot;ms-cui-tts&quot; unselectable=&quot;on&quot; role=&quot;tablist&quot;&gt;&lt;li class=&quot;ms-cui-tt ms-browseTab ms-cui-tt-s&quot; id=&quot;Ribbon.Read-title&quot; unselectable=&quot;on&quot; role=&quot;tab&quot;&gt;&lt;a class=&quot;ms-cui-tt-a&quot; unselectable=&quot;on&quot; href=&quot;javascript:;&quot; onclick=&quot;_ribbonStartInit(&#39;Ribbon.Read&#39;,false, event);&quot; title=&quot;찾아보기&quot; onkeydown=&quot;if(event != null &amp;&amp; event.keyCode == 13){ if(typeof(_ribbon) != &#39;undefined&#39;) _ribbon.launchedByKeyboard = true; _ribbonStartInit(&#39;Ribbon.Read&#39;,false, event);  }&quot;&gt;&lt;span class=&quot;ms-cui-tt-span&quot; unselectable=&quot;on&quot;&gt;찾아보기&lt;/span&gt;&lt;span class=&quot;ms-cui-hidden&quot; unselectable=&quot;on&quot;&gt;1/1 탭&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div class=&quot;ms-cui-TabRowRight s4-trc-container s4-notdlg ms-core-defaultFont&quot; id=&quot;RibbonContainer-TabRowRight&quot; unselectable=&quot;on&quot;&gt;
-		
-					&lt;a onclick=&quot;EnsureScriptFunc(&amp;#39;sharing.js&amp;#39;, &amp;#39;DisplaySharingDialog&amp;#39;, function(){DisplaySharingDialog(&amp;#39;\u002f&amp;#39;)}); return false;&quot; id=&quot;ctl00_site_share_button&quot; title=&quot;사용자에게 이 사이트에 대한 액세스 권한을 부여합니다.&quot; Href=&quot;javascript:__doPostBack(&#39;ctl00$site_share_button&#39;,&#39;&#39;)&quot; style=&quot;display:inline-block;&quot;&gt;&lt;span class=&quot;ms-promotedActionButton-text&quot;&gt;공유&lt;/span&gt;&lt;/a&gt;
-					&lt;a onclick=&quot;SP.SOD.executeFunc(&amp;#39;followingcommon.js&amp;#39;, &amp;#39;FollowSite&amp;#39;, function() { FollowSite(); }); return false;&quot; id=&quot;site_follow_button&quot; title=&quot;내 사이트 페이지에서 빠르게 다시 방문할 수 있도록 이 사이트를 팔로우합니다.&quot; Href=&quot;javascript:__doPostBack(&#39;ctl00$site_follow_button&#39;,&#39;&#39;)&quot; style=&quot;display:inline-block;&quot;&gt;&lt;span class=&quot;ms-promotedActionButton-text&quot;&gt;팔로우&lt;/span&gt;&lt;/a&gt;
-					&lt;a id=&quot;ctl00_SyncPromotedAction&quot; title=&quot;컴퓨터에 이 문서 라이브러리와 동기화된 복사본을 만듭니다.&quot; Href=&quot;javascript:__doPostBack(&#39;ctl00$SyncPromotedAction&#39;,&#39;&#39;)&quot; style=&quot;display:inline-block;&quot;&gt;&lt;span class=&quot;ms-promotedActionButton-text&quot;&gt;동기화&lt;/span&gt;&lt;/a&gt;
-					
-&lt;span id=&quot;fullscreenmodebox&quot; class=&quot;ms-qatbutton&quot;&gt;
-	&lt;span id=&quot;fullscreenmode&quot;&gt;
-		&lt;a onmouseover=&quot;this.firstChild.firstChild.firstChild.style.left=&amp;#39;-125px&amp;#39;; this.firstChild.firstChild.firstChild.style.top=&amp;#39;-178px&amp;#39;;&quot; onmouseout=&quot;this.firstChild.firstChild.firstChild.style.left=&amp;#39;-143px&amp;#39;; this.firstChild.firstChild.firstChild.style.top=&amp;#39;-178px&amp;#39;;&quot; id=&quot;ctl00_fullscreenmodeBtn&quot; onclick=&quot;SetFullScreenMode(true);PreventDefaultNavigation();return false;&quot; Href=&quot;#&quot; style=&quot;display:inline-block;height:30px;width:30px;&quot;&gt;&lt;span style=&quot;display:inline-block;overflow:hidden;height:16px;width:16px;padding-left:7px;padding-top:7px;padding-right:7px;padding-bottom:7px;&quot;&gt;&lt;span style=&quot;height:16px;width:16px;position:relative;display:inline-block;overflow:hidden;&quot; class=&quot;s4-clust&quot;&gt;&lt;img src=&quot;/_layouts/15/images/spcommon.png?rev=23&quot; alt=&quot;&quot; style=&quot;border:0;position:absolute;left:-143px;top:-178px;&quot; /&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
-	&lt;/span&gt;
-	&lt;span id=&quot;exitfullscreenmode&quot; style=&quot;display: none;&quot;&gt;
-		&lt;a onmouseover=&quot;this.firstChild.firstChild.firstChild.style.left=&amp;#39;-179px&amp;#39;; this.firstChild.firstChild.firstChild.style.top=&amp;#39;-96px&amp;#39;;&quot; onmouseout=&quot;this.firstChild.firstChild.firstChild.style.left=&amp;#39;-107px&amp;#39;; this.firstChild.firstChild.firstChild.style.top=&amp;#39;-178px&amp;#39;;&quot; id=&quot;ctl00_exitfullscreenmodeBtn&quot; onclick=&quot;SetFullScreenMode(false);PreventDefaultNavigation();return false;&quot; Href=&quot;#&quot; style=&quot;display:inline-block;height:30px;width:30px;&quot;&gt;&lt;span style=&quot;display:inline-block;overflow:hidden;height:16px;width:16px;padding-left:7px;padding-top:7px;padding-right:7px;padding-bottom:7px;&quot;&gt;&lt;span style=&quot;height:16px;width:16px;position:relative;display:inline-block;overflow:hidden;&quot; class=&quot;s4-clust&quot;&gt;&lt;img src=&quot;/_layouts/15/images/spcommon.png?rev=23&quot; alt=&quot;&quot; style=&quot;border:0;position:absolute;left:-107px;top:-178px;&quot; /&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
-	&lt;/span&gt;
-&lt;/span&gt;
-
-
-				&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
-		
-&lt;/div&gt;" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;DeltaSPRibbon&#39; /&gt;&lt;P N=&#39;BlockElement&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;">
+		<SharePoint:AjaxDelta id="DeltaSPRibbon" BlockElement="true" runat="server">
 			<SharePoint:DelegateControl runat="server" ID="GlobalDelegate0" ControlId="GlobalSiteLink0" />
-			<SharePoint:SPRibbon
+			<SharePoint:SPRibbon ID="SPRibbon1"
 				runat="server"
 				PlaceholderElementId="RibbonContainer"
-				CssFile="" ><SharePoint:SPRibbonPeripheralContent
+				CssFile="" ><SharePoint:SPRibbonPeripheralContent ID="SPRibbonPeripheralContent1"
 					runat="server"
 					CssClass="ms-core-defaultFont ms-dialogHidden"
 					Location="TabRowLeft">
@@ -341,9 +314,9 @@
 					ID="RibbonTabRowRight"
 					CssClass="s4-trc-container s4-notdlg ms-core-defaultFont">
 		
-					<SharePoint:SPSharePromotedActionButton runat="server"/>
-					<SharePoint:DelegateControl runat="server" ControlId="PromotedActions" AllowMultipleControls="true" />
-					<SharePoint:SPSyncPromotedActionButton runat="server"/>
+					<SharePoint:SPSharePromotedActionButton ID="SPSharePromotedActionButton1" runat="server"/>
+					<SharePoint:DelegateControl ID="DelegateControl4" runat="server" ControlId="PromotedActions" AllowMultipleControls="true" />
+					<SharePoint:SPSyncPromotedActionButton ID="SPSyncPromotedActionButton1" runat="server"/>
 					<SharePoint:PageStateActionButton id="PageStateActionButton" runat="server" Visible="false" />
 <span id="fullscreenmodebox" class="ms-qatbutton">
 	<span id="fullscreenmode">
@@ -397,7 +370,7 @@
 			/>
 	</span>
 </span>
-<SharePoint:DeveloperDashboard runat="server" />
+<SharePoint:DeveloperDashboard ID="DeveloperDashboard1" runat="server" />
 <SharePoint:DeveloperDashboardLauncher
 	ID="DeveloperDashboardLauncher"
 	ThemeKey="spcommon"
@@ -424,28 +397,13 @@
 				</SharePoint:SPRibbonPeripheralContent></SharePoint:SPRibbon>
 		</SharePoint:AjaxDelta>
 	</div>
-	<SharePoint:AjaxDelta id="DeltaSPNavigation" runat="server" __designer:Preview="&lt;span id=&quot;ctl00_DeltaSPNavigation&quot;&gt;
-		
-			&lt;span id=&quot;ctl00_SPNavigation_ctl00_publishingRibbon&quot;&gt;&lt;/span&gt;
-
-		
-	&lt;/span&gt;" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;DeltaSPNavigation&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;">
+	<SharePoint:AjaxDelta id="DeltaSPNavigation" runat="server">
 		<asp:ContentPlaceHolder ID="SPNavigation" runat="server">
 			<SharePoint:DelegateControl runat="server" ControlId="PublishingConsole" Id="PublishingConsoleDelegate" />
 		</asp:ContentPlaceHolder>
 	</SharePoint:AjaxDelta>
 </div>
-<SharePoint:AjaxDelta id="DeltaWebPartAdderUpdatePanelContainer" BlockElement="true" CssClass="ms-core-webpartadder" runat="server" __designer:Preview="&lt;div id=&quot;ctl00_DeltaWebPartAdderUpdatePanelContainer&quot; class=&quot;ms-core-webpartadder&quot;&gt;
-	
-  &lt;div id=&quot;WebPartAdderUpdatePanelContainer&quot;&gt;
-	&lt;div id=&quot;ctl00_WebPartAdderUpdatePanel&quot;&gt;
-		
-		&lt;span id=&quot;ctl00_WebPartAdder&quot;&gt;&lt;/span&gt;
-		
-	&lt;/div&gt;
-  &lt;/div&gt;
-
-&lt;/div&gt;" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;DeltaWebPartAdderUpdatePanelContainer&#39; /&gt;&lt;P N=&#39;BlockElement&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;CssClass&#39; T=&#39;ms-core-webpartadder&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;">
+<SharePoint:AjaxDelta id="DeltaWebPartAdderUpdatePanelContainer" BlockElement="true" CssClass="ms-core-webpartadder" runat="server">
   <div id="WebPartAdderUpdatePanelContainer">
 	<asp:UpdatePanel
 		ID="WebPartAdderUpdatePanel"
@@ -472,11 +430,7 @@
 		<div id="titleAreaRow"
 			class="ms-tableRow">
 <div id="siteIcon" class="ms-tableCell ms-verticalAlignTop">
-	<SharePoint:AjaxDelta id="DeltaSiteLogo" BlockElement="true" runat="server" __designer:Preview="&lt;div id=&quot;ctl00_DeltaSiteLogo&quot;&gt;
-	
-		&lt;a id=&quot;ctl00_onetidProjectPropertyTitleGraphic&quot; class=&quot;ms-siteicon-a&quot;&gt;&lt;img id=&quot;ctl00_onetidHeadbnnr2&quot; class=&quot;ms-siteicon-img&quot; name=&quot;onetidHeadbnnr0&quot; Src=&quot;/SiteAssets/sharepointLogo.gif&quot; alt=&quot;홈&quot; /&gt;&lt;/a&gt;
-	
-&lt;/div&gt;" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;DeltaSiteLogo&#39; /&gt;&lt;P N=&#39;BlockElement&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;">
+	<SharePoint:AjaxDelta id="DeltaSiteLogo" BlockElement="true" runat="server">
 		<SharePoint:SPSimpleSiteLink CssClass="ms-siteicon-a" runat="server" id="onetidProjectPropertyTitleGraphic" ><SharePoint:SiteLogoImage CssClass="ms-siteicon-img" name="onetidHeadbnnr0" id="onetidHeadbnnr2" LogoImageUrl="/_layouts/15/images/siteIcon.png?rev=23" runat="server"/></SharePoint:SPSimpleSiteLink>
 	</SharePoint:AjaxDelta>
 </div>
@@ -484,9 +438,7 @@
 				<div
 					class="ms-breadcrumb-top">
 <div class="ms-breadcrumb-dropdownBox" style="display:none;">
-<SharePoint:AjaxDelta id="DeltaBreadcrumbDropdown" runat="server" __designer:Preview="&lt;span id=&quot;ctl00_DeltaBreadcrumbDropdown&quot;&gt;
-	
-&lt;/span&gt;" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;DeltaBreadcrumbDropdown&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;">
+<SharePoint:AjaxDelta id="DeltaBreadcrumbDropdown" runat="server">
 	<SharePoint:PopoutMenu
 		Visible="false"
 		runat="server"
@@ -501,7 +453,7 @@
 		AnchorCss="ms-breadcrumb-anchor"
 		AnchorOpenCss="ms-breadcrumb-anchor-open"
 		MenuCss="ms-breadcrumb-menu ms-noList"><div class="ms-breadcrumb-top">
-			<asp:Label runat="server" CssClass="ms-breadcrumb-header" Text="<%$Resources:wss,master_breadcrumbHeader%>" /></div><asp:ContentPlaceHolder id="PlaceHolderTitleBreadcrumb" runat="server"><SharePoint:ListSiteMapPath
+			<asp:Label ID="Label1" runat="server" CssClass="ms-breadcrumb-header" Text="<%$Resources:wss,master_breadcrumbHeader%>" /></div><asp:ContentPlaceHolder id="PlaceHolderTitleBreadcrumb" runat="server"><SharePoint:ListSiteMapPath ID="ListSiteMapPath1"
 				runat="server"
 				SiteMapProviders="SPSiteMapProvider,SPContentMapProvider"
 				RenderCurrentNodeAsLink="false"
@@ -524,20 +476,7 @@
 				SkipLinkText="" /></asp:ContentPlaceHolder></SharePoint:PopoutMenu>
 </SharePoint:AjaxDelta>
 </div>
-<SharePoint:AjaxDelta id="DeltaTopNavigation" BlockElement="true" CssClass="ms-displayInline ms-core-navigation" role="navigation" runat="server" __designer:Preview="&lt;div id=&quot;ctl00_DeltaTopNavigation&quot; class=&quot;ms-displayInline ms-core-navigation&quot; role=&quot;navigation&quot;&gt;
-	
-	
-	
-		&lt;div id=&quot;zz9_TopNavigationMenu&quot; class=&quot; noindex ms-core-listMenu-horizontalBox&quot;&gt;
-		&lt;ul id=&quot;zz10_RootAspMenu&quot; class=&quot;root ms-core-listMenu-root static&quot;&gt;
-			&lt;li class=&quot;static ms-verticalAlignTop ms-listMenu-editLink ms-navedit-editArea&quot;&gt;&lt;span class=&quot;ms-navedit-editSpan&quot; id=&quot;zz9_TopNavigationMenu_NavMenu_Edit&quot;&gt;&lt;a id=&quot;zz9_TopNavigationMenu_NavMenu_EditLinks&quot; class=&quot;ms-navedit-editLinksText&quot; href=&quot;#&quot; onclick=&quot;g_QuickLaunchMenu = null; EnsureScriptParams(&amp;#39;quicklaunch.js&amp;#39;, &amp;#39;QuickLaunchInitEditMode&amp;#39;, &amp;#39;zz9_TopNavigationMenu&amp;#39;, 1, 2, 0, &amp;#39;\u002f&amp;#39;); cancelDefault(event); return false;&quot;&gt;&lt;span class=&quot;ms-displayInlineBlock&quot;&gt;&lt;span class=&quot;ms-navedit-editLinksIconWrapper ms-verticalAlignMiddle&quot;&gt;&lt;img class=&quot;ms-navedit-editLinksIcon&quot; Src=&quot;/_layouts/15/images/spcommon.png?rev=23&quot; /&gt;&lt;/span&gt;&lt;span class=&quot;ms-metadata ms-verticalAlignMiddle&quot;&gt;링크 편집&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;span id=&quot;zz9_TopNavigationMenu_NavMenu_Loading&quot; class=&quot;ms-navedit-menuLoading ms-hide&quot;&gt;&lt;a id=&quot;zz9_TopNavigationMenu_NavMenu_GearsLink&quot; href=&quot;#&quot; onclick=&quot;HideGears(); return false;&quot; title=&quot;이 애니메이션은 작업이 진행 중임을 나타냅니다. 이 애니메이션 이미지를 제거하려면 클릭하세요.&quot;&gt;&lt;img id=&quot;zz9_TopNavigationMenu_NavMenu_GearsImage&quot; Src=&quot;/_layouts/15/images/loadingcirclests16.gif?rev=23&quot; /&gt;&lt;/a&gt;&lt;/span&gt;&lt;div id=&quot;zz9_TopNavigationMenu_NavMenu_ErrorMsg&quot; class=&quot;ms-navedit-errorMsg&quot;&gt;
-
-			&lt;/div&gt;&lt;/span&gt;&lt;/li&gt;
-		&lt;/ul&gt;
-	&lt;/div&gt;
-	
-
-&lt;/div&gt;" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;DeltaTopNavigation&#39; /&gt;&lt;P N=&#39;BlockElement&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;CssClass&#39; T=&#39;ms-displayInline ms-core-navigation&#39; /&gt;&lt;P N=&#39;HasAttributes&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;">
+<SharePoint:AjaxDelta id="DeltaTopNavigation" BlockElement="true" CssClass="ms-displayInline ms-core-navigation" role="navigation" runat="server">
 	<SharePoint:DelegateControl runat="server" ControlId="TopNavigationDataSource" Id="topNavigationDelegate"><Template_Controls>
 			<asp:SiteMapDataSource
 				ShowStartingNode="False"
@@ -565,61 +504,32 @@
 </SharePoint:AjaxDelta>
 				</div>
 <h1 id="pageTitle" class="ms-core-pageTitle">
-  <SharePoint:AjaxDelta id="DeltaPlaceHolderPageTitleInTitleArea" runat="server" __designer:Preview="&lt;span id=&quot;ctl00_DeltaPlaceHolderPageTitleInTitleArea&quot;&gt;
-	
-		&lt;span&gt;&lt;/span&gt;
-	
-  &lt;/span&gt;" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;DeltaPlaceHolderPageTitleInTitleArea&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;">
+  <SharePoint:AjaxDelta id="DeltaPlaceHolderPageTitleInTitleArea" runat="server">
 	<asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" runat="server">
-		<SharePoint:SPTitleBreadcrumb
+		<SharePoint:SPTitleBreadcrumb ID="SPTitleBreadcrumb1"
 			  runat="server"
 			  RenderCurrentNodeAsLink="true"
 				  SiteMapProvider="SPContentMapProvider"
-			  CentralAdminSiteMapProvider="SPXmlAdminContentMapProvider"><PATHSEPARATORTEMPLATE><SharePoint:ClusteredDirectionalSeparatorArrow runat="server" />
+			  CentralAdminSiteMapProvider="SPXmlAdminContentMapProvider"><PATHSEPARATORTEMPLATE><SharePoint:ClusteredDirectionalSeparatorArrow ID="ClusteredDirectionalSeparatorArrow1" runat="server" />
 		</PATHSEPARATORTEMPLATE></SharePoint:SPTitleBreadcrumb>
 	</asp:ContentPlaceHolder>
   </SharePoint:AjaxDelta>
-  <SharePoint:AjaxDelta BlockElement="true" id="DeltaPlaceHolderPageDescription" CssClass="ms-displayInlineBlock ms-normalWrap" runat="server" __designer:Preview="&lt;div id=&quot;ctl00_DeltaPlaceHolderPageDescription&quot; class=&quot;ms-displayInlineBlock ms-normalWrap&quot;&gt;
-	
-	&lt;a href=&quot;javascript:;&quot; id=&quot;ms-pageDescriptionDiv&quot; style=&quot;display:none;&quot;&gt;
-	  &lt;span id=&quot;ms-pageDescriptionImage&quot;&gt;&amp;#160;&lt;/span&gt;
-	&lt;/a&gt;
-	&lt;span class=&quot;ms-accessible&quot; id=&quot;ms-pageDescription&quot;&gt;
-	  
-	&lt;/span&gt;
-	&lt;script type=&quot;text/javascript&quot;&gt;// &lt;![CDATA[ 
-
-_spBodyOnLoadFunctionNames.push(&quot;setupPageDescriptionCallout&quot;); // ]]&gt;
-&lt;/script&gt;
-  
-&lt;/div&gt;" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;DeltaPlaceHolderPageDescription&#39; /&gt;&lt;P N=&#39;BlockElement&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;CssClass&#39; T=&#39;ms-displayInlineBlock ms-normalWrap&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;">
+  <SharePoint:AjaxDelta BlockElement="true" id="DeltaPlaceHolderPageDescription" CssClass="ms-displayInlineBlock ms-normalWrap" runat="server">
 	<a href="javascript:;" id="ms-pageDescriptionDiv" style="display:none;">
 	  <span id="ms-pageDescriptionImage">&#160;</span>
 	</a>
 	<span class="ms-accessible" id="ms-pageDescription">
 	  <asp:ContentPlaceHolder id="PlaceHolderPageDescription" runat="server" />
 	</span>
-	<SharePoint:ScriptBlock runat="server">_spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); </SharePoint:ScriptBlock>
+	<SharePoint:ScriptBlock ID="ScriptBlock1" runat="server">_spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); </SharePoint:ScriptBlock>
   </SharePoint:AjaxDelta>
 </h1>
 			</div>
 			<div class="ms-tableCell ms-verticalAlignTop">
-<SharePoint:AjaxDelta id="DeltaPlaceHolderSearchArea" BlockElement="true" CssClass="ms-mpSearchBox ms-floatRight" runat="server" __designer:Preview="&lt;div id=&quot;ctl00_DeltaPlaceHolderSearchArea&quot; class=&quot;ms-mpSearchBox ms-floatRight&quot;&gt;
-	
-  
-	&lt;div id=&quot;searchInputBox&quot;&gt;
-	  &lt;div class=&quot;ms-webpart-chrome ms-webpart-chrome-fullWidth &quot;&gt;
-		&lt;div WebPartID=&quot;00000000-0000-0000-0000-000000000000&quot; HasPers=&quot;true&quot; id=&quot;WebPartctl00_PlaceHolderSearchArea_SmallSearchInputBox1&quot; width=&quot;100%&quot; class=&quot;ms-WPBody noindex &quot; OnlyForMePart=&quot;true&quot; allowDelete=&quot;false&quot; style=&quot;&quot; &gt;&lt;div componentid=&quot;ctl00_PlaceHolderSearchArea_SmallSearchInputBox1_csr&quot; id=&quot;ctl00_PlaceHolderSearchArea_SmallSearchInputBox1_csr&quot;&gt;&lt;div id=&quot;SearchBox&quot; name=&quot;Control&quot;&gt;&lt;div class=&quot;ms-srch-sb ms-srch-sb-border&quot; id=&quot;ctl00_PlaceHolderSearchArea_SmallSearchInputBox1_csr_sboxdiv&quot;&gt;&lt;input type=&quot;text&quot; value=&quot;검색...&quot; maxlength=&quot;2048&quot; accessKey=&quot;S&quot; title=&quot;검색...&quot; id=&quot;ctl00_PlaceHolderSearchArea_SmallSearchInputBox1_csr_sbox&quot; autocomplete=&quot;off&quot; autocorrect=&quot;off&quot; onkeypress=&quot;EnsureScriptFunc(&#39;Search.ClientControls.js&#39;, &#39;Srch.U&#39;, function() {if (Srch.U.isEnterKey(String.fromCharCode(event.keyCode))) {$find(&#39;ctl00_PlaceHolderSearchArea_SmallSearchInputBox1_csr&#39;).search($get(&#39;ctl00_PlaceHolderSearchArea_SmallSearchInputBox1_csr_sbox&#39;).value);return Srch.U.cancelEvent(event);}})&quot; onkeydown=&quot;EnsureScriptFunc(&#39;Search.ClientControls.js&#39;, &#39;Srch.U&#39;, function() {var ctl = $find(&#39;ctl00_PlaceHolderSearchArea_SmallSearchInputBox1_csr&#39;);ctl.activateDefaultQuerySuggestionBehavior();})&quot; onfocus=&quot;EnsureScriptFunc(&#39;Search.ClientControls.js&#39;, &#39;Srch.U&#39;, function() {var ctl = $find(&#39;ctl00_PlaceHolderSearchArea_SmallSearchInputBox1_csr&#39;);ctl.hidePrompt();ctl.setBorder(true);})&quot; onblur=&quot;EnsureScriptFunc(&#39;Search.ClientControls.js&#39;, &#39;Srch.U&#39;, function() {var ctl = $find(&#39;ctl00_PlaceHolderSearchArea_SmallSearchInputBox1_csr&#39;); if (ctl){ ctl.showPrompt(); ctl.setBorder(false);}})&quot; class=&quot;ms-textSmall ms-srch-sb-prompt ms-helperText&quot;/&gt;&lt;a title=&quot;검색&quot; class=&quot;ms-srch-sb-searchLink&quot; id=&quot;ctl00_PlaceHolderSearchArea_SmallSearchInputBox1_csr_SearchLink&quot; onclick=&quot;EnsureScriptFunc(&#39;Search.ClientControls.js&#39;, &#39;Srch.U&#39;, function() {$find(&#39;ctl00_PlaceHolderSearchArea_SmallSearchInputBox1_csr&#39;).search($get(&#39;ctl00_PlaceHolderSearchArea_SmallSearchInputBox1_csr_sbox&#39;).value);})&quot; href=&quot;javascript: {}&quot; &gt;&lt;img src=&quot;/_layouts/15/images/searchresultui.png?rev=23&quot; class=&quot;ms-srch-sb-searchImg&quot; id=&quot;searchImg&quot; alt=&quot;검색&quot; /&gt;&lt;/a&gt;&lt;div class=&quot;ms-qSuggest-container ms-shadow&quot; id=&quot;AutoCompContainer&quot;&gt;&lt;div id=&quot;ctl00_PlaceHolderSearchArea_SmallSearchInputBox1_csr_AutoCompList&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;noscript&gt;&lt;div id=&quot;ctl00_PlaceHolderSearchArea_SmallSearchInputBox1_noscript&quot;&gt;브라우저에서 JavaScript가 활성화되지 않은 것 같습니다. JavaScript를 설정하고 다시 시도해 보세요.&lt;/div&gt;&lt;/noscript&gt;&lt;div id=&quot;ctl00_PlaceHolderSearchArea_SmallSearchInputBox1&quot;&gt;
-
-		&lt;/div&gt;&lt;div class=&quot;ms-clear&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;/div&gt;
-  
-
-&lt;/div&gt;" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;DeltaPlaceHolderSearchArea&#39; /&gt;&lt;P N=&#39;BlockElement&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;CssClass&#39; T=&#39;ms-mpSearchBox ms-floatRight&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;">
+<SharePoint:AjaxDelta id="DeltaPlaceHolderSearchArea" BlockElement="true" CssClass="ms-mpSearchBox ms-floatRight" runat="server">
   <asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server">
 	<div id="searchInputBox">
-	  <SharePoint:DelegateControl runat="server" ControlId="SmallSearchInputBox" />
+	  <SharePoint:DelegateControl ID="DelegateControl5" runat="server" ControlId="SmallSearchInputBox" />
 	</div>
   </asp:ContentPlaceHolder>
 </SharePoint:AjaxDelta>
@@ -648,16 +558,29 @@ _spBodyOnLoadFunctionNames.push(&quot;setupPageDescriptionCallout&quot;); // ]]&
 	    	<span>Welcome</span>
 	    </div>
 	    <div class="name_mail">
-	    	
+	    	<div>
+		    	<span class="aprTitle">결재할 문서</span> : <span id="doApr" class="aprContent"></span>
+	    	</div>
+	    	<div>
+		    	<span class="aprTitle">진행중 문서</span> : <span id="ingApr" class="aprContent"></span>
+	    	</div>
+	    	<div>
+		    	<span class="aprTitle">참조된 문서</span> : <span id="refApr" class="aprContent"></span>
+	    	</div>	    	
 		</div>
 	</div>
 </div>
 <!--Today-->
+<!--HomePage-->
+<div class="homepage">
+	<a href="http://www.gowit.co.kr" onclick="void(window.open(this.href,'','')); return false;">
+	<img alt="홈페이지" src="/GOW365/Today/banner_gowit.gif"  /></a>
+</div>
+<!--HomePage-->
+
+
 	 
-  <SharePoint:AjaxDelta id="DeltaPlaceHolderLeftNavBar" BlockElement="true" CssClass="ms-core-navigation" role="navigation" runat="server" __designer:Preview="&lt;table cellpadding=&quot;4&quot; cellspacing=&quot;0&quot; style=&quot;font: messagebox; color: buttontext; background-color: buttonface; border: solid 1px; border-top-color: buttonhighlight; border-left-color: buttonhighlight; border-bottom-color: buttonshadow; border-right-color: buttonshadow&quot;&gt;
-                &lt;tr&gt;&lt;td nowrap&gt;&lt;span style=&quot;font-weight: bold; color: red&quot;&gt;Error Rendering Control&lt;/span&gt; - DeltaPlaceHolderLeftNavBar&lt;/td&gt;&lt;/tr&gt;
-                &lt;tr&gt;&lt;td&gt;An unhandled exception has occurred.&lt;br /&gt;Object reference not set to an instance of an object.&lt;/td&gt;&lt;/tr&gt;
-              &lt;/table&gt;" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;DeltaPlaceHolderLeftNavBar&#39; /&gt;&lt;P N=&#39;BlockElement&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;CssClass&#39; T=&#39;ms-core-navigation&#39; /&gt;&lt;P N=&#39;HasAttributes&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;">
+  <SharePoint:AjaxDelta id="DeltaPlaceHolderLeftNavBar" BlockElement="true" CssClass="ms-core-navigation" role="navigation" runat="server">
 	<asp:ContentPlaceHolder id="PlaceHolderLeftNavBar" runat="server">
 				<a id="startNavigation" name="startNavigation" tabIndex="-1"></a>
 				<asp:ContentPlaceHolder id="PlaceHolderLeftNavBarTop" runat="server" />
@@ -672,7 +595,7 @@ _spBodyOnLoadFunctionNames.push(&quot;setupPageDescriptionCallout&quot;); // ]]&
 					QuickLaunchControlId="V4QuickLaunchMenu"
 					ContainedControl="QuickLaunch"
 					EnableViewState="false"
-					><SharePoint:DelegateControl runat="server" ControlId="QuickLaunchDataSource">
+					><SharePoint:DelegateControl ID="DelegateControl6" runat="server" ControlId="QuickLaunchDataSource">
 				<Template_Controls>
 					<asp:SiteMapDataSource SiteMapProvider="SPNavigationProvider" ShowStartingNode="False" id="QuickLaunchSiteMap" StartingNodeUrl="sid:1025" runat="server" />
 				</Template_Controls>
@@ -684,7 +607,7 @@ _spBodyOnLoadFunctionNames.push(&quot;setupPageDescriptionCallout&quot;); // ]]&
 						ContainedControl="TreeView"
 						CssClass="ms-tv-box"
 					><SharePoint:SPLinkButton runat="server" NavigateUrl="~site/_layouts/15/viewlsts.aspx" id="idNavLinkSiteHierarchyV4" Text="<%$Resources:wss,treeview_header%>" accesskey="<%$Resources:wss,quiklnch_allcontent_AK%>"
-						CssClass="ms-tv-header" /><SharePoint:DelegateControl runat="server" ControlId="TreeViewAndDataSource">
+						CssClass="ms-tv-header" /><SharePoint:DelegateControl ID="DelegateControl7" runat="server" ControlId="TreeViewAndDataSource">
 				
 								<Template_Controls>
 								<SharePoint:SPHierarchyDataSourceControl
@@ -734,32 +657,17 @@ _spBodyOnLoadFunctionNames.push(&quot;setupPageDescriptionCallout&quot;); // ]]&
 <div id="contentBox"
  aria-live="polite" aria-relevant="all">
   <div id="notificationArea" class="ms-notif-box"></div>
-	<SharePoint:AjaxDelta id="DeltaPageStatusBar" BlockElement="true" runat="server" __designer:Preview="&lt;div id=&quot;ctl00_DeltaPageStatusBar&quot;&gt;
-	
-		&lt;div id=&quot;pageStatusBar&quot;&gt;&lt;/div&gt;
-	
-&lt;/div&gt;" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;DeltaPageStatusBar&#39; /&gt;&lt;P N=&#39;BlockElement&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;">
+	<SharePoint:AjaxDelta id="DeltaPageStatusBar" BlockElement="true" runat="server">
 		<div id="pageStatusBar"></div>
 	</SharePoint:AjaxDelta>
-	<SharePoint:AjaxDelta id="DeltaPlaceHolderMain" BlockElement="true" IsMainContent="true" runat="server" __designer:Preview="&lt;div id=&quot;ctl00_DeltaPlaceHolderMain&quot;&gt;
-	
-		&lt;a id=&quot;mainContent&quot; name=&quot;mainContent&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;
-		
-	
-&lt;/div&gt;" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;DeltaPlaceHolderMain&#39; /&gt;&lt;P N=&#39;IsMainContent&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;BlockElement&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;">
+	<SharePoint:AjaxDelta id="DeltaPlaceHolderMain" BlockElement="true" IsMainContent="true" runat="server">
 		<a id="mainContent" name="mainContent" tabindex="-1"></a>
 		<asp:ContentPlaceHolder id="PlaceHolderMain" runat="server" />
 	</SharePoint:AjaxDelta>
 </div>
-<SharePoint:AjaxDelta id="DeltaFormDigest" BlockElement="true" runat="server" __designer:Preview="&lt;div id=&quot;ctl00_DeltaFormDigest&quot;&gt;
-	
-	
-		
-	
-
-&lt;/div&gt;" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;DeltaFormDigest&#39; /&gt;&lt;P N=&#39;BlockElement&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;">
+<SharePoint:AjaxDelta id="DeltaFormDigest" BlockElement="true" runat="server">
 	<asp:ContentPlaceHolder id="PlaceHolderFormDigest" runat="server">
-		<SharePoint:FormDigest runat="server"/>
+		<SharePoint:FormDigest ID="FormDigest1" runat="server"/>
 	</asp:ContentPlaceHolder>
 </SharePoint:AjaxDelta>
 <asp:ContentPlaceHolder id="PlaceHolderSiteName" runat="server" Visible="false" />
@@ -781,14 +689,43 @@ _spBodyOnLoadFunctionNames.push(&quot;setupPageDescriptionCallout&quot;); // ]]&
 		</div>
 		</div>
 </SharePoint:SharePointForm>
-	<SharePoint:AjaxDelta id="DeltaPlaceHolderUtilityContent" runat="server" __designer:Preview="&lt;span id=&quot;ctl00_DeltaPlaceHolderUtilityContent&quot;&gt;
-		
-	&lt;/span&gt;" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;DeltaPlaceHolderUtilityContent&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;">
+	<SharePoint:AjaxDelta id="DeltaPlaceHolderUtilityContent" runat="server">
 		<asp:ContentPlaceHolder id="PlaceHolderUtilityContent" runat="server"/>
 	</SharePoint:AjaxDelta>
-	<SharePoint:ScriptBlock runat="server" __designer:Preview="&lt;script type=&quot;text/javascript&quot;&gt;// &lt;![CDATA[ 
+	<SharePoint:ScriptBlock ID="ScriptBlock2" runat="server">var g_Workspace = "s4-workspace"; </SharePoint:ScriptBlock>
+	<script type="text/javascript">
+	    ExecuteOrDelayUntilScriptLoaded(TodayApprovalInitialize, "sp.js");
 
-var g_Workspace = &quot;s4-workspace&quot;; // ]]&gt;
-&lt;/script&gt;" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;ctl21&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;">var g_Workspace = "s4-workspace"; </SharePoint:ScriptBlock>
+	    function TodayApprovalInitialize() {
+
+	        clientContextApproval = new SP.ClientContext("/workflow");
+	        var web = clientContextApproval.get_web();
+	        var list = web.get_lists().getByTitle("eApproval");
+	        var camlQuery = new SP.CamlQuery();
+
+	        var q1 = '<View><Query><Where><And><And><And><Neq><FieldRef Name="aprStatus" /><Value Type="Text">임시저장</Value></Neq><Neq><FieldRef Name="aprStatus" /><Value Type="Text">반려</Value></Neq></And><Neq><FieldRef Name="aprStatus" /><Value Type="Text">승인완료</Value></Neq></And><Contains><FieldRef Name=\'curApprover\' /><Value Type=\'Lookup\'><UserID/></Value></Contains></And></Where></Query></View>';
+	        camlQuery.set_viewXml(q1);
+	        ApprovallistItems1 = list.getItems(camlQuery);
+	        clientContextApproval.load(ApprovallistItems1);
+
+	        var q2 = '<View><Query><Where><And><And><And><Or><Or><Or><Or><Eq><FieldRef Name="approver1" /><Value Type="Lookup"><UserID/></Value></Eq><Eq><FieldRef Name="approver2" /><Value Type="Lookup"><UserID/></Value></Eq></Or><Eq><FieldRef Name="approver3" /><Value Type="Lookup"><UserID/></Value></Eq></Or><Eq><FieldRef Name="approver4" /><Value Type="Lookup"><UserID/></Value></Eq></Or><Eq><FieldRef Name="reviewer" /><Value Type="Lookup"><UserID/></Value></Eq></Or><Neq><FieldRef Name="aprStatus" /><Value Type="Text">임시저장</Value></Neq></And><Neq><FieldRef Name="aprStatus" /><Value Type="Text">승인완료</Value></Neq></And><Neq><FieldRef Name="aprStatus" /><Value Type="Text">반려</Value></Neq></And></Where></Query></View>';
+	        camlQuery.set_viewXml(q2);
+	        ApprovallistItems2 = list.getItems(camlQuery);
+	        clientContextApproval.load(ApprovallistItems2);
+
+	        clientContextApproval.executeQueryAsync(Function.createDelegate(this, this.ApprovalListItemsLoadSuccess),
+            Function.createDelegate(this, this.ApprovalQueryFailed));
+
+	    }
+	    function ApprovalListItemsLoadSuccess(sender, args) {
+	        jQuery('#doApr').html(this.ApprovallistItems1.get_count());
+	        jQuery('#ingApr').html(this.ApprovallistItems2.get_count());
+	    }
+
+	    function ApprovalQueryFailed(sender, args) {
+	        alert('request failed ' + args.get_message() + '\n' + args.get_stackTrace());
+	    }
+
+	</script>
 </body>
 </SharePoint:SPHtmlTag>

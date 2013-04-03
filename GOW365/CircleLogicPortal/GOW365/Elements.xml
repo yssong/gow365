@@ -86,5 +86,15 @@
     <File Path="GOW365\MemberSearch\search_head.gif" Url="GOW365/MemberSearch/search_head.gif" />
     <File Path="GOW365\MemberSearch\search_btn_32.gif" Url="GOW365/MemberSearch/search_btn_32.gif" />
     <File Path="GOW365\MemberSearch\nopicture.gif" Url="GOW365/MemberSearch/nopicture.gif" />
+    <File Path="GOW365\SiteMap\SiteMap.css" Url="GOW365/SiteMap/SiteMap.css" />
+    <File Path="GOW365\SiteMap\site_icon.gif" Url="GOW365/SiteMap/site_icon.gif" />
+    <File Path="GOW365\SiteMap\site_li_border.gif" Url="GOW365/SiteMap/site_li_border.gif" />
+    <File Path="GOW365\SiteMap\sitemap_h1.gif" Url="GOW365/SiteMap/sitemap_h1.gif" />
+    <File Path="GOW365\SiteMap\sitemap_h2.gif" Url="GOW365/SiteMap/sitemap_h2.gif" />
+    <File Path="GOW365\SiteMap\sitemap_h3.gif" Url="GOW365/SiteMap/sitemap_h3.gif" />
+    <File Path="GOW365\SiteMap\sitemap_h4.gif" Url="GOW365/SiteMap/sitemap_h4.gif" />
+    <File Path="GOW365\SiteMap\sitemap_h5.gif" Url="GOW365/SiteMap/sitemap_h5.gif" />
+    <File Path="GOW365\SiteMap\sitemap_head.gif" Url="GOW365/SiteMap/sitemap_head.gif" />
+    <File Path="GOW365\Today\banner_gowit.gif" Url="GOW365/Today/banner_gowit.gif" />
   </Module>
 </Elements>

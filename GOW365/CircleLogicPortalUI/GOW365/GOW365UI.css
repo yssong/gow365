@@ -80,7 +80,7 @@
 	/*background-color:#e4e5e7;*/
 	/*background-color:rgb(0, 114, 198);*/
 	background-color:#565656;
-	border-bottom:3px #1F7EC2 solid;
+	border-bottom:5px #1F7EC2 solid;
 	text-align:left;
 }
 #titleAreaBox
@@ -110,12 +110,21 @@
 }
 #DeltaTopNavigation .ms-core-listMenu-horizontalBox a.ms-core-listMenu-item:hover, .ms-core-listMenu-horizontalBox a.ms-core-listMenu-selected.ms-core-listMenu-item:hover, a.ms-tv-item:hover, a.ms-tv-header:hover
 {
-	color:#ebeded;
+	color:#efefef;
 }
 #DeltaTopNavigation .ms-core-listMenu-item, .ms-core-listMenu-item:link, .ms-core-listMenu-item:visited, .ms-tv-item:link, .ms-tv-item:visited, .ms-tv-header:link, .ms-tv-header:visited
 {
-	color:#aaaaaa;
+	color:#cccccc;
 }
+#DeltaTopNavigation li.dynamic .ms-core-listMenu-item, li.dynamic .ms-core-listMenu-item:link,li.dynamic .ms-core-listMenu-item:visited
+{
+	color:#666666;
+}
+#DeltaTopNavigation li.dynamic a.ms-core-listMenu-item:hover, li.dynamic a.ms-core-listMenu-selected.ms-core-listMenu-item:hover
+{
+	color:#888888;
+}
+
 .ms-breadcrumb-top
 {
 	text-align:center;
@@ -157,7 +166,7 @@
 {
 	padding-top:8px;
 	margin:0 auto;
-	width:1000px;
+	/*width:1000px;*/
 	text-align:left;
 }
 #sideNavBox
@@ -173,11 +182,13 @@
 {
 	/*background-color:#ffffff;*/
 	margin-top:0px;
-	margin-left:190px;
 	min-height: 500px;
 }
-
-
+#sideNavBox .ms-webpartzone-cell, #sideNavBox .ms-WPBody 
+{
+	margin-left:0px;
+	padding:5px;
+}
 .ms-core-sideNavBox-removeLeftMargin
 {
 	margin-left:0px;
@@ -189,7 +200,7 @@
 table.ms-listviewtable TH
 {
 	/* orange under line */
-/* 	border-bottom:2px #ff8000 solid;*/
+	/* 	border-bottom:2px #ff8000 solid;*/
 	/* Grey under line */	
  	border-bottom:1px #aaaaaa solid;
 }
@@ -207,14 +218,17 @@ table.ms-listviewtable td.ms-vb-imgFirstCell
 {
 	font-size:12pt;
 }
-
 .ms-webpartzone-cell
 {
 	background-color:#ffffff;
-	padding:10px;
 	border-radius: 8px;
+	padding:10px;
 	margin-bottom:8px;
-	margin-left:5px;
+	/*margin-left:5px;*/
+}
+.ms-webpartzone-cell .ms-WPBody
+{
+	margin:10px;
 }
 .ms-core-listMenu-verticalBox
 {
@@ -227,17 +241,57 @@ table.ms-listviewtable td.ms-vb-imgFirstCell
 {
 	font-size:10pt;
 }
-/**Today**/
+.contentRowNodialog
+{
+	width:1000px;
+}
+.contentBoxNodialog
+{
+	margin-left:185px;
+}
+a, .ms-link:visited
+{
+	color:#565656;
+}
+/*blog design*/
+#sideNavBox .ms-WPBody 
+{
+	margin-left:0px;
+	padding-left:0px;
+}
+.ms-blog-LeftColumn
+{
+	padding-left:8px;
+}
+.ms-blog-quickLinksEntry
+{
+	color:#999999;	
+}
+.ms-blog-listMenu-root
+{
+	width:150px;
+}
+#sideNavBox .ms-core-listMenu-item, li.dynamic .ms-core-listMenu-item:link,li.dynamic .ms-core-listMenu-item:visited
+{
+	color:#666666;
+}
+#sideNavBox a.ms-core-listMenu-item:hover, li.dynamic a.ms-core-listMenu-selected.ms-core-listMenu-item:hover
+{
+	color:#888888;
+}
+
+
+/*Today*/
 .today{
 	width:180px;
-	min-height:100px;
+	min-height:125px;
 	background-color:#fff;
 	border-radius: 8px;
 	margin-bottom:8px;
 }
 .day_left{
 	width:70px;
-	margin-top:22px;
+	margin-top:37px;
 	float:left;
 }
 .calender{
@@ -265,7 +319,7 @@ table.ms-listviewtable td.ms-vb-imgFirstCell
 	text-align:center;
 }
 .day_right{
-	margin-top:22px;
+	margin-top:12px;
 	float:left;
 }
 .day_name{
@@ -285,16 +339,28 @@ table.ms-listviewtable td.ms-vb-imgFirstCell
 	font-size:12px;
 	font-family:Dotum,'돋움';
 }
-.name_mail table tr{
+.name_mail div{
 	height:26px;
+	line-height:26px;
 }
-.name_mail table th{
+.name_mail .aprTitle{
+	font-size:12px;
 	height:26px;
 	line-height:26px;
 	color:#5a5a5a
 }
-.name_mail table td{
+.name_mail .aprContent{
 	height:26px;
 	line-height:26px;
 	color:#dd5600;
+}
+.homepage
+{
+	width:180px;
+	height:auto;
+	background-color:#fff;
+	border-radius: 8px;
+	padding-top:12px;
+	padding-bottom:12px;
+	margin-bottom:8px;
 }

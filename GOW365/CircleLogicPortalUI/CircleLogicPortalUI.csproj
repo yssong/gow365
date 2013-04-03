@@ -77,6 +77,7 @@
     <Content Include="GOW365\Elements.xml" />
     <Content Include="GOW365\GOW365UI.css" />
     <Content Include="GOW365\GOW365UI_blue.css" />
+    <Content Include="GOW365\Gow365UI_GreyOrange.css" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

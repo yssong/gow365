@@ -97,6 +97,7 @@ function <%=this.ClientID%>Initialize() {
     
 }
 
+
 function onListItemsLoadFailed(sender, args) {
 	SP.UI.Notify.addNotification("List items load failed: " + args.get_message(), false);
 }
@@ -136,7 +137,11 @@ function <%=this.ClientID%>onListItemsLoadSuccess1(sender, args) {
             }
             else if (listtype1 == SP.ListTemplateType.discussionBoard)
             {
-                var rooturl = escape(listurl+"/"+oListItem.get_item("Title"));
+                //타이틀의 특수문자 제거 ? # $ % * &
+                var title = oListItem.get_item("Title").replace(/\?/gi, "").replace(/\#/gi, "").replace(/\%/gi, "").replace(/\*/gi, "").replace(/\&/gi, "");
+                //가운데 연속된 "."," " 는 한개로 마지막은 잘라냄
+                title = title.replace(/\.{1,}/gi, ".").replace(/\.$/gi, "").replace(/\s$/gi, "");
+                var rooturl = encodeURIComponent(listurl + "/" + title).replace(/\!/gi, "%21").replace(/\(/gi, "%28").replace(/\)/gi, "%29").replace(/\_/gi, "%5F").replace(/\-/gi, "%2D").replace(/\./gi, "%2E");
                 itemHtml += "<li><span class='tabTitle'><a href='#' onclick=\"javascript:openDialog('" + listurl + "/Flat.aspx?rootfolder=" + rooturl + "&FolderCTID=" + contenttype1 + "'); return false;\">";
                 itemHtml += oListItem.get_item("Title") + "(" + oListItem.get_item("ItemChildCount") + ")";
                 itemHtml += "</a>";
@@ -194,7 +199,11 @@ function <%=this.ClientID%>onListItemsLoadSuccess2(sender, args) {
             }
             else if (listtype1 == SP.ListTemplateType.discussionBoard)
             {
-                var rooturl = escape(listurl+"/"+oListItem.get_item("Title"));
+                //타이틀의 특수문자 제거 ? # $ % * &
+                var title = oListItem.get_item("Title").replace(/\?/gi, "").replace(/\#/gi, "").replace(/\%/gi, "").replace(/\*/gi, "").replace(/\&/gi, "");
+                //가운데 연속된 "."," " 는 한개로 마지막은 잘라냄
+                title = title.replace(/\.{1,}/gi, ".").replace(/\.$/gi, "").replace(/\s$/gi, "");
+                var rooturl = encodeURIComponent(listurl + "/" + title).replace(/\!/gi, "%21").replace(/\(/gi, "%28").replace(/\)/gi, "%29").replace(/\_/gi, "%5F").replace(/\-/gi, "%2D").replace(/\./gi, "%2E");
                 itemHtml += "<li><span class='tabTitle'><a href='#' onclick=\"javascript:openDialog('" + listurl + "/Flat.aspx?rootfolder=" + rooturl + "&FolderCTID=" + contenttype2 + "'); return false;\">";
                 itemHtml += oListItem.get_item("Title") + "(" + oListItem.get_item("ItemChildCount") + ")";
                 itemHtml += "</a>";
@@ -243,8 +252,7 @@ function <%=this.ClientID%>onListItemsLoadSuccess3(sender, args) {
                 itemHtml += oListItem.get_item('DisplayName');
                 itemHtml += "</a>";
                 itemHtml += "</span><span class='tabName'>" + oListItem.get_item("Editor").get_lookupValue() + "</span><span  class='tabDate'>" + oListItem.get_item("Modified").format("yyyy-MM-dd") + "</span></li>";
-
-                                
+                    
             }
             else if (listtype1 == SP.ListTemplateType.links)
             {
@@ -255,7 +263,11 @@ function <%=this.ClientID%>onListItemsLoadSuccess3(sender, args) {
             }
             else if (listtype1 == SP.ListTemplateType.discussionBoard)
             {
-                var rooturl = escape(listurl+"/"+oListItem.get_item("Title"));
+                //타이틀의 특수문자 제거 ? # $ % * &
+                var title = oListItem.get_item("Title").replace(/\?/gi, "").replace(/\#/gi, "").replace(/\%/gi, "").replace(/\*/gi, "").replace(/\&/gi, "");
+                //가운데 연속된 "."," " 는 한개로 마지막은 잘라냄
+                title = title.replace(/\.{1,}/gi, ".").replace(/\.$/gi, "").replace(/\s$/gi, "");
+                var rooturl = encodeURIComponent(listurl + "/" + title).replace(/\!/gi, "%21").replace(/\(/gi, "%28").replace(/\)/gi, "%29").replace(/\_/gi, "%5F").replace(/\-/gi, "%2D").replace(/\./gi, "%2E");
                 itemHtml += "<li><span class='tabTitle'><a href='#' onclick=\"javascript:openDialog('" + listurl + "/Flat.aspx?rootfolder=" + rooturl + "&FolderCTID=" + contenttype3 + "'); return false;\">";
                 itemHtml += oListItem.get_item("Title") + "(" + oListItem.get_item("ItemChildCount") + ")";
                 itemHtml += "</a>";

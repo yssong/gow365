@@ -93,6 +93,15 @@
     <ElementFile Location="GOW365\MemberSearch\search_head.gif" />
     <ElementFile Location="GOW365\MemberSearch\search_btn_32.gif" />
     <ElementFile Location="GOW365\MemberSearch\nopicture.gif" />
+    <ElementFile Location="GOW365\SiteMap\SiteMap.css" />
+    <ElementFile Location="GOW365\SiteMap\site_icon.gif" />
+    <ElementFile Location="GOW365\SiteMap\site_li_border.gif" />
+    <ElementFile Location="GOW365\SiteMap\sitemap_h1.gif" />
+    <ElementFile Location="GOW365\SiteMap\sitemap_h2.gif" />
+    <ElementFile Location="GOW365\SiteMap\sitemap_h3.gif" />
+    <ElementFile Location="GOW365\SiteMap\sitemap_h4.gif" />
+    <ElementFile Location="GOW365\SiteMap\sitemap_h5.gif" />
+    <ElementFile Location="GOW365\SiteMap\sitemap_head.gif" />
     <ElementManifest Location="NewDocsTabWebPart\Elements.xml" />
     <ElementFile Location="NewDocsTabWebPart\NewDocsTabWebPart.webpart" />
     <ElementManifest Location="DropDownLinkWebPart\Elements.xml" />
@@ -105,5 +114,9 @@
     <ElementFile Location="ImageSlideWebPart\ImageSlideWebPart.webpart" />
     <ElementManifest Location="MemberSearch\Elements.xml" />
     <ElementFile Location="MemberSearch\MemberSearch.webpart" />
+    <ElementManifest Location="SiteMap\Elements.xml" />
+    <ElementFile Location="SiteMap\SiteMap.webpart" />
+    <ElementManifest Location="ApprovalStatusWebPart\Elements.xml" />
+    <ElementFile Location="ApprovalStatusWebPart\ApprovalStatusWebPart.webpart" />
   </ElementManifests>
 </Feature>

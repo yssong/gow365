@@ -12,6 +12,8 @@
         <SafeControl Assembly="CircleLogicPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fbf14c1666825aaf" Namespace="CircleLogicPortal.CalendarWebPart" TypeName="*" />
         <SafeControl Assembly="CircleLogicPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fbf14c1666825aaf" Namespace="CircleLogicPortal.ImageSlideWebPart" TypeName="*" />
         <SafeControl Assembly="CircleLogicPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fbf14c1666825aaf" Namespace="CircleLogicPortal.MemberSearch" TypeName="*" />
+        <SafeControl Assembly="CircleLogicPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fbf14c1666825aaf" Namespace="CircleLogicPortal.SiteMap" TypeName="*" />
+        <SafeControl Assembly="CircleLogicPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fbf14c1666825aaf" Namespace="CircleLogicPortal.ApprovalStatusWebPart" TypeName="*" />
       </SafeControls>
     </Assembly>
   </Assemblies>
