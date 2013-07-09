@@ -1,7 +1,7 @@
 ﻿.membersearch{
-	width:196px;
-	padding-left:12px;
-    padding-right:12px;
+	width:216px;
+	padding-left:0px;
+    padding-right:0px;
     padding-top:5px;
     padding-bottom:5px;
 
@@ -30,20 +30,15 @@
         list-style-type: none;
 }
 .searchresult {
-    width:190px;
+    width:auto;
     min-height:40px;
     height:auto;
     margin-top:3px;
-    margin: 0;
-    padding: 0;
-    display: inline;
-    line-height:inherit;
-    list-style-type: none;
-    border-top-color:#dbdbde;
-    border-top-width:1px;
-    border-top-style:solid;
-    vertical-align:top;
-    position:relative;
+	margin-top:5px;
+	border:solid 1px #CCC;
+	padding:5px;
+	min-height:50px;
+
 }
 .member {
     width:190px;
@@ -62,32 +57,42 @@
 .userInfo {
     padding:0px;
     margin:0px;
-    margin-left:40px;
-    width:140px;
+    margin-left:5px;
+    padding-bottom:3px;
+    width:auto;
     min-height:45px;
     height:auto;
 }
 .uName {
-    width:150px;
+
+	color:#565656;
+	
+	margin-left:0;
+	padding-bottom:5px;
+	padding-top:2px;
+	font-weight:bold;
+
+    width:190px;
     line-height:inherit;
     word-break:break-all;
     word-wrap:break-word;
+}
+.searchresult div
+{
+	width:auto;
+	
+	margin:0px;
+    line-height:inherit;
+    word-break:break-all;
+    word-wrap:break-word;
+    
 }
 .uDept {
-    width:150px;
-    line-height:inherit;
-    word-break:break-all;
-    word-wrap:break-word;
+
 }
 .uPhone {
-    width:150px;
-    line-height:inherit;
-    word-break:break-all;
-    word-wrap:break-word;
+
 }
 .uMail {
-    width:150px;
-    line-height:inherit;
-    word-break:break-all;
-    word-wrap:break-word;
+
 }

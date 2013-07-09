@@ -1,10 +1,6 @@
 ﻿#siteIcon
 {
 	display:none;
-	/*
-	height:0px;
-	overflow:hidden;
-	*/
 }
 .ms-core-deltaSuiteLinks
 {
@@ -52,7 +48,8 @@
 }
 #titleAreaBox
 {
-	background-color: #44649f;
+	/*background-color: #44649f;*/
+	background-color: #104E8B;
 	margin-left:180px;
 	margin-right:0px;
 	padding-left:20px;
@@ -77,6 +74,11 @@
 .ms-core-listMenu-horizontalBox a.ms-core-listMenu-item:hover, .ms-core-listMenu-horizontalBox a.ms-core-listMenu-selected.ms-core-listMenu-item:hover, a.ms-tv-item:hover, a.ms-tv-header:hover
 {
 	color:#fbfd04;
+}
+#sideNavBox .ms-core-listMenu-item, li.dynamic .ms-core-listMenu-item:link, li.dynamic .ms-core-listMenu-item:visited
+{
+	color:#666666;
+	font-size:12px;
 }
 .ms-breadcrumb-box
 {
@@ -131,34 +133,123 @@ table.ms-listviewtable td.ms-vb-imgFirstCell
 }
 .ms-core-listMenu-item, .ms-core-listMenu-item:link, .ms-core-listMenu-item:visited, .ms-tv-item:link, .ms-tv-item:visited, .ms-tv-header:link, .ms-tv-header:visited
 {
-	color:#bbbbbb;
+	color:#dddddd;
 }
+#sideNavBox .ms-core-listMenu-item,#sideNavBox  .ms-core-listMenu-item:link,#sideNavBox  .ms-core-listMenu-item:visited,#sideNavBox  .ms-tv-item:link,#sideNavBox  .ms-tv-item:visited,#sideNavBox  .ms-tv-header:link,#sideNavBox  .ms-tv-header:visited
+{
+	color:#666666;
+	font-size:12px;
+}
+
 #sideNavBox .menu-item-text
 {
 	color:#666666;
 }
-/*SiteMap*/
-.sitebox h3{
-	color: #167bc1;
-	letter-spacing: -2px;
-	padding-top: 14px;
-	padding-bottom: 12px;
-	padding-left: 10px;
-	font-family: "맑은고딕", Dotum, "돋움";
-	font-size: 16px;
-	font-weight: bold;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	border-top-color: #167bc1;
-	border-bottom-color: #ccc;
-	border-top-width: 3px;
-	border-bottom-width: 1px;
-	border-top-style: solid;
-	border-bottom-style: solid;
+.ms-webpart-chrome-title, .ms-webpart-titleText
+{
+	font-family:"Malgun Gothic","맑은 고딕",Gulim,"굴림",sans-serif;
+	font-size:12pt;
 }
-.sitebox h3 a,.sitebox h3 a:link{
-	color: #167bc1;
-	text-decoration:none;
+.ms-webpart-titleText
+{
+	margin-left:5px;
+	margin-top:5px;
+}
+#contentBox
+{
+	padding-top:5px;
+	margin-top:0px;
+	margin-left:200px;
+	min-height: 500px;
+}
+
+#contentBox .ms-WPBody 
+{
+	padding-left:5px;
+	padding-right:10px;
+}
+#Refinement
+{
+	padding-left:10px;
+}
+
+/**Today**/
+.today{
+	width:180px;
+	min-height:110px;
+	background:#e4e5e7;
+	margin-top:14px;
+}
+.day_left{
+	width:68px;
+	margin-top:23px;
+	float:left;
+}
+.day_right{
+	float:left;
+	width:106px;
+	padding-bottom:10px;
+}
+
+.calender{
+	background:url(Today/blue_today_calenderbg.gif) no-repeat;
+	width:46px;
+	height:47px;
+	margin-left:10px;
+}
+.cal_month{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#fff;
+	font-size:10px;
+	font-weight:bold;
+	width:46px;
+	text-align:center;
+	padding-top:7px;
+}
+.cal_day{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#333;
+	font-size:18px;
+	padding-top:3px;
+	text-align:center;
+}
+.day_namebtn{
+	border-bottom:solid 2px #0972b6;
+	width:100%;
+	height:25px;
+	margin-bottom:2px;
+}
+.day_name{
+	width:100px;
+	border-bottom:solid 2px #0972b6;
+	padding-left:8px;
+	padding-bottom:6px;
+	padding-top:6px;
+	font-size:12px;
+	font-weight:bold;
+	font-family:Dotum,'돋움';
+}
+.name_mail div{
+	height:26px;
+	line-height:26px;
+	color:#5a5a5a;
+	background:url(Today/blue_today_text_line.gif) repeat-x center bottom;
+}
+.name_mail .aprTitle{
+	font-size:12px;
+	/*font-weight:bold;*/
+	height:26px;
+	line-height:26px;
+	color:#5a5a5a
+}
+.name_mail .aprContent{
+	height:26px;
+	line-height:26px;
+	color:#dd5600;
+}
+.graybg_line{
+	background:url('Today/blue_bgline.gif') repeat-x left center;
+	width:100%;
+	height:2px;
+	padding:8px 0;
 }

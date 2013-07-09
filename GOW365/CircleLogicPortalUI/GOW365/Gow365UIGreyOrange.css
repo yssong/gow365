@@ -227,12 +227,12 @@ table.ms-listviewtable td.ms-vb-imgFirstCell
 {
 	background-color:#ffffff;
 	border-radius: 8px;
-	padding:10px;
+	padding:5px;
 	margin-bottom:8px;
 }
 .ms-webpartzone-cell .ms-WPBody
 {
-	margin:10px;
+	margin:7px;
 }
 .ms-core-listMenu-verticalBox
 {
@@ -263,6 +263,20 @@ a, .ms-link:visited
 	width:32px;
 	height:32px;
 }
+table .ms-formbody
+{
+	width:250px;
+}
+
+table .ms-formbody
+{
+	width:550px;
+}
+#Refinement
+{
+	padding-left:10px;
+}
+
 /*blog design*/
 #sideNavBox .ms-WPBody 
 {
@@ -377,29 +391,4 @@ a, .ms-link:visited
 	padding-top:12px;
 	padding-bottom:12px;
 	margin-bottom:8px;
-}
-/*SiteMap*/
-.sitebox h3{
-	color: #167bc1;
-	letter-spacing: -2px;
-	padding-top: 14px;
-	padding-bottom: 12px;
-	padding-left: 10px;
-	font-family: "맑은고딕", Dotum, "돋움";
-	font-size: 16px;
-	font-weight: bold;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	border-top-color: #167bc1;
-	border-bottom-color: #ccc;
-	border-top-width: 3px;
-	border-bottom-width: 1px;
-	border-top-style: solid;
-	border-bottom-style: solid;
-}
-.sitebox h3 a,.sitebox h3 a:link{
-	color: #167bc1;
-	text-decoration:none;
 }

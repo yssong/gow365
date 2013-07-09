@@ -63,14 +63,13 @@ function <%=this.ClientID%>onListItemsLoadSuccess(sender, args) {
 		   
             if (listtype1 == SP.ListTemplateType.links)
             {
-                itemHtml += "<option id='<%=this.ClientID%>"+oListItem.get_item("ID")+"' value='"+oListItem.get_item("Url").get_url()+"'>";
-                itemHtml += oListItem.get_item("Title");
+                itemHtml += "<option id='<%=this.ClientID%>"+oListItem.get_item("ID")+"' value='"+oListItem.get_item("URL").get_url()+"'>";
+                itemHtml += oListItem.get_item("URL").get_description();
                 itemHtml += "</option>";
                 
             }
             else if (listtype1 == 170)
             {
-                
                 itemHtml += "<option id='<%=this.ClientID%>"+oListItem.get_item("ID")+"' value='"+oListItem.get_item("LinkLocation").get_url()+"'>";
                 itemHtml += oListItem.get_item("Title");
                 itemHtml += "</option>";

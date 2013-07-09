@@ -20,8 +20,8 @@ function <%=this.ClientID%>Initialize() {
 
 	var camlQuery = new SP.CamlQuery();
 	
-    var q = "<View><Query><Where><And><Neq><FieldRef Name='ContentType' /><Value Type='String'>Folder</Value></Neq><Neq><FieldRef Name='ContentType' /><Value Type='String'>폴더</Value></Neq>"+
-"</And></Where><OrderBy><FieldRef Name='Modified' Ascending='FALSE' /></OrderBy><QueryOptions><RowLimit><%=ItemCount%></RowLimit></QueryOptions></Query></View>";
+	var q = "<View  Scope='RecursiveAll'><Query><Where><And><Neq><FieldRef Name='ContentType' /><Value Type='String'>Folder</Value></Neq><Neq><FieldRef Name='ContentType' /><Value Type='String'>폴더</Value></Neq>" +
+"</And></Where><OrderBy><FieldRef Name='Modified' Ascending='FALSE' /></OrderBy></Query><RowLimit><%=ItemCount%></RowLimit></View>";
 
     camlQuery.set_viewXml(q);
 

@@ -16,6 +16,7 @@
 	margin-left: 6px;
 	float: left;
 }
+/*MoveTOmasterpageUICSS
 .sitebox h3{
 	color: #167bc1;
 	letter-spacing: -2px;
@@ -29,7 +30,7 @@
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 0px;
-	/*border-top-color: #f86d08;*/
+	border-top-color: #f86d08;
 	border-bottom-color: #ccc;
 	border-top-width: 3px;
 	border-bottom-width: 1px;
@@ -37,9 +38,10 @@
 	border-bottom-style: solid;
 }
 .sitebox h3 a,.sitebox h3 a:link{
-	/*color: #f86d08;*/
+	color: #f86d08;
 	text-decoration:none;
 }
+*/
 .sitemapbox
 {
 	padding-top: 0px;

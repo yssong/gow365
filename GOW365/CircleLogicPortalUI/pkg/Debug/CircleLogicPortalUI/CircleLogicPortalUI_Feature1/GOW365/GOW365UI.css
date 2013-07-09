@@ -253,6 +253,10 @@ a, .ms-link:visited
 {
 	color:#565656;
 }
+.ms-formbody
+{
+	width:450px;
+}
 /*blog design*/
 #sideNavBox .ms-WPBody 
 {

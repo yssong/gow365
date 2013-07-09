@@ -24,7 +24,8 @@ function <%=this.ClientID%>memberSearch() {
 	clientContext.executeQueryAsync(
 		function (sender, args) {
             jQuery('#<%=this.ClientID %>items ul li').remove();
-			var <%=this.ClientID %>listItemEnumerator = <%=this.ClientID %>_webusers.getEnumerator();
+		    var <%=this.ClientID %>listItemEnumerator = <%=this.ClientID %>_webusers.getEnumerator();
+		    var i = 0;
         	while (<%=this.ClientID %>listItemEnumerator.moveNext()) {
                 var <%=this.ClientID %>itemStr = "";
 				var listItem = <%=this.ClientID %>listItemEnumerator.get_current();
@@ -34,16 +35,22 @@ function <%=this.ClientID%>memberSearch() {
 				var userId= listItem.get_id();
                 var MobilePhone = (listItem.get_item('MobilePhone')==null?"":listItem.get_item('MobilePhone'));
                 var WorkPhone = (listItem.get_item('WorkPhone')==null?"":listItem.get_item('WorkPhone'));
-                var JobTitle = (listItem.get_item('JobTitle')==null?"":listItem.get_item('JobTitle'));
-                var Department = (listItem.get_item('Department')==null?"":listItem.get_item('Department'));
+                var JobTitle = (listItem.get_item('JobTitle')==null?"직함":listItem.get_item('JobTitle'));
+                var Department = (listItem.get_item('Department')==null?"부서":listItem.get_item('Department'));
                 var Email = (listItem.get_item('EMail')==null?"":listItem.get_item('EMail'));
                 var picture = (listItem.get_item('Picture')==null?"<%=ImgUrl%>nopicture.gif":listItem.get_item('Picture').get_url());
                 
-                <%=this.ClientID %>itemstr="<li class='searchresult'>"+"<div class='photo'><img width=40 height=40 src='"+picture +"'/></div>";
-                <%=this.ClientID %>itemstr+="<div class='userInfo'><div class='uName'>"+DisplayName+
-                "</div><div class='uDept'>"+Department+" / "+JobTitle+
-                "</div><div class='uPhone'>"+MobilePhone+"</div><div class='uPhone'>"+WorkPhone+
-                "</div><div class='uMail'>"+Email+"</div></div></li>";
+        	    if (i == 0) {
+        	        jQuery('#<%=this.ClientID %>items ul').append("<li><div style='width:100%;text-align:right;'><span  onclick='<%=this.ClientID %>clearSearch()' style='margin-right:10px;cursor:pointer;'>clear</span></div></li>");
+        	    }
+        	    i++;
+
+                <%=this.ClientID %>itemstr="<li class='searchresult'>"+"<div class='photo' style='display:none'><img width=40 height=40 src='"+picture +"'/></div>";
+                <%=this.ClientID %>itemstr += "<div class='userInfo'><div class='uName'>" + DisplayName + "</div>"+
+                "<div class='uDept'>dept : "+ Department + " / " + JobTitle +"</div>"+
+                "<div class='uPhone'>mobile : " + MobilePhone + "</div>" +
+                "<div class='uPhone'>office : " + WorkPhone +"</div>"+
+                "<div class='uMail'><a href='mailto:"+Email+"'>"+Email+"</a></div></div></li>";
                 jQuery('#<%=this.ClientID %>items ul').append(<%=this.ClientID %>itemstr);
 			}
 			
@@ -51,7 +58,11 @@ function <%=this.ClientID%>memberSearch() {
 		function (sender, args) {
 			return null;
 		});
+    
 }
+    function <%=this.ClientID %>clearSearch() {
+        jQuery('#<%=this.ClientID %>items ul li').remove();
+    }
 </script>
 <div class="membersearch">
  <div class="search_head">
@@ -71,7 +82,7 @@ function <%=this.ClientID%>memberSearch() {
    </tbody>
   </table>
  </div>
- <div id="<%=this.ClientID %>items">
+ <div id="<%=this.ClientID %>items" class="search_result">
      <ul class="searchItems">
 
      </ul>

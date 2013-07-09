@@ -96,5 +96,16 @@
     <File Path="GOW365\SiteMap\sitemap_h5.gif" Url="GOW365/SiteMap/sitemap_h5.gif" />
     <File Path="GOW365\SiteMap\sitemap_head.gif" Url="GOW365/SiteMap/sitemap_head.gif" />
     <File Path="GOW365\Today\banner_gowit.gif" Url="GOW365/Today/banner_gowit.gif" />
+    <File Path="GOW365\Today\blue_today_calenderbg.gif" Url="GOW365/Today/blue_today_calenderbg.gif" />
+    <File Path="GOW365\Today\blue_today_pwbtn.gif" Url="GOW365/Today/blue_today_pwbtn.gif" />
+    <File Path="GOW365\Today\blue_today_text_line.gif" Url="GOW365/Today/blue_today_text_line.gif" />
+    <File Path="GOW365\Today\gray_bgline.gif" Url="GOW365/Today/gray_bgline.gif" />
+    <File Path="GOW365\Quicklink\quicklink_dotline.png" Url="GOW365/Quicklink/quicklink_dotline.png" />
+    <File Path="GOW365\Quicklink\quicklink_img04.png" Url="GOW365/Quicklink/quicklink_img04.png" />
+    <File Path="GOW365\Quicklink\quicklink_img05.png" Url="GOW365/Quicklink/quicklink_img05.png" />
+    <File Path="GOW365\Quicklink\quicklink_img06.png" Url="GOW365/Quicklink/quicklink_img06.png" />
+    <File Path="GOW365\Quicklink\quicklink_img07.png" Url="GOW365/Quicklink/quicklink_img07.png" />
+    <File Path="GOW365\Quicklink\quicklink_img08.png" Url="GOW365/Quicklink/quicklink_img08.png" />
+    <File Path="GOW365\Quicklink\quicklink_img09.png" Url="GOW365/Quicklink/quicklink_img09.png" />
   </Module>
 </Elements>

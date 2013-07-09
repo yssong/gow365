@@ -2,10 +2,11 @@
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Module Name="GOW365">
     <File Path="GOW365\GOW365UI.css" Url="GOW365/GOW365UI.css" />
-    <File Path="GOW365\GOW365UI_blue.css" Url="GOW365/GOW365UI_blue.css" />
-    <File Path="GOW365\Masterpage\GowMaster.master" Url="GOW365/Masterpage/GowMaster.master" />
+    <File Path="GOW365\GOW365UIblue.css" Url="GOW365/GOW365UIblue.css" />
+    <File Path="GOW365\Masterpage\GowMaster_greyorange.master" Url="GOW365/Masterpage/GowMaster_greyorange.master" />
     <File Path="GOW365\Masterpage\GowMaster_blue.master" Url="GOW365/Masterpage/GowMaster_blue.master" />
-    <File Path="GOW365\Gow365UI_GreyOrange.css" Url="GOW365/Gow365UI_GreyOrange.css" />
+    <File Path="GOW365\Gow365UIGreyOrange.css" Url="GOW365/Gow365UIGreyOrange.css" />
     <File Path="GOW365\jquery-1.9.1.min.js" Url="GOW365/jquery-1.9.1.min.js" />
+    <File Path="GOW365\Masterpage\GowMaster_greyblue.master" Url="GOW365/Masterpage/GowMaster_greyblue.master" />
   </Module>
 </Elements>

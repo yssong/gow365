@@ -63,14 +63,12 @@ namespace CircleLogicPortal.ImageSlideWebPart {
             @__w.Write(@"Initialize() {
     //Get the current SP context
 
-	var camlQuery = new SP.CamlQuery();
+    var camlQuery = new SP.CamlQuery();
 	
-    var q = ""<View><Query><Where><And><Neq><FieldRef Name='ContentType' /><Value Type='String'>Folder</Value></Neq><Neq><FieldRef Name='ContentType' /><Value Type='String'>폴더</Value></Neq>""+
-""</And></Where><OrderBy><FieldRef Name='Modified' Ascending='FALSE' /></OrderBy><QueryOptions><RowLimit>");
-                                                                                                @__w.Write(ItemCount);
+    var q = ""<View Scope='RecursiveAll'><Query><Where><Eq><FieldRef Name='FSObjType' /><Value Type='Integer'>0</Value></Eq></Where><OrderBy><FieldRef Name='Modified' Ascending='FALSE' /></OrderBy></Query><RowLimit>");
+                                                                                                                                                                                                              @__w.Write(ItemCount);
 
-            @__w.Write("</RowLimit></QueryOptions></Query></View>\";\r\n\r\n    camlQuery.set_viewXml(q);\r\n\r\n " +
-                    "   ");
+            @__w.Write("</RowLimit></View>\";\r\n\r\n    camlQuery.set_viewXml(q);\r\n\r\n    ");
        if (ListName.Trim()!="")    { 
        if (WebName.Trim() != "")
        { 

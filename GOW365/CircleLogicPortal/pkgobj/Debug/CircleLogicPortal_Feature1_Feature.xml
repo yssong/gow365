@@ -103,6 +103,17 @@
     <ElementFile Location="GOW365\SiteMap\sitemap_h5.gif" />
     <ElementFile Location="GOW365\SiteMap\sitemap_head.gif" />
     <ElementFile Location="GOW365\Today\banner_gowit.gif" />
+    <ElementFile Location="GOW365\Today\blue_today_calenderbg.gif" />
+    <ElementFile Location="GOW365\Today\blue_today_pwbtn.gif" />
+    <ElementFile Location="GOW365\Today\blue_today_text_line.gif" />
+    <ElementFile Location="GOW365\Today\gray_bgline.gif" />
+    <ElementFile Location="GOW365\Quicklink\quicklink_dotline.png" />
+    <ElementFile Location="GOW365\Quicklink\quicklink_img04.png" />
+    <ElementFile Location="GOW365\Quicklink\quicklink_img05.png" />
+    <ElementFile Location="GOW365\Quicklink\quicklink_img06.png" />
+    <ElementFile Location="GOW365\Quicklink\quicklink_img07.png" />
+    <ElementFile Location="GOW365\Quicklink\quicklink_img08.png" />
+    <ElementFile Location="GOW365\Quicklink\quicklink_img09.png" />
     <ElementManifest Location="NewDocsTabWebPart\Elements.xml" />
     <ElementFile Location="NewDocsTabWebPart\NewDocsTabWebPart.webpart" />
     <ElementManifest Location="DropDownLinkWebPart\Elements.xml" />

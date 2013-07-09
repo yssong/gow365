@@ -57,8 +57,9 @@
     <None Include="Features\Feature1\Feature1.feature">
       <FeatureId>{5bc3aa59-d467-43f8-991e-58a887758a7d}</FeatureId>
     </None>
-    <None Include="GOW365\Masterpage\GowMaster.master" />
+    <None Include="GOW365\Masterpage\GowMaster_greyorange.master" />
     <None Include="GOW365\Masterpage\GowMaster_blue.master" />
+    <None Include="GOW365\Masterpage\GowMaster_greyblue.master" />
     <None Include="GOW365\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{6bdd6d5e-fb6f-46e9-b633-69759aea7903}</SharePointProjectItemId>
     </None>
@@ -77,8 +78,8 @@
     </Content>
     <Content Include="GOW365\Elements.xml" />
     <Content Include="GOW365\GOW365UI.css" />
-    <Content Include="GOW365\GOW365UI_blue.css" />
-    <Content Include="GOW365\Gow365UI_GreyOrange.css" />
+    <Content Include="GOW365\GOW365UIblue.css" />
+    <Content Include="GOW365\Gow365UIGreyOrange.css" />
     <Content Include="GOW365\jquery-1.9.1.min.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

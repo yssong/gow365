@@ -276,6 +276,13 @@
     <Content Include="GOW365\MemberSearch\search_btn_32.gif" />
     <Content Include="GOW365\MemberSearch\search_head.gif" />
     <Content Include="GOW365\MemberSearch\search_img.gif" />
+    <Content Include="GOW365\Quicklink\quicklink_dotline.png" />
+    <Content Include="GOW365\Quicklink\quicklink_img04.png" />
+    <Content Include="GOW365\Quicklink\quicklink_img05.png" />
+    <Content Include="GOW365\Quicklink\quicklink_img06.png" />
+    <Content Include="GOW365\Quicklink\quicklink_img07.png" />
+    <Content Include="GOW365\Quicklink\quicklink_img08.png" />
+    <Content Include="GOW365\Quicklink\quicklink_img09.png" />
     <Content Include="GOW365\SiteMap\SiteMap.css" />
     <Content Include="GOW365\SiteMap\sitemap_h1.gif" />
     <Content Include="GOW365\SiteMap\sitemap_h2.gif" />
@@ -315,6 +322,10 @@
     <Content Include="GOW365\TabList\TabStyle.css" />
     <Content Include="GOW365\TabList\tab_aline.gif" />
     <Content Include="GOW365\Today\banner_gowit.gif" />
+    <Content Include="GOW365\Today\blue_today_calenderbg.gif" />
+    <Content Include="GOW365\Today\blue_today_pwbtn.gif" />
+    <Content Include="GOW365\Today\blue_today_text_line.gif" />
+    <Content Include="GOW365\Today\gray_bgline.gif" />
     <Content Include="GOW365\Today\today_calenderbg.gif" />
     <Content Include="ImageSlideWebPart\Elements.xml" />
     <Content Include="ImageSlideWebPart\ImageSlideWebPart.ascx">

@@ -1,62 +1,83 @@
-﻿.sitemap_head{
-	padding-bottom:15px;
+﻿.sitemap_head
+{
+	padding-bottom: 15px;
 }
-.sitemap{
-	width:100%;
+.sitemap
+{
+	width: 100%;
 }
-.sitebox{
-	width:180px;
-	height:400px;
-	float:left;
-	margin:0 6px;
+.sitebox
+{
+	width: 180px;
+	height: 400px;
+	margin-top: 0px;
+	margin-right: 6px;
+	margin-bottom: 0px;
+	margin-left: 6px;
+	float: left;
 }
-.sitebox H3{
-	border-bottom:solid 1px #ccc;
-	padding-bottom:12px;
-	padding-top:14px;
-	padding-left:10px;
-	border-top:solid 3px #167bc1;
-	margin:0;
-	font-size:16px;
-	font-family:Malgun Gothic,'맑은 고딕',Dotum, '돋움';
-	font-weight:bold;
-	color:#167bc1;
-	letter-spacing:-2px;
+/*MoveTOmasterpageUICSS
+.sitebox h3{
+	color: #167bc1;
+	letter-spacing: -2px;
+	padding-top: 14px;
+	padding-bottom: 12px;
+	padding-left: 10px;
+	font-family: "맑은고딕", Dotum, "돋움";
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	border-top-color: #f86d08;
+	border-bottom-color: #ccc;
+	border-top-width: 3px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
 }
-.sitemapbox{
-	padding:0;
-	margin:0;
-	font-size:13px;
-	font-family:Malgun Gothic,'맑은 고딕',Dotum, '돋움';
+.sitebox h3 a,.sitebox h3 a:link{
+	color: #f86d08;
+	text-decoration:none;
 }
-.sitemapbox li, .sitemapbox li a{
+*/
+.sitemapbox
+{
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	font-family: Dotum, "돋움";
+	font-size: 12px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+.sitemapbox li{
 	list-style:none;
 	color:#555;
-	padding-top:6px;
+	padding-top:10px;
 	padding-left:12px;
 	font-weight:bold;
 	padding-bottom:8px;
 	background:url(site_li_border.gif) no-repeat bottom;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
 }
 
-.site_nomal{
+.sitemapnormal{
 	padding:0;
 	margin:0;
 }
-.site_nomal li{
-	list-style:none;
-	padding:2px 10px 2px 20px;
-	font-size:12px;
-	font-family:Malgun Gothic,'맑은 고딕',Dotum, '돋움';
 
-}
-.site_nomal li a{
+.sitemapnormal li{
+	list-style:none;
+	padding:6px 10px 0px 13px;
+	font-size:12px;
+	font-family:Dotum, '돋움';
 	font-weight:lighter;
-	padding-left:7px;
 	color:#777;
-	background:url(site_icon.gif) no-repeat left;
+	background:url(site_icon.gif) no-repeat 5px 8px;
 	border-bottom:0px;
 }
+

@@ -97,5 +97,16 @@
     <ProjectItemFile Source="SiteMap\sitemap_h5.gif" Target="GOW365\SiteMap\" Type="ElementFile" />
     <ProjectItemFile Source="SiteMap\sitemap_head.gif" Target="GOW365\SiteMap\" Type="ElementFile" />
     <ProjectItemFile Source="Today\banner_gowit.gif" Target="GOW365\Today\" Type="ElementFile" />
+    <ProjectItemFile Source="Today\blue_today_calenderbg.gif" Target="GOW365\Today\" Type="ElementFile" />
+    <ProjectItemFile Source="Today\blue_today_pwbtn.gif" Target="GOW365\Today\" Type="ElementFile" />
+    <ProjectItemFile Source="Today\blue_today_text_line.gif" Target="GOW365\Today\" Type="ElementFile" />
+    <ProjectItemFile Source="Today\gray_bgline.gif" Target="GOW365\Today\" Type="ElementFile" />
+    <ProjectItemFile Source="Quicklink\quicklink_dotline.png" Target="GOW365\Quicklink\" Type="ElementFile" />
+    <ProjectItemFile Source="Quicklink\quicklink_img04.png" Target="GOW365\Quicklink\" Type="ElementFile" />
+    <ProjectItemFile Source="Quicklink\quicklink_img05.png" Target="GOW365\Quicklink\" Type="ElementFile" />
+    <ProjectItemFile Source="Quicklink\quicklink_img06.png" Target="GOW365\Quicklink\" Type="ElementFile" />
+    <ProjectItemFile Source="Quicklink\quicklink_img07.png" Target="GOW365\Quicklink\" Type="ElementFile" />
+    <ProjectItemFile Source="Quicklink\quicklink_img08.png" Target="GOW365\Quicklink\" Type="ElementFile" />
+    <ProjectItemFile Source="Quicklink\quicklink_img09.png" Target="GOW365\Quicklink\" Type="ElementFile" />
   </Files>
 </ProjectItem>

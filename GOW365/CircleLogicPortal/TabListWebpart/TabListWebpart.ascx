@@ -31,7 +31,7 @@ function <%=this.ClientID%>Initialize() {
 
 	var camlQuery = new SP.CamlQuery();
 	
-    var q = "<View><Query><Where><Neq><FieldRef Name='ContentType' /><Value Type='Computed'>Folder</Value> </Neq></Where><OrderBy><FieldRef Name='Modified' Ascending='FALSE' /></OrderBy><QueryOptions><RowLimit><%=ListItemCount%></RowLimit></QueryOptions></Query></View>";
+	var q = "<View  Scope='RecursiveAll'><Query><Where><And><IsNotNull><FieldRef Name='Title' /></IsNotNull><Neq><FieldRef Name='ContentType' /><Value Type='String'>folder</Value> </Neq></And></Where><OrderBy><FieldRef Name='Modified' Ascending='FALSE' /></OrderBy></Query><RowLimit><%=ListItemCount%></RowLimit></View>";
     camlQuery.set_viewXml(q);
 
     <% if (ListName1.Trim()!="")    { %>
@@ -117,42 +117,48 @@ function <%=this.ClientID%>onListItemsLoadSuccess1(sender, args) {
             //Retrieve the current list item
             var oListItem = listEnumerator.get_current();
             itemHtml = "";
-		    //Add the items to the list
-            if (listtype1 == SP.BaseType.DocumentLibrary)
-            {
-                itemHtml += "<li><span class='tabTitle'><a href=\"#\" onclick=\"javascript:openDialog('" + <%=this.ClientID %>list1.get_defaultDisplayFormUrl()
-     + "?ID=" + oListItem.get_item('ID') + "'); return false;\">";
-                itemHtml += oListItem.get_item('DisplayName');
-                itemHtml += "</a>";
-                itemHtml += "</span><span class='tabName'>" + oListItem.get_item("Editor").get_lookupValue() + "</span><span  class='tabDate'>" + oListItem.get_item("Modified").format("yyyy-MM-dd") + "</span></li>";
+            //Add the items to the list
+            try {
+            
+                if (listtype1 == SP.BaseType.DocumentLibrary)
+                {
+                    itemHtml += "<li><span class='tabTitle'><a href=\"#\" onclick=\"javascript:openDialog('" + <%=this.ClientID %>list1.get_defaultDisplayFormUrl()
+         + "?ID=" + oListItem.get_item('ID') + "'); return false;\">";
+                    itemHtml += oListItem.get_item('DisplayName');
+                    itemHtml += "</a>";
+                    itemHtml += "</span><span class='tabName'>" + oListItem.get_item("Editor").get_lookupValue() + "</span><span  class='tabDate'>" + oListItem.get_item("Modified").format("yyyy-MM-dd") + "</span></li>";
 
                                 
+                }
+                else if (listtype1 == SP.ListTemplateType.links)
+                {
+                    itemHtml += "<li><span class='tabTitle'><a href=\"#\" onclick=\"javascript:openDialog('" + <%=this.ClientID %>list1.DefaultDisplayFormUrl + "?ID=" +  oListItem.get_item('ID') + "'); return false;\">";
+                    itemHtml += oListItem.get_item("URL");
+                    itemHtml += "</a>";
+                    itemHtml += "</span><span class='tabName'>" + oListItem.get_item("Editor").get_lookupValue() + "</span><span  class='tabDate'>" + oListItem.get_item("Modified").format("yyyy-MM-dd") + "</span></li>";
+                }
+                else if (listtype1 == SP.ListTemplateType.discussionBoard)
+                {
+                    //타이틀의 특수문자 제거 ? # $ % * &
+                    var title = oListItem.get_item("Title").replace(/\?/gi, "").replace(/\#/gi, "").replace(/\%/gi, "").replace(/\*/gi, "").replace(/\&/gi, "");
+                    //가운데 연속된 "."," " 는 한개로 마지막은 잘라냄
+                    title = title.replace(/\.{1,}/gi, ".").replace(/\.$/gi, "").replace(/\s$/gi, "");
+                    var rooturl = encodeURIComponent(listurl + "/" + title).replace(/\!/gi, "%21").replace(/\(/gi, "%28").replace(/\)/gi, "%29").replace(/\_/gi, "%5F").replace(/\-/gi, "%2D").replace(/\./gi, "%2E");
+                    itemHtml += "<li><span class='tabTitle'><a href='#' onclick=\"javascript:openDialog('" + listurl + "/Flat.aspx?rootfolder=" + rooturl + "&FolderCTID=" + contenttype1 + "'); return false;\">";
+                    itemHtml += oListItem.get_item("Title") + "(" + oListItem.get_item("ItemChildCount") + ")";
+                    itemHtml += "</a>";
+                    itemHtml += "</span><span class='tabName'>" + oListItem.get_item("Editor").get_lookupValue() + "</span><span  class='tabDate'>" + oListItem.get_item("Modified").format("yyyy-MM-dd") + "</span></li>";
+                }
+                else
+                {
+                    itemHtml += "<li><span class='tabTitle'><a href=\"#\" onclick=\"javascript:openDialog('" + <%=this.ClientID %>list1.get_defaultDisplayFormUrl() + "?ID=" +  oListItem.get_item('ID') + "'); return false;\">";
+                    itemHtml += oListItem.get_item("Title");
+                    itemHtml += "</a>";
+                    itemHtml += "</span><span class='tabName'>" + oListItem.get_item("Editor").get_lookupValue() + "</span><span  class='tabDate'>" + oListItem.get_item("Modified").format("yyyy-MM-dd") + "</span></li>";
+                }
             }
-            else if (listtype1 == SP.ListTemplateType.links)
-            {
-                itemHtml += "<li><span class='tabTitle'><a href=\"#\" onclick=\"javascript:openDialog('" + <%=this.ClientID %>list1.DefaultDisplayFormUrl + "?ID=" +  oListItem.get_item('ID') + "'); return false;\">";
-                itemHtml += oListItem.get_item("URL");
-                itemHtml += "</a>";
-                itemHtml += "</span><span class='tabName'>" + oListItem.get_item("Editor").get_lookupValue() + "</span><span  class='tabDate'>" + oListItem.get_item("Modified").format("yyyy-MM-dd") + "</span></li>";
-            }
-            else if (listtype1 == SP.ListTemplateType.discussionBoard)
-            {
-                //타이틀의 특수문자 제거 ? # $ % * &
-                var title = oListItem.get_item("Title").replace(/\?/gi, "").replace(/\#/gi, "").replace(/\%/gi, "").replace(/\*/gi, "").replace(/\&/gi, "");
-                //가운데 연속된 "."," " 는 한개로 마지막은 잘라냄
-                title = title.replace(/\.{1,}/gi, ".").replace(/\.$/gi, "").replace(/\s$/gi, "");
-                var rooturl = encodeURIComponent(listurl + "/" + title).replace(/\!/gi, "%21").replace(/\(/gi, "%28").replace(/\)/gi, "%29").replace(/\_/gi, "%5F").replace(/\-/gi, "%2D").replace(/\./gi, "%2E");
-                itemHtml += "<li><span class='tabTitle'><a href='#' onclick=\"javascript:openDialog('" + listurl + "/Flat.aspx?rootfolder=" + rooturl + "&FolderCTID=" + contenttype1 + "'); return false;\">";
-                itemHtml += oListItem.get_item("Title") + "(" + oListItem.get_item("ItemChildCount") + ")";
-                itemHtml += "</a>";
-                itemHtml += "</span><span class='tabName'>" + oListItem.get_item("Editor").get_lookupValue() + "</span><span  class='tabDate'>" + oListItem.get_item("Modified").format("yyyy-MM-dd") + "</span></li>";
-            }
-            else
-            {
-                itemHtml += "<li><span class='tabTitle'><a href=\"#\" onclick=\"javascript:openDialog('" + <%=this.ClientID %>list1.get_defaultDisplayFormUrl() + "?ID=" +  oListItem.get_item('ID') + "'); return false;\">";
-                itemHtml += oListItem.get_item("Title");
-                itemHtml += "</a>";
-                itemHtml += "</span><span class='tabName'>" + oListItem.get_item("Editor").get_lookupValue() + "</span><span  class='tabDate'>" + oListItem.get_item("Modified").format("yyyy-MM-dd") + "</span></li>";
+            catch (err) {
+
             }
 		
 		    jQuery('#<%=this.ClientID %>_tab1 ul').append(itemHtml);

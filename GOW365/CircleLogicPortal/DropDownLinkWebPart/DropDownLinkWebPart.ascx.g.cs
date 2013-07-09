@@ -134,14 +134,13 @@ namespace CircleLogicPortal.DropDownLinkWebPart {
                 itemHtml += ""<option id='");
                                  @__w.Write(this.ClientID);
 
-            @__w.Write(@"""+oListItem.get_item(""ID"")+""' value='""+oListItem.get_item(""Url"").get_url()+""'>"";
-                itemHtml += oListItem.get_item(""Title"");
+            @__w.Write(@"""+oListItem.get_item(""ID"")+""' value='""+oListItem.get_item(""URL"").get_url()+""'>"";
+                itemHtml += oListItem.get_item(""URL"").get_description();
                 itemHtml += ""</option>"";
                 
             }
             else if (listtype1 == 170)
             {
-                
                 itemHtml += ""<option id='");
                                  @__w.Write(this.ClientID);
 

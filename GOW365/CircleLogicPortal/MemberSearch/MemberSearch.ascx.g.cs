@@ -76,13 +76,13 @@ namespace CircleLogicPortal.MemberSearch {
                     "           jQuery(\'#");
              @__w.Write(this.ClientID );
 
-            @__w.Write("items ul li\').remove();\r\n\t\t\tvar ");
-@__w.Write(this.ClientID );
+            @__w.Write("items ul li\').remove();\r\n\t\t    var ");
+  @__w.Write(this.ClientID );
 
             @__w.Write("listItemEnumerator = ");
-                                       @__w.Write(this.ClientID );
+                                          @__w.Write(this.ClientID );
 
-            @__w.Write("_webusers.getEnumerator();\r\n        \twhile (");
+            @__w.Write("_webusers.getEnumerator();\r\n\t\t    var i = 0;\r\n        \twhile (");
         @__w.Write(this.ClientID );
 
             @__w.Write("listItemEnumerator.moveNext()) {\r\n                var ");
@@ -98,38 +98,48 @@ namespace CircleLogicPortal.MemberSearch {
 				var userId= listItem.get_id();
                 var MobilePhone = (listItem.get_item('MobilePhone')==null?"""":listItem.get_item('MobilePhone'));
                 var WorkPhone = (listItem.get_item('WorkPhone')==null?"""":listItem.get_item('WorkPhone'));
-                var JobTitle = (listItem.get_item('JobTitle')==null?"""":listItem.get_item('JobTitle'));
-                var Department = (listItem.get_item('Department')==null?"""":listItem.get_item('Department'));
+                var JobTitle = (listItem.get_item('JobTitle')==null?""직함"":listItem.get_item('JobTitle'));
+                var Department = (listItem.get_item('Department')==null?""부서"":listItem.get_item('Department'));
                 var Email = (listItem.get_item('EMail')==null?"""":listItem.get_item('EMail'));
                 var picture = (listItem.get_item('Picture')==null?""");
                                                            @__w.Write(ImgUrl);
 
             @__w.Write("nopicture.gif\":listItem.get_item(\'Picture\').get_url());\r\n                \r\n      " +
-                    "          ");
+                    "  \t    if (i == 0) {\r\n        \t        jQuery(\'#");
+                  @__w.Write(this.ClientID );
+
+            @__w.Write("items ul\').append(\"<li><div style=\'width:100%;text-align:right;\'><span  onclick=\'" +
+                    "");
+                                                                                                                      @__w.Write(this.ClientID );
+
+            @__w.Write("clearSearch()\' style=\'margin-right:10px;cursor:pointer;\'>clear</span></div></li>\"" +
+                    ");\r\n        \t    }\r\n        \t    i++;\r\n\r\n                ");
         @__w.Write(this.ClientID );
 
-            @__w.Write("itemstr=\"<li class=\'searchresult\'>\"+\"<div class=\'photo\'><img width=40 height=40 s" +
-                    "rc=\'\"+picture +\"\'/></div>\";\r\n                ");
+            @__w.Write("itemstr=\"<li class=\'searchresult\'>\"+\"<div class=\'photo\' style=\'display:none\'><img" +
+                    " width=40 height=40 src=\'\"+picture +\"\'/></div>\";\r\n                ");
         @__w.Write(this.ClientID );
 
-            @__w.Write(@"itemstr+=""<div class='userInfo'><div class='uName'>""+DisplayName+
-                ""</div><div class='uDept'>""+Department+"" / ""+JobTitle+
-                ""</div><div class='uPhone'>""+MobilePhone+""</div><div class='uPhone'>""+WorkPhone+
-                ""</div><div class='uMail'>""+Email+""</div></div></li>"";
+            @__w.Write(@"itemstr += ""<div class='userInfo'><div class='uName'>"" + DisplayName + ""</div>""+
+                ""<div class='uDept'>dept : ""+ Department + "" / "" + JobTitle +""</div>""+
+                ""<div class='uPhone'>mobile : "" + MobilePhone + ""</div>"" +
+                ""<div class='uPhone'>office : "" + WorkPhone +""</div>""+
+                ""<div class='uMail'><a href='mailto:""+Email+""'>""+Email+""</a></div></div></li>"";
                 jQuery('#");
                  @__w.Write(this.ClientID );
 
             @__w.Write("items ul\').append(");
                                                       @__w.Write(this.ClientID );
 
-            @__w.Write(@"itemstr);
-			}
-			
-		},
-		function (sender, args) {
-			return null;
-		});
-}
+            @__w.Write("itemstr);\r\n\t\t\t}\r\n\t\t\t\r\n\t\t},\r\n\t\tfunction (sender, args) {\r\n\t\t\treturn null;\r\n\t\t});\r\n" +
+                    "    \r\n}\r\n    function ");
+     @__w.Write(this.ClientID );
+
+            @__w.Write("clearSearch() {\r\n        jQuery(\'#");
+         @__w.Write(this.ClientID );
+
+            @__w.Write(@"items ul li').remove();
+    }
 </script>
 <div class=""membersearch"">
  <div class=""search_head"">
@@ -158,7 +168,8 @@ namespace CircleLogicPortal.MemberSearch {
                     " id=\"");
   @__w.Write(this.ClientID );
 
-            @__w.Write("items\">\r\n     <ul class=\"searchItems\">\r\n\r\n     </ul>\r\n </div>\r\n</div>\r\n");
+            @__w.Write("items\" class=\"search_result\">\r\n     <ul class=\"searchItems\">\r\n\r\n     </ul>\r\n </di" +
+                    "v>\r\n</div>\r\n");
         }
         
         private void InitializeControl() {
